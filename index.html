@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,6 +18,11 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#blog">Blog</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li>
+                    <button class="theme-toggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
             </ul>
         </div>
     </nav>
@@ -41,12 +46,24 @@
             <div class="about-text">
                 <p>Passionate software developer with a focus on AI and machine learning. I love building tools that make a difference and sharing knowledge with the community.</p>
                 <div class="skills">
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">React</span>
-                    <span class="skill-tag">Machine Learning</span>
-                    <span class="skill-tag">AI</span>
-                    <span class="skill-tag">Cloud Computing</span>
+                    <div class="skill-category">
+                        <h3>Languages</h3>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">TypeScript</span>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Frameworks</h3>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">FastAPI</span>
+                    </div>
+                    <div class="skill-category">
+                        <h3>AI/ML</h3>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">Scikit-learn</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -56,10 +73,28 @@
         <h2>Featured Projects</h2>
         <div class="project-grid">
             <div class="project-card">
+                <div class="project-image">
+                    <img src="https://via.placeholder.com/300x200" alt="Chat Bot">
+                </div>
                 <h3>Chat Bot</h3>
-                <p>A Streamlit-based chat interface for Ollama models</p>
+                <p>A Streamlit-based chat interface for Ollama models. Features include:</p>
+                <ul class="project-features">
+                    <li>Real-time chat interaction</li>
+                    <li>Multiple model support</li>
+                    <li>Message history</li>
+                </ul>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Streamlit</span>
+                    <span class="tech-tag">Ollama</span>
+                </div>
                 <div class="project-links">
-                    <a href="https://github.com/learnbydoingwithsteventest/chat_bot" target="_blank">View Project</a>
+                    <a href="https://github.com/learnbydoingwithsteventest/chat_bot" target="_blank">
+                        <i class="fab fa-github"></i> View Code
+                    </a>
+                    <a href="#" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Live Demo
+                    </a>
                 </div>
             </div>
             <div class="project-card">
