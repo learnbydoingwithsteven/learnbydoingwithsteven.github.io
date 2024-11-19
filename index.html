@@ -177,6 +177,130 @@
             border-top: 1px solid rgba(0, 0, 0, 0.1);
         }
 
+        .github-style {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .github-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: var(--bg-color);
+            padding: 1rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .stat-card h3 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-card p {
+            color: var(--text-color);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .section-title {
+            font-size: 1.75rem;
+            color: var(--text-color);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .latest-content {
+            margin-bottom: 3rem;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .content-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .content-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .content-thumbnail {
+            width: 100%;
+            height: 180px;
+            background-size: cover;
+            background-position: center;
+            background-color: var(--primary-color);
+            position: relative;
+        }
+
+        .content-thumbnail i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+            color: white;
+            opacity: 0.9;
+        }
+
+        .content-info {
+            padding: 1rem;
+        }
+
+        .content-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+
+        .content-meta {
+            font-size: 0.9rem;
+            color: var(--text-color);
+            opacity: 0.8;
+        }
+
+        .platform-tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .tag-youtube {
+            background: rgba(255, 0, 0, 0.1);
+            color: #ff0000;
+        }
+
+        .tag-spotify {
+            background: rgba(30, 215, 96, 0.1);
+            color: #1ed760;
+        }
+
+        .tag-tiktok {
+            background: rgba(0, 0, 0, 0.1);
+            color: var(--text-color);
+        }
+
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -235,6 +359,105 @@
         <section class="hero">
             <h1>Learn by Doing with Steven</h1>
             <p class="subtitle">Join me on a journey of continuous learning and growth. I create content across various platforms to share knowledge, experiences, and inspire others to learn by doing.</p>
+        </section>
+
+        <section class="github-style">
+            <h2 class="section-title">GitHub Activity</h2>
+            <div class="github-stats">
+                <div class="stat-card">
+                    <h3>500+</h3>
+                    <p>Contributions</p>
+                </div>
+                <div class="stat-card">
+                    <h3>50+</h3>
+                    <p>Repositories</p>
+                </div>
+                <div class="stat-card">
+                    <h3>1000+</h3>
+                    <p>Followers</p>
+                </div>
+            </div>
+            <div class="content-meta">
+                🔥 Most active in: Python, JavaScript, Java, C++
+            </div>
+        </section>
+
+        <section class="latest-content">
+            <h2 class="section-title">Latest YouTube Videos</h2>
+            <div class="content-grid">
+                <div class="content-card">
+                    <div class="content-thumbnail">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <div class="content-info">
+                        <span class="platform-tag tag-youtube">YouTube</span>
+                        <h3 class="content-title">Title of Your Latest Video</h3>
+                        <p class="content-meta">Posted 2 days ago • 1.5K views</p>
+                    </div>
+                </div>
+                <div class="content-card">
+                    <div class="content-thumbnail">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <div class="content-info">
+                        <span class="platform-tag tag-youtube">YouTube</span>
+                        <h3 class="content-title">Another Recent Video Title</h3>
+                        <p class="content-meta">Posted 5 days ago • 2.3K views</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="latest-content">
+            <h2 class="section-title">Latest Podcasts</h2>
+            <div class="content-grid">
+                <div class="content-card">
+                    <div class="content-thumbnail">
+                        <i class="fab fa-spotify"></i>
+                    </div>
+                    <div class="content-info">
+                        <span class="platform-tag tag-spotify">Spotify CN</span>
+                        <h3 class="content-title">Latest Chinese Podcast Episode</h3>
+                        <p class="content-meta">Released 3 days ago • 45 min</p>
+                    </div>
+                </div>
+                <div class="content-card">
+                    <div class="content-thumbnail">
+                        <i class="fab fa-spotify"></i>
+                    </div>
+                    <div class="content-info">
+                        <span class="platform-tag tag-spotify">Spotify EN</span>
+                        <h3 class="content-title">Latest English Podcast Episode</h3>
+                        <p class="content-meta">Released 4 days ago • 35 min</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="latest-content">
+            <h2 class="section-title">Latest TikTok Content</h2>
+            <div class="content-grid">
+                <div class="content-card">
+                    <div class="content-thumbnail">
+                        <i class="fab fa-tiktok"></i>
+                    </div>
+                    <div class="content-info">
+                        <span class="platform-tag tag-tiktok">TikTok</span>
+                        <h3 class="content-title">Recent TikTok Video Title</h3>
+                        <p class="content-meta">Posted 1 day ago • 5K views</p>
+                    </div>
+                </div>
+                <div class="content-card">
+                    <div class="content-thumbnail">
+                        <i class="fab fa-tiktok"></i>
+                    </div>
+                    <div class="content-info">
+                        <span class="platform-tag tag-tiktok">TikTok</span>
+                        <h3 class="content-title">Another TikTok Video Title</h3>
+                        <p class="content-meta">Posted 3 days ago • 3.2K views</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <div class="social-grid">
