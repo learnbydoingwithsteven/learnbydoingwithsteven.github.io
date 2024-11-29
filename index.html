@@ -296,15 +296,107 @@
             color: #1ed760;
         }
 
+        .project-section {
+            margin-top: 3rem;
+        }
+
+        .project-category {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .project-category h2 {
+            color: var(--primary-color);
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            background: var(--bg-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-card h3 {
+            color: var(--text-color);
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .project-card p {
+            color: var(--text-color);
+            opacity: 0.8;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .search-bar {
+            margin: 2rem 0;
+            position: relative;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            border: 2px solid var(--card-bg);
+            background: var(--card-bg);
+            color: var(--text-color);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .search-bar input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .search-bar i {
+            position: absolute;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-color);
+            opacity: 0.5;
+        }
+
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
+        .animate-in {
+            animation: fadeIn 0.5s ease-out forwards;
         }
 
         @media (max-width: 768px) {
@@ -428,6 +520,85 @@
             </div>
         </section>
 
+        <div class="search-bar">
+            <input type="text" placeholder="Search projects..." id="projectSearch">
+            <i class="fas fa-search"></i>
+        </div>
+
+        <section class="project-section">
+            <div class="project-category">
+                <h2><i class="fas fa-robot"></i> AI and Large Language Models</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <h3>AutoGen Research Group Chat</h3>
+                        <p>Implementation of advanced group chat functionality with RAG capabilities</p>
+                        <span class="tag">AutoGen</span>
+                        <span class="tag">RAG</span>
+                    </div>
+                    <div class="project-card">
+                        <h3>Web RAG with Ollama</h3>
+                        <p>Implementation of RAG system using Ollama and web data</p>
+                        <span class="tag">Ollama</span>
+                        <span class="tag">RAG</span>
+                    </div>
+                    <div class="project-card">
+                        <h3>Local Chatbot</h3>
+                        <p>Gradio-based chatbot using local LM Studio models</p>
+                        <span class="tag">Gradio</span>
+                        <span class="tag">LM Studio</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-category">
+                <h2><i class="fas fa-chart-line"></i> Data Science and Analysis</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <h3>Stock Analysis Suite</h3>
+                        <p>Comprehensive stock analysis tools including sentiment analysis and visualization</p>
+                        <span class="tag">Finance</span>
+                        <span class="tag">Analysis</span>
+                    </div>
+                    <div class="project-card">
+                        <h3>CrewAI Financial Analysis</h3>
+                        <p>Advanced financial analysis using CrewAI</p>
+                        <span class="tag">CrewAI</span>
+                        <span class="tag">Finance</span>
+                    </div>
+                    <div class="project-card">
+                        <h3>Bank Simulation</h3>
+                        <p>Comprehensive banking system simulation</p>
+                        <span class="tag">Simulation</span>
+                        <span class="tag">Finance</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-category">
+                <h2><i class="fas fa-brain"></i> Machine Learning and Deep Learning</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <h3>Neural Network Implementations</h3>
+                        <p>ANN simulations and experiments</p>
+                        <span class="tag">Neural Networks</span>
+                        <span class="tag">ML</span>
+                    </div>
+                    <div class="project-card">
+                        <h3>Weather Forecast Models</h3>
+                        <p>Comparison of three different weather forecasting models</p>
+                        <span class="tag">Forecasting</span>
+                        <span class="tag">Models</span>
+                    </div>
+                    <div class="project-card">
+                        <h3>Transformer Projects</h3>
+                        <p>Implementations of GPT-2, BERT, and custom transformers</p>
+                        <span class="tag">NLP</span>
+                        <span class="tag">Transformers</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <div class="social-grid">
             <a href="https://www.youtube.com/@learnbydoingwithsteven" target="_blank" class="social-link">
                 <i class="fab fa-youtube"></i>
@@ -507,6 +678,41 @@
             link.addEventListener('mouseleave', () => {
                 link.querySelector('i').style.transform = 'scale(1) rotate(0)';
             });
+        });
+
+        // Project search functionality
+        const projectSearch = document.getElementById('projectSearch');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        projectSearch.addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            
+            projectCards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const description = card.querySelector('p').textContent.toLowerCase();
+                const tags = Array.from(card.querySelectorAll('.tag')).map(tag => tag.textContent.toLowerCase());
+                
+                const matches = title.includes(searchTerm) || 
+                              description.includes(searchTerm) ||
+                              tags.some(tag => tag.includes(searchTerm));
+                
+                card.style.display = matches ? 'block' : 'none';
+            });
+        });
+
+        // Add animation classes on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.project-category').forEach(category => {
+            observer.observe(category);
         });
     </script>
 </body>
