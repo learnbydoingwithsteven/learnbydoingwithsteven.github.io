@@ -328,6 +328,7 @@
             border-radius: 12px;
             padding: 1.5rem;
             transition: transform 0.3s ease;
+            cursor: pointer;
         }
 
         .project-card:hover {
@@ -357,6 +358,22 @@
             font-size: 0.85rem;
             margin-right: 0.5rem;
             margin-bottom: 0.5rem;
+        }
+
+        .project-links {
+            margin-bottom: 1rem;
+        }
+
+        .repo-link {
+            color: var(--text-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .repo-link i {
+            font-size: 1.25rem;
         }
 
         .search-bar {
@@ -532,18 +549,33 @@
                     <div class="project-card">
                         <h3>AutoGen Research Group Chat</h3>
                         <p>Implementation of advanced group chat functionality with RAG capabilities</p>
+                        <div class="project-links">
+                            <a href="https://github.com/learnbydoingwithsteven/Youtube/tree/main/20240517%20AUTOGEN%20RESEARCH%20GROUP%20CHAT%20AND%20RAG%20GROUP%20CHAT" target="_blank" class="repo-link">
+                                <i class="fab fa-github"></i> Repository
+                            </a>
+                        </div>
                         <span class="tag">AutoGen</span>
                         <span class="tag">RAG</span>
                     </div>
                     <div class="project-card">
                         <h3>Web RAG with Ollama</h3>
                         <p>Implementation of RAG system using Ollama and web data</p>
+                        <div class="project-links">
+                            <a href="https://github.com/learnbydoingwithsteven/Youtube/tree/main/20241121_web_rag_ollama_json_ok" target="_blank" class="repo-link">
+                                <i class="fab fa-github"></i> Repository
+                            </a>
+                        </div>
                         <span class="tag">Ollama</span>
                         <span class="tag">RAG</span>
                     </div>
                     <div class="project-card">
                         <h3>Local Chatbot</h3>
                         <p>Gradio-based chatbot using local LM Studio models</p>
+                        <div class="project-links">
+                            <a href="https://github.com/learnbydoingwithsteven/Youtube/tree/main/20240905_gradio_lmstudio_chatbot_local" target="_blank" class="repo-link">
+                                <i class="fab fa-github"></i> Repository
+                            </a>
+                        </div>
                         <span class="tag">Gradio</span>
                         <span class="tag">LM Studio</span>
                     </div>
@@ -556,20 +588,35 @@
                     <div class="project-card">
                         <h3>Stock Analysis Suite</h3>
                         <p>Comprehensive stock analysis tools including sentiment analysis and visualization</p>
+                        <div class="project-links">
+                            <a href="https://github.com/learnbydoingwithsteven/Youtube/tree/main/20240502%20stock%20analysis%20report%20basic%20version" target="_blank" class="repo-link">
+                                <i class="fab fa-github"></i> Repository
+                            </a>
+                        </div>
                         <span class="tag">Finance</span>
                         <span class="tag">Analysis</span>
                     </div>
                     <div class="project-card">
                         <h3>CrewAI Financial Analysis</h3>
                         <p>Advanced financial analysis using CrewAI</p>
+                        <div class="project-links">
+                            <a href="https://github.com/learnbydoingwithsteven/Youtube/tree/main/20240909_CREWAI_FI_ANALYSIS" target="_blank" class="repo-link">
+                                <i class="fab fa-github"></i> Repository
+                            </a>
+                        </div>
                         <span class="tag">CrewAI</span>
                         <span class="tag">Finance</span>
                     </div>
                     <div class="project-card">
                         <h3>Bank Simulation</h3>
                         <p>Comprehensive banking system simulation</p>
+                        <div class="project-links">
+                            <a href="https://github.com/learnbydoingwithsteven/Youtube/tree/main/20240915%20bank%20simulation" target="_blank" class="repo-link">
+                                <i class="fab fa-github"></i> Repository
+                            </a>
+                        </div>
                         <span class="tag">Simulation</span>
-                        <span class="tag">Finance</span>
+                        <span class="tag">Banking</span>
                     </div>
                 </div>
             </div>
@@ -578,22 +625,104 @@
                 <h2><i class="fas fa-brain"></i> Machine Learning and Deep Learning</h2>
                 <div class="project-grid">
                     <div class="project-card">
-                        <h3>Neural Network Implementations</h3>
-                        <p>ANN simulations and experiments</p>
+                        <h3>Neural Network Simulations</h3>
+                        <p>Artificial Neural Network implementations and experiments</p>
+                        <div class="project-links">
+                            <a href="https://github.com/learnbydoingwithsteven/Youtube/tree/main/20241022_ann_simulations" target="_blank" class="repo-link">
+                                <i class="fab fa-github"></i> Repository
+                            </a>
+                        </div>
                         <span class="tag">Neural Networks</span>
-                        <span class="tag">ML</span>
+                        <span class="tag">AI</span>
                     </div>
                     <div class="project-card">
                         <h3>Weather Forecast Models</h3>
                         <p>Comparison of three different weather forecasting models</p>
+                        <div class="project-links">
+                            <a href="https://github.com/learnbydoingwithsteven/Youtube/tree/main/20240912_Weather_Forcast_3_models" target="_blank" class="repo-link">
+                                <i class="fab fa-github"></i> Repository
+                            </a>
+                        </div>
                         <span class="tag">Forecasting</span>
                         <span class="tag">Models</span>
                     </div>
                     <div class="project-card">
-                        <h3>Transformer Projects</h3>
-                        <p>Implementations of GPT-2, BERT, and custom transformers</p>
-                        <span class="tag">NLP</span>
+                        <h3>Transformer Models</h3>
+                        <p>Implementation and comparison of GPT-2 and BERT models</p>
+                        <div class="project-links">
+                            <a href="https://github.com/learnbydoingwithsteven/Youtube/tree/main/20240913_transformer_gpt2_bert" target="_blank" class="repo-link">
+                                <i class="fab fa-github"></i> Repository
+                            </a>
+                        </div>
                         <span class="tag">Transformers</span>
+                        <span class="tag">NLP</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-category">
+                <h2><i class="fas fa-graduation-cap"></i> Data Science Education</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <h3>Data Talk Series: DS Course & Tools</h3>
+                        <p>Episode 1: Introduction to Data Science tools and courses</p>
+                        <div class="project-links">
+                            <a href="https://github.com/learnbydoingwithsteven/Youtube/tree/main/20240915_datatalkep1_dsccourse_dstools" target="_blank" class="repo-link">
+                                <i class="fab fa-github"></i> Repository
+                            </a>
+                        </div>
+                        <span class="tag">Education</span>
+                        <span class="tag">Tools</span>
+                    </div>
+                    <div class="project-card">
+                        <h3>Data Talk: NumPy & Transformers</h3>
+                        <p>Episode 2: Deep dive into NumPy and Transformer architectures</p>
+                        <div class="project-links">
+                            <a href="https://github.com/learnbydoingwithsteven/Youtube/tree/main/20240915_datatalkep2_numpy_transformerplayground" target="_blank" class="repo-link">
+                                <i class="fab fa-github"></i> Repository
+                            </a>
+                        </div>
+                        <span class="tag">NumPy</span>
+                        <span class="tag">Transformers</span>
+                    </div>
+                    <div class="project-card">
+                        <h3>Data Talk: Visualization</h3>
+                        <p>Episodes 4-5: Matplotlib and Seaborn tutorials</p>
+                        <div class="project-links">
+                            <a href="https://github.com/learnbydoingwithsteven/Youtube/tree/main/20240917_data_talk_ep4_matplotlib" target="_blank" class="repo-link">
+                                <i class="fab fa-github"></i> Repository
+                            </a>
+                        </div>
+                        <span class="tag">Visualization</span>
+                        <span class="tag">Tutorial</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-category">
+                <h2><i class="fas fa-tools"></i> Development Tools and Infrastructure</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <h3>Windsurf Tutorial</h3>
+                        <p>30-minute app development and Docker implementation</p>
+                        <div class="project-links">
+                            <a href="https://github.com/learnbydoingwithsteven/Youtube/tree/main/20241117_windsurf_tutorial_30min_app_and_docker" target="_blank" class="repo-link">
+                                <i class="fab fa-github"></i> Repository
+                            </a>
+                        </div>
+                        <span class="tag">Docker</span>
+                        <span class="tag">Tutorial</span>
+                    </div>
+                    <div class="project-card">
+                        <h3>DepthPro Testing</h3>
+                        <p>Depth processing and analysis tools</p>
+                        <div class="project-links">
+                            <a href="https://github.com/learnbydoingwithsteven/Youtube/tree/main/20241018_DepthPro_Test" target="_blank" class="repo-link">
+                                <i class="fab fa-github"></i> Repository
+                            </a>
+                        </div>
+                        <span class="tag">Analysis</span>
+                        <span class="tag">Tools</span>
                     </div>
                 </div>
             </div>
