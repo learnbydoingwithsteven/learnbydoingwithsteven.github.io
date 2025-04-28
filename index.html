@@ -3,21 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Steven's Portfolio</title>
+    <meta name="description" content="Steven's Portfolio - Software Developer & AI Enthusiast specializing in Python, JavaScript, and AI/ML technologies">
+    <meta name="keywords" content="software developer, AI, machine learning, Python, JavaScript, portfolio">
+    <meta name="author" content="Steven">
+    <meta property="og:title" content="Steven's Professional Portfolio">
+    <meta property="og:description" content="Software Developer & AI Enthusiast specializing in Python, JavaScript, and AI/ML technologies">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://learnbydoingwithsteventest.github.io/">
+    <title>Steven's Professional Portfolio | Software Developer & AI Enthusiast</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Steven",
+      "url": "https://learnbydoingwithsteventest.github.io/",
+      "sameAs": [
+        "https://github.com/learnbydoingwithsteventest",
+        "https://www.linkedin.com/in/steven-w-6828a31bb/",
+        "https://x.com/Catchingtides"
+      ],
+      "jobTitle": "Software Developer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Independent Developer"
+      }
+    }
+    </script>
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-content">
-            <div class="logo">Steven</div>
+            <div class="logo"><span class="primary-color">Steven</span><span class="secondary-color">.dev</span></div>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#blog" class="nav-link">Blog</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
                 <li>
                     <button class="theme-toggle" aria-label="Toggle dark mode">
                         <i class="fas fa-moon"></i>
@@ -28,41 +59,81 @@
     </nav>
 
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Hi, I'm Steven 👋</h1>
-            <p class="subtitle">Software Developer & AI Enthusiast</p>
-            <div class="social-links">
-                <a href="https://github.com/learnbydoingwithsteventest" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/steven-w-6828a31bb/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://x.com/Catchingtides" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="https://substack.com/@steven923044" target="_blank" aria-label="Substack Blog"><i class="fas fa-blog"></i></a> 
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+            <div class="hero-text">
+                <h1>Hi, I'm <span class="highlight">Steven</span> <span class="wave">👋</span></h1>
+                <h2 class="subtitle"><span id="typing-text">Software Developer & AI Enthusiast</span><span class="cursor">|</span></h2>
+                <p class="hero-description">I create innovative software solutions with a focus on AI and machine learning technologies.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="primary-btn"><i class="fas fa-code"></i> View My Work</a>
+                    <a href="#contact" class="secondary-btn"><i class="fas fa-envelope"></i> Contact Me</a>
+                </div>
             </div>
+            <div class="social-links" data-aos="fade-up" data-aos-delay="300">
+                <a href="https://github.com/learnbydoingwithsteventest" target="_blank" aria-label="GitHub" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/steven-w-6828a31bb/" target="_blank" aria-label="LinkedIn" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://x.com/Catchingtides" target="_blank" aria-label="Twitter" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="https://substack.com/@steven923044" target="_blank" aria-label="Substack Blog" class="social-icon"><i class="fas fa-rss"></i></a> 
+            </div>
+        </div>
+        <div class="scroll-down">
+            <a href="#about"><i class="fas fa-chevron-down"></i></a>
         </div>
     </section>
 
     <section id="about" class="about">
-        <h2>About Me</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p>Passionate software developer with a focus on AI and machine learning. I love building tools that make a difference and sharing knowledge with the community.</p>
-                <div class="skills">
-                    <div class="skill-category">
-                        <h3>Languages</h3>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">TypeScript</span>
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">About Me</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">My background, skills, and passion</p>
+            </div>
+            <div class="about-content">
+                <div class="about-image" data-aos="fade-right">
+                    <div class="image-wrapper">
+                        <img src="https://avatars.githubusercontent.com/u/138286275?v=4" alt="Steven's profile picture" />
                     </div>
-                    <div class="skill-category">
-                        <h3>Frameworks</h3>
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">FastAPI</span>
-                    </div>
-                    <div class="skill-category">
-                        <h3>AI/ML</h3>
-                        <span class="skill-tag">TensorFlow</span>
-                        <span class="skill-tag">PyTorch</span>
-                        <span class="skill-tag">Scikit-learn</span>
+                </div>
+                <div class="about-text" data-aos="fade-left" data-aos-delay="100">
+                    <p class="about-description">I'm a passionate software developer with a focus on <strong>AI</strong> and <strong>machine learning</strong>. With a deep interest in creating impactful technology, I love building tools that make a difference and sharing knowledge with the community.</p>
+                    <p class="about-description">My journey in tech has been driven by curiosity and a commitment to continuous learning. I believe in the power of technology to solve complex problems and improve lives.</p>
+                    <div class="skills">
+                        <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                            <h3><i class="fas fa-code"></i> Languages</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">TypeScript</span>
+                                <span class="skill-tag">SQL</span>
+                            </div>
+                        </div>
+                        <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                            <h3><i class="fas fa-layer-group"></i> Frameworks</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">React</span>
+                                <span class="skill-tag">Node.js</span>
+                                <span class="skill-tag">FastAPI</span>
+                                <span class="skill-tag">Django</span>
+                            </div>
+                        </div>
+                        <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
+                            <h3><i class="fas fa-brain"></i> AI/ML</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">TensorFlow</span>
+                                <span class="skill-tag">PyTorch</span>
+                                <span class="skill-tag">Scikit-learn</span>
+                                <span class="skill-tag">Hugging Face</span>
+                            </div>
+                        </div>
+                        <div class="skill-category" data-aos="fade-up" data-aos-delay="500">
+                            <h3><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">AWS</span>
+                                <span class="skill-tag">Docker</span>
+                                <span class="skill-tag">Kubernetes</span>
+                                <span class="skill-tag">CI/CD</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -70,89 +141,329 @@
     </section>
 
     <section id="projects" class="projects">
-        <h2>Featured Projects</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="https://raw.githubusercontent.com/learnbydoingwithsteven/rag_chat_with_ds_streamlit/main/assets/1_chat_bot_interface_ollama_groq.png" alt="Chat Bot Interface Screenshot">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">A selection of my recent work</p>
+            </div>
+            <div class="project-filter" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="ai">AI</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="other">Other</button>
+            </div>
+            <div class="project-grid">
+                <div class="project-card" data-category="ai" data-aos="fade-up">
+                    <div class="project-image">
+                        <img src="https://raw.githubusercontent.com/learnbydoingwithsteven/rag_chat_with_ds_streamlit/main/assets/1_chat_bot_interface_ollama_groq.png" alt="Chat Bot Interface Screenshot">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/learnbydoingwithsteventest/chat_bot" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">Chat Bot</h3>
+                            <span class="project-type">AI</span>
+                        </div>
+                        <p class="project-description">A Streamlit-based chat interface for Ollama models with advanced features:</p>
+                        <ul class="project-features">
+                            <li>Real-time chat interaction with LLMs</li>
+                            <li>Support for multiple local and API models</li>
+                            <li>Persistent message history and chat sessions</li>
+                            <li>RAG capabilities with document context</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Streamlit</span>
+                            <span class="tech-tag">Ollama</span>
+                            <span class="tech-tag">LangChain</span>
+                        </div>
+                    </div>
                 </div>
-                <h3>Chat Bot</h3>
-                <p>A Streamlit-based chat interface for Ollama models. Features include:</p>
-                <ul class="project-features">
-                    <li>Real-time chat interaction</li>
-                    <li>Multiple model support</li>
-                    <li>Message history</li>
-                </ul>
-                <div class="project-tech">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">Streamlit</span>
-                    <span class="tech-tag">Ollama</span>
+                
+                <div class="project-card" data-category="ai" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=600" alt="AI Image Generator">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link disabled">
+                                    <i class="fas fa-code"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">AI Image Generator</h3>
+                            <span class="project-type">AI</span>
+                        </div>
+                        <p class="project-description">Create stunning images using state-of-the-art AI models:</p>
+                        <ul class="project-features">
+                            <li>Text-to-image generation with diffusion models</li>
+                            <li>Style transfer and image editing capabilities</li>
+                            <li>Local deployment options for privacy</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Stable Diffusion</span>
+                            <span class="tech-tag">PyTorch</span>
+                        </div>
+                        <div class="project-status">Coming Soon</div>
+                    </div>
                 </div>
-                <div class="project-links">
-                    <a href="https://github.com/learnbydoingwithsteventest/chat_bot" target="_blank">
-                        <i class="fab fa-github"></i> View Code
-                    </a>
+                
+                <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=600" alt="Smart Task Manager">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link disabled">
+                                    <i class="fas fa-code"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">Smart Task Manager</h3>
+                            <span class="project-type">Web + AI</span>
+                        </div>
+                        <p class="project-description">AI-powered task prioritization and management system:</p>
+                        <ul class="project-features">
+                            <li>Intelligent task prioritization based on deadlines and importance</li>
+                            <li>Natural language processing for task creation</li>
+                            <li>Team collaboration features and integrations</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">GPT API</span>
+                        </div>
+                        <div class="project-status">Coming Soon</div>
+                    </div>
                 </div>
             </div>
-            <div class="project-card">
-                <h3>AI Image Generator</h3>
-                <p>Create stunning images using AI models</p>
-                <div class="project-links">
-                    <a href="#" target="_blank">Coming Soon</a>
-                </div>
-            </div>
-            <div class="project-card">
-                <h3>Smart Task Manager</h3>
-                <p>AI-powered task prioritization and management</p>
-                <div class="project-links">
-                    <a href="#" target="_blank">Coming Soon</a>
-                </div>
+            <div class="view-more" data-aos="fade-up">
+                <a href="https://github.com/learnbydoingwithsteventest?tab=repositories" target="_blank" class="more-btn">View More on GitHub <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
 
     <section id="blog" class="blog">
-        <h2>Latest Blog Posts</h2>
-        <div class="blog-grid">
-            <div class="blog-card">
-                <h3>Getting Started with Ollama</h3>
-                <p>Learn how to set up and use Ollama for local AI development</p>
-                <a href="https://substack.com/@steven923044" target="_blank" class="read-more">Read More on Substack</a>
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Latest Blog Posts</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Thoughts and insights on technology and development</p>
             </div>
-            <div class="blog-card">
-                <h3>Building Modern Web Apps</h3>
-                <p>A comprehensive guide to modern web development</p>
-                <a href="https://substack.com/@steven923044" target="_blank" class="read-more">Read More on Substack</a>
+            <div class="blog-grid">
+                <div class="blog-card" data-aos="fade-up">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1655720031554-a929595f0197?w=600" alt="Ollama blog post">
+                        <div class="blog-date">
+                            <span class="day">15</span>
+                            <span class="month">Apr</span>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-tags">
+                            <span class="blog-tag">AI</span>
+                            <span class="blog-tag">Tutorial</span>
+                        </div>
+                        <h3 class="blog-title">Getting Started with Ollama</h3>
+                        <p class="blog-excerpt">A comprehensive guide to setting up and using Ollama for local AI development. Learn how to run powerful LLMs on your own hardware.</p>
+                        <a href="https://substack.com/@steven923044" target="_blank" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="blog-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=600" alt="Web development">
+                        <div class="blog-date">
+                            <span class="day">28</span>
+                            <span class="month">Mar</span>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-tags">
+                            <span class="blog-tag">Web</span>
+                            <span class="blog-tag">Frontend</span>
+                        </div>
+                        <h3 class="blog-title">Building Modern Web Apps</h3>
+                        <p class="blog-excerpt">A comprehensive guide to modern web development with React, Next.js, and other cutting-edge technologies.</p>
+                        <a href="https://substack.com/@steven923044" target="_blank" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="blog-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1677442135123-1f577f916d67?w=600" alt="AI Development">
+                        <div class="blog-date">
+                            <span class="day">10</span>
+                            <span class="month">Mar</span>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-tags">
+                            <span class="blog-tag">AI</span>
+                            <span class="blog-tag">Best Practices</span>
+                        </div>
+                        <h3 class="blog-title">AI Development Tips</h3>
+                        <p class="blog-excerpt">Explore best practices for AI application development, including model selection, validation, and ethical considerations.</p>
+                        <a href="https://substack.com/@steven923044" target="_blank" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
             </div>
-            <div class="blog-card">
-                <h3>AI Development Tips</h3>
-                <p>Best practices for AI application development</p>
-                <a href="https://substack.com/@steven923044" target="_blank" class="read-more">Read More on Substack</a>
+            <div class="view-more" data-aos="fade-up">
+                <a href="https://substack.com/@steven923044" target="_blank" class="more-btn">View All Posts <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
 
     <section id="contact" class="contact">
-        <h2>Get in Touch</h2>
-        <div class="contact-content">
-            <p>I'm always open to new opportunities and collaborations!</p>
-            <div class="contact-links">
-                <a href="mailto:wjbear2020@gmail.com" class="contact-button">
-                    <i class="fas fa-envelope"></i> Email Me
-                </a>
-                <a href="https://www.linkedin.com/in/steven-w-6828a31bb/" target="_blank" class="contact-button">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Get in Touch</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Let's talk about your project or collaboration opportunities</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <h3>Contact Information</h3>
+                    <p>I'm always open to new opportunities, collaborations, and interesting projects. Feel free to reach out!</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:wjbear2020@gmail.com">wjbear2020@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <div>
+                                <h4>LinkedIn</h4>
+                                <a href="https://www.linkedin.com/in/steven-w-6828a31bb/" target="_blank">steven-w</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fab fa-github"></i>
+                            <div>
+                                <h4>GitHub</h4>
+                                <a href="https://github.com/learnbydoingwithsteventest" target="_blank">learnbydoingwithsteventest</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-social">
+                        <h4>Follow Me</h4>
+                        <div class="social-icons">
+                            <a href="https://github.com/learnbydoingwithsteventest" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/steven-w-6828a31bb/" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://x.com/Catchingtides" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="https://substack.com/@steven923044" target="_blank" class="social-icon"><i class="fas fa-rss"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form" data-aos="fade-left">
+                    <h3>Send Me a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
     <footer>
-        <div class="footer-content">
-            <p>&copy; 2025 Steven's Portfolio. All rights reserved.</p>
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-about">
+                        <h3 class="footer-title">Steven<span class="secondary-color">.dev</span></h3>
+                        <p>Software Developer & AI Enthusiast focused on creating innovative solutions and sharing knowledge with the community.</p>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <h3 class="footer-title">Quick Links</h3>
+                        <ul class="footer-menu">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#blog">Blog</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-contact">
+                        <h3 class="footer-title">Contact</h3>
+                        <p><i class="fas fa-envelope"></i> wjbear2020@gmail.com</p>
+                        <p><i class="fab fa-github"></i> github.com/learnbydoingwithsteventest</p>
+                        <div class="footer-social">
+                            <a href="https://github.com/learnbydoingwithsteventest" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/steven-w-6828a31bb/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://x.com/Catchingtides" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://substack.com/@steven923044" target="_blank"><i class="fas fa-rss"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 Steven's Professional Portfolio. All rights reserved.</p>
+                <p>Last updated: April 28, 2025</p>
+            </div>
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="script.js"></script>
+    <script>
+        // Initialize AOS animation library
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+    </script>
 </body>
 </html>
