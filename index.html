@@ -15,6 +15,158 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <style>
+        /* Category styling */
+        .category-intro {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .category-explanation {
+            text-align: left;
+            display: inline-block;
+            margin: 1rem auto;
+        }
+        
+        .category-header {
+            width: 100%;
+            margin: 2.5rem 0 1.5rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #f0f0f0;
+            clear: both;
+        }
+        
+        .category-title {
+            font-size: 1.6rem;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        
+        .category-title i {
+            margin-right: 0.5rem;
+            color: #3498db;
+        }
+        
+        .category-description {
+            font-size: 1rem;
+            color: #7f8c8d;
+            margin-bottom: 1rem;
+        }
+        
+        /* Project filter button styling */
+        .project-filter {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .filter-btn {
+            padding: 8px 16px;
+            border: 2px solid #3498db;
+            background-color: transparent;
+            color: #3498db;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        /* Project grid enhancements */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 1rem;
+        }
+        
+        .project-card {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: white;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        
+        .project-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .project-features {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+        
+        .project-features li {
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+        
+        .project-features li:before {
+            content: '✓';
+            color: #3498db;
+            position: absolute;
+            left: -1.2rem;
+        }
+        
+        /* Image notice styling */
+        .image-notice {
+            font-size: 0.8rem;
+            margin-top: 10px;
+            padding: 8px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            color: #666;
+            text-align: center;
+            border: 1px dashed #ccc;
+        }
+        
+        /* View more button styling */
+        .view-more {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        
+        .more-btn {
+            display: inline-block;
+            padding: 10px 25px;
+            background-color: #3498db;
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .more-btn:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+        }
+    </style>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -91,7 +243,7 @@
             <div class="about-content">
                 <div class="about-image" data-aos="fade-right">
                     <div class="image-wrapper">
-                        <img src="https://github.githubassets.com/images/modules/profile/profile-joined-github.svg" alt="Steven as a content creator" />
+                        <img src="images/creator_profile.jpg" alt="Steven as a content creator" onerror="this.onerror=null; this.src='https://github.githubassets.com/images/modules/profile/profile-joined-github.svg'; this.parentElement.innerHTML += '<div class=\'image-notice\'>To use your own profile image, save a photo to<br><code>images/creator_profile.jpg</code></div>';" />
                     </div>
                 </div>
                 <div class="about-text" data-aos="fade-left" data-aos-delay="100">
@@ -149,8 +301,18 @@
                 <div class="section-divider"></div>
                 <p class="section-subtitle">A showcase of my AI/ML work</p>
             </div>
+            
+            <div class="category-intro" data-aos="fade-up">
+                <h3 class="category-title">Project Categories</h3>
+                <p>My projects are organized into two main categories:</p>
+                <ul class="category-explanation">
+                    <li><strong>Standalone Repositories:</strong> Complete, independent projects that can be cloned and run locally</li>
+                    <li><strong>YouTube Tutorial Projects:</strong> Projects built during my YouTube tutorials, with step-by-step implementations</li>
+                </ul>
+            </div>
+            
             <div class="project-filter" data-aos="fade-up">
-                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn active" data-filter="all">All Projects</button>
                 <button class="filter-btn" data-filter="standalone">Standalone Repos</button>
                 <button class="filter-btn" data-filter="youtube">YouTube Projects</button>
             </div>
@@ -159,6 +321,28 @@
                 document.addEventListener('DOMContentLoaded', function() {
                     const filterBtns = document.querySelectorAll('.filter-btn');
                     const projectCards = document.querySelectorAll('.project-card');
+                    const categoryHeaders = document.querySelectorAll('.category-header');
+                    
+                    // Function to update visibility
+                    function updateVisibility(filter) {
+                        projectCards.forEach(card => {
+                            if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                                card.style.display = 'block';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        });
+                        
+                        // Show/hide category headers based on filter
+                        categoryHeaders.forEach(header => {
+                            const category = header.getAttribute('data-category');
+                            if (filter === 'all' || filter === category) {
+                                header.style.display = 'block';
+                            } else {
+                                header.style.display = 'none';
+                            }
+                        });
+                    }
                     
                     filterBtns.forEach(btn => {
                         btn.addEventListener('click', function() {
@@ -168,20 +352,20 @@
                             this.classList.add('active');
                             
                             const filter = this.getAttribute('data-filter');
-                            
-                            projectCards.forEach(card => {
-                                if (filter === 'all' || card.getAttribute('data-category') === filter) {
-                                    card.style.display = 'block';
-                                } else {
-                                    card.style.display = 'none';
-                                }
-                            });
+                            updateVisibility(filter);
                         });
                     });
+                    
+                    // Initialize with 'all' filter
+                    updateVisibility('all');
                 });
             </script>
             <div class="project-grid">
-                <!-- Standalone Repository Projects -->
+                <!-- Standalone Repository Projects Category Header -->
+                <div class="category-header" data-category="standalone" data-aos="fade-up">
+                    <h3 class="category-title"><i class="fas fa-cube"></i> Standalone Repositories</h3>
+                    <p class="category-description">Complete, independent projects with full functionality</p>
+                </div>
                 <div class="project-card" data-category="standalone" data-aos="fade-up">
                     <div class="project-image">
                         <img src="https://raw.githubusercontent.com/learnbydoingwithsteven/rag_chat_with_ds_streamlit/main/assets/1_chat_bot_interface_ollama_groq.png" alt="Multilingual RAG Chatbot Screenshot">
@@ -406,7 +590,12 @@
                         </div>
                     </div>
                 </div>
-                <!-- YouTube Projects -->
+                
+                <!-- YouTube Projects Category Header -->
+                <div class="category-header" data-category="youtube" data-aos="fade-up">
+                    <h3 class="category-title"><i class="fab fa-youtube"></i> YouTube Tutorial Projects</h3>
+                    <p class="category-description">Step-by-step implementations from my video tutorials</p>
+                </div>
                 <div class="project-card" data-category="youtube" data-aos="fade-up" data-aos-delay="600">
                     <div class="project-image">
                         <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=600" alt="Stock News Sentiment">
