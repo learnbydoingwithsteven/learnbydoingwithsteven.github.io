@@ -178,6 +178,16 @@ body {
 
 .skill-tag:hover {
     transform: scale(1.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add subtle shadow on hover */
+}
+
+.skill-category {
+    margin-bottom: 1rem; /* Add space between categories */
+}
+
+.skill-category h3 {
+    margin-bottom: 0.5rem; /* Space below category title */
+    color: var(--secondary-color);
 }
 
 /* Projects Section */
@@ -215,10 +225,50 @@ body {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
+.project-image {
+    margin-bottom: 1.5rem; /* Add space below image */
+    overflow: hidden; /* Ensure image stays within bounds */
+    border-radius: 10px; /* Match card radius */
+}
+
+.project-image img {
+    display: block; /* Remove extra space below image */
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 200px; /* Limit image height */
+    object-fit: cover; /* Cover the area nicely */
+    border-radius: 10px; /* Rounded corners for the image */
+}
+
+
 .project-card h3 {
     margin-bottom: 1rem;
     color: var(--primary-color);
 }
+
+.project-features {
+    list-style: disc; /* Use standard bullets */
+    margin-left: 1.5rem; /* Indent list */
+    margin-bottom: 1rem; /* Space below features */
+    font-size: 0.95rem; /* Slightly smaller text */
+}
+
+.project-tech {
+    margin-top: 1rem; /* Space above tech tags */
+    margin-bottom: 1.5rem; /* Space below tech tags */
+}
+
+.project-tech .tech-tag {
+    background: var(--secondary-color); /* Use secondary color for tech tags */
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem; /* Allow wrapping */
+    display: inline-block;
+}
+
 
 .project-links {
     margin-top: 1.5rem;
@@ -276,7 +326,17 @@ body {
     color: var(--primary-color);
     text-decoration: none;
     font-weight: 500;
+    padding: 0.6rem 1.2rem; /* Add padding */
+    border: 1px solid var(--primary-color); /* Add border */
+    border-radius: 25px; /* Make it pill-shaped */
+    transition: var(--transition);
 }
+
+.read-more:hover {
+    background-color: var(--primary-color); /* Fill on hover */
+    color: white;
+}
+
 
 /* Contact Section */
 .contact {
