@@ -151,9 +151,35 @@
             </div>
             <div class="project-filter" data-aos="fade-up">
                 <button class="filter-btn active" data-filter="all">All</button>
-                <a href="#" onclick="event.preventDefault();"><button class="filter-btn" data-filter="standalone">Standalone Repos</button></a>
-                <a href="#" onclick="event.preventDefault();"><button class="filter-btn" data-filter="youtube">YouTube Projects</button></a>
+                <button class="filter-btn" data-filter="standalone">Standalone Repos</button>
+                <button class="filter-btn" data-filter="youtube">YouTube Projects</button>
             </div>
+            
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const filterBtns = document.querySelectorAll('.filter-btn');
+                    const projectCards = document.querySelectorAll('.project-card');
+                    
+                    filterBtns.forEach(btn => {
+                        btn.addEventListener('click', function() {
+                            // Remove active class from all buttons
+                            filterBtns.forEach(b => b.classList.remove('active'));
+                            // Add active class to current button
+                            this.classList.add('active');
+                            
+                            const filter = this.getAttribute('data-filter');
+                            
+                            projectCards.forEach(card => {
+                                if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                                    card.style.display = 'block';
+                                } else {
+                                    card.style.display = 'none';
+                                }
+                            });
+                        });
+                    });
+                });
+            </script>
             <div class="project-grid">
                 <!-- Standalone Repository Projects -->
                 <div class="project-card" data-category="standalone" data-aos="fade-up">
@@ -429,20 +455,20 @@
             <div class="blog-grid">
                 <div class="blog-card" data-aos="fade-up">
                     <div class="blog-image">
-                        <img src="https://images.unsplash.com/photo-1655720031554-a929595f0197?w=600" alt="Ollama blog post">
+                        <img src="https://images.unsplash.com/photo-1655720031554-a929595f0197?w=600" alt="WeChat Article">
                         <div class="blog-date">
-                            <span class="day">15</span>
-                            <span class="month">Apr</span>
+                            <span class="day">10</span>
+                            <span class="month">Mar</span>
                         </div>
                     </div>
                     <div class="blog-content">
                         <div class="blog-tags">
+                            <span class="blog-tag">WeChat</span>
                             <span class="blog-tag">AI</span>
-                            <span class="blog-tag">Tutorial</span>
                         </div>
-                        <h3 class="blog-title">Getting Started with Ollama</h3>
-                        <p class="blog-excerpt">A comprehensive guide to setting up and using Ollama for local AI development. Learn how to run powerful LLMs on your own hardware.</p>
-                        <a href="https://substack.com/@steven923044" target="_blank" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        <h3 class="blog-title">AI Development Insights</h3>
+                        <p class="blog-excerpt">An exploration of cutting-edge AI development techniques and implementation strategies for modern applications.</p>
+                        <a href="https://mp.weixin.qq.com/s/Fd9SzqM6c7aHENArjikkmg" target="_blank" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
