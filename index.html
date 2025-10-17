@@ -1,157 +1,179 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Steven - AI & Machine Learning</title>
+    <meta name="description" content="Learn By Doing with Steven - AI, ML, NLP, and RL Projects Portfolio">
+    <meta name="author" content="Learn By Doing with Steven">
+    <title>Learn By Doing with Steven | AI & ML Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="noise"></div>
-    <div class="container">
-        <header class="main-header">
-            <div class="logo">Steven.</div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-                <i class="fas fa-sun"></i>
-                <i class="fas fa-moon"></i>
-            </button>
-        </header>
-
-        <main>
-            <section id="hero" class="hero-section">
-                <div class="hero-content">
-                    <h1 class="hero-title">Building with AI.</h1>
-                    <p class="hero-subtitle">I'm Steven, an AI/ML educator and builder. I create hands-on projects and tutorials to make complex technology accessible.</p>
-                    <div class="hero-cta">
-                        <a href="https://linktr.ee/learnbydoingwithsteven" target="_blank" class="btn btn-primary">Linktree</a>
-                        <a href="https://www.youtube.com/@learnbydoingwithsteven" target="_blank" class="btn btn-secondary">YouTube</a>
-                        <a href="https://github.com/learnbydoingwithsteven" target="_blank" class="btn btn-secondary">GitHub</a>
-                    </div>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="#" class="logo">Learn By Doing</a>
+                <div class="nav-links">
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="https://github.com/learnbydoingwithsteven" target="_blank" class="nav-link-primary">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        GitHub
+                    </a>
                 </div>
-            </section>
-
-            <section id="about" class="about-section">
-                <h2 class="section-title">About Me</h2>
-                <div class="about-content-grid">
-                    <div class="about-text">
-                        <p>I'm passionate about exploring the frontiers of artificial intelligence and sharing what I learn. My work focuses on practical applications of machine learning, from building agentic systems with AutoGen and CrewAI to deploying local LLMs for privacy-focused solutions.</p>
-                        <p>Through my <a href="https://www.youtube.com/@learnbydoingwithsteven" target="_blank">YouTube channel</a> and projects, I aim to demystify AI and empower others to "learn by doing."</p>
-                    </div>
-                    <div class="about-skills">
-                        <h3>Core Skills</h3>
-                        <ul class="skills-list">
-                            <li>Python</li>
-                            <li>AI/ML Frameworks</li>
-                            <li>LangChain & LlamaIndex</li>
-                            <li>AutoGen & CrewAI</li>
-                            <li>RAG Systems</li>
-                            <li>Local LLM Deployment</li>
-                            <li>Data Science</li>
-                            <li>Web Development</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <section id="projects" class="projects-section">
-                <h2 class="section-title">Featured Projects</h2>
-                <div class="project-grid">
-                    <div class="project-card">
-                        <div class="card-header"><i class="fas fa-flask"></i><h3 class="card-title">AI_Research</h3></div>
-                        <p class="card-description">A curated collection of AI research papers and summaries.</p>
-                        <a href="https://github.com/learnbydoingwithsteven/AI_Research" class="card-link" target="_blank">View on GitHub &rarr;</a>
-                    </div>
-                    <div class="project-card">
-                        <div class="card-header"><i class="fas fa-robot"></i><h3 class="card-title">Autogen_Agents</h3></div>
-                        <p class="card-description">Building autonomous agents with the AutoGen framework.</p>
-                        <a href="https://github.com/learnbydoingwithsteven/Autogen_Agents" class="card-link" target="_blank">View on GitHub &rarr;</a>
-                    </div>
-                    <div class="project-card">
-                        <div class="card-header"><i class="fas fa-users"></i><h3 class="card-title">Crew_AI_Agents</h3></div>
-                        <p class="card-description">Orchestrating role-playing, autonomous AI agents with CrewAI.</p>
-                        <a href="https://github.com/learnbydoingwithsteven/Crew_AI_Agents" class="card-link" target="_blank">View on GitHub &rarr;</a>
-                    </div>
-                    <div class="project-card">
-                        <div class="card-header"><i class="fas fa-comment-dots"></i><h3 class="card-title">Local_Chat_Bot</h3></div>
-                        <p class="card-description">A chatbot that runs locally on your machine for privacy and offline use.</p>
-                        <a href="https://github.com/learnbydoingwithsteven/Local_Chat_Bot" class="card-link" target="_blank">View on GitHub &rarr;</a>
-                    </div>
-                    <div class="project-card">
-                        <div class="card-header"><i class="fas fa-vial"></i><h3 class="card-title">Model_Tests</h3></div>
-                        <p class="card-description">Experiments and tests for various machine learning models.</p>
-                        <a href="https://github.com/learnbydoingwithsteven/Model_Tests" class="card-link" target="_blank">View on GitHub &rarr;</a>
-                    </div>
-                    <div class="project-card">
-                        <div class="card-header"><i class="fas fa-chart-pie"></i><h3 class="card-title">Python_Data_Analysis</h3></div>
-                        <p class="card-description">Jupyter notebooks for data analysis and visualization in Python.</p>
-                        <a href="https://github.com/learnbydoingwithsteven/Python_Data_Analysis" class="card-link" target="_blank">View on GitHub &rarr;</a>
-                    </div>
-                    <div class="project-card">
-                        <div class="card-header"><i class="fab fa-youtube"></i><h3 class="card-title">Youtube</h3></div>
-                        <p class="card-description">Code and resources for projects featured on my YouTube channel.</p>
-                        <a href="https://github.com/learnbydoingwithsteven/Youtube" class="card-link" target="_blank">View on GitHub &rarr;</a>
-                    </div>
-                    <div class="project-card">
-                        <div class="card-header"><i class="fas fa-tachometer-alt"></i><h3 class="card-title">agentic_dashboard_app</h3></div>
-                        <p class="card-description">An AI-powered dashboard application using agentic workflows.</p>
-                        <a href="https://github.com/learnbydoingwithsteven/agentic_dashboard_app" class="card-link" target="_blank">View on GitHub &rarr;</a>
-                    </div>
-                    <div class="project-card">
-                        <div class="card-header"><i class="fas fa-cogs"></i><h3 class="card-title">agentic_datascience_tool</h3></div>
-                        <p class="card-description">A tool for automating data science tasks with AI agents.</p>
-                        <a href="https://github.com/learnbydoingwithsteven/agentic_datascience_tool" class="card-link" target="_blank">View on GitHub &rarr;</a>
-                    </div>
-                    <div class="project-card">
-                        <div class="card-header"><i class="fas fa-language"></i><h3 class="card-title">nlp</h3></div>
-                        <p class="card-description">Projects and notebooks focused on Natural Language Processing.</p>
-                        <a href="https://github.com/learnbydoingwithsteven/nlp" class="card-link" target="_blank">View on GitHub &rarr;</a>
-                    </div>
-                    <div class="project-card">
-                        <div class="card-header"><i class="fab fa-react"></i><h3 class="card-title">rag_chat_with_ds_react</h3></div>
-                        <p class="card-description">A RAG-based chatbot with a React frontend.</p>
-                        <a href="https://github.com/learnbydoingwithsteven/rag_chat_with_ds_react" class="card-link" target="_blank">View on GitHub &rarr;</a>
-                    </div>
-                    <div class="project-card">
-                        <div class="card-header"><i class="fas fa-leaf"></i><h3 class="card-title">rag_chat_with_ds_streamlit</h3></div>
-                        <p class="card-description">A RAG-based chatbot with a Streamlit frontend.</p>
-                        <a href="https://github.com/learnbydoingwithsteven/rag_chat_with_ds_streamlit" class="card-link" target="_blank">View on GitHub &rarr;</a>
-                    </div>
-                    <div class="project-card">
-                        <div class="card-header"><i class="fas fa-project-diagram"></i><h3 class="card-title">workflow_simulations</h3></div>
-                        <p class="card-description">Simulations of various automated workflows.</p>
-                        <a href="https://github.com/learnbydoingwithsteven/workflow_simulations" class="card-link" target="_blank">View on GitHub &rarr;</a>
-                    </div>
-                </div>
-            </section>
-
-            <section id="contact" class="contact-section">
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="contact-text">Have a question or want to collaborate? Feel free to reach out.</p>
-                <a href="mailto:wjbear2020@gmail.com" class="btn btn-primary">Say Hello</a>
-            </section>
-        </main>
-
-        <footer class="main-footer">
-            <div class="footer-socials">
-                <a href="https://github.com/learnbydoingwithsteven" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://www.youtube.com/@learnbydoingwithsteven" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                <a href="https://x.com/Catchingtides" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.linkedin.com/in/steven-w-6828a31bb/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             </div>
-            <p>&copy; 2025 Steven. All rights reserved.</p>
-        </footer>
-    </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Building the Future with
+                    <span class="gradient-text">AI & Machine Learning</span>
+                </h1>
+                <p class="hero-subtitle">
+                    1,500+ production-ready applications across AI, ML, NLP, and Reinforcement Learning.
+                    Open source. Well-documented. Ready to deploy.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">25</div>
+                        <div class="stat-label">Repositories</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">1,500+</div>
+                        <div class="stat-label">Applications</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">600K+</div>
+                        <div class="stat-label">Lines of Code</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">400+</div>
+                        <div class="stat-label">Courses</div>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">Explore Projects</a>
+                    <a href="https://github.com/learnbydoingwithsteven" target="_blank" class="btn btn-secondary">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Production-ready applications and comprehensive learning resources</p>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-category="all">All Projects</button>
+                <button class="filter-tab" data-category="ai-ml">AI & ML</button>
+                <button class="filter-tab" data-category="nlp">NLP & LLM</button>
+                <button class="filter-tab" data-category="rl">Reinforcement Learning</button>
+                <button class="filter-tab" data-category="apps">Applications</button>
+            </div>
+
+            <!-- Project Grid -->
+            <div class="project-grid" id="projectGrid">
+                <!-- Projects will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">About This Portfolio</h2>
+                    <p>A comprehensive collection of AI, Machine Learning, Natural Language Processing, and Reinforcement Learning projects. Each repository contains production-ready code, comprehensive documentation, and real-world applications.</p>
+                    
+                    <div class="tech-stack">
+                        <h3>Tech Stack</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Redis</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">Scikit-learn</span>
+                        </div>
+                    </div>
+
+                    <div class="features">
+                        <div class="feature">
+                            <div class="feature-icon">🚀</div>
+                            <div class="feature-content">
+                                <h4>Production Ready</h4>
+                                <p>All applications are containerized, tested, and ready for deployment</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">📚</div>
+                            <div class="feature-content">
+                                <h4>Well Documented</h4>
+                                <p>Comprehensive documentation, API references, and usage guides</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">🔧</div>
+                            <div class="feature-content">
+                                <h4>Modern Architecture</h4>
+                                <p>Full-stack applications with React frontends and FastAPI backends</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Interested in collaboration or have questions?</p>
+                <div class="contact-links">
+                    <a href="https://github.com/learnbydoingwithsteven" target="_blank" class="contact-link">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        GitHub Profile
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Learn By Doing with Steven. All rights reserved.</p>
+                <p>Open source projects for learning and development</p>
+            </div>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
