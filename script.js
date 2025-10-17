@@ -1,309 +1,323 @@
-// Project data
-const projects = [
-    {
-        name: 'ai_100',
+// Fetch repositories directly from GitHub API
+const GITHUB_USERNAME = 'learnbydoingwithsteven';
+const GITHUB_API = `https://api.github.com/users/${GITHUB_USERNAME}/repos`;
+
+// Category mappings based on repository names
+const CATEGORY_MAP = {
+    'ai_100': 'ai-ml',
+    'ml_100': 'ai-ml',
+    'ml_0-1': 'ai-ml',
+    'agents_100': 'ai-ml',
+    'agentic_sys_0-1': 'ai-ml',
+    'nlp_100': 'nlp',
+    'nlp_0-1': 'nlp',
+    'llm_0-1': 'nlp',
+    'llm_eval_gpt2': 'nlp',
+    'rl_100': 'rl',
+    'rl_0-1': 'rl',
+    'rl_2425_1': 'rl',
+    'rl_2425_2': 'rl',
+    'rl_2425_3': 'rl',
+    'rl_2425_4': 'rl',
+    'rl_2425_5': 'rl',
+    'rl_2425_6': 'rl',
+    'bank_100': 'apps',
+    'law_100': 'apps',
+    'games_100': 'apps',
+    'cag_10': 'apps',
+    'rag_10': 'apps',
+    'mit': 'education',
+    'stanford': 'education',
+    'youtube_ref': 'education'
+};
+
+// Repository metadata (titles, descriptions, icons)
+const REPO_METADATA = {
+    'ai_100': {
         title: 'AI Applications Suite',
-        description: '100 production-ready AI applications covering computer vision, NLP, medical imaging, and predictive analytics with full-stack architecture.',
-        category: 'ai-ml',
+        description: '100 production-ready AI applications covering computer vision, NLP, medical imaging, and predictive analytics.',
         icon: '🤖',
-        apps: 100,
-        tech: ['Python', 'React', 'FastAPI', 'Docker'],
-        github: 'https://github.com/learnbydoingwithsteven/ai_100'
+        apps: 100
     },
-    {
-        name: 'ml_100',
+    'ml_100': {
         title: 'Machine Learning Applications',
-        description: '100 ML applications across healthcare, finance, retail, transportation, and environmental domains with complete implementations.',
-        category: 'ai-ml',
+        description: '100 ML applications across healthcare, finance, retail, transportation, and environmental domains.',
         icon: '🧠',
-        apps: 100,
-        tech: ['Python', 'TensorFlow', 'Scikit-learn', 'Docker'],
-        github: 'https://github.com/learnbydoingwithsteven/ml_100'
+        apps: 100
     },
-    {
-        name: 'ml_0-1',
+    'ml_0-1': {
         title: 'ML Learning Path',
-        description: '100 machine learning courses from fundamentals to advanced topics including supervised, unsupervised, and deep learning.',
-        category: 'ai-ml',
+        description: '100 machine learning courses from fundamentals to advanced topics including deep learning.',
         icon: '📚',
-        apps: 100,
-        tech: ['Python', 'Jupyter', 'PyTorch', 'TensorFlow'],
-        github: 'https://github.com/learnbydoingwithsteven/ml_0-1'
+        apps: 100
     },
-    {
-        name: 'agents_100',
+    'agents_100': {
         title: 'AI Agents Collection',
-        description: '100 autonomous AI agent applications featuring multi-agent systems, decision-making frameworks, and intelligent automation.',
-        category: 'ai-ml',
+        description: '100 autonomous AI agent applications featuring multi-agent systems and intelligent automation.',
         icon: '🤝',
-        apps: 100,
-        tech: ['Python', 'LangChain', 'OpenAI', 'FastAPI'],
-        github: 'https://github.com/learnbydoingwithsteven/agents_100'
+        apps: 100
     },
-    {
-        name: 'agentic_sys_0-1',
+    'agentic_sys_0-1': {
         title: 'Agentic Systems Course',
-        description: 'Comprehensive course on building AI agents from zero to one, covering architecture, planning, and multi-agent coordination.',
-        category: 'ai-ml',
+        description: 'Comprehensive course on building AI agents from zero to one with architecture and planning.',
         icon: '🎓',
-        apps: 'Course',
-        tech: ['Python', 'LangChain', 'React', 'FastAPI'],
-        github: 'https://github.com/learnbydoingwithsteven/agentic_sys_0-1'
+        apps: 'Course'
     },
-    {
-        name: 'nlp_100',
+    'nlp_100': {
         title: 'NLP Applications',
-        description: '100 NLP applications for text classification, entity extraction, sentiment analysis, translation, and text generation.',
-        category: 'nlp',
+        description: '100 NLP applications for text classification, entity extraction, sentiment analysis, and generation.',
         icon: '💬',
-        apps: 100,
-        tech: ['Python', 'Transformers', 'spaCy', 'FastAPI'],
-        github: 'https://github.com/learnbydoingwithsteven/nlp_100'
+        apps: 100
     },
-    {
-        name: 'nlp_0-1',
+    'nlp_0-1': {
         title: 'NLP Learning Path',
-        description: '100 NLP courses from text preprocessing to advanced transformers, covering all aspects of natural language processing.',
-        category: 'nlp',
+        description: '100 NLP courses from text preprocessing to advanced transformers.',
         icon: '📖',
-        apps: 100,
-        tech: ['Python', 'NLTK', 'Transformers', 'PyTorch'],
-        github: 'https://github.com/learnbydoingwithsteven/nlp_0-1'
+        apps: 100
     },
-    {
-        name: 'llm_0-1',
+    'llm_0-1': {
         title: 'LLM Mastery Course',
-        description: '100 lessons on Large Language Models from tokenization to RLHF, fine-tuning, and deployment strategies.',
-        category: 'nlp',
+        description: '100 lessons on Large Language Models from tokenization to RLHF and deployment.',
         icon: '🔤',
-        apps: 100,
-        tech: ['Python', 'Transformers', 'OpenAI', 'LangChain'],
-        github: 'https://github.com/learnbydoingwithsteven/llm_0-1'
+        apps: 100
     },
-    {
-        name: 'llm_eval_gpt2',
+    'llm_eval_gpt2': {
         title: 'LLM Evaluation Framework',
-        description: 'Comprehensive framework for evaluating and benchmarking GPT-2 and other language models with metrics and analysis tools.',
-        category: 'nlp',
+        description: 'Comprehensive framework for evaluating and benchmarking GPT-2 and other language models.',
         icon: '📊',
-        apps: 'Framework',
-        tech: ['Python', 'Transformers', 'PyTorch', 'Streamlit'],
-        github: 'https://github.com/learnbydoingwithsteven/llm_eval_gpt2'
+        apps: 'Framework'
     },
-    {
-        name: 'rl_100',
+    'rl_100': {
         title: 'Reinforcement Learning Apps',
-        description: '100 RL applications for robotics, trading, gaming, and smart systems with complete implementations and visualizations.',
-        category: 'rl',
+        description: '100 RL applications for robotics, trading, gaming, and smart systems.',
         icon: '🎮',
-        apps: 100,
-        tech: ['Python', 'Gymnasium', 'PyTorch', 'Streamlit'],
-        github: 'https://github.com/learnbydoingwithsteven/rl_100'
+        apps: 100
     },
-    {
-        name: 'rl_0-1',
+    'rl_0-1': {
         title: 'RL Learning Path',
-        description: 'Complete reinforcement learning course from zero to one, covering MDPs, value functions, policy gradients, and deep RL.',
-        category: 'rl',
+        description: 'Complete reinforcement learning course covering MDPs, value functions, and deep RL.',
         icon: '🎯',
-        apps: 'Course',
-        tech: ['Python', 'Gymnasium', 'Stable-Baselines3'],
-        github: 'https://github.com/learnbydoingwithsteven/rl_0-1'
+        apps: 'Course'
     },
-    {
-        name: 'rl_2425_1',
+    'rl_2425_1': {
         title: 'RL Project: Chaotic Chef',
-        description: 'Tabular vs function approximation RL methods in a grid-world ingredient collection game with Q-learning and SARSA.',
-        category: 'rl',
+        description: 'Tabular vs function approximation RL methods in a grid-world game.',
         icon: '👨‍🍳',
-        apps: 'Project',
-        tech: ['Python', 'Gymnasium', 'Streamlit', 'NumPy'],
-        github: 'https://github.com/learnbydoingwithsteven/rl_2425_1'
+        apps: 'Project'
     },
-    {
-        name: 'rl_2425_2',
+    'rl_2425_2': {
         title: 'RL Project: The Gambler',
-        description: 'Linear function approximation and feature design in simplified Blackjack with exploration strategies.',
-        category: 'rl',
+        description: 'Linear function approximation and feature design in simplified Blackjack.',
         icon: '🎰',
-        apps: 'Project',
-        tech: ['Python', 'Gymnasium', 'NumPy', 'Matplotlib'],
-        github: 'https://github.com/learnbydoingwithsteven/rl_2425_2'
+        apps: 'Project'
     },
-    {
-        name: 'rl_2425_3',
+    'rl_2425_3': {
         title: 'RL Project: Primal Hunt',
-        description: 'Deep Q-Networks (DQN) with experience replay and target networks for survival hunting game.',
-        category: 'rl',
+        description: 'Deep Q-Networks (DQN) with experience replay and target networks.',
         icon: '🏹',
-        apps: 'Project',
-        tech: ['Python', 'PyTorch', 'Gymnasium', 'DQN'],
-        github: 'https://github.com/learnbydoingwithsteven/rl_2425_3'
+        apps: 'Project'
     },
-    {
-        name: 'rl_2425_4',
+    'rl_2425_4': {
         title: 'RL Project: Push Your Luck',
-        description: 'Policy gradient methods (REINFORCE, Actor-Critic) in dice-rolling treasure exploration game.',
-        category: 'rl',
+        description: 'Policy gradient methods (REINFORCE, Actor-Critic) in dice-rolling game.',
         icon: '🎲',
-        apps: 'Project',
-        tech: ['Python', 'PyTorch', 'Gymnasium', 'Policy Gradients'],
-        github: 'https://github.com/learnbydoingwithsteven/rl_2425_4'
+        apps: 'Project'
     },
-    {
-        name: 'rl_2425_5',
+    'rl_2425_5': {
         title: 'RL Project: Harvest & Thrive',
-        description: 'Continuous action spaces with policy-based RL for farm resource management and crop optimization.',
-        category: 'rl',
+        description: 'Continuous action spaces with policy-based RL for farm management.',
         icon: '🌾',
-        apps: 'Project',
-        tech: ['Python', 'PyTorch', 'Continuous Control', 'PPO'],
-        github: 'https://github.com/learnbydoingwithsteven/rl_2425_5'
+        apps: 'Project'
     },
-    {
-        name: 'rl_2425_6',
+    'rl_2425_6': {
         title: 'RL Project: Medieval Tournament',
-        description: 'Multi-agent reinforcement learning in competitive knight tournament with strategic decision-making.',
-        category: 'rl',
+        description: 'Multi-agent reinforcement learning in competitive knight tournament.',
         icon: '⚔️',
-        apps: 'Project',
-        tech: ['Python', 'Multi-Agent', 'Game Theory', 'PyTorch'],
-        github: 'https://github.com/learnbydoingwithsteven/rl_2425_6'
+        apps: 'Project'
     },
-    {
-        name: 'bank_100',
+    'bank_100': {
         title: 'Banking Applications',
-        description: '100 banking and finance applications covering risk management, fraud detection, AML, and compliance systems.',
-        category: 'apps',
+        description: '100 banking and finance applications covering risk management, fraud detection, and compliance.',
         icon: '🏦',
-        apps: 100,
-        tech: ['Python', 'React', 'FastAPI', 'PostgreSQL'],
-        github: 'https://github.com/learnbydoingwithsteven/bank_100'
+        apps: 100
     },
-    {
-        name: 'law_100',
+    'law_100': {
         title: 'Legal Technology Apps',
-        description: '100 legal technology applications for case management, document generation, client services, and compliance.',
-        category: 'apps',
+        description: '100 legal technology applications for case management and document generation.',
         icon: '⚖️',
-        apps: 100,
-        tech: ['Python', 'React', 'FastAPI', 'Docker'],
-        github: 'https://github.com/learnbydoingwithsteven/law_100'
+        apps: 100
     },
-    {
-        name: 'games_100',
+    'games_100': {
         title: 'Interactive Games',
-        description: '100 web-based games including puzzles, strategy, action, and educational games with modern frameworks.',
-        category: 'apps',
+        description: '100 web-based games including puzzles, strategy, and educational games.',
         icon: '🎮',
-        apps: 100,
-        tech: ['React', 'TypeScript', 'Canvas', 'WebGL'],
-        github: 'https://github.com/learnbydoingwithsteven/games_100'
+        apps: 100
     },
-    {
-        name: 'cag_10',
+    'cag_10': {
         title: 'CAG Applications',
-        description: '10 Computer-Aided Generation applications for legal, medical, code review, and business automation.',
-        category: 'apps',
+        description: '10 Computer-Aided Generation applications for business automation.',
         icon: '🔧',
-        apps: 10,
-        tech: ['Python', 'React', 'FastAPI', 'OpenAI'],
-        github: 'https://github.com/learnbydoingwithsteven/cag_10'
+        apps: 10
     },
-    {
-        name: 'rag_10',
+    'rag_10': {
         title: 'RAG Applications',
-        description: '10 Retrieval-Augmented Generation applications for intelligent document search and question answering.',
-        category: 'apps',
+        description: '10 Retrieval-Augmented Generation applications for intelligent document search.',
         icon: '🔍',
-        apps: 10,
-        tech: ['Python', 'LangChain', 'ChromaDB', 'FastAPI'],
-        github: 'https://github.com/learnbydoingwithsteven/rag_10'
+        apps: 10
     },
-    {
-        name: 'mit',
+    'mit': {
         title: 'MIT Course Materials',
-        description: 'Collection of MIT course materials, projects, and implementations for computer science and AI topics.',
-        category: 'education',
+        description: 'Collection of MIT course materials and projects for computer science and AI.',
         icon: '🎓',
-        apps: 'Materials',
-        tech: ['Python', 'Jupyter', 'LaTeX', 'Various'],
-        github: 'https://github.com/learnbydoingwithsteven/mit'
+        apps: 'Materials'
     },
-    {
-        name: 'stanford',
+    'stanford': {
         title: 'Stanford Course Materials',
-        description: 'Stanford course materials and projects covering machine learning, AI, and computer science fundamentals.',
-        category: 'education',
+        description: 'Stanford course materials covering machine learning and AI fundamentals.',
         icon: '🏛️',
-        apps: 'Materials',
-        tech: ['Python', 'Jupyter', 'TensorFlow', 'PyTorch'],
-        github: 'https://github.com/learnbydoingwithsteven/stanford'
+        apps: 'Materials'
     },
-    {
-        name: 'youtube_ref',
+    'youtube_ref': {
         title: 'YouTube Reference Materials',
-        description: 'Curated collection of YouTube tutorials, courses, and reference materials for AI, ML, and programming.',
-        category: 'education',
+        description: 'Curated collection of YouTube tutorials and reference materials.',
         icon: '📺',
-        apps: 'References',
-        tech: ['Documentation', 'Tutorials', 'Resources'],
-        github: 'https://github.com/learnbydoingwithsteven/youtube_ref'
+        apps: 'References'
     }
-];
+};
+
+let allRepos = [];
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
-    loadProjects('all');
+    fetchGitHubRepos();
     setupFilters();
     setupSmoothScroll();
 });
+
+// Fetch repositories from GitHub API
+async function fetchGitHubRepos() {
+    const grid = document.getElementById('projectGrid');
+    grid.innerHTML = '<div style="text-align: center; padding: 3rem; color: #64748b;">Loading repositories from GitHub...</div>';
+    
+    try {
+        const response = await fetch(GITHUB_API + '?per_page=100&sort=updated');
+        
+        if (!response.ok) {
+            throw new Error('Failed to fetch repositories');
+        }
+        
+        const repos = await response.json();
+        
+        // Process and enrich repository data
+        allRepos = repos.map(repo => {
+            const metadata = REPO_METADATA[repo.name] || {};
+            const category = CATEGORY_MAP[repo.name] || 'other';
+            
+            // Detect technologies from repo data
+            const tech = [];
+            if (repo.language) tech.push(repo.language);
+            if (repo.topics) {
+                repo.topics.forEach(topic => {
+                    if (['react', 'typescript', 'docker', 'fastapi', 'python'].includes(topic.toLowerCase())) {
+                        tech.push(topic);
+                    }
+                });
+            }
+            
+            return {
+                name: repo.name,
+                title: metadata.title || repo.name.replace(/_/g, ' ').replace(/-/g, ' '),
+                description: metadata.description || repo.description || 'GitHub repository',
+                category: category,
+                icon: metadata.icon || '📦',
+                apps: metadata.apps || 'Project',
+                tech: tech.length > 0 ? tech : ['GitHub'],
+                github: repo.html_url,
+                stars: repo.stargazers_count,
+                updated: repo.updated_at
+            };
+        });
+        
+        // Load all projects initially
+        loadProjects('all');
+        
+        // Update statistics
+        updateStats();
+        
+    } catch (error) {
+        console.error('Error fetching repositories:', error);
+        grid.innerHTML = `
+            <div style="text-align: center; padding: 3rem; color: #ef4444;">
+                <p>Failed to load repositories from GitHub.</p>
+                <p style="font-size: 0.875rem; margin-top: 1rem;">Error: ${error.message}</p>
+            </div>
+        `;
+    }
+}
+
+// Update statistics in hero section
+function updateStats() {
+    const repoCount = allRepos.length;
+    const appCount = allRepos.reduce((sum, repo) => {
+        return sum + (typeof repo.apps === 'number' ? repo.apps : 0);
+    }, 0);
+    
+    // Update stat numbers if elements exist
+    const statNumbers = document.querySelectorAll('.stat-number');
+    if (statNumbers[0]) statNumbers[0].textContent = repoCount;
+    if (statNumbers[1]) statNumbers[1].textContent = appCount + '+';
+}
 
 // Load projects
 function loadProjects(category) {
     const grid = document.getElementById('projectGrid');
     grid.innerHTML = '';
     
-    const filteredProjects = category === 'all' 
-        ? projects 
-        : projects.filter(p => p.category === category);
+    const filteredRepos = category === 'all' 
+        ? allRepos 
+        : allRepos.filter(r => r.category === category);
     
-    filteredProjects.forEach((project, index) => {
-        const card = createProjectCard(project);
-        card.style.animationDelay = `${index * 0.1}s`;
+    if (filteredRepos.length === 0) {
+        grid.innerHTML = '<div style="text-align: center; padding: 3rem; color: #64748b;">No repositories found in this category.</div>';
+        return;
+    }
+    
+    filteredRepos.forEach((repo, index) => {
+        const card = createProjectCard(repo);
+        card.style.animationDelay = `${index * 0.05}s`;
         grid.appendChild(card);
     });
 }
 
 // Create project card
-function createProjectCard(project) {
+function createProjectCard(repo) {
     const card = document.createElement('div');
     card.className = 'project-card';
-    card.onclick = () => window.open(project.github, '_blank');
+    card.onclick = () => window.open(repo.github, '_blank');
     
-    const appsText = typeof project.apps === 'number' ? `${project.apps} Apps` : project.apps;
+    const appsText = typeof repo.apps === 'number' ? `${repo.apps} Apps` : repo.apps;
+    const starsText = repo.stars > 0 ? `⭐ ${repo.stars}` : '⭐ Open Source';
     
     card.innerHTML = `
         <div class="project-header">
-            <div class="project-icon">${project.icon}</div>
-            <span class="project-category">${getCategoryName(project.category)}</span>
+            <div class="project-icon">${repo.icon}</div>
+            <span class="project-category">${getCategoryName(repo.category)}</span>
         </div>
-        <h3 class="project-title">${project.title}</h3>
-        <p class="project-description">${project.description}</p>
+        <h3 class="project-title">${repo.title}</h3>
+        <p class="project-description">${repo.description}</p>
         <div class="project-stats">
             <div class="project-stat">
                 <span>📦</span>
                 <span>${appsText}</span>
             </div>
             <div class="project-stat">
-                <span>⭐</span>
-                <span>Open Source</span>
+                <span>${starsText}</span>
             </div>
         </div>
         <div class="project-tech">
-            ${project.tech.map(t => `<span class="tech-badge">${t}</span>`).join('')}
+            ${repo.tech.slice(0, 4).map(t => `<span class="tech-badge">${t}</span>`).join('')}
         </div>
-        <a href="${project.github}" class="project-link" onclick="event.stopPropagation()">
+        <a href="${repo.github}" class="project-link" onclick="event.stopPropagation()">
             View on GitHub →
         </a>
     `;
@@ -318,7 +332,8 @@ function getCategoryName(category) {
         'nlp': 'NLP & LLM',
         'rl': 'Reinforcement Learning',
         'apps': 'Applications',
-        'education': 'Education'
+        'education': 'Education',
+        'other': 'Other'
     };
     return names[category] || category;
 }
