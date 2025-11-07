@@ -744,28 +744,124 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+    
+    .hero {
+        padding: 6rem 0 4rem;
+    }
+    
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        line-height: 1.3;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
     }
     
     .hero-stats {
         grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 1.5rem;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .stat-label {
+        font-size: 0.85rem;
     }
     
     .hero-cta {
         flex-direction: column;
+        width: 100%;
+    }
+    
+    .hero-cta .btn {
+        width: 100%;
+        text-align: center;
     }
     
     .nav-links {
-        gap: 1rem;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+    }
+    
+    .nav-link {
+        font-size: 0.875rem;
+    }
+    
+    .nav-link-primary {
+        font-size: 0.875rem;
+        padding: 0.4rem 0.75rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
     }
     
     .project-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
     
     .filter-tabs {
         flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .filter-tab {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .features {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .tech-tags {
+        gap: 0.5rem;
+    }
+    
+    .tech-tag {
+        padding: 0.4rem 0.75rem;
+        font-size: 0.875rem;
+    }
+    
+    .back-to-top {
+        bottom: 1rem;
+        right: 1rem;
+        width: 45px;
+        height: 45px;
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.75rem;
+    }
+    
+    .stat-number {
+        font-size: 1.75rem;
+    }
+    
+    .project-card {
+        padding: 1.5rem;
+    }
+    
+    .btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.95rem;
     }
 }
 
