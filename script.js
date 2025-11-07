@@ -197,7 +197,12 @@ document.addEventListener('DOMContentLoaded', () => {
 // Fetch repositories from GitHub API
 async function fetchGitHubRepos() {
     const grid = document.getElementById('projectGrid');
-    grid.innerHTML = '<div style="text-align: center; padding: 3rem; color: #64748b;">Loading repositories from GitHub...</div>';
+    grid.innerHTML = `
+        <div class="loading-container">
+            <div class="loading-spinner"></div>
+            <p>Loading repositories from GitHub...</p>
+        </div>
+    `;
     
     try {
         const response = await fetch(GITHUB_API + '?per_page=100&sort=updated');
@@ -247,9 +252,12 @@ async function fetchGitHubRepos() {
     } catch (error) {
         console.error('Error fetching repositories:', error);
         grid.innerHTML = `
-            <div style="text-align: center; padding: 3rem; color: #ef4444;">
-                <p>Failed to load repositories from GitHub.</p>
-                <p style="font-size: 0.875rem; margin-top: 1rem;">Error: ${error.message}</p>
+            <div class="loading-container">
+                <p style="color: #ef4444; font-weight: 600;">Failed to load repositories from GitHub.</p>
+                <p style="font-size: 0.875rem; margin-top: 0.5rem;">Error: ${error.message}</p>
+                <button onclick="fetchGitHubRepos()" class="btn btn-primary" style="margin-top: 1rem;">
+                    Try Again
+                </button>
             </div>
         `;
     }
@@ -278,14 +286,24 @@ function loadProjects(category) {
         : allRepos.filter(r => r.category === category);
     
     if (filteredRepos.length === 0) {
-        grid.innerHTML = '<div style="text-align: center; padding: 3rem; color: #64748b;">No repositories found in this category.</div>';
+        grid.innerHTML = `
+            <div class="loading-container">
+                <p>No repositories found in this category.</p>
+            </div>
+        `;
         return;
     }
     
     filteredRepos.forEach((repo, index) => {
         const card = createProjectCard(repo);
         card.style.animationDelay = `${index * 0.05}s`;
+        card.style.opacity = '0';
         grid.appendChild(card);
+        
+        // Trigger animation
+        setTimeout(() => {
+            card.style.opacity = '1';
+        }, 10);
     });
 }
 
@@ -318,7 +336,7 @@ function createProjectCard(repo) {
             ${repo.tech.slice(0, 4).map(t => `<span class="tech-badge">${t}</span>`).join('')}
         </div>
         <a href="${repo.github}" class="project-link" onclick="event.stopPropagation()">
-            View on GitHub →
+            View on GitHub
         </a>
     `;
     
@@ -370,9 +388,26 @@ function setupSmoothScroll() {
 // Navbar scroll effect
 window.addEventListener('scroll', () => {
     const nav = document.querySelector('.nav');
+    const backToTop = document.querySelector('.back-to-top');
+    
     if (window.scrollY > 50) {
-        nav.style.boxShadow = 'var(--shadow)';
+        nav.classList.add('scrolled');
     } else {
-        nav.style.boxShadow = 'none';
+        nav.classList.remove('scrolled');
+    }
+    
+    // Show/hide back to top button
+    if (window.scrollY > 300) {
+        backToTop.classList.add('visible');
+    } else {
+        backToTop.classList.remove('visible');
     }
 });
+
+// Back to top functionality
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
