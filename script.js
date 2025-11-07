@@ -197,10 +197,19 @@ document.addEventListener('DOMContentLoaded', () => {
 // Fetch repositories from GitHub API
 async function fetchGitHubRepos() {
     const grid = document.getElementById('projectGrid');
-    grid.innerHTML = '<div style="text-align: center; padding: 3rem; color: #64748b;">Loading repositories from GitHub...</div>';
+    grid.innerHTML = `
+        <div class="loading-container" style="text-align: center; padding: 3rem; color: #64748b;">
+            <div class="loading-spinner"></div>
+            <p>Loading repositories from GitHub...</p>
+        </div>
+    `;
     
     try {
-        const response = await fetch(GITHUB_API + '?per_page=100&sort=updated');
+        const response = await fetch(GITHUB_API + '?per_page=100&sort=updated', {
+            headers: {
+                'Accept': 'application/vnd.github.v3+json'
+            }
+        });
         
         if (!response.ok) {
             throw new Error('Failed to fetch repositories');
@@ -246,12 +255,30 @@ async function fetchGitHubRepos() {
         
     } catch (error) {
         console.error('Error fetching repositories:', error);
-        grid.innerHTML = `
-            <div style="text-align: center; padding: 3rem; color: #ef4444;">
-                <p>Failed to load repositories from GitHub.</p>
-                <p style="font-size: 0.875rem; margin-top: 1rem;">Error: ${error.message}</p>
-            </div>
-        `;
+        // Fallback to static repository list if API fails
+        allRepos = Object.keys(REPO_METADATA).map(repoName => {
+            const metadata = REPO_METADATA[repoName];
+            const category = CATEGORY_MAP[repoName] || 'other';
+            
+            return {
+                name: repoName,
+                title: metadata.title || repoName.replace(/_/g, ' ').replace(/-/g, ' '),
+                description: metadata.description || 'GitHub repository',
+                category: category,
+                icon: metadata.icon || '📦',
+                apps: metadata.apps || 'Project',
+                tech: ['GitHub'],
+                github: `https://github.com/${GITHUB_USERNAME}/${repoName}`,
+                stars: 0,
+                updated: new Date().toISOString()
+            };
+        });
+        
+        // Load all projects with fallback data
+        loadProjects('all');
+        
+        // Update statistics
+        updateStats();
     }
 }
 
@@ -375,4 +402,88 @@ window.addEventListener('scroll', () => {
     } else {
         nav.style.boxShadow = 'none';
     }
+    
+    // Back to top button visibility
+    const backToTop = document.getElementById('backToTop');
+    if (window.scrollY > 300) {
+        backToTop.classList.add('visible');
+    } else {
+        backToTop.classList.remove('visible');
+    }
 });
+
+// Back to top functionality
+document.getElementById('backToTop').addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+// Mobile menu toggle
+document.getElementById('mobileMenuToggle').addEventListener('click', () => {
+    const navLinks = document.getElementById('navLinks');
+    const menuToggle = document.getElementById('mobileMenuToggle');
+    navLinks.classList.toggle('active');
+    
+    // Update toggle icon
+    menuToggle.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+});
+
+// Close mobile menu when clicking on a link
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        const navLinks = document.getElementById('navLinks');
+        const menuToggle = document.getElementById('mobileMenuToggle');
+        navLinks.classList.remove('active');
+        menuToggle.textContent = '☰';
+    });
+});
+
+// Add counter animation on scroll
+const observerOptions = {
+    threshold: 0.5,
+    rootMargin: '0px'
+};
+
+const animateCounter = (element, target) => {
+    let current = 0;
+    const increment = target / 50;
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            element.textContent = element.dataset.original;
+            clearInterval(timer);
+        } else {
+            const value = Math.floor(current);
+            if (element.dataset.original.includes('+')) {
+                element.textContent = value + '+';
+            } else if (element.dataset.original.includes('K+')) {
+                element.textContent = value + 'K+';
+            } else {
+                element.textContent = value;
+            }
+        }
+    }, 20);
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.dataset.animated) {
+            entry.target.dataset.animated = 'true';
+            const statNumbers = entry.target.querySelectorAll('.stat-number');
+            statNumbers.forEach(stat => {
+                stat.dataset.original = stat.textContent;
+                const value = parseInt(stat.textContent.replace(/\D/g, ''));
+                if (!isNaN(value)) {
+                    animateCounter(stat, value);
+                }
+            });
+        }
+    });
+}, observerOptions);
+
+const statsSection = document.querySelector('.hero-stats');
+if (statsSection) {
+    observer.observe(statsSection);
+}
