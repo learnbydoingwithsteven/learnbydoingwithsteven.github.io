@@ -781,25 +781,7 @@ html {
 }
 
 /* Enhanced Card Hover Effects */
-.project-card {
-    position: relative;
-    overflow: hidden;
-}
-
-.project-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.1), transparent);
-    transition: left 0.5s ease;
-}
-
-.project-card:hover::before {
-    left: 100%;
-}
+/* Already defined in project-card above at line 371 */
 
 /* Improved Focus States for Accessibility */
 a:focus, button:focus, .filter-tab:focus {
@@ -833,9 +815,9 @@ a:focus, button:focus, .filter-tab:focus {
     animation: none;
 }
 
-/* Smooth Transitions */
-* {
-    transition: background-color 0.2s ease, color 0.2s ease;
+/* Smooth Transitions for specific elements */
+a, button, .filter-tab, .project-card, .nav-link, .btn {
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
 /* Enhanced Project Category Badge */

@@ -456,10 +456,11 @@ const animateCounter = (element, target) => {
             clearInterval(timer);
         } else {
             const value = Math.floor(current);
-            if (element.dataset.original.includes('+')) {
-                element.textContent = value + '+';
-            } else if (element.dataset.original.includes('K+')) {
+            const original = element.dataset.original;
+            if (original.includes('K+')) {
                 element.textContent = value + 'K+';
+            } else if (original.includes('+')) {
+                element.textContent = value + '+';
             } else {
                 element.textContent = value;
             }
