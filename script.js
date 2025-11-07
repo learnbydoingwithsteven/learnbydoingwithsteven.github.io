@@ -186,16 +186,12 @@ const REPO_METADATA = {
 };
 
 let allRepos = [];
-let currentCategory = 'all';
-let currentSearch = '';
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
     fetchGitHubRepos();
     setupFilters();
     setupSmoothScroll();
-    setupNavigationToggle();
-    setupProjectSearch();
 });
 
 // Fetch repositories from GitHub API
@@ -249,10 +245,10 @@ async function fetchGitHubRepos() {
         
         // Load all projects initially
         loadProjects('all');
-
+        
         // Update statistics
         updateStats();
-
+        
     } catch (error) {
         console.error('Error fetching repositories:', error);
         grid.innerHTML = `
@@ -281,54 +277,29 @@ function updateStats() {
 }
 
 // Load projects
-function loadProjects(category = currentCategory, searchTerm = currentSearch) {
+function loadProjects(category) {
     const grid = document.getElementById('projectGrid');
-    const hint = document.getElementById('projectHint');
-
-    currentCategory = category;
-    currentSearch = searchTerm;
-
     grid.innerHTML = '';
-
-    const trimmedSearch = searchTerm.trim();
-    const normalizedSearch = trimmedSearch.toLowerCase();
-
-    const filteredRepos = category === 'all'
-        ? allRepos
+    
+    const filteredRepos = category === 'all' 
+        ? allRepos 
         : allRepos.filter(r => r.category === category);
-
-    const searchFilteredRepos = normalizedSearch
-        ? filteredRepos.filter(repo => {
-            const haystack = [
-                repo.title,
-                repo.description,
-                repo.name,
-                ...(repo.tech || [])
-            ].join(' ').toLowerCase();
-            return haystack.includes(normalizedSearch);
-        })
-        : filteredRepos;
-
-    if (hint) {
-        updateSearchHint(hint, searchFilteredRepos.length, filteredRepos.length, category, trimmedSearch);
-    }
-
-    if (searchFilteredRepos.length === 0) {
+    
+    if (filteredRepos.length === 0) {
         grid.innerHTML = `
-            <div class="project-empty">
-                <h3>No repositories match your filters yet</h3>
-                <p>Try switching categories or clearing your search to explore the full collection.</p>
+            <div class="loading-container">
+                <p>No repositories found in this category.</p>
             </div>
         `;
         return;
     }
-
-    searchFilteredRepos.forEach((repo, index) => {
+    
+    filteredRepos.forEach((repo, index) => {
         const card = createProjectCard(repo);
         card.style.animationDelay = `${index * 0.05}s`;
         card.style.opacity = '0';
         grid.appendChild(card);
-
+        
         // Trigger animation
         setTimeout(() => {
             card.style.opacity = '1';
@@ -392,10 +363,8 @@ function setupFilters() {
         tab.addEventListener('click', () => {
             tabs.forEach(t => t.classList.remove('active'));
             tab.classList.add('active');
-            tabs.forEach(t => t.setAttribute('aria-selected', 'false'));
-            tab.setAttribute('aria-selected', 'true');
             const category = tab.dataset.category;
-            loadProjects(category, currentSearch);
+            loadProjects(category);
         });
     });
 }
@@ -420,13 +389,13 @@ function setupSmoothScroll() {
 window.addEventListener('scroll', () => {
     const nav = document.querySelector('.nav');
     const backToTop = document.querySelector('.back-to-top');
-
+    
     if (window.scrollY > 50) {
         nav.classList.add('scrolled');
     } else {
         nav.classList.remove('scrolled');
     }
-
+    
     // Show/hide back to top button
     if (window.scrollY > 300) {
         backToTop.classList.add('visible');
@@ -441,89 +410,4 @@ function scrollToTop() {
         top: 0,
         behavior: 'smooth'
     });
-}
-
-function setupNavigationToggle() {
-    const navToggle = document.getElementById('navToggle');
-    const navLinks = document.getElementById('navLinks');
-    const navOverlay = document.getElementById('navOverlay');
-    const navLinkItems = navLinks ? navLinks.querySelectorAll('a') : [];
-
-    if (!navToggle || !navLinks || !navOverlay) return;
-
-    const closeNav = () => {
-        navLinks.classList.remove('active');
-        navOverlay.classList.remove('visible');
-        navToggle.classList.remove('is-open');
-        navToggle.setAttribute('aria-expanded', 'false');
-        document.body.classList.remove('nav-open');
-    };
-
-    const openNav = () => {
-        navLinks.classList.add('active');
-        navOverlay.classList.add('visible');
-        navToggle.classList.add('is-open');
-        navToggle.setAttribute('aria-expanded', 'true');
-        document.body.classList.add('nav-open');
-    };
-
-    const toggleNav = () => {
-        if (navLinks.classList.contains('active')) {
-            closeNav();
-        } else {
-            openNav();
-        }
-    };
-
-    navToggle.addEventListener('click', toggleNav);
-    navOverlay.addEventListener('click', closeNav);
-
-    navLinkItems.forEach(link => {
-        link.addEventListener('click', () => {
-            if (window.innerWidth <= 768) {
-                closeNav();
-            }
-        });
-    });
-
-    window.addEventListener('resize', () => {
-        if (window.innerWidth > 768) {
-            closeNav();
-        }
-    });
-
-    document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape') {
-            closeNav();
-        }
-    });
-}
-
-function setupProjectSearch() {
-    const searchInput = document.getElementById('projectSearch');
-    if (!searchInput) return;
-
-    const handleSearch = (value) => {
-        loadProjects(currentCategory, value);
-    };
-
-    searchInput.addEventListener('input', (event) => {
-        handleSearch(event.target.value || '');
-    });
-
-    searchInput.addEventListener('search', (event) => {
-        handleSearch(event.target.value || '');
-    });
-}
-
-function updateSearchHint(element, visibleCount, categoryCount, category, searchTerm) {
-    const categoryName = getCategoryName(category).toLowerCase();
-
-    if (searchTerm) {
-        element.textContent = `Showing ${visibleCount} result${visibleCount === 1 ? '' : 's'} for “${searchTerm}” in ${categoryName}.`;
-    } else if (category !== 'all') {
-        element.textContent = `Showing ${categoryCount} curated repositories in ${categoryName}.`;
-    } else {
-        element.textContent = 'Showing all curated repositories.';
-    }
 }
