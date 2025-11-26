@@ -189,8 +189,11 @@ let allRepos = [];
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
-    fetchGitHubRepos();
-    setupFilters();
+    const hasProjectGrid = !!document.getElementById('projectGrid');
+    if (hasProjectGrid) {
+        fetchGitHubRepos();
+        setupFilters();
+    }
     setupSmoothScroll();
 });
 
