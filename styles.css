@@ -875,14 +875,19 @@ html {
 
 .matrix-group summary::-webkit-details-marker { display: none; }
 
+.matrix-group[open] {
+    box-shadow: var(--shadow);
+}
+
 .matrix-group summary::before {
-    content: '▶';
+    content: '▸';
     font-size: 0.875rem;
+    margin-right: 0.25rem;
     transition: transform 0.2s ease;
 }
 
 .matrix-group[open] summary::before {
-    transform: rotate(90deg);
+    content: '▾';
 }
 
 .matrix-group summary:hover {
@@ -890,7 +895,36 @@ html {
     color: var(--primary);
 }
 
-.matrix-group .project-grid {
-    padding: 1rem;
+.matrix-group[open] summary {
+    background: var(--white);
+    border-bottom: 1px solid var(--gray-lighter);
+}
+
+.matrix-content {
     border-top: 1px solid var(--gray-lighter);
+    padding: 0;
+}
+
+.matrix-group[open] .matrix-content {
+    padding: 1rem;
+    animation: contentFade 0.2s ease;
+}
+
+@keyframes contentFade {
+    from { opacity: 0; transform: translateY(-4px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.matrix-group summary .count {
+    margin-left: auto;
+    color: var(--gray);
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+
+.accordion-controls {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 0.5rem;
 }

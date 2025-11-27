@@ -195,6 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setupFilters();
     }
     setupSmoothScroll();
+    setupAccordion();
 });
 
 // Fetch repositories from GitHub API
@@ -413,4 +414,33 @@ function scrollToTop() {
         top: 0,
         behavior: 'smooth'
     });
+}
+
+// Accordion behavior for matrix groups
+function setupAccordion() {
+    const groups = Array.from(document.querySelectorAll('details.matrix-group'));
+    if (groups.length === 0) return;
+
+    // Only one group open at a time
+    groups.forEach(group => {
+        group.addEventListener('toggle', () => {
+            if (group.open) {
+                groups.forEach(g => { if (g !== group) g.removeAttribute('open'); });
+            }
+        });
+    });
+
+    // Expand/Collapse All controls
+    const expandBtn = document.querySelector('[data-accordion="expand"]');
+    const collapseBtn = document.querySelector('[data-accordion="collapse"]');
+    if (expandBtn) {
+        expandBtn.addEventListener('click', () => {
+            groups.forEach(g => g.setAttribute('open', ''));
+        });
+    }
+    if (collapseBtn) {
+        collapseBtn.addEventListener('click', () => {
+            groups.forEach(g => g.removeAttribute('open'));
+        });
+    }
 }
