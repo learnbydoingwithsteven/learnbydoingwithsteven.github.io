@@ -851,3 +851,46 @@ html {
     outline: 2px solid var(--primary);
     outline-offset: 2px;
 }
+
+.matrix-group {
+    margin-bottom: 1rem;
+    border: 1px solid var(--gray-lighter);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background: var(--white);
+}
+
+.matrix-group summary {
+    padding: 1rem;
+    font-weight: 600;
+    color: var(--dark);
+    cursor: pointer;
+    background: var(--bg);
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    list-style: none;
+}
+
+.matrix-group summary::-webkit-details-marker { display: none; }
+
+.matrix-group summary::before {
+    content: '▶';
+    font-size: 0.875rem;
+    transition: transform 0.2s ease;
+}
+
+.matrix-group[open] summary::before {
+    transform: rotate(90deg);
+}
+
+.matrix-group summary:hover {
+    background: var(--white);
+    color: var(--primary);
+}
+
+.matrix-group .project-grid {
+    padding: 1rem;
+    border-top: 1px solid var(--gray-lighter);
+}
