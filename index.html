@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn By Doing with Steven - AI, ML, NLP, and RL Projects Portfolio. Community Builder, Engineer, Founder, Investor, and Podcast Host.">
+    <meta name="description"
+        content="Learn By Doing with Steven - AI, ML, NLP, and RL Projects Portfolio. Community Builder, Engineer, Founder, Investor, and Podcast Host.">
     <meta name="author" content="Learn By Doing with Steven">
     <meta name="keywords" content="AI, Machine Learning, Data Science, LLM, Steven, Learn By Doing, Podcast, Community">
     <title>Learn By Doing with Steven | AI & ML Portfolio</title>
-    
+
     <!-- Google Fonts for Modern Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <style>
         /* CSS Variables - Modern Minimalist Color Palette */
         :root {
@@ -37,7 +39,9 @@
         }
 
         /* Reset & Base Styles */
-        *, *::before, *::after {
+        *,
+        *::before,
+        *::after {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
@@ -64,11 +68,15 @@
         }
 
         @media (min-width: 640px) {
-            .container { padding: 0 1.5rem; }
+            .container {
+                padding: 0 1.5rem;
+            }
         }
 
         @media (min-width: 1024px) {
-            .container { padding: 0 2rem; }
+            .container {
+                padding: 0 2rem;
+            }
         }
 
         /* Header */
@@ -163,11 +171,15 @@
         }
 
         @media (min-width: 768px) {
-            .hero { padding: 6rem 0; }
+            .hero {
+                padding: 6rem 0;
+            }
         }
 
         @media (min-width: 1024px) {
-            .hero { padding: 8rem 0; }
+            .hero {
+                padding: 8rem 0;
+            }
         }
 
         .hero-content {
@@ -186,11 +198,15 @@
         }
 
         @media (min-width: 768px) {
-            .hero-title { font-size: 3rem; }
+            .hero-title {
+                font-size: 3rem;
+            }
         }
 
         @media (min-width: 1024px) {
-            .hero-title { font-size: 3.75rem; }
+            .hero-title {
+                font-size: 3.75rem;
+            }
         }
 
         .hero-subtitle {
@@ -212,7 +228,9 @@
         }
 
         @media (min-width: 768px) {
-            .links-section { padding: 6rem 0; }
+            .links-section {
+                padding: 6rem 0;
+            }
         }
 
         .section-header {
@@ -226,7 +244,9 @@
         }
 
         @media (min-width: 768px) {
-            .section-title { font-size: 2.25rem; }
+            .section-title {
+                font-size: 2.25rem;
+            }
         }
 
         .section-subtitle {
@@ -268,16 +288,45 @@
             box-shadow: var(--shadow-md);
         }
 
-        .category-card.blue { background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%); }
-        .category-card.purple { background: linear-gradient(135deg, #FAF5FF 0%, #F3E8FF 100%); }
-        .category-card.green { background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%); }
-        .category-card.red { background: linear-gradient(135deg, #FEF2F2 0%, #FFE4E6 100%); }
-        .category-card.orange { background: linear-gradient(135deg, #FEF2F2 0%, #FFEDD5 100%); }
-        .category-card.pink { background: linear-gradient(135deg, #FAF5FF 0%, #FCE7F3 100%); }
-        .category-card.cyan { background: linear-gradient(135deg, #EFF6FF 0%, #ECFEFF 100%); }
-        .category-card.indigo { background: linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%); }
-        .category-card.amber { background: linear-gradient(135deg, #FFFBEB 0%, #FFEDD5 100%); }
-        .category-card.teal { background: linear-gradient(135deg, #F0FDFA 0%, #D1FAE5 100%); }
+        .category-card.blue {
+            background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+        }
+
+        .category-card.purple {
+            background: linear-gradient(135deg, #FAF5FF 0%, #F3E8FF 100%);
+        }
+
+        .category-card.green {
+            background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%);
+        }
+
+        .category-card.red {
+            background: linear-gradient(135deg, #FEF2F2 0%, #FFE4E6 100%);
+        }
+
+        .category-card.orange {
+            background: linear-gradient(135deg, #FEF2F2 0%, #FFEDD5 100%);
+        }
+
+        .category-card.pink {
+            background: linear-gradient(135deg, #FAF5FF 0%, #FCE7F3 100%);
+        }
+
+        .category-card.cyan {
+            background: linear-gradient(135deg, #EFF6FF 0%, #ECFEFF 100%);
+        }
+
+        .category-card.indigo {
+            background: linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%);
+        }
+
+        .category-card.amber {
+            background: linear-gradient(135deg, #FFFBEB 0%, #FFEDD5 100%);
+        }
+
+        .category-card.teal {
+            background: linear-gradient(135deg, #F0FDFA 0%, #D1FAE5 100%);
+        }
 
         .category-header {
             display: flex;
@@ -412,7 +461,9 @@
         }
 
         @media (min-width: 768px) {
-            .cta-section { padding: 6rem 0; }
+            .cta-section {
+                padding: 6rem 0;
+            }
         }
 
         .cta-content {
@@ -428,7 +479,9 @@
         }
 
         @media (min-width: 768px) {
-            .cta-title { font-size: 2.25rem; }
+            .cta-title {
+                font-size: 2.25rem;
+            }
         }
 
         .cta-text {
@@ -490,7 +543,9 @@
         }
 
         @media (min-width: 768px) {
-            .footer-text { text-align: left; }
+            .footer-text {
+                text-align: left;
+            }
         }
 
         .footer-title {
@@ -562,6 +617,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <header class="header">
@@ -571,9 +627,11 @@
                     <div class="logo-icon">S</div>
                     <span class="logo-text">Learn By Doing</span>
                 </div>
-                <a href="https://github.com/learnbydoingwithsteven" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                <a href="https://github.com/learnbydoingwithsteven" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-outline">
                     <svg class="icon" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                     </svg>
                     GitHub
                 </a>
@@ -587,7 +645,8 @@
             <div class="hero-content">
                 <h1 class="hero-title">Learn By Doing with Steven</h1>
                 <p class="hero-subtitle">
-                    🌍 Community Builder-Engineer, Founder, Investor 🎙️ Podcast Host 🤝 Vanta Techlab 💻 Data Science, LLM, Models 🧩 Exploration & Experiments 🕹️ AI-driven Programming
+                    🌍 Community Builder-Engineer, Founder, Investor 🎙️ Podcast Host 🤝 Vanta Techlab 💻 Data Science,
+                    LLM, Models 🧩 Exploration & Experiments 🕹️ AI-driven Programming
                 </p>
                 <div class="hero-buttons">
                     <a href="portfolio.html" class="btn btn-primary btn-lg">View Portfolio</a>
@@ -623,18 +682,22 @@
             <div class="cta-content">
                 <h2 class="cta-title">Let's Connect</h2>
                 <p class="cta-text">
-                    Whether you're interested in collaboration, learning, or just want to say hello, feel free to reach out through any of the channels above.
+                    Whether you're interested in collaboration, learning, or just want to say hello, feel free to reach
+                    out through any of the channels above.
                 </p>
                 <div class="cta-buttons">
                     <a href="mailto:wjbear2020@gmail.com" class="btn btn-lg btn-cta-outline">
                         <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                         </svg>
                         Send Email
                     </a>
-                    <a href="https://github.com/learnbydoingwithsteven" target="_blank" class="btn btn-lg btn-cta-accent">
+                    <a href="https://github.com/learnbydoingwithsteven" target="_blank"
+                        class="btn btn-lg btn-cta-accent">
                         <svg class="icon" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                         </svg>
                         Visit GitHub
                     </a>
@@ -652,19 +715,23 @@
                     <p class="footer-subtitle">Open source projects for learning and development</p>
                 </div>
                 <div class="footer-links">
-                    <a href="https://github.com/learnbydoingwithsteven" target="_blank" rel="noopener noreferrer" class="footer-link">
+                    <a href="https://github.com/learnbydoingwithsteven" target="_blank" rel="noopener noreferrer"
+                        class="footer-link">
                         <svg fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                         </svg>
                     </a>
                     <a href="mailto:wjbear2020@gmail.com" class="footer-link">
                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                         </svg>
                     </a>
                     <a href="https://x.com/Catchingtides" target="_blank" rel="noopener noreferrer" class="footer-link">
                         <svg fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                         </svg>
                     </a>
                 </div>
@@ -680,105 +747,112 @@
         const linkCategories = [
             {
                 id: "scheduling",
-                title: "Book an Appointment",
-                titleCn: "预约时间",
+                title: "Book a Call",
+                titleCn: "预约交流",
                 icon: "📅",
                 color: "blue",
                 links: [
-                    { name: "cal.com", url: "https://cal.com/learnbydoing", description: "Calendar scheduling" },
-                    { name: "Google Calendar", url: "https://calendar.app.google/", description: "Google Calendar integration" },
-                    { name: "Calendly", url: "https://calendly.com/", description: "Meeting scheduler" },
+                    { name: "🗓️ Cal.com", url: "https://cal.com/stevenwang", description: "Calendar scheduling" },
+                    { name: "📅 Google Calendar", url: "https://calendar.app.google/fT6ip6i638AGuP8v5", description: "Google Calendar integration" },
+                    { name: "📬 ChiliPiper", url: "https://gmail.chilipiper.com/me/steven-wang", description: "Lead qualification" },
+                    { name: "⏰ Calendly", url: "https://calendly.com/steven_wang/60min", description: "60 min meeting scheduler" },
+                ]
+            },
+            {
+                id: "writing",
+                title: "Website & Writing",
+                titleCn: "主站与文章",
+                icon: "🌐",
+                color: "cyan",
+                links: [
+                    { name: "🧱 GitHub", url: "https://github.com/learnbydoingwithsteven", description: "Code repositories" },
+                    { name: "🌐 GitHub.io", url: "https://learnbydoingwithsteven.github.io/", description: "Personal website" },
+                    { name: "🐻 Bear Blog", url: "https://learnbydoingwithsteven.bearblog.dev/", description: "Minimalist blog" },
+                    { name: "✍️ Substack", url: "https://substack.com/@steven923044", description: "Newsletter platform" },
+                    { name: "📰 LinkedIn Newsletter", url: "https://www.linkedin.com/newsletters/7283566848875384833/", description: "Professional insights" },
+                    { name: "📲 微信公众号", url: "https://mp.weixin.qq.com/s/_UgwPOKp0KFDNQdPSYuWMg", description: "WeChat official account" }
                 ]
             },
             {
                 id: "communities",
                 title: "Communities",
                 titleCn: "社群矩阵",
-                icon: "👥",
+                icon: "💬",
                 color: "green",
                 links: [
-                    { name: "LinkedIn Group", url: "https://www.linkedin.com/groups/15054015", description: "中/欧/美AI社群 - Startup, employment, fundraising" },
-                    { name: "Discord（中欧美AI社群）", url: "https://discord.gg/XE6WpAfM", description: "AI community for entrepreneurs" },
-                    { name: "Discord（Learn By Doing）", url: "https://discord.gg/47yq8KcC", description: "Technical & podcast discussions" },
-                    { name: "Telegram Group", url: "https://t.me/+i9NRjGCKjRQxMDNk", description: "Direct messaging community" },
-                    { name: "WhatsApp Group", url: "https://chat.whatsapp.com/Gmfju4artZB0VfRxV93H8p", description: "WhatsApp community" }
+                    { name: "🌐 LinkedIn Group（中/欧/美AI社群）", url: "https://www.linkedin.com/groups/15054015", description: "Startup, employment, fundraising" },
+                    { name: "💬 Discord（中欧美AI社群）", url: "https://discord.gg/XE6WpAfM", description: "AI community for entrepreneurs" },
+                    { name: "💬 Discord（Learn By Doing）", url: "https://discord.gg/47yq8KcC", description: "Technical & podcast discussions" },
+                    { name: "📡 Telegram Group（技术·播客）", url: "https://t.me/+i9NRjGCKjRQxMDNk", description: "Tech & podcast community" },
+                    { name: "📱 WhatsApp Group（技术·播客）", url: "https://chat.whatsapp.com/Gmfju4artZB0VfRxV93H8p", description: "WhatsApp community" }
+                ]
+            },
+            {
+                id: "contact",
+                title: "Direct Contacts",
+                titleCn: "直接联系",
+                icon: "🧑‍💼",
+                color: "purple",
+                links: [
+                    { name: "✉️ Email", url: "mailto:wjbear2020@gmail.com", description: "Career / Banking / Finance / GenAI / DataScience / Industry / Consulting and Collaborations" }
                 ]
             },
             {
                 id: "support",
-                title: "Support My Work",
+                title: "Support Steven's Work",
                 titleCn: "支持创作",
-                icon: "❤️",
+                icon: "💰",
                 color: "red",
                 links: [
-                    { name: "PayPal", url: "https://www.paypal.com/paypalme/wangjiansuper?country.x=IT&locale.x=en_US", description: "Donate via PayPal" },
-                    { name: "Buy Me A Coffee", url: "https://buymeacoffee.com/learnbydoing", description: "Support with coffee" }
+                    { name: "💳 PayPal", url: "https://www.paypal.com/paypalme/wangjiansuper?country.x=IT&locale.x=en_US", description: "Donate via PayPal" },
+                    { name: "☕ Buy Me A Coffee", url: "https://buymeacoffee.com/learnbydoing", description: "Support with coffee" }
                 ]
             },
             {
                 id: "video",
                 title: "Video Platforms",
-                titleCn: "视频平台",
+                titleCn: "视频矩阵",
                 icon: "🎥",
                 color: "orange",
                 links: [
-                    { name: "YouTube - Learn By Doing", url: "https://www.youtube.com/@learnbydoingwithsteven", description: "Main English channel" },
-                    { name: "YouTube - 数能生智", url: "https://www.youtube.com/@%E6%95%B0%E8%83%BD%E7%94%9F%E6%99%BA", description: "Chinese version" },
-                    { name: "TikTok", url: "https://www.tiktok.com/@learnbydoingwithsteven", description: "Short-form content" },
-                    { name: "哔哩哔哩（Steven数据漫谈）", url: "https://space.bilibili.com/3546784399886498", description: "Chinese video platform" }
+                    { name: "▶️ YouTube Learn By Doing With Steven", url: "https://www.youtube.com/@learnbydoingwithsteven", description: "Main English channel" },
+                    { name: "▶️ 数能生智（中文频道）", url: "https://www.youtube.com/@%E6%95%B0%E8%83%BD%E7%94%9F%E6%99%BA", description: "Chinese YouTube channel" },
+                    { name: "🎵 TikTok", url: "https://www.tiktok.com/@learnbydoingwithsteven", description: "Short-form content" },
+                    { name: "📺 哔哩哔哩（Steven数据漫谈）", url: "https://space.bilibili.com/3546784399886498?spm_id_from=333.788.upinfo.head.click", description: "Bilibili channel" },
+                    { name: "🎵 抖音", url: "https://www.douyin.com/user/self?modal_id=7577406098097933622&showTab=post", description: "Douyin channel" }
                 ]
             },
             {
-                id: "podcasts",
-                title: "Podcasts",
-                titleCn: "播客",
-                icon: "🎙️",
-                color: "pink",
+                id: "channels",
+                title: "Website / Channels",
+                titleCn: "网站 / 频道 / 平台",
+                icon: "🌍",
+                color: "teal",
                 links: [
-                    { name: "Steven Data Talk (Apple)", url: "https://podcasts.apple.com/", description: "Data Science & AI" },
-                    { name: "Steven AI Talk (Spotify)", url: "https://spotify.com/", description: "AI discussions on Spotify" },
-                    { name: "小宇宙 Podcasts", url: "https://www.xiaoyuzhoufm.com/podcast/66a322470736bb4045362844", description: "Chinese podcast platform" }
-                ]
-            },
-            {
-                id: "writing",
-                title: "Writing & Blog",
-                titleCn: "写作平台",
-                icon: "✍️",
-                color: "cyan",
-                links: [
+                    { name: "WhatsApp Channel", url: "https://whatsapp.com/channel/0029VazqfKFK0IBoyfgyO70b", description: "WhatsApp broadcast channel" },
+                    { name: "Telegram Channel", url: "https://t.me/learnbydoingwithsteven", description: "Telegram broadcast channel" },
                     { name: "GitHub", url: "https://github.com/learnbydoingwithsteven", description: "Code repositories" },
-                    { name: "GitHub.io", url: "https://learnbydoingwithsteven.github.io", description: "Personal website" },
+                    { name: "GitHub.io", url: "https://learnbydoingwithsteven.github.io/", description: "Personal website" },
+                    { name: "LinkedIn Newsletter (Business)", url: "https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7359504834644926464", description: "Business newsletter" },
+                    { name: "LinkedIn Newsletter (Tech)", url: "https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7283566848875384833", description: "Tech newsletter" },
                     { name: "Substack", url: "https://substack.com/@steven923044", description: "Newsletter platform" },
-                    { name: "Bear Blog", url: "https://learnbydoingwithsteven.bearblog.dev", description: "Minimalist blog" },
-                    { name: "LinkedIn Newsletter", url: "https://www.linkedin.com/newsletters/7283566848875384833/", description: "Professional insights" },
-                    { name: "微信公众号", url: "https://mp.weixin.qq.com/s/_UgwPOKp0KFDNQdPSYuWMg", description: "WeChat official account" }
+                    { name: "Bear Blog", url: "https://learnbydoingwithsteven.bearblog.dev/", description: "Minimalist blog" },
+                    { name: "微信公众号", url: "https://mp.weixin.qq.com/s/_UgwPOKp0KFDNQdPSYuWMg", description: "世界模型的下一站" }
                 ]
             },
             {
                 id: "social",
                 title: "Social Media",
-                titleCn: "社交媒体",
+                titleCn: "社交平台",
                 icon: "📱",
                 color: "indigo",
                 links: [
+                    { name: "小红书", url: "https://www.xiaohongshu.com/user/profile/5e0e450b0000000001001e26?xsec_token=YBolHet_ed8Npv1I7yr4lMGb6VRZWtbkE9QSkodxdCu0I=&xsec_source=app_share&xhsshare=CopyLink&appuid=5e0e450b0000000001001e26&apptime=1737132065&share_id=c4262bd995c34cebaab2e0d85e5a3875", description: "Chinese social platform" },
                     { name: "LinkedIn（独立项目）", url: "https://www.linkedin.com/in/steven-w-6828a31bb/", description: "Independent projects profile" },
                     { name: "LinkedIn（完整职业）", url: "https://www.linkedin.com/in/jian-w-83bb36440/", description: "Full professional profile" },
-                    { name: "X (Twitter)", url: "https://x.com/Catchingtides", description: "Real-time updates" },
-                    { name: "Instagram", url: "https://www.instagram.com/learnbydoingwithsteven", description: "Visual content" },
-                    { name: "小红书", url: "https://www.xiaohongshu.com/user/profile/5e0e450b0000000001001e26", description: "Chinese social platform" },
-                    { name: "Facebook", url: "https://www.facebook.com/profile.php?id=61571798756202", description: "Community updates" }
-                ]
-            },
-            {
-                id: "channels",
-                title: "Channels",
-                titleCn: "频道",
-                icon: "🌍",
-                color: "purple",
-                links: [
-                    { name: "WhatsApp Channel", url: "https://whatsapp.com/channel/0029VazqfKFK0IBoyfgyO70b", description: "WhatsApp broadcast channel" },
-                    { name: "Telegram Channel", url: "https://t.me/learnbydoingwithsteven", description: "Telegram broadcast channel" }
+                    { name: "X（Twitter）", url: "https://x.com/Catchingtides", description: "Real-time updates" },
+                    { name: "Facebook", url: "https://www.facebook.com/profile.php?id=61571798756202", description: "Community updates" },
+                    { name: "Instagram", url: "https://www.instagram.com/learnbydoingwithsteven", description: "Visual content" }
                 ]
             },
             {
@@ -790,19 +864,81 @@
                 links: [
                     { name: "Vanta Tech Lab", url: "https://www.linkedin.com/company/vantatechlab", description: "Tech venture community" },
                     { name: "DukeCEO", url: "https://www.linkedin.com/company/chinese-entrepreneurs-organization-at-duke-dukeceo", description: "Duke entrepreneurship" },
-                    { name: "创·见 Founder Vision", url: "https://www.xiaoyuzhoufm.com/podcast/66a322470736bb4045362844", description: "Founder community" },
+                    { name: "创·见 Founder Vision", url: "https://www.xiaoyuzhoufm.com/podcast/66a322470736bb4045362844?s=eyJ1IjoiNjVkZDlhNDBlZGNlNjcxMDRhOThhNjZkIiwiZCI6MX0=", description: "Founder community" },
                     { name: "我作为嘉宾的节目", url: "https://www.xiaoyuzhoufm.com/episode/690c8ad5d99642be96c4accc", description: "Guest podcast appearance" }
+                ]
+            },
+            {
+                id: "podcasts",
+                title: "Steven Data Talk",
+                titleCn: "播客矩阵",
+                icon: "🎙️",
+                color: "pink",
+                links: [
+                    { name: "Apple Podcasts", url: "https://podcasts.apple.com/gb/podcast/steven-data-talk/id1845702474", description: "Steven Data Talk on Apple" },
+                    { name: "Spotify", url: "https://open.spotify.com/show/3qSV5WJBsHbivqdmIopEYR?si=Q7XxCzxsSTKXmKiW27hmAA", description: "Steven Data Talk on Spotify" },
+                    { name: "喜马拉雅", url: "https://www.ximalaya.com/album/88884765", description: "Ximalaya podcast" },
+                    { name: "小宇宙", url: "https://www.xiaoyuzhoufm.com/podcast/68ef81ce0a78e59c5c5c45e7", description: "Xiaoyuzhou podcast" },
+                    { name: "YouTube Music", url: "https://music.youtube.com/playlist?list=PLfV0OO4XXVBk1oCeZg-xwdnYbNuSDqgmW&si=EQtgt96FfSZSwxvc", description: "YouTube Music playlist" },
+                    { name: "Amazon Music", url: "https://music.amazon.com/podcasts/b31ecf00-32e8-41b5-96cd-13e86253d249/steven-data-talk", description: "Amazon Music podcast" }
+                ]
+            },
+            {
+                id: "podcasts-cn",
+                title: "Steven 数据漫谈",
+                titleCn: "中文播客",
+                icon: "🎧",
+                color: "pink",
+                links: [
+                    { name: "Apple Podcasts", url: "https://podcasts.apple.com/gb/podcast/steven%E6%95%B0%E6%8D%AE%E6%BC%AB%E8%B0%88/id1845703144", description: "Steven数据漫谈 on Apple" },
+                    { name: "Spotify", url: "https://open.spotify.com/show/4b8dqmQmVQiPPxuIZNR58w?si=QgCsksYYSV-jTqz1e4tFpw", description: "Steven数据漫谈 on Spotify" },
+                    { name: "喜马拉雅", url: "https://www.ximalaya.com/album/89574928", description: "Ximalaya podcast" },
+                    { name: "小宇宙", url: "https://www.xiaoyuzhoufm.com/podcast/68ef81d14ce3619b345a32b2", description: "Xiaoyuzhou podcast" },
+                    { name: "YouTube Music", url: "https://music.youtube.com/playlist?list=PLfV0OO4XXVBmQOOLxMpZXn519_PW3uneG&si=rgCVgHICnqNK5rFX", description: "YouTube Music playlist" },
+                    { name: "Amazon Music", url: "https://music.amazon.com/podcasts/6d68d8c4-d7bb-4c1d-8b6c-1e9b0946463d/steven%E6%95%B0%E6%8D%AE%E6%BC%AB%E8%B0%88", description: "Amazon Music podcast" }
+                ]
+            },
+            {
+                id: "podcasts-ai",
+                title: "Steven AI Talk",
+                titleCn: "多语AI播客",
+                icon: "🤖",
+                color: "blue",
+                links: [
+                    { name: "Apple Podcasts (English)", url: "https://podcasts.apple.com/gb/podcast/steven-ai-talk-english/id1846320778", description: "English AI Talk on Apple" },
+                    { name: "Spotify (English)", url: "https://open.spotify.com/show/43CVIH13u3pvIyg9aTEHwY?si=w-gPlNheRmCTfvlIPOwL9w", description: "English AI Talk on Spotify" },
+                    { name: "Amazon Music (English)", url: "https://music.amazon.com/podcasts/7aaf0f86-7cb1-4f6f-bba3-6fd3cb9dcad2/steven-ai-talkenglish", description: "English AI Talk on Amazon" },
+                    { name: "小宇宙 (English)", url: "https://www.xiaoyuzhoufm.com/podcast/68ef7ec2332567e348b6e57b", description: "Xiaoyuzhou English podcast" },
+                    { name: "YouTube Music (English)", url: "https://music.youtube.com/playlist?list=PLfV0OO4XXVBk811V6mTVbL483S_56ZtF5&si=qqGM8Es0NTSFtflX", description: "YouTube Music English" },
+                    { name: "Spotify（中文 Steven AI 播客）", url: "https://open.spotify.com/show/7gLoHfOKO302yNcF7bzNOu?si=FU7xcKwUQU-jfTXxi0grBg", description: "Chinese AI Talk on Spotify" },
+                    { name: "喜马拉雅（中文）", url: "https://www.ximalaya.com/album/88276097", description: "Chinese AI Talk on Ximalaya" },
+                    { name: "Spotify（Italiano）", url: "https://open.spotify.com/show/7D3BcWR5xGzGap8A1bSeoQ?si=ek8GNzrnT-OdiGJ91vi0rw", description: "Italian AI Talk on Spotify" }
+                ]
+            },
+            {
+                id: "podcasts-yc",
+                title: "YC 斯坦福创业课",
+                titleCn: "CS183B 精讲",
+                icon: "🎓",
+                color: "purple",
+                links: [
+                    { name: "Apple Podcasts", url: "https://podcasts.apple.com/us/podcast/yc%E6%96%AF%E5%9D%A6%E7%A6%8F%E5%88%9B%E4%B8%9A%E8%AF%BE2015cs183b%E7%B2%BE%E8%AE%B2/id1846320657", description: "YC CS183B on Apple" },
+                    { name: "Spotify", url: "https://open.spotify.com/show/5dg2pUoVlwvWCu2RSRYUay?si=esrJ8TByS-Cqrw4aOqKDyw", description: "YC CS183B on Spotify" },
+                    { name: "喜马拉雅", url: "https://m.ximalaya.com/album/109171033?from=pc", description: "YC CS183B on Ximalaya" },
+                    { name: "小宇宙", url: "https://www.xiaoyuzhoufm.com/podcast/68ef7ec662e8bfe0dffdd116", description: "YC CS183B on Xiaoyuzhou" },
+                    { name: "YouTube Music", url: "https://music.youtube.com/playlist?list=PLfV0OO4XXVBlRgHAHArWBcpbOYykZfMqI&si=KwnQAp25yoprI39H", description: "YC CS183B on YouTube Music" },
+                    { name: "Amazon Music", url: "https://music.amazon.com/podcasts/97f55ca2-d30d-48d8-afa5-9d51362bf92c/yc%E6%96%AF%E5%9D%A6%E7%A6%8F%E5%88%9B%E4%B8%9A%E8%AF%BE2015cs183b%E7%B2%BE%E8%AE%B2", description: "YC CS183B on Amazon Music" }
                 ]
             },
             {
                 id: "travel",
                 title: "Travel Channel",
-                titleCn: "旅行频道",
+                titleCn: "兴趣爱好",
                 icon: "🚗",
                 color: "teal",
                 links: [
-                    { name: "Steven On The Road (YouTube)", url: "https://youtube.com/@stevenontheroad6129", description: "Travel vlog" },
-                    { name: "Steven On The Road（哔哩哔哩）", url: "https://space.bilibili.com/157133040", description: "Chinese travel channel" }
+                    { name: "🚗 Steven On The Road (YouTube)", url: "https://youtube.com/@stevenontheroad6129?si=pAUvAm0af6eFJrDn", description: "Travel vlog" },
+                    { name: "🚗 Steven On The Road（哔哩哔哩）", url: "https://space.bilibili.com/157133040", description: "Chinese travel channel" }
                 ]
             }
         ];
@@ -891,4 +1027,5 @@
         });
     </script>
 </body>
+
 </html>
