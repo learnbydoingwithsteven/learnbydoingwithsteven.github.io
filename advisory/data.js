@@ -132,9 +132,9 @@ window.PORTFOLIO_DATA = {
         it: "Aree di consulenza e docenza"
       },
       lead: {
-        zh: "围绕企业 AI 提效、跨国 ICT 管理、系统落地与流程治理展开。",
-        en: "Focused on enterprise AI enablement, cross-border ICT management, systems delivery, and process governance.",
-        it: "Focus su AI enablement per l'impresa, gestione ICT cross-border, delivery di sistemi e governance dei processi."
+        zh: "企业 AI 提效 / 跨国 ICT 管理 / 系统落地 / 流程治理",
+        en: "Enterprise AI enablement / Cross-border ICT management / Systems delivery / Process governance",
+        it: "AI enablement enterprise / Gestione ICT cross-border / Delivery di sistemi / Governance dei processi"
       }
     },
     fit: {
@@ -145,9 +145,9 @@ window.PORTFOLIO_DATA = {
         it: "Esperienze rappresentative di consulenza e docenza"
       },
       lead: {
-        zh: "更强调实际承担过的工作、培训与项目，而不是抽象标签。",
-        en: "This section emphasizes real work delivered, training led, and projects handled rather than abstract positioning labels.",
-        it: "Questa sezione mette l'accento su lavoro svolto, formazione condotta e progetti reali, piuttosto che su etichette astratte."
+        zh: "企业数字化转型 / 技术方案落地 / 内部培训推广 / 跨部门协同",
+        en: "Digital transformation / Solution delivery / Internal training rollout / Cross-functional coordination",
+        it: "Trasformazione digitale / Delivery di soluzioni / Rollout formativo interno / Coordinamento interfunzionale"
       }
     },
     timeline: {
@@ -158,9 +158,9 @@ window.PORTFOLIO_DATA = {
         it: "Percorso professionale"
       },
       lead: {
-        zh: "工作经历覆盖银行、欧洲 ICT 管理、集团融资风控与独立 AI 顾问阶段。",
-        en: "The career path spans banking, ICT management in Europe, group financing and risk roles, and an independent AI advisory phase.",
-        it: "Il percorso copre banca, gestione ICT in Europa, ruoli di financing e risk a livello di gruppo, e una fase di consulenza AI indipendente."
+        zh: "金融银行数字化 / 欧洲 ICT 管理 / 融资风控 / AI 顾问",
+        en: "Banking digitalization / Europe ICT management / Financing and risk / AI advisory",
+        it: "Digitalizzazione bancaria / Gestione ICT in Europa / Financing e risk / Consulenza AI"
       }
     },
     projects: {
@@ -171,9 +171,9 @@ window.PORTFOLIO_DATA = {
         it: "Progetti rappresentativi"
       },
       lead: {
-        zh: "项目可用于课程展示、方案沟通与客户介绍。",
-        en: "These projects can support classroom delivery, solution discussions, and client-facing introductions.",
-        it: "Questi progetti possono supportare lezioni, discussioni di soluzione e presentazioni verso clienti."
+        zh: "销售 AI / 财务 AI / 法务 AI / Agent 工作流 / 知识系统",
+        en: "Sales AI / Finance AI / Legal AI / Agent workflows / Knowledge systems",
+        it: "Sales AI / Finance AI / Legal AI / Workflow agent / Knowledge system"
       }
     },
     docs: {
@@ -197,9 +197,9 @@ window.PORTFOLIO_DATA = {
         it: "Rete di contenuti e collaborazioni"
       },
       lead: {
-        zh: "公开内容输出与国际社区连接，支撑课程传播、客户沟通与后续合作。",
-        en: "Public content output and international community links support course distribution, client communication, and follow-on collaboration.",
-        it: "La produzione pubblica di contenuti e i collegamenti con comunita internazionali sostengono diffusione dei corsi, comunicazione con i clienti e collaborazioni successive."
+        zh: "多媒体与文字输出 / 海外社媒发表 / 国际社区连接 / 跨语种沟通",
+        en: "Multimedia and writing / Overseas social publishing / International communities / Multilingual communication",
+        it: "Contenuti multimedia e testuali / Pubblicazione social internazionale / Community globali / Comunicazione multilingue"
       }
     },
     footer: {
