@@ -128,6 +128,7 @@ button {
     gap: 12px;
     text-decoration: none;
     min-width: 0;
+    flex: 0 0 auto;
 }
 
 .brand-mark {
@@ -176,14 +177,35 @@ button {
 
 .site-nav {
     justify-content: center;
+    flex-wrap: nowrap;
+    flex: 0 1 auto;
+    min-width: 0;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.site-nav::-webkit-scrollbar {
+    display: none;
+}
+
+.header-actions {
+    flex: 0 0 auto;
 }
 
 .nav-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
     text-decoration: none;
     padding: 10px 14px;
     border-radius: 999px;
     color: var(--ink-soft);
     font-size: 0.95rem;
+    white-space: nowrap;
     transition: transform 180ms ease, color 180ms ease, background 180ms ease;
 }
 
@@ -1058,6 +1080,10 @@ button {
     .site-nav,
     .header-actions {
         justify-content: center;
+    }
+
+    .site-nav {
+        width: 100%;
     }
 }
 
