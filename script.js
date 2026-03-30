@@ -5,27 +5,27 @@ const COPY = {
         nav: {
             home: { en: "Home", zh: "首页", it: "Home" },
             portfolio: { en: "Portfolio", zh: "项目集", it: "Portfolio" },
-            advisory: { en: "Advisory", zh: "顾问 / 培训", it: "Advisory" },
+            advisory: { en: "Advisory", zh: "顾问培训", it: "Advisory" },
             directory: { en: "Media & Links", zh: "媒体与链接", it: "Media e link" },
             github: { en: "GitHub", zh: "GitHub", it: "GitHub" }
         },
         brand: {
             tag: {
-                en: "AI systems, media, and community",
-                zh: "AI 系统、内容与社群",
-                it: "Sistemi AI, media e community"
+                en: "AI Projects / Advisory / Media",
+                zh: "AI 项目 / 顾问培训 / 媒体内容",
+                it: "Progetti AI / Advisory / Media"
             }
         },
         footer: {
             lineOne: {
-                en: "A multilingual home for AI projects, podcast channels, and community pathways.",
-                zh: "一个面向 AI 项目、播客渠道与社群路径的多语言主页。",
-                it: "Una casa multilingue per progetti AI, canali podcast e percorsi di community."
+                en: "AI projects / advisory / media / community.",
+                zh: "AI 项目 / 顾问培训 / 媒体内容 / 社群网络。",
+                it: "Progetti AI / advisory / media / community."
             },
             lineTwo: {
-                en: "Built for Chinese, English, and Italian visitors.",
-                zh: "面向中文、英文与意大利语用户设计。",
-                it: "Pensato per visitatori in cinese, inglese e italiano."
+                en: "Chinese / English / Italian.",
+                zh: "中文 / 英文 / 意大利语。",
+                it: "Cinese / Inglese / Italiano."
             }
         },
         backToTop: {
@@ -36,20 +36,20 @@ const COPY = {
     },
     home: {
         metaTitle: {
-            en: "Learn By Doing with Steven | Multilingual AI Hub",
-            zh: "Learn By Doing with Steven | 多语言 AI 主页",
-            it: "Learn By Doing with Steven | Hub AI multilingue"
+            en: "Learn By Doing with Steven | AI Projects, Advisory, Media",
+            zh: "Learn By Doing with Steven | AI 项目、顾问培训与媒体",
+            it: "Learn By Doing with Steven | Progetti AI, advisory e media"
         },
         metaDescription: {
-            en: "A multilingual hub for Steven's AI systems, portfolio work, podcast channels, and global communities.",
-            zh: "汇集 Steven 的 AI 系统、项目作品、播客渠道与全球社群的多语言主页。",
-            it: "Un hub multilingue per i sistemi AI di Steven, il portfolio, i podcast e le community globali."
+            en: "AI projects, advisory, media channels, and community access in Chinese, English, and Italian.",
+            zh: "AI 项目、顾问培训、媒体渠道与社群网络，支持中文、英文与意大利语。",
+            it: "Progetti AI, advisory, canali media e accesso alla community in cinese, inglese e italiano."
         },
         hero: {
             eyebrow: {
-                en: "Multilingual AI builder, operator, and podcast host",
-                zh: "多语言 AI 构建者、社群运营者与播客主理人",
-                it: "Builder AI multilingue, operatore di community e host di podcast"
+                en: "AI Projects / Advisory / Media",
+                zh: "AI 项目 / 顾问培训 / 媒体内容",
+                it: "Progetti AI / Advisory / Media"
             },
             titleLead: {
                 en: "Learn By Doing with Steven",
@@ -57,55 +57,68 @@ const COPY = {
                 it: "Learn By Doing with Steven"
             },
             titleAccent: {
-                en: "Build. Share. Connect.",
-                zh: "边做边学，边建边连接",
-                it: "Costruire, condividere, connettere."
+                en: "AI Projects. Advisory. Media.",
+                zh: "AI 项目 / 顾问培训 / 媒体",
+                it: "Progetti AI. Advisory. Media."
             },
             subtitle: {
-                en: "A premium starting point for AI systems, learning projects, community channels, and founder conversations across Chinese, English, and Italian.",
-                zh: "这里汇集 AI 系统、学习型项目、社群渠道与创业交流，并支持中文、英文、意大利语三种语言自由切换。",
-                it: "Un punto di partenza premium per sistemi AI, progetti di apprendimento, community e conversazioni con founder, disponibile in cinese, inglese e italiano."
+                en: "AI projects / advisory / media channels / community / Chinese, English, Italian.",
+                zh: "AI 项目 / 顾问培训 / 媒体渠道 / 社群网络 / 中文、英文、意大利语。",
+                it: "Progetti AI / Advisory / Canali media / Community / Cinese, inglese, italiano."
             },
-            primary: { en: "Explore portfolio", zh: "查看项目集", it: "Esplora il portfolio" },
-            advisory: { en: "Open advisory page", zh: "讲师 / 顾问页", it: "Apri la pagina advisory" },
-            secondary: { en: "Open media directory", zh: "打开媒体目录", it: "Apri la directory media" },
-            tertiary: { en: "Email Steven", zh: "给 Steven 发邮件", it: "Scrivi a Steven" }
+            primary: { en: "Portfolio", zh: "项目集", it: "Portfolio" },
+            advisory: { en: "Advisory", zh: "顾问培训", it: "Advisory" },
+            secondary: { en: "Media & Links", zh: "媒体与链接", it: "Media e link" },
+            tertiary: { en: "Email", zh: "邮箱", it: "Email" }
         },
         intro: {
-            label: { en: "Site lens", zh: "站点视角", it: "Lente del sito" },
+            label: { en: "Positioning", zh: "站点定位", it: "Posizionamento" },
             title: {
-                en: "What this site is optimized for",
-                zh: "这个站点真正服务什么",
-                it: "Per cosa e ottimizzato questo sito"
+                en: "Content & services",
+                zh: "内容与服务",
+                it: "Contenuti e servizi"
             },
             copy: {
-                en: "The experience is designed as a fast control center: projects when you need proof, channels when you need access, and language switching when you need reach.",
-                zh: "这套体验被设计成一个快速控制台：需要证明能力时看项目，需要建立联系时看渠道，需要扩大触达时切换语言。",
-                it: "L'esperienza e pensata come un centro di controllo rapido: progetti quando serve prova del lavoro, canali quando serve accesso, cambio lingua quando serve portata."
+                en: "AI projects / advisory / media channels / community / Chinese, English, Italian",
+                zh: "AI 项目 / 顾问培训 / 媒体内容 / 社群网络 / 中文、英文、意大利语",
+                it: "Progetti AI / Advisory / Canali media / Community / Cinese, inglese, italiano"
             }
         },
         linksIntro: {
-            label: { en: "Start anywhere", zh: "从任意入口开始", it: "Inizia da qualunque punto" },
+            label: { en: "Sections", zh: "主要模块", it: "Sezioni" },
             title: {
-                en: "Fast routes into the ecosystem",
-                zh: "进入整套生态的最快路径",
-                it: "Le vie piu rapide per entrare nell'ecosistema"
+                en: "Access points",
+                zh: "入口导航",
+                it: "Punti di accesso"
             },
             copy: {
-                en: "These sections jump directly into calls, writing, communities, direct contact, and creator support.",
-                zh: "下面这些模块可以直接进入预约、写作内容、社群、直接联系与创作支持。",
-                it: "Queste sezioni portano subito a call, scrittura, community, contatto diretto e supporto alla creazione."
+                en: "Scheduling / media / advisory / communities / contact / support",
+                zh: "预约 / 社媒内容 / 顾问培训 / 社群 / 联系 / 支持",
+                it: "Prenotazioni / Media / Advisory / Community / Contatto / Supporto"
             }
         },
         cta: {
-            title: { en: "Need the fastest next click?", zh: "想最快找到下一步入口？", it: "Cerchi il prossimo click piu utile?" },
+            title: { en: "Featured pages", zh: "重点页面", it: "Pagine in evidenza" },
             copy: {
-                en: "Jump into the directory for channels and podcasts, or open the portfolio for flagship repositories and technical proof of work.",
-                zh: "想看渠道与播客，请进入目录；想看核心仓库与技术证明，请打开项目集。",
-                it: "Apri la directory per canali e podcast, oppure il portfolio per i repository principali e le prove di lavoro tecnico."
+                en: "Portfolio / Advisory / Media & Links",
+                zh: "项目集 / 顾问培训 / 媒体与链接",
+                it: "Portfolio / Advisory / Media e link"
             },
-            primary: { en: "View directory", zh: "查看目录", it: "Vai alla directory" },
-            secondary: { en: "View portfolio", zh: "查看项目集", it: "Vai al portfolio" }
+            primary: { en: "Media & Links", zh: "媒体与链接", it: "Media e link" },
+            secondary: { en: "Portfolio", zh: "项目集", it: "Portfolio" }
+        },
+        profile: {
+            kicker: { en: "Profile", zh: "简介", it: "Profilo" },
+            title: {
+                en: "Learn By Doing with Steven",
+                zh: "Learn By Doing with Steven",
+                it: "Learn By Doing with Steven"
+            },
+            body: {
+                en: "AI projects / advisory / media channels / Chinese, English, Italian.",
+                zh: "AI 项目 / 顾问培训 / 媒体渠道 / 中文、英文、意大利语。",
+                it: "Progetti AI / Advisory / Canali media / Cinese, inglese, italiano."
+            }
         }
     },
     portfolio: {
@@ -213,53 +226,53 @@ const COPY = {
 };
 
 const METRICS = [
-    { value: "3", label: { en: "interface languages", zh: "界面语言", it: "lingue dell'interfaccia" } },
-    { value: "AI + Data", label: { en: "systems and learning tracks", zh: "系统与学习路径", it: "sistemi e percorsi" } },
-    { value: "Global", label: { en: "community and podcast presence", zh: "社群与播客网络", it: "community e podcast" } },
-    { value: "Open", label: { en: "collaboration paths", zh: "合作入口", it: "percorsi di collaborazione" } }
+    { value: "3", label: { en: "languages", zh: "语言", it: "lingue" } },
+    { value: "AI + Data", label: { en: "projects and systems", zh: "项目与系统", it: "progetti e sistemi" } },
+    { value: "Global", label: { en: "media and community", zh: "媒体与社群", it: "media e community" } },
+    { value: "Open", label: { en: "collaboration", zh: "合作", it: "collaborazione" } }
 ];
 
 const SIGNALS = [
     {
-        en: "Translate complex technical work into clear public experiences.",
-        zh: "把复杂技术工作转化为清晰可感的公共体验。",
-        it: "Trasformare lavoro tecnico complesso in esperienze pubbliche chiare."
+        en: "AI projects / repositories / systems",
+        zh: "AI 项目 / 仓库 / 系统",
+        it: "Progetti AI / repository / sistemi"
     },
     {
-        en: "Bridge China, Europe, and global AI conversations.",
-        zh: "连接中国、欧洲与全球 AI 对话。",
-        it: "Collegare le conversazioni AI tra Cina, Europa e scena globale."
+        en: "Advisory / training / enterprise AI",
+        zh: "顾问 / 培训 / 企业 AI",
+        it: "Advisory / Formazione / AI enterprise"
     },
     {
-        en: "Ship pages, systems, and media that feel intentional.",
-        zh: "交付有明确品位与方向感的页面、系统与内容。",
-        it: "Pubblicare pagine, sistemi e media con una direzione chiara."
+        en: "Media / community / multilingual reach",
+        zh: "媒体 / 社群 / 多语种传播",
+        it: "Media / Community / Presenza multilingue"
     }
 ];
 
 const INSIGHTS = [
     {
-        title: { en: "Build AI products", zh: "构建 AI 产品", it: "Costruire prodotti AI" },
+        title: { en: "AI projects", zh: "AI 项目", it: "Progetti AI" },
         copy: {
-            en: "Portfolio work spans learning systems, applied AI suites, and reusable technical foundations.",
-            zh: "项目集覆盖学习系统、行业应用型 AI 套件与可复用技术底座。",
-            it: "Il portfolio copre sistemi di apprendimento, suite AI applicate e fondamenta tecniche riutilizzabili."
+            en: "Repositories / systems / applied products.",
+            zh: "仓库 / 系统 / 应用产品。",
+            it: "Repository / Sistemi / Prodotti applicati."
         }
     },
     {
-        title: { en: "Teach in public", zh: "公开式教学与输出", it: "Insegnare in pubblico" },
+        title: { en: "Media & content", zh: "媒体与内容", it: "Media e contenuti" },
         copy: {
-            en: "Courses, podcasts, newsletters, and social channels turn technical work into repeatable knowledge.",
-            zh: "课程、播客、newsletter 与社交渠道，把技术工作沉淀成可复用的知识资产。",
-            it: "Corsi, podcast, newsletter e canali social trasformano il lavoro tecnico in conoscenza riutilizzabile."
+            en: "Podcasts / newsletters / articles / videos.",
+            zh: "播客 / Newsletter / 文章 / 视频。",
+            it: "Podcast / Newsletter / Articoli / Video."
         }
     },
     {
-        title: { en: "Connect communities", zh: "连接跨区域社群", it: "Connettere community" },
+        title: { en: "Community & contact", zh: "社群与联系", it: "Community e contatti" },
         copy: {
-            en: "Calls, groups, and collaboration links make it easy to move from browsing into conversation.",
-            zh: "预约、社群与合作入口，让浏览者可以快速从浏览进入交流。",
-            it: "Call, gruppi e link di collaborazione rendono semplice passare dalla navigazione alla conversazione."
+            en: "Scheduling / communities / contact / collaboration.",
+            zh: "预约 / 社群 / 联系 / 合作。",
+            it: "Prenotazioni / Community / Contatto / Collaborazione."
         }
     }
 ];
@@ -267,12 +280,12 @@ const INSIGHTS = [
 const GROUPS = [
     {
         key: "call",
-        badge: "Schedule",
-        title: { en: "Book a call", zh: "预约交流", it: "Prenota una call" },
+        badge: "Scheduling",
+        title: { en: "Scheduling", zh: "预约", it: "Prenotazioni" },
         description: {
-            en: "Calendar options for direct conversations and warm introductions.",
-            zh: "用于直接交流、合作沟通与熟人引荐的预约入口。",
-            it: "Opzioni di calendario per conversazioni dirette e introduzioni strutturate."
+            en: "Scheduling / meetings / collaboration",
+            zh: "预约 / 会议 / 合作沟通",
+            it: "Prenotazioni / Riunioni / Collaborazione"
         },
         items: [
             { title: "Cal.com", url: "https://cal.com/stevenwang" },
@@ -283,12 +296,12 @@ const GROUPS = [
     },
     {
         key: "writing",
-        badge: "Writing",
-        title: { en: "Writing & websites", zh: "主站与写作", it: "Siti e scrittura" },
+        badge: "Media",
+        title: { en: "Media & content", zh: "社媒内容", it: "Media e contenuti" },
         description: {
-            en: "Main site, code hub, newsletters, and long-form writing channels.",
-            zh: "主站、代码主页、newsletter 与长文写作渠道。",
-            it: "Sito principale, hub del codice, newsletter e canali di scrittura long-form."
+            en: "Website / GitHub / newsletters / articles",
+            zh: "主站 / GitHub / Newsletter / 文章",
+            it: "Sito / GitHub / Newsletter / Articoli"
         },
         items: [
             { title: "GitHub", url: "https://github.com/learnbydoingwithsteven" },
@@ -303,11 +316,11 @@ const GROUPS = [
     {
         key: "advisory",
         badge: "Advisory",
-        title: { en: "Lecturer & advisor profile", zh: "讲师与顾问介绍页", it: "Profilo docente e advisory" },
+        title: { en: "Advisory", zh: "顾问培训", it: "Advisory" },
         description: {
-            en: "An independent profile page for Steven's lecturer, consultant, and enterprise AI enablement positioning.",
-            zh: "一个独立页面，集中展示 Steven 的讲师、顾问与企业 AI 赋能定位。",
-            it: "Una pagina indipendente che presenta il posizionamento di Steven come docente, consulente e referente per l'AI enablement in azienda."
+            en: "Advisory / training / enterprise AI",
+            zh: "顾问 / 培训 / 企业 AI",
+            it: "Advisory / Formazione / AI enterprise"
         },
         items: [
             { title: { en: "Open advisory page", zh: "打开介绍页", it: "Apri la pagina advisory" }, url: "advisory/" }
@@ -316,11 +329,11 @@ const GROUPS = [
     {
         key: "communities",
         badge: "Community",
-        title: { en: "Communities", zh: "社群矩阵", it: "Community" },
+        title: { en: "Communities", zh: "社群", it: "Community" },
         description: {
-            en: "Groups where AI, startup, and media conversations continue beyond the website.",
-            zh: "AI、创业与内容交流在站外持续发生的社群入口。",
-            it: "Gruppi in cui le conversazioni su AI, startup e media continuano oltre il sito."
+            en: "AI community / founder network / discussion groups",
+            zh: "AI 社群 / 创业网络 / 讨论组",
+            it: "Community AI / Network founder / Gruppi di discussione"
         },
         items: [
             { title: { en: "LinkedIn Group", zh: "LinkedIn 群组", it: "Gruppo LinkedIn" }, url: "https://www.linkedin.com/groups/15054015" },
@@ -332,23 +345,23 @@ const GROUPS = [
     },
     {
         key: "direct",
-        badge: "Direct",
-        title: { en: "Direct contact", zh: "直接联系", it: "Contatto diretto" },
+        badge: "Contact",
+        title: { en: "Contact", zh: "联系", it: "Contatto" },
         description: {
-            en: "The fastest inbox for collaboration, learning, finance, data, or AI conversations.",
-            zh: "适合合作、学习、金融、数据或 AI 交流的最快收件箱入口。",
-            it: "La casella piu diretta per collaborazioni e conversazioni su dati, finance o AI."
+            en: "Email / collaboration / direct contact",
+            zh: "邮箱 / 合作 / 直接联系",
+            it: "Email / Collaborazione / Contatto diretto"
         },
         items: [{ title: "Email", url: "mailto:wjbear2020@gmail.com" }]
     },
     {
         key: "support",
         badge: "Support",
-        title: { en: "Support the work", zh: "支持创作", it: "Supporta il lavoro" },
+        title: { en: "Support", zh: "支持", it: "Supporto" },
         description: {
-            en: "Ways to support independent experiments, writing, and public learning.",
-            zh: "支持独立实验、写作与公开学习的方式。",
-            it: "Modalita per sostenere esperimenti indipendenti, scrittura e apprendimento in pubblico."
+            en: "Sponsorship / support / contributions",
+            zh: "赞助 / 支持 / 贡献",
+            it: "Sponsorizzazione / Supporto / Contributi"
         },
         items: [
             { title: "PayPal", url: "https://www.paypal.com/paypalme/wangjiansuper?country.x=IT&locale.x=en_US" },
