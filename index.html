@@ -1,1033 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Learn By Doing with Steven - AI, ML, NLP, and RL Projects Portfolio. Community Builder, Engineer, Founder, Investor, and Podcast Host.">
+    <meta name="description" content="A multilingual hub for Steven's AI systems, portfolio work, podcast channels, and global communities.">
+    <meta name="theme-color" content="#0f766e">
     <meta name="author" content="Learn By Doing with Steven">
-    <meta name="keywords" content="AI, Machine Learning, Data Science, LLM, Steven, Learn By Doing, Podcast, Community">
-    <title>Learn By Doing with Steven | AI & ML Portfolio</title>
-
-    <!-- Google Fonts for Modern Typography -->
+    <title>Learn By Doing with Steven | Multilingual AI Hub</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <style>
-        /* CSS Variables - Modern Minimalist Color Palette */
-        :root {
-            --primary: #84CC16;
-            --primary-hover: #65A30D;
-            --primary-foreground: #FFFFFF;
-            --background: #FFFFFF;
-            --foreground: #1F2937;
-            --card: #F9FAFB;
-            --card-foreground: #1F2937;
-            --secondary: #F3F4F6;
-            --secondary-foreground: #374151;
-            --muted: #E5E7EB;
-            --muted-foreground: #6B7280;
-            --accent: #84CC16;
-            --accent-foreground: #1F2937;
-            --border: #E5E7EB;
-            --radius: 0.75rem;
-            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-        }
-
-        /* Reset & Base Styles */
-        *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg, var(--background) 0%, var(--secondary) 100%);
-            color: var(--foreground);
-            line-height: 1.6;
-            min-height: 100vh;
-        }
-
-        /* Container */
-        .container {
-            width: 100%;
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
-
-        @media (min-width: 640px) {
-            .container {
-                padding: 0 1.5rem;
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .container {
-                padding: 0 2rem;
-            }
-        }
-
-        /* Header */
-        .header {
-            position: sticky;
-            top: 0;
-            z-index: 50;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border);
-        }
-
-        .header-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 64px;
-        }
-
-        .logo-section {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-
-        .logo-icon {
-            width: 36px;
-            height: 36px;
-            background: var(--accent);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            color: var(--foreground);
-            box-shadow: var(--shadow-md);
-        }
-
-        .logo-text {
-            font-size: 1.125rem;
-            font-weight: 600;
-            color: var(--foreground);
-        }
-
-        /* Buttons */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            padding: 0.625rem 1.25rem;
-            border-radius: var(--radius);
-            font-weight: 500;
-            font-size: 0.875rem;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-            cursor: pointer;
-        }
-
-        .btn-outline {
-            background: transparent;
-            border-color: var(--accent);
-            color: var(--foreground);
-        }
-
-        .btn-outline:hover {
-            background: var(--accent);
-            color: var(--accent-foreground);
-        }
-
-        .btn-primary {
-            background: var(--foreground);
-            color: var(--background);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .btn-primary:hover {
-            background: #374151;
-            transform: translateY(-2px);
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
-        }
-
-        .btn-lg {
-            padding: 0.875rem 1.75rem;
-            font-size: 1rem;
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 4rem 0;
-        }
-
-        @media (min-width: 768px) {
-            .hero {
-                padding: 6rem 0;
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .hero {
-                padding: 8rem 0;
-            }
-        }
-
-        .hero-content {
-            max-width: 48rem;
-        }
-
-        .hero-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(to right, var(--foreground), rgba(31, 41, 55, 0.7));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        @media (min-width: 768px) {
-            .hero-title {
-                font-size: 3rem;
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .hero-title {
-                font-size: 3.75rem;
-            }
-        }
-
-        .hero-subtitle {
-            font-size: 1.125rem;
-            color: var(--muted-foreground);
-            margin-bottom: 2rem;
-            line-height: 1.7;
-        }
-
-        .hero-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        /* Links Section */
-        .links-section {
-            padding: 4rem 0;
-        }
-
-        @media (min-width: 768px) {
-            .links-section {
-                padding: 6rem 0;
-            }
-        }
-
-        .section-header {
-            margin-bottom: 3rem;
-        }
-
-        .section-title {
-            font-size: 1.875rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        @media (min-width: 768px) {
-            .section-title {
-                font-size: 2.25rem;
-            }
-        }
-
-        .section-subtitle {
-            color: var(--muted-foreground);
-        }
-
-        /* Controls */
-        .controls {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-
-        /* Categories Grid */
-        .categories-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
-
-        @media (min-width: 768px) {
-            .categories-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        /* Category Card */
-        .category-card {
-            background: linear-gradient(135deg, var(--card) 0%, rgba(255, 255, 255, 0.8) 100%);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            overflow: hidden;
-            transition: all 0.3s ease;
-            box-shadow: var(--shadow-sm);
-        }
-
-        .category-card:hover {
-            border-color: var(--accent);
-            box-shadow: var(--shadow-md);
-        }
-
-        .category-card.blue {
-            background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
-        }
-
-        .category-card.purple {
-            background: linear-gradient(135deg, #FAF5FF 0%, #F3E8FF 100%);
-        }
-
-        .category-card.green {
-            background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%);
-        }
-
-        .category-card.red {
-            background: linear-gradient(135deg, #FEF2F2 0%, #FFE4E6 100%);
-        }
-
-        .category-card.orange {
-            background: linear-gradient(135deg, #FEF2F2 0%, #FFEDD5 100%);
-        }
-
-        .category-card.pink {
-            background: linear-gradient(135deg, #FAF5FF 0%, #FCE7F3 100%);
-        }
-
-        .category-card.cyan {
-            background: linear-gradient(135deg, #EFF6FF 0%, #ECFEFF 100%);
-        }
-
-        .category-card.indigo {
-            background: linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%);
-        }
-
-        .category-card.amber {
-            background: linear-gradient(135deg, #FFFBEB 0%, #FFEDD5 100%);
-        }
-
-        .category-card.teal {
-            background: linear-gradient(135deg, #F0FDFA 0%, #D1FAE5 100%);
-        }
-
-        .category-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 1rem 1.5rem;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        .category-header:hover {
-            background: rgba(0, 0, 0, 0.03);
-        }
-
-        .category-info {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-
-        .category-icon {
-            font-size: 1.5rem;
-        }
-
-        .category-titles {
-            text-align: left;
-        }
-
-        .category-title {
-            font-weight: 600;
-            color: var(--foreground);
-        }
-
-        .category-title-cn {
-            font-size: 0.75rem;
-            color: var(--muted-foreground);
-        }
-
-        .category-meta {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .category-count {
-            font-size: 0.75rem;
-            font-weight: 500;
-            background: rgba(132, 204, 22, 0.2);
-            color: var(--primary-hover);
-            padding: 0.25rem 0.5rem;
-            border-radius: 9999px;
-        }
-
-        .chevron {
-            width: 1.25rem;
-            height: 1.25rem;
-            color: var(--accent);
-            transition: transform 0.3s ease;
-        }
-
-        .category-card.expanded .chevron {
-            transform: rotate(180deg);
-        }
-
-        /* Category Content */
-        .category-content {
-            display: none;
-            border-top: 1px solid rgba(0, 0, 0, 0.05);
-            padding: 1rem 1.5rem;
-            background: rgba(255, 255, 255, 0.5);
-        }
-
-        .category-card.expanded .category-content {
-            display: block;
-        }
-
-        /* Link Item */
-        .link-item {
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            padding: 0.75rem;
-            border-radius: 0.5rem;
-            text-decoration: none;
-            color: inherit;
-            transition: all 0.3s ease;
-        }
-
-        .link-item:hover {
-            background: rgba(255, 255, 255, 0.8);
-        }
-
-        .link-info {
-            flex: 1;
-        }
-
-        .link-name {
-            font-weight: 500;
-            color: var(--foreground);
-            transition: color 0.3s ease;
-        }
-
-        .link-item:hover .link-name {
-            color: var(--accent);
-        }
-
-        .link-description {
-            font-size: 0.75rem;
-            color: var(--muted-foreground);
-            margin-top: 0.25rem;
-        }
-
-        .link-icon {
-            width: 1rem;
-            height: 1rem;
-            color: var(--muted-foreground);
-            margin-left: 0.5rem;
-            margin-top: 0.25rem;
-            flex-shrink: 0;
-            transition: color 0.3s ease;
-        }
-
-        .link-item:hover .link-icon {
-            color: var(--accent);
-        }
-
-        /* CTA Section */
-        .cta-section {
-            padding: 4rem 0;
-            background: var(--foreground);
-            color: var(--background);
-        }
-
-        @media (min-width: 768px) {
-            .cta-section {
-                padding: 6rem 0;
-            }
-        }
-
-        .cta-content {
-            max-width: 42rem;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .cta-title {
-            font-size: 1.875rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        @media (min-width: 768px) {
-            .cta-title {
-                font-size: 2.25rem;
-            }
-        }
-
-        .cta-text {
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 2rem;
-        }
-
-        .cta-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1rem;
-        }
-
-        .btn-cta-outline {
-            background: var(--background);
-            color: var(--foreground);
-            border-color: var(--background);
-        }
-
-        .btn-cta-outline:hover {
-            background: var(--accent);
-            color: var(--accent-foreground);
-            border-color: var(--accent);
-        }
-
-        .btn-cta-accent {
-            background: var(--accent);
-            color: var(--accent-foreground);
-        }
-
-        .btn-cta-accent:hover {
-            background: var(--primary-hover);
-        }
-
-        /* Footer */
-        .footer {
-            background: rgba(243, 244, 246, 0.5);
-            border-top: 1px solid var(--border);
-            padding: 3rem 0;
-        }
-
-        .footer-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 2rem;
-        }
-
-        @media (min-width: 768px) {
-            .footer-content {
-                flex-direction: row;
-                justify-content: space-between;
-            }
-        }
-
-        .footer-text {
-            text-align: center;
-        }
-
-        @media (min-width: 768px) {
-            .footer-text {
-                text-align: left;
-            }
-        }
-
-        .footer-title {
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-subtitle {
-            color: var(--muted-foreground);
-        }
-
-        .footer-links {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .footer-link {
-            padding: 0.5rem;
-            border-radius: 0.5rem;
-            color: var(--foreground);
-            transition: all 0.3s ease;
-        }
-
-        .footer-link:hover {
-            background: rgba(132, 204, 22, 0.2);
-            color: var(--accent);
-        }
-
-        .footer-link svg {
-            width: 1.25rem;
-            height: 1.25rem;
-        }
-
-        /* Icons */
-        .icon {
-            width: 1.25rem;
-            height: 1.25rem;
-        }
-
-        /* Back to Top */
-        .back-to-top {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            width: 48px;
-            height: 48px;
-            background: var(--foreground);
-            color: var(--background);
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 1.5rem;
-            box-shadow: var(--shadow-lg);
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-            z-index: 100;
-        }
-
-        .back-to-top.visible {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .back-to-top:hover {
-            background: var(--accent);
-            transform: translateY(-4px);
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
-
-<body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo-section">
-                    <div class="logo-icon">S</div>
-                    <span class="logo-text">Learn By Doing</span>
-                </div>
-                <a href="https://github.com/learnbydoingwithsteven" target="_blank" rel="noopener noreferrer"
-                    class="btn btn-outline">
-                    <svg class="icon" fill="currentColor" viewBox="0 0 24 24">
-                        <path
-                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                    </svg>
-                    GitHub
-                </a>
-            </div>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Learn By Doing with Steven</h1>
-                <p class="hero-subtitle">
-                    🌍 Community Builder-Engineer, Founder, Investor 🎙️ Podcast Host 🤝 Vanta Techlab 💻 Data Science,
-                    LLM, Models 🧩 Exploration & Experiments 🕹️ AI-driven Programming
-                </p>
-                <div class="hero-buttons">
-                    <a href="portfolio.html" class="btn btn-primary btn-lg">View Portfolio</a>
-                    <a href="podcasts.html" class="btn btn-outline btn-lg">Social Media Directory</a>
-                    <a href="#links-section" class="btn btn-outline btn-lg">All Links</a>
+<body data-page="home">
+    <div class="site-shell">
+        <header class="site-header">
+            <div class="container">
+                <div class="header-bar">
+                    <a class="brand" href="index.html">
+                        <span class="brand-mark">LB</span>
+                        <span class="brand-copy">
+                            <span class="brand-name">Learn By Doing</span>
+                            <span class="brand-tag" data-i18n="shared.brand.tag"></span>
+                        </span>
+                    </a>
+                    <nav class="site-nav" aria-label="Primary">
+                        <a class="nav-link is-current" href="index.html" aria-current="page" data-i18n="shared.nav.home"></a>
+                        <a class="nav-link" href="portfolio.html" data-i18n="shared.nav.portfolio"></a>
+                        <a class="nav-link" href="podcasts.html" data-i18n="shared.nav.directory"></a>
+                    </nav>
+                    <div class="header-actions">
+                        <div class="language-switch" aria-label="Language selector">
+                            <button class="lang-btn" type="button" data-lang="zh" aria-pressed="false">中文</button>
+                            <button class="lang-btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+                            <button class="lang-btn" type="button" data-lang="it" aria-pressed="false">IT</button>
+                        </div>
+                        <a class="button button-ghost" href="https://github.com/learnbydoingwithsteven" target="_blank" rel="noopener" data-i18n="shared.nav.github"></a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </header>
 
-    <!-- Links Section -->
-    <section class="links-section" id="links-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Connect with Me</h2>
-                <p class="section-subtitle">Find me across platforms, communities, and channels</p>
-            </div>
+        <main>
+            <section class="hero">
+                <div class="container hero-grid">
+                    <div class="hero-copy reveal">
+                        <p class="eyebrow" data-i18n="home.hero.eyebrow"></p>
+                        <h1 class="display-title">
+                            <span data-i18n="home.hero.titleLead"></span><br>
+                            <span class="accent" data-i18n="home.hero.titleAccent"></span>
+                        </h1>
+                        <p class="hero-lead" data-i18n="home.hero.subtitle"></p>
+                        <div class="button-row">
+                            <a class="button button-primary" href="portfolio.html" data-i18n="home.hero.primary"></a>
+                            <a class="button button-secondary" href="podcasts.html" data-i18n="home.hero.secondary"></a>
+                            <a class="button button-ghost" href="mailto:wjbear2020@gmail.com" data-i18n="home.hero.tertiary"></a>
+                        </div>
+                        <div class="metric-strip" id="home-metrics"></div>
+                    </div>
 
-            <div class="controls">
-                <button class="btn btn-outline" onclick="expandAll()">Expand All</button>
-                <button class="btn btn-outline" onclick="collapseAll()">Collapse All</button>
-            </div>
-
-            <div class="categories-grid" id="categories-grid">
-                <!-- Categories will be injected by JavaScript -->
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2 class="cta-title">Let's Connect</h2>
-                <p class="cta-text">
-                    Whether you're interested in collaboration, learning, or just want to say hello, feel free to reach
-                    out through any of the channels above.
-                </p>
-                <div class="cta-buttons">
-                    <a href="mailto:wjbear2020@gmail.com" class="btn btn-lg btn-cta-outline">
-                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
-                        Send Email
-                    </a>
-                    <a href="https://github.com/learnbydoingwithsteven" target="_blank"
-                        class="btn btn-lg btn-cta-accent">
-                        <svg class="icon" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                        </svg>
-                        Visit GitHub
-                    </a>
+                    <aside class="profile-panel reveal">
+                        <div class="profile-image-wrap">
+                            <img class="profile-image" src="images/creator_profile.jpeg" alt="Steven portrait">
+                        </div>
+                        <div class="profile-copy-wrap">
+                            <p class="profile-kicker" data-i18n="home.profile.kicker"></p>
+                            <h2 class="profile-title" data-i18n="home.profile.title"></h2>
+                            <p class="profile-copy" data-i18n="home.profile.body"></p>
+                            <ul class="signal-list" id="home-signals"></ul>
+                        </div>
+                    </aside>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-text">
-                    <p class="footer-title">© 2025 Learn By Doing with Steven. All rights reserved.</p>
-                    <p class="footer-subtitle">Open source projects for learning and development</p>
+            <section class="section">
+                <div class="container">
+                    <div class="section-intro reveal">
+                        <div>
+                            <p class="section-label" data-i18n="home.intro.label"></p>
+                            <h2 class="section-title" data-i18n="home.intro.title"></h2>
+                        </div>
+                        <p class="section-copy" data-i18n="home.intro.copy"></p>
+                    </div>
+                    <div class="bento-grid" id="home-insights"></div>
                 </div>
-                <div class="footer-links">
-                    <a href="https://github.com/learnbydoingwithsteven" target="_blank" rel="noopener noreferrer"
-                        class="footer-link">
-                        <svg fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                        </svg>
-                    </a>
-                    <a href="mailto:wjbear2020@gmail.com" class="footer-link">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
-                    </a>
-                    <a href="https://x.com/Catchingtides" target="_blank" rel="noopener noreferrer" class="footer-link">
-                        <svg fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                        </svg>
-                    </a>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <div class="section-intro reveal">
+                        <div>
+                            <p class="section-label" data-i18n="home.linksIntro.label"></p>
+                            <h2 class="section-title" data-i18n="home.linksIntro.title"></h2>
+                        </div>
+                        <p class="section-copy" data-i18n="home.linksIntro.copy"></p>
+                    </div>
+                    <div class="directory-grid" id="home-groups"></div>
                 </div>
-            </div>
-        </div>
-    </footer>
+            </section>
 
-    <!-- Back to Top Button -->
-    <button class="back-to-top" onclick="scrollToTop()" aria-label="Back to top">↑</button>
-
-    <script>
-        // Link Categories Data
-        const linkCategories = [
-            {
-                id: "scheduling",
-                title: "Book a Call",
-                titleCn: "预约交流",
-                icon: "📅",
-                color: "blue",
-                links: [
-                    { name: "🗓️ Cal.com", url: "https://cal.com/stevenwang", description: "Calendar scheduling" },
-                    { name: "📅 Google Calendar", url: "https://calendar.app.google/fT6ip6i638AGuP8v5", description: "Google Calendar integration" },
-                    { name: "📬 ChiliPiper", url: "https://gmail.chilipiper.com/me/steven-wang", description: "Lead qualification" },
-                    { name: "⏰ Calendly", url: "https://calendly.com/steven_wang/60min", description: "60 min meeting scheduler" },
-                ]
-            },
-            {
-                id: "writing",
-                title: "Website & Writing",
-                titleCn: "主站与文章",
-                icon: "🌐",
-                color: "cyan",
-                links: [
-                    { name: "🧱 GitHub", url: "https://github.com/learnbydoingwithsteven", description: "Code repositories" },
-                    { name: "🌐 GitHub.io", url: "https://learnbydoingwithsteven.github.io/", description: "Personal website" },
-                    { name: "🐻 Bear Blog", url: "https://learnbydoingwithsteven.bearblog.dev/", description: "Minimalist blog" },
-                    { name: "✍️ Substack", url: "https://substack.com/@steven923044", description: "Newsletter platform" },
-                    { name: "✍️ Substack (AI)", url: "https://substack.com/@learnbydoingwithsteven", description: "AI-focused newsletter" },
-                    { name: "📰 LinkedIn Newsletter", url: "https://www.linkedin.com/newsletters/7283566848875384833/", description: "Professional insights" },
-                    { name: "📲 微信公众号", url: "https://mp.weixin.qq.com/s/_UgwPOKp0KFDNQdPSYuWMg", description: "WeChat official account" }
-                ]
-            },
-            {
-                id: "communities",
-                title: "Communities",
-                titleCn: "社群矩阵",
-                icon: "💬",
-                color: "green",
-                links: [
-                    { name: "🌐 LinkedIn Group（中/欧/美AI社群）", url: "https://www.linkedin.com/groups/15054015", description: "Startup, employment, fundraising" },
-                    { name: "💬 Discord（中欧美AI社群）", url: "https://discord.gg/XE6WpAfM", description: "AI community for entrepreneurs" },
-                    { name: "💬 Discord（Learn By Doing）", url: "https://discord.gg/47yq8KcC", description: "Technical & podcast discussions" },
-                    { name: "📡 Telegram Group（技术·播客）", url: "https://t.me/+i9NRjGCKjRQxMDNk", description: "Tech & podcast community" },
-                    { name: "📱 WhatsApp Group（技术·播客）", url: "https://chat.whatsapp.com/Gmfju4artZB0VfRxV93H8p", description: "WhatsApp community" }
-                ]
-            },
-            {
-                id: "contact",
-                title: "Direct Contacts",
-                titleCn: "直接联系",
-                icon: "🧑‍💼",
-                color: "purple",
-                links: [
-                    { name: "✉️ Email", url: "mailto:wjbear2020@gmail.com", description: "Career / Banking / Finance / GenAI / DataScience / Industry / Consulting and Collaborations" }
-                ]
-            },
-            {
-                id: "support",
-                title: "Support Steven's Work",
-                titleCn: "支持创作",
-                icon: "💰",
-                color: "red",
-                links: [
-                    { name: "💳 PayPal", url: "https://www.paypal.com/paypalme/wangjiansuper?country.x=IT&locale.x=en_US", description: "Donate via PayPal" },
-                    { name: "☕ Buy Me A Coffee", url: "https://buymeacoffee.com/learnbydoing", description: "Support with coffee" }
-                ]
-            },
-            {
-                id: "video",
-                title: "Video Platforms",
-                titleCn: "视频矩阵",
-                icon: "🎥",
-                color: "orange",
-                links: [
-                    { name: "▶️ YouTube Learn By Doing With Steven", url: "https://www.youtube.com/@learnbydoingwithsteven", description: "Main English channel" },
-                    { name: "▶️ 数能生智（中文频道）", url: "https://www.youtube.com/@%E6%95%B0%E8%83%BD%E7%94%9F%E6%99%BA", description: "Chinese YouTube channel" },
-                    { name: "🎵 TikTok", url: "https://www.tiktok.com/@learnbydoingwithsteven", description: "Short-form content" },
-                    { name: "📺 哔哩哔哩（Steven数据漫谈）", url: "https://space.bilibili.com/3546784399886498?spm_id_from=333.788.upinfo.head.click", description: "Bilibili channel" },
-                    { name: "🎵 抖音", url: "https://www.douyin.com/user/self?modal_id=7577406098097933622&showTab=post", description: "Douyin channel" }
-                ]
-            },
-            {
-                id: "channels",
-                title: "Website / Channels",
-                titleCn: "网站 / 频道 / 平台",
-                icon: "🌍",
-                color: "teal",
-                links: [
-                    { name: "WhatsApp Channel", url: "https://whatsapp.com/channel/0029VazqfKFK0IBoyfgyO70b", description: "WhatsApp broadcast channel" },
-                    { name: "Telegram Channel", url: "https://t.me/learnbydoingwithsteven", description: "Telegram broadcast channel" },
-                    { name: "GitHub", url: "https://github.com/learnbydoingwithsteven", description: "Code repositories" },
-                    { name: "GitHub.io", url: "https://learnbydoingwithsteven.github.io/", description: "Personal website" },
-                    { name: "LinkedIn Newsletter (Business)", url: "https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7359504834644926464", description: "Business newsletter" },
-                    { name: "LinkedIn Newsletter (Tech)", url: "https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7283566848875384833", description: "Tech newsletter" },
-                    { name: "Substack", url: "https://substack.com/@steven923044", description: "Newsletter platform" },
-                    { name: "Substack (AI)", url: "https://substack.com/@learnbydoingwithsteven", description: "AI-focused newsletter" },
-                    { name: "Bear Blog", url: "https://learnbydoingwithsteven.bearblog.dev/", description: "Minimalist blog" },
-                    { name: "微信公众号", url: "https://mp.weixin.qq.com/s/_UgwPOKp0KFDNQdPSYuWMg", description: "世界模型的下一站" }
-                ]
-            },
-            {
-                id: "social",
-                title: "Social Media",
-                titleCn: "社交平台",
-                icon: "📱",
-                color: "indigo",
-                links: [
-                    { name: "小红书", url: "https://www.xiaohongshu.com/user/profile/5e0e450b0000000001001e26?xsec_token=YBolHet_ed8Npv1I7yr4lMGb6VRZWtbkE9QSkodxdCu0I=&xsec_source=app_share&xhsshare=CopyLink&appuid=5e0e450b0000000001001e26&apptime=1737132065&share_id=c4262bd995c34cebaab2e0d85e5a3875", description: "Chinese social platform" },
-                    { name: "LinkedIn（独立项目）", url: "https://www.linkedin.com/in/steven-w-6828a31bb/", description: "Independent projects profile" },
-                    { name: "LinkedIn（完整职业）", url: "https://www.linkedin.com/in/jian-w-83bb36440/", description: "Full professional profile" },
-                    { name: "X（Twitter）", url: "https://x.com/Catchingtides", description: "Real-time updates" },
-                    { name: "Facebook", url: "https://www.facebook.com/profile.php?id=61571798756202", description: "Community updates" },
-                    { name: "Instagram", url: "https://www.instagram.com/learnbydoingwithsteven", description: "Visual content" }
-                ]
-            },
-            {
-                id: "collaborations",
-                title: "Collaborations",
-                titleCn: "合作伙伴",
-                icon: "🤝",
-                color: "amber",
-                links: [
-                    { name: "Vanta Tech Lab", url: "https://www.linkedin.com/company/vantatechlab", description: "Tech venture community" },
-                    { name: "DukeCEO", url: "https://www.linkedin.com/company/chinese-entrepreneurs-organization-at-duke-dukeceo", description: "Duke entrepreneurship" },
-                    { name: "创·见 Founder Vision", url: "https://www.xiaoyuzhoufm.com/podcast/66a322470736bb4045362844?s=eyJ1IjoiNjVkZDlhNDBlZGNlNjcxMDRhOThhNjZkIiwiZCI6MX0=", description: "Founder community" },
-                    { name: "我作为嘉宾的节目", url: "https://www.xiaoyuzhoufm.com/episode/690c8ad5d99642be96c4accc", description: "Guest podcast appearance" }
-                ]
-            },
-            {
-                id: "podcasts",
-                title: "Steven Data Talk",
-                titleCn: "播客矩阵",
-                icon: "🎙️",
-                color: "pink",
-                links: [
-                    { name: "Apple Podcasts", url: "https://podcasts.apple.com/gb/podcast/steven-data-talk/id1845702474", description: "Steven Data Talk on Apple" },
-                    { name: "Spotify", url: "https://open.spotify.com/show/3qSV5WJBsHbivqdmIopEYR?si=Q7XxCzxsSTKXmKiW27hmAA", description: "Steven Data Talk on Spotify" },
-                    { name: "喜马拉雅", url: "https://www.ximalaya.com/album/88884765", description: "Ximalaya podcast" },
-                    { name: "小宇宙", url: "https://www.xiaoyuzhoufm.com/podcast/68ef81ce0a78e59c5c5c45e7", description: "Xiaoyuzhou podcast" },
-                    { name: "YouTube Music", url: "https://music.youtube.com/playlist?list=PLfV0OO4XXVBk1oCeZg-xwdnYbNuSDqgmW&si=EQtgt96FfSZSwxvc", description: "YouTube Music playlist" },
-                    { name: "Amazon Music", url: "https://music.amazon.com/podcasts/b31ecf00-32e8-41b5-96cd-13e86253d249/steven-data-talk", description: "Amazon Music podcast" }
-                ]
-            },
-            {
-                id: "podcasts-cn",
-                title: "Steven 数据漫谈",
-                titleCn: "中文播客",
-                icon: "🎧",
-                color: "pink",
-                links: [
-                    { name: "Apple Podcasts", url: "https://podcasts.apple.com/gb/podcast/steven%E6%95%B0%E6%8D%AE%E6%BC%AB%E8%B0%88/id1845703144", description: "Steven数据漫谈 on Apple" },
-                    { name: "Spotify", url: "https://open.spotify.com/show/4b8dqmQmVQiPPxuIZNR58w?si=QgCsksYYSV-jTqz1e4tFpw", description: "Steven数据漫谈 on Spotify" },
-                    { name: "喜马拉雅", url: "https://www.ximalaya.com/album/89574928", description: "Ximalaya podcast" },
-                    { name: "小宇宙", url: "https://www.xiaoyuzhoufm.com/podcast/68ef81d14ce3619b345a32b2", description: "Xiaoyuzhou podcast" },
-                    { name: "YouTube Music", url: "https://music.youtube.com/playlist?list=PLfV0OO4XXVBmQOOLxMpZXn519_PW3uneG&si=rgCVgHICnqNK5rFX", description: "YouTube Music playlist" },
-                    { name: "Amazon Music", url: "https://music.amazon.com/podcasts/6d68d8c4-d7bb-4c1d-8b6c-1e9b0946463d/steven%E6%95%B0%E6%8D%AE%E6%BC%AB%E8%B0%88", description: "Amazon Music podcast" }
-                ]
-            },
-            {
-                id: "podcasts-ai",
-                title: "Steven AI Talk",
-                titleCn: "多语AI播客",
-                icon: "🤖",
-                color: "blue",
-                links: [
-                    { name: "Apple Podcasts (English)", url: "https://podcasts.apple.com/gb/podcast/steven-ai-talk-english/id1846320778", description: "English AI Talk on Apple" },
-                    { name: "Spotify (English)", url: "https://open.spotify.com/show/43CVIH13u3pvIyg9aTEHwY?si=w-gPlNheRmCTfvlIPOwL9w", description: "English AI Talk on Spotify" },
-                    { name: "Amazon Music (English)", url: "https://music.amazon.com/podcasts/7aaf0f86-7cb1-4f6f-bba3-6fd3cb9dcad2/steven-ai-talkenglish", description: "English AI Talk on Amazon" },
-                    { name: "小宇宙 (English)", url: "https://www.xiaoyuzhoufm.com/podcast/68ef7ec2332567e348b6e57b", description: "Xiaoyuzhou English podcast" },
-                    { name: "YouTube Music (English)", url: "https://music.youtube.com/playlist?list=PLfV0OO4XXVBk811V6mTVbL483S_56ZtF5&si=qqGM8Es0NTSFtflX", description: "YouTube Music English" },
-                    { name: "Spotify（中文 Steven AI 播客）", url: "https://open.spotify.com/show/7gLoHfOKO302yNcF7bzNOu?si=FU7xcKwUQU-jfTXxi0grBg", description: "Chinese AI Talk on Spotify" },
-                    { name: "喜马拉雅（中文）", url: "https://www.ximalaya.com/album/88276097", description: "Chinese AI Talk on Ximalaya" },
-                    { name: "Spotify（Italiano）", url: "https://open.spotify.com/show/7D3BcWR5xGzGap8A1bSeoQ?si=ek8GNzrnT-OdiGJ91vi0rw", description: "Italian AI Talk on Spotify" }
-                ]
-            },
-            {
-                id: "podcasts-yc",
-                title: "YC 斯坦福创业课",
-                titleCn: "CS183B 精讲",
-                icon: "🎓",
-                color: "purple",
-                links: [
-                    { name: "Apple Podcasts", url: "https://podcasts.apple.com/us/podcast/yc%E6%96%AF%E5%9D%A6%E7%A6%8F%E5%88%9B%E4%B8%9A%E8%AF%BE2015cs183b%E7%B2%BE%E8%AE%B2/id1846320657", description: "YC CS183B on Apple" },
-                    { name: "Spotify", url: "https://open.spotify.com/show/5dg2pUoVlwvWCu2RSRYUay?si=esrJ8TByS-Cqrw4aOqKDyw", description: "YC CS183B on Spotify" },
-                    { name: "喜马拉雅", url: "https://m.ximalaya.com/album/109171033?from=pc", description: "YC CS183B on Ximalaya" },
-                    { name: "小宇宙", url: "https://www.xiaoyuzhoufm.com/podcast/68ef7ec662e8bfe0dffdd116", description: "YC CS183B on Xiaoyuzhou" },
-                    { name: "YouTube Music", url: "https://music.youtube.com/playlist?list=PLfV0OO4XXVBlRgHAHArWBcpbOYykZfMqI&si=KwnQAp25yoprI39H", description: "YC CS183B on YouTube Music" },
-                    { name: "Amazon Music", url: "https://music.amazon.com/podcasts/97f55ca2-d30d-48d8-afa5-9d51362bf92c/yc%E6%96%AF%E5%9D%A6%E7%A6%8F%E5%88%9B%E4%B8%9A%E8%AF%BE2015cs183b%E7%B2%BE%E8%AE%B2", description: "YC CS183B on Amazon Music" }
-                ]
-            },
-            {
-                id: "travel",
-                title: "Travel Channel",
-                titleCn: "兴趣爱好",
-                icon: "🚗",
-                color: "teal",
-                links: [
-                    { name: "🚗 Steven On The Road (YouTube)", url: "https://youtube.com/@stevenontheroad6129?si=pAUvAm0af6eFJrDn", description: "Travel vlog" },
-                    { name: "🚗 Steven On The Road（哔哩哔哩）", url: "https://space.bilibili.com/157133040", description: "Chinese travel channel" }
-                ]
-            }
-        ];
-
-        // Chevron SVG
-        const chevronSVG = `<svg class="chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-        </svg>`;
-
-        // External link SVG
-        const externalLinkSVG = `<svg class="link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-        </svg>`;
-
-        // Render categories
-        function renderCategories() {
-            const grid = document.getElementById('categories-grid');
-            grid.innerHTML = linkCategories.map(category => `
-                <div class="category-card ${category.color}" data-id="${category.id}">
-                    <div class="category-header" onclick="toggleCategory('${category.id}')">
-                        <div class="category-info">
-                            <span class="category-icon">${category.icon}</span>
-                            <div class="category-titles">
-                                <div class="category-title">${category.title}</div>
-                                <div class="category-title-cn">${category.titleCn}</div>
+            <section class="section">
+                <div class="container">
+                    <div class="cta-card reveal">
+                        <div class="cta-content">
+                            <h2 class="cta-title" data-i18n="home.cta.title"></h2>
+                            <p class="cta-copy" data-i18n="home.cta.copy"></p>
+                            <div class="button-row">
+                                <a class="button button-secondary" href="podcasts.html" data-i18n="home.cta.primary"></a>
+                                <a class="button button-ghost button-cta-highlight" href="portfolio.html" data-i18n="home.cta.secondary"></a>
                             </div>
                         </div>
-                        <div class="category-meta">
-                            <span class="category-count">${category.links.length}</span>
-                            ${chevronSVG}
-                        </div>
-                    </div>
-                    <div class="category-content">
-                        ${category.links.map(link => `
-                            <a href="${link.url}" target="_blank" rel="noopener noreferrer" class="link-item">
-                                <div class="link-info">
-                                    <div class="link-name">${link.name}</div>
-                                    ${link.description ? `<div class="link-description">${link.description}</div>` : ''}
-                                </div>
-                                ${externalLinkSVG}
-                            </a>
-                        `).join('')}
                     </div>
                 </div>
-            `).join('');
-        }
+            </section>
+        </main>
 
-        // Toggle category
-        function toggleCategory(id) {
-            const card = document.querySelector(`.category-card[data-id="${id}"]`);
-            card.classList.toggle('expanded');
-        }
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-card reveal">
+                    <div class="footer-copy">
+                        <p>&copy; <span data-current-year></span> Learn By Doing with Steven</p>
+                        <p data-i18n="shared.footer.lineOne"></p>
+                        <p data-i18n="shared.footer.lineTwo"></p>
+                    </div>
+                    <div class="footer-links">
+                        <a class="button button-ghost" href="portfolio.html" data-i18n="shared.nav.portfolio"></a>
+                        <a class="button button-ghost" href="podcasts.html" data-i18n="shared.nav.directory"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
-        // Expand all categories
-        function expandAll() {
-            document.querySelectorAll('.category-card').forEach(card => {
-                card.classList.add('expanded');
-            });
-        }
+        <button class="top-button" type="button" data-i18n-aria-label="shared.backToTop">↑</button>
+    </div>
 
-        // Collapse all categories
-        function collapseAll() {
-            document.querySelectorAll('.category-card').forEach(card => {
-                card.classList.remove('expanded');
-            });
-        }
-
-        // Scroll to top
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        // Back to top button visibility
-        window.addEventListener('scroll', () => {
-            const btn = document.querySelector('.back-to-top');
-            if (window.scrollY > 300) {
-                btn.classList.add('visible');
-            } else {
-                btn.classList.remove('visible');
-            }
-        });
-
-        // Initialize
-        document.addEventListener('DOMContentLoaded', () => {
-            renderCategories();
-        });
-    </script>
+    <script src="script.js" defer></script>
 </body>
-
 </html>

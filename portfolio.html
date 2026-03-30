@@ -3,167 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn By Doing with Steven - AI, ML, NLP, and RL Projects Portfolio">
+    <meta name="description" content="Curated flagship repositories across AI systems, learning paths, applied platforms, and agentic experiments.">
+    <meta name="theme-color" content="#0f766e">
     <meta name="author" content="Learn By Doing with Steven">
     <title>Portfolio | Learn By Doing with Steven</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="images/creator_profile.jpeg">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
-<body>
-    <nav class="nav">
-        <div class="container">
-            <div class="nav-content">
-                <a href="index.html" class="logo">Learn By Doing</a>
-                <div class="nav-links">
-                    <a href="index.html" class="nav-link">Home</a>
-                    <a href="#projects" class="nav-link">Projects</a>
-                    <a href="#about" class="nav-link">About</a>
-                    <a href="#contact" class="nav-link">Contact</a>
-                    <a href="https://github.com/learnbydoingwithsteven" target="_blank" class="nav-link-primary">
-                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                        </svg>
-                        GitHub
+<body data-page="portfolio">
+    <div class="site-shell">
+        <header class="site-header">
+            <div class="container">
+                <div class="header-bar">
+                    <a class="brand" href="index.html">
+                        <span class="brand-mark">LB</span>
+                        <span class="brand-copy">
+                            <span class="brand-name">Learn By Doing</span>
+                            <span class="brand-tag" data-i18n="shared.brand.tag"></span>
+                        </span>
                     </a>
+                    <nav class="site-nav" aria-label="Primary">
+                        <a class="nav-link" href="index.html" data-i18n="shared.nav.home"></a>
+                        <a class="nav-link is-current" href="portfolio.html" aria-current="page" data-i18n="shared.nav.portfolio"></a>
+                        <a class="nav-link" href="podcasts.html" data-i18n="shared.nav.directory"></a>
+                    </nav>
+                    <div class="header-actions">
+                        <div class="language-switch" aria-label="Language selector">
+                            <button class="lang-btn" type="button" data-lang="zh" aria-pressed="false">中文</button>
+                            <button class="lang-btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+                            <button class="lang-btn" type="button" data-lang="it" aria-pressed="false">IT</button>
+                        </div>
+                        <a class="button button-ghost" href="https://github.com/learnbydoingwithsteven" target="_blank" rel="noopener" data-i18n="shared.nav.github"></a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </nav>
+        </header>
 
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    Building the Future with
-                    <span class="gradient-text">AI & Machine Learning</span>
-                </h1>
-                <p class="hero-subtitle">
-                    1,500+ production-ready applications across AI, ML, NLP, and Reinforcement Learning.
-                    Open source. Well-documented. Ready to deploy.
-                </p>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <div class="stat-number">25</div>
-                        <div class="stat-label">Repositories</div>
+        <main>
+            <section class="hero">
+                <div class="container hero-grid">
+                    <div class="hero-copy reveal">
+                        <p class="eyebrow" data-i18n="portfolio.hero.eyebrow"></p>
+                        <h1 class="display-title">
+                            <span data-i18n="portfolio.hero.titleLead"></span><br>
+                            <span class="accent" data-i18n="portfolio.hero.titleAccent"></span>
+                        </h1>
+                        <p class="hero-lead" data-i18n="portfolio.hero.subtitle"></p>
+                        <div class="button-row">
+                            <a class="button button-primary" href="https://github.com/learnbydoingwithsteven" target="_blank" rel="noopener" data-i18n="portfolio.hero.primary"></a>
+                            <a class="button button-secondary" href="mailto:wjbear2020@gmail.com" data-i18n="portfolio.hero.secondary"></a>
+                        </div>
+                        <div class="metric-strip" id="portfolio-stats"></div>
                     </div>
-                    <div class="stat">
-                        <div class="stat-number">1,500+</div>
-                        <div class="stat-label">Applications</div>
+
+                    <aside class="profile-panel reveal">
+                        <div class="profile-image-wrap">
+                            <img class="profile-image" src="images/creator_profile.jpeg" alt="Steven portrait">
+                        </div>
+                        <div class="profile-copy-wrap">
+                            <p class="profile-kicker" data-i18n="portfolio.projectsIntro.label"></p>
+                            <h2 class="profile-title" data-i18n="portfolio.projectsIntro.title"></h2>
+                            <p class="profile-copy" data-i18n="portfolio.projectsIntro.copy"></p>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <div class="project-filter-bar reveal" id="project-filters"></div>
+                    <div class="project-grid" id="project-grid"></div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <div class="section-intro reveal">
+                        <div>
+                            <p class="section-label" data-i18n="portfolio.about.label"></p>
+                            <h2 class="section-title" data-i18n="portfolio.about.title"></h2>
+                        </div>
+                        <p class="section-copy" data-i18n="portfolio.about.copy"></p>
                     </div>
-                    <div class="stat">
-                        <div class="stat-number">600K+</div>
-                        <div class="stat-label">Lines of Code</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">400+</div>
-                        <div class="stat-label">Courses</div>
+                    <div class="guiding-grid">
+                        <article class="principle-card reveal">
+                            <h3 class="principle-title" data-i18n="portfolio.principles.0.title"></h3>
+                            <p class="principle-copy" data-i18n="portfolio.principles.0.copy"></p>
+                        </article>
+                        <article class="principle-card reveal">
+                            <h3 class="principle-title" data-i18n="portfolio.principles.1.title"></h3>
+                            <p class="principle-copy" data-i18n="portfolio.principles.1.copy"></p>
+                        </article>
+                        <article class="principle-card reveal">
+                            <h3 class="principle-title" data-i18n="portfolio.principles.2.title"></h3>
+                            <p class="principle-copy" data-i18n="portfolio.principles.2.copy"></p>
+                        </article>
                     </div>
                 </div>
-                <div class="hero-cta">
-                    <a href="#projects" class="btn btn-primary">Explore Projects</a>
-                    <a href="https://github.com/learnbydoingwithsteven" target="_blank" class="btn btn-secondary">View on GitHub</a>
-                </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <section id="projects" class="projects">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Featured Projects</h2>
-                <p class="section-subtitle">Production-ready applications and comprehensive learning resources</p>
-            </div>
-            <div class="filter-tabs">
-                <button class="filter-tab active" data-category="all">All Projects</button>
-                <button class="filter-tab" data-category="ai-ml">AI & ML</button>
-                <button class="filter-tab" data-category="nlp">NLP & LLM</button>
-                <button class="filter-tab" data-category="rl">Reinforcement Learning</button>
-                <button class="filter-tab" data-category="apps">Applications</button>
-            </div>
-            <div class="project-grid" id="projectGrid"></div>
-        </div>
-    </section>
-
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2 class="section-title">About This Portfolio</h2>
-                    <p>A comprehensive collection of AI, Machine Learning, Natural Language Processing, and Reinforcement Learning projects. Each repository contains production-ready code, comprehensive documentation, and real-world applications.</p>
-                    <div class="tech-stack">
-                        <h3>Tech Stack</h3>
-                        <div class="tech-tags">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">TypeScript</span>
-                            <span class="tech-tag">FastAPI</span>
-                            <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                            <span class="tech-tag">Redis</span>
-                            <span class="tech-tag">TensorFlow</span>
-                            <span class="tech-tag">PyTorch</span>
-                            <span class="tech-tag">Scikit-learn</span>
-                        </div>
-                    </div>
-                    <div class="features">
-                        <div class="feature">
-                            <div class="feature-icon">🚀</div>
-                            <div class="feature-content">
-                                <h4>Production Ready</h4>
-                                <p>All applications are containerized, tested, and ready for deployment</p>
-                            </div>
-                        </div>
-                        <div class="feature">
-                            <div class="feature-icon">📚</div>
-                            <div class="feature-content">
-                                <h4>Well Documented</h4>
-                                <p>Comprehensive documentation, API references, and usage guides</p>
-                            </div>
-                        </div>
-                        <div class="feature">
-                            <div class="feature-icon">🔧</div>
-                            <div class="feature-content">
-                                <h4>Modern Architecture</h4>
-                                <p>Full-stack applications with React frontends and FastAPI backends</p>
+            <section class="section">
+                <div class="container">
+                    <div class="cta-card reveal">
+                        <div class="cta-content">
+                            <h2 class="cta-title" data-i18n="portfolio.cta.title"></h2>
+                            <p class="cta-copy" data-i18n="portfolio.cta.copy"></p>
+                            <div class="button-row">
+                                <a class="button button-secondary" href="podcasts.html" data-i18n="portfolio.cta.primary"></a>
+                                <a class="button button-ghost" href="https://github.com/learnbydoingwithsteven" target="_blank" rel="noopener" data-i18n="portfolio.cta.secondary"></a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
+        </main>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="contact-content">
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="section-subtitle">Interested in collaboration or have questions?</p>
-                <div class="contact-links">
-                    <a href="https://github.com/learnbydoingwithsteven" target="_blank" class="contact-link">
-                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                        </svg>
-                        GitHub Profile
-                    </a>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-card reveal">
+                    <div class="footer-copy">
+                        <p>&copy; <span data-current-year></span> Learn By Doing with Steven</p>
+                        <p data-i18n="shared.footer.lineOne"></p>
+                        <p data-i18n="shared.footer.lineTwo"></p>
+                    </div>
+                    <div class="footer-links">
+                        <a class="button button-ghost" href="index.html" data-i18n="shared.nav.home"></a>
+                        <a class="button button-ghost" href="podcasts.html" data-i18n="shared.nav.directory"></a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </footer>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2025 Learn By Doing with Steven. All rights reserved.</p>
-                <p>Open source projects for learning and development</p>
-            </div>
-        </div>
-    </footer>
+        <button class="top-button" type="button" data-i18n-aria-label="shared.backToTop">↑</button>
+    </div>
 
-    <button class="back-to-top" onclick="scrollToTop()" aria-label="Back to top">↑</button>
-
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
