@@ -5,7 +5,7 @@ const COPY = {
         nav: {
             home: { en: "Home", zh: "首页", it: "Home" },
             portfolio: { en: "Portfolio", zh: "项目集", it: "Portfolio" },
-            advisory: { en: "Advisory", zh: "顾问页", it: "Advisory" },
+            advisory: { en: "Advisory", zh: "顾问 / 培训", it: "Advisory" },
             directory: { en: "Media & Links", zh: "媒体与链接", it: "Media e link" },
             github: { en: "GitHub", zh: "GitHub", it: "GitHub" }
         },
@@ -67,6 +67,7 @@ const COPY = {
                 it: "Un punto di partenza premium per sistemi AI, progetti di apprendimento, community e conversazioni con founder, disponibile in cinese, inglese e italiano."
             },
             primary: { en: "Explore portfolio", zh: "查看项目集", it: "Esplora il portfolio" },
+            advisory: { en: "Open advisory page", zh: "讲师 / 顾问页", it: "Apri la pagina advisory" },
             secondary: { en: "Open media directory", zh: "打开媒体目录", it: "Apri la directory media" },
             tertiary: { en: "Email Steven", zh: "给 Steven 发邮件", it: "Scrivi a Steven" }
         },
@@ -569,7 +570,7 @@ const FILTERS = {
     agents: { en: "Agents & RL", zh: "智能体与强化学习", it: "Agenti e RL" }
 };
 
-const HOME_GROUP_KEYS = ["call", "writing", "advisory", "communities", "direct", "support"];
+const HOME_GROUP_KEYS = ["advisory", "call", "writing", "communities", "direct", "support"];
 const state = { lang: detectLanguage(), filter: "all" };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -725,7 +726,7 @@ function renderDirectory(lang) {
 }
 
 function renderGroupCard(group, lang) {
-    return `<article class="link-group-card reveal"><div class="card-top"><div><span class="group-badge">${group.badge}</span><h3 class="card-title">${text(group.title, lang)}</h3><p class="card-copy">${text(group.description, lang)}</p></div><span class="group-summary-count">${group.items.length}</span></div><div class="link-list">${group.items.slice(0, 4).map((item) => renderLink(item, lang)).join("")}</div></article>`;
+    return `<article class="link-group-card reveal ${group.key === "advisory" ? "is-highlight" : ""}"><div class="card-top"><div><span class="group-badge">${group.badge}</span><h3 class="card-title">${text(group.title, lang)}</h3><p class="card-copy">${text(group.description, lang)}</p></div><span class="group-summary-count">${group.items.length}</span></div><div class="link-list">${group.items.slice(0, 4).map((item) => renderLink(item, lang)).join("")}</div></article>`;
 }
 
 function renderGroupDetails(group, lang) {
@@ -743,7 +744,16 @@ function renderLink(item, lang) {
 
 function shortUrl(url) {
     if (url.startsWith("mailto:")) return url.replace("mailto:", "");
-    return url.replace(/^https?:\/\//, "").replace(/\/$/, "");
+    try {
+        const parsed = new URL(url);
+        const host = parsed.host.replace(/^www\./, "");
+        let path = parsed.pathname.replace(/\/+$/, "");
+        if (path.length > 28) path = `${path.slice(0, 28)}...`;
+        const suffix = parsed.search ? "?..." : "";
+        return `${host}${path}${suffix}` || host;
+    } catch {
+        return url.replace(/^https?:\/\//, "").replace(/\/$/, "");
+    }
 }
 
 function labelFromUrl(url) {
