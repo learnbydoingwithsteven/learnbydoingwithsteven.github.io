@@ -5,6 +5,7 @@ const COPY = {
         nav: {
             home: { en: "Home", zh: "首页", it: "Home" },
             portfolio: { en: "Portfolio", zh: "项目集", it: "Portfolio" },
+            advisory: { en: "Advisory", zh: "顾问页", it: "Advisory" },
             directory: { en: "Media & Links", zh: "媒体与链接", it: "Media e link" },
             github: { en: "GitHub", zh: "GitHub", it: "GitHub" }
         },
@@ -299,6 +300,19 @@ const GROUPS = [
         ]
     },
     {
+        key: "advisory",
+        badge: "Advisory",
+        title: { en: "Lecturer & advisor profile", zh: "讲师与顾问介绍页", it: "Profilo docente e advisory" },
+        description: {
+            en: "An independent profile page for Steven's lecturer, consultant, and enterprise AI enablement positioning.",
+            zh: "一个独立页面，集中展示 Steven 的讲师、顾问与企业 AI 赋能定位。",
+            it: "Una pagina indipendente che presenta il posizionamento di Steven come docente, consulente e referente per l'AI enablement in azienda."
+        },
+        items: [
+            { title: { en: "Open advisory page", zh: "打开介绍页", it: "Apri la pagina advisory" }, url: "advisory/" }
+        ]
+    },
+    {
         key: "communities",
         badge: "Community",
         title: { en: "Communities", zh: "社群矩阵", it: "Community" },
@@ -555,7 +569,7 @@ const FILTERS = {
     agents: { en: "Agents & RL", zh: "智能体与强化学习", it: "Agenti e RL" }
 };
 
-const HOME_GROUP_KEYS = ["call", "writing", "communities", "direct", "support"];
+const HOME_GROUP_KEYS = ["call", "writing", "advisory", "communities", "direct", "support"];
 const state = { lang: detectLanguage(), filter: "all" };
 
 document.addEventListener("DOMContentLoaded", () => {
