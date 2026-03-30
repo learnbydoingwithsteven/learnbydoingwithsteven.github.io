@@ -39,18 +39,19 @@ function renderLangSwitch() {
 }
 
 function renderFacts() {
+  const factsTitle = tr(data.meta.factsTitle);
+
   return `
     <div class="panel">
-      <h2 class="panel-title">${tr({
-        zh: "快速信息",
-        en: "Quick facts",
-        it: "Informazioni rapide"
-      })}</h2>
-      <div class="bullet-list">
+      ${factsTitle ? `<h2 class="panel-title">${factsTitle}</h2>` : ""}
+      <div class="facts-list">
         ${data.meta.facts
           .map(
             (fact) => `
-              <div><strong>${tr(fact.label)}:</strong> ${tr(fact.value)}</div>
+              <div class="fact-item">
+                <span class="fact-label">${tr(fact.label)}</span>
+                <span class="fact-value">${tr(fact.value)}</span>
+              </div>
             `
           )
           .join("")}
@@ -84,6 +85,7 @@ function renderMetrics() {
 }
 
 function renderHero() {
+  const eyebrow = tr(data.meta.eyebrow);
   const heroActions = data.ui?.showHeroActions
     ? `
         <div class="hero-actions">
@@ -103,7 +105,7 @@ function renderHero() {
   return `
     <section id="hero" class="hero">
       <div class="hero-card">
-        <span class="eyebrow">${tr(data.meta.eyebrow)}</span>
+        ${eyebrow ? `<span class="eyebrow">${eyebrow}</span>` : ""}
         <h1 class="hero-title">
           ${data.meta.name}
           <span class="sub">${tr(data.meta.title)}</span>
@@ -120,13 +122,16 @@ function renderHero() {
 }
 
 function renderSectionHeading(section) {
+  const kicker = tr(section.kicker);
+  const lead = tr(section.lead);
+
   return `
     <div class="section-heading">
       <div>
-        <span class="section-kicker">${tr(section.kicker)}</span>
+        ${kicker ? `<span class="section-kicker">${kicker}</span>` : ""}
         <h2 class="section-title">${tr(section.title)}</h2>
       </div>
-      <p class="section-lead">${tr(section.lead)}</p>
+      ${lead ? `<p class="section-lead">${lead}</p>` : ""}
     </div>
   `;
 }
@@ -300,9 +305,9 @@ function renderFooter() {
 function renderPage() {
   document.documentElement.lang = currentLang === "zh" ? "zh-CN" : currentLang;
   document.title = `${data.meta.name} | ${tr({
-    zh: "讲师介绍",
-    en: "Lecturer Profile",
-    it: "Profilo docente"
+    zh: "顾问与讲师简介",
+    en: "Advisory and Lecturer Profile",
+    it: "Profilo di consulenza e docenza"
   })}`;
 
   renderLangSwitch();

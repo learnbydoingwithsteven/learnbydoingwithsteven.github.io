@@ -258,6 +258,26 @@ main {
   line-height: 1.75;
 }
 
+.facts-list {
+  display: grid;
+  gap: 14px;
+}
+
+.fact-item {
+  display: grid;
+  gap: 4px;
+}
+
+.fact-label {
+  color: #d8edf5;
+  font-size: 0.9rem;
+}
+
+.fact-value {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
 .metric-grid,
 .fit-grid,
 .timeline-grid,
