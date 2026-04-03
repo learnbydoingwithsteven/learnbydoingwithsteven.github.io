@@ -119,24 +119,7 @@ const COPY = {
                 zh: "AI 项目 / 顾问培训 / 媒体渠道 / 中文、英文、意大利语。",
                 it: "Progetti AI / Advisory / Canali media / Cinese, inglese, italiano."
             }
-        },
-        teachingIntro: {
-            label: {
-                en: "Curriculum Archive",
-                zh: "过往教学存档",
-                it: "Archivio corsi"
-            },
-            title: {
-                en: "Presentation Cover Matrices",
-                zh: "课程交付首屏视觉阵列",
-                it: "Matrici visuali delle slide di copertina"
-            },
-            copy: {
-                en: "A comprehensive visual registry of enterprise-grade AI training programs delivered across Chinese, English, and Italian markets, featuring 150+ high-fidelity presentation assets from the Ping An and Gaodun Codex projects.",
-                zh: "跨越中、英、意三大市场的企业级 AI 培训课程视觉索引，集中展示了来自平安集团与高顿 Codex 项目的 150 余份高保真教学课件的首屏封貌。",
-                it: "Un registro visivo completo dei programmi di formazione AI di livello enterprise erogati nei mercati cinese, inglese e italiano, con oltre 150 asset di presentazione dai progetti Ping An e Gaodun Codex."
-            }
-        }
+
     },
     portfolio: {
         metaTitle: {
@@ -598,90 +581,9 @@ const LANGUAGE_LABELS = {
     it: { en: "Italian", zh: "\u610f\u5927\u5229\u8bed", it: "Italiano" }
 };
 
-const TEACHING_TERMS = {
-    firstSlideCovers: {
-        en: "curriculum covers",
-        zh: "份教学封貌",
-        it: "copertine curriculum"
-    },
-    sourceFolder: {
-        en: "Source Archive",
-        zh: "源归档目录",
-        it: "Archivio sorgente"
-    },
-    anonymizedArchive: {
-        en: "Enterprise-sanitized delivery",
-        zh: "企业脱敏版交付归档",
-        it: "Consegna anonimizzata enterprise"
-    },
-    finalDeliveryArchive: {
-        en: "Final production hub",
-        zh: "最终生产版本归档",
-        it: "Hub di produzione finale"
-    },
-    montageAlt: {
-        en: "Curriculum visual matrix",
-        zh: "课程首屏视觉矩阵",
-        it: "Matrice visuale del curriculum"
-    }
-};
 
-const PAST_TEACHING_SHOWCASES = [
-    {
-        key: "pingan-it",
-        project: "Ping An",
-        language: "it",
-        count: 40,
-        archive: "anonymizedArchive",
-        folder: "Raccolta_PPT_Italiano_Anonimizzata_20260403",
-        image: "assets/past-teaching/pingan-it-first-slide-grid.jpg"
-    },
-    {
-        key: "pingan-en",
-        project: "Ping An",
-        language: "en",
-        count: 40,
-        archive: "anonymizedArchive",
-        folder: "English_Sanitized_PPT_Collection_20260403",
-        image: "assets/past-teaching/pingan-en-first-slide-grid.jpg"
-    },
-    {
-        key: "pingan-zh",
-        project: "Ping An",
-        language: "zh",
-        count: 40,
-        archive: "anonymizedArchive",
-        folder: "\u4ea4\u4ed8PPT\u6c47\u603b_\u4e2d\u6587\u8131\u654f\u7248_20260402",
-        image: "assets/past-teaching/pingan-zh-first-slide-grid.jpg"
-    },
-    {
-        key: "gaodun-codex-it",
-        project: "Gaodun Codex",
-        language: "it",
-        count: 26,
-        archive: "finalDeliveryArchive",
-        folder: "Archivio_Consegna_Finale_20260403_IT",
-        image: "assets/past-teaching/gaodun-codex-it-first-slide-grid.jpg"
-    },
-    {
-        key: "gaodun-codex-en",
-        project: "Gaodun Codex",
-        language: "en",
-        count: 26,
-        archive: "finalDeliveryArchive",
-        folder: "Final_Delivery_Hub_20260403_EN",
-        image: "assets/past-teaching/gaodun-codex-en-first-slide-grid.jpg"
-    },
-    {
-        key: "gaodun-codex-zh",
-        project: "Gaodun Codex",
-        language: "zh",
-        count: 26,
-        archive: "finalDeliveryArchive",
-        folder: "\u6700\u7ec8\u4ea4\u4ed8\u6c47\u603b_20260402_\u4e2d\u6587\u7ec8\u7248",
-        image: "assets/past-teaching/gaodun-codex-zh-first-slide-grid.jpg"
-    }
-];
+
+
 
 const FILTERS = {
     all: { en: "All", zh: "全部", it: "Tutti" },

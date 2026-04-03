@@ -446,13 +446,117 @@ main {
 }
 
 @keyframes rise {
-  from {
-    opacity: 0;
-    transform: translateY(14px);
-  }
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+.teaching-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 24px;
+}
+
+.teaching-card {
+  position: relative;
+  padding: 24px;
+  border-radius: var(--radius-xl);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  transition: transform 300ms ease, border-color 300ms ease;
+  overflow: hidden;
+}
+
+.teaching-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(77, 208, 181, 0.4);
+}
+
+.teaching-badges {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.group-badge,
+.metric-chip {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.group-badge {
+  background: rgba(121, 184, 255, 0.1);
+  color: var(--accent-3);
+}
+
+.metric-chip {
+  background: rgba(77, 208, 181, 0.1);
+  color: var(--accent);
+}
+
+.card-title {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #fff;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.card-copy {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+.teaching-image-wrap {
+  margin-top: 20px;
+  position: relative;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius-md);
+  padding: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.teaching-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  transition: transform 400ms ease;
+}
+
+.teaching-card:hover .teaching-image {
+  transform: scale(1.01);
+}
+
+.teaching-folder {
+  margin: 20px 0 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.8rem;
+  overflow-wrap: anywhere;
+}
+
+.teaching-folder-label {
+  color: #d8edf5;
+  font-weight: 500;
+  margin-right: 4px;
+}
+
+.teaching-folder-value {
+  opacity: 0.8;
+}
+
+@media (max-width: 960px) {
+  .teaching-grid {
+    grid-template-columns: 1fr;
   }
 }
 

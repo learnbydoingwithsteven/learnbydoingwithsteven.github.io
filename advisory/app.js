@@ -224,6 +224,50 @@ function renderNetwork() {
   `;
 }
 
+function renderTeachingShowcase() {
+  const showcase = data.teachingShowcase;
+  if (!showcase) return "";
+
+  const items = showcase.items
+    .map((item) => {
+      const language = tr({
+        zh: item.language === "zh" ? "中文" : (item.language === "en" ? "英文" : "意大利语"),
+        en: item.language === "zh" ? "Chinese" : (item.language === "en" ? "English" : "Italian"),
+        it: item.language === "zh" ? "Cinese" : (item.language === "en" ? "Inglese" : "Italiano")
+      });
+      const archive = tr(showcase.terms[item.archive]);
+      const alt = `${item.project} ${language} ${tr(showcase.terms.montageAlt)}`;
+
+      return `
+        <article class="teaching-card reveal">
+          <div class="teaching-badges">
+            <span class="group-badge">${item.project}</span>
+            <span class="metric-chip">${language}</span>
+          </div>
+          <h3 class="card-title">${item.project} · ${language}</h3>
+          <p class="card-copy">${item.count} ${tr(showcase.terms.firstSlideCovers)} · ${archive}</p>
+          <div class="teaching-image-wrap">
+            <img class="teaching-image" src="${item.image}" alt="${alt}" loading="lazy">
+          </div>
+          <p class="teaching-folder">
+            <span class="teaching-folder-label">${tr(showcase.terms.sourceFolder)}:</span>
+            <span class="teaching-folder-value">${item.folder}</span>
+          </p>
+        </article>
+      `;
+    })
+    .join("");
+
+  return `
+    <section class="content-section">
+      ${renderSectionHeading(showcase.section)}
+      <div class="teaching-grid">
+        ${items}
+      </div>
+    </section>
+  `;
+}
+
 function renderProjects() {
   return `
     <section class="content-section">
@@ -321,6 +365,7 @@ function renderPage() {
     renderFit(),
     renderTimeline(),
     renderNetwork(),
+    renderTeachingShowcase(),
     renderProjects(),
     documentsSection,
     footerSection
