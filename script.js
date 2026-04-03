@@ -119,6 +119,23 @@ const COPY = {
                 zh: "AI 项目 / 顾问培训 / 媒体渠道 / 中文、英文、意大利语。",
                 it: "Progetti AI / Advisory / Canali media / Cinese, inglese, italiano."
             }
+        },
+        teachingIntro: {
+            label: {
+                en: "Curriculum Archive",
+                zh: "过往教学存档",
+                it: "Archivio corsi"
+            },
+            title: {
+                en: "Presentation Cover Matrices",
+                zh: "课程交付首屏视觉阵列",
+                it: "Matrici visuali delle slide di copertina"
+            },
+            copy: {
+                en: "A comprehensive visual registry of enterprise-grade AI training programs delivered across Chinese, English, and Italian markets, featuring 150+ high-fidelity presentation assets from the Ping An and Gaodun Codex projects.",
+                zh: "跨越中、英、意三大市场的企业级 AI 培训课程视觉索引，集中展示了来自平安集团与高顿 Codex 项目的 150 余份高保真教学课件的首屏封貌。",
+                it: "Un registro visivo completo dei programmi di formazione AI di livello enterprise erogati nei mercati cinese, inglese e italiano, con oltre 150 asset di presentazione dai progetti Ping An e Gaodun Codex."
+            }
         }
     },
     portfolio: {
@@ -575,6 +592,97 @@ const QUICK_LINKS = [
     { title: "Apple Podcasts", url: "https://podcasts.apple.com/search?term=%E6%95%B0%E6%8D%AE%E6%BC%AB%E8%B0%88" }
 ];
 
+const LANGUAGE_LABELS = {
+    zh: { en: "Chinese", zh: "\u4e2d\u6587", it: "Cinese" },
+    en: { en: "English", zh: "\u82f1\u6587", it: "Inglese" },
+    it: { en: "Italian", zh: "\u610f\u5927\u5229\u8bed", it: "Italiano" }
+};
+
+const TEACHING_TERMS = {
+    firstSlideCovers: {
+        en: "curriculum covers",
+        zh: "份教学封貌",
+        it: "copertine curriculum"
+    },
+    sourceFolder: {
+        en: "Source Archive",
+        zh: "源归档目录",
+        it: "Archivio sorgente"
+    },
+    anonymizedArchive: {
+        en: "Enterprise-sanitized delivery",
+        zh: "企业脱敏版交付归档",
+        it: "Consegna anonimizzata enterprise"
+    },
+    finalDeliveryArchive: {
+        en: "Final production hub",
+        zh: "最终生产版本归档",
+        it: "Hub di produzione finale"
+    },
+    montageAlt: {
+        en: "Curriculum visual matrix",
+        zh: "课程首屏视觉矩阵",
+        it: "Matrice visuale del curriculum"
+    }
+};
+
+const PAST_TEACHING_SHOWCASES = [
+    {
+        key: "pingan-it",
+        project: "Ping An",
+        language: "it",
+        count: 40,
+        archive: "anonymizedArchive",
+        folder: "Raccolta_PPT_Italiano_Anonimizzata_20260403",
+        image: "assets/past-teaching/pingan-it-first-slide-grid.jpg"
+    },
+    {
+        key: "pingan-en",
+        project: "Ping An",
+        language: "en",
+        count: 40,
+        archive: "anonymizedArchive",
+        folder: "English_Sanitized_PPT_Collection_20260403",
+        image: "assets/past-teaching/pingan-en-first-slide-grid.jpg"
+    },
+    {
+        key: "pingan-zh",
+        project: "Ping An",
+        language: "zh",
+        count: 40,
+        archive: "anonymizedArchive",
+        folder: "\u4ea4\u4ed8PPT\u6c47\u603b_\u4e2d\u6587\u8131\u654f\u7248_20260402",
+        image: "assets/past-teaching/pingan-zh-first-slide-grid.jpg"
+    },
+    {
+        key: "gaodun-codex-it",
+        project: "Gaodun Codex",
+        language: "it",
+        count: 26,
+        archive: "finalDeliveryArchive",
+        folder: "Archivio_Consegna_Finale_20260403_IT",
+        image: "assets/past-teaching/gaodun-codex-it-first-slide-grid.jpg"
+    },
+    {
+        key: "gaodun-codex-en",
+        project: "Gaodun Codex",
+        language: "en",
+        count: 26,
+        archive: "finalDeliveryArchive",
+        folder: "Final_Delivery_Hub_20260403_EN",
+        image: "assets/past-teaching/gaodun-codex-en-first-slide-grid.jpg"
+    },
+    {
+        key: "gaodun-codex-zh",
+        project: "Gaodun Codex",
+        language: "zh",
+        count: 26,
+        archive: "finalDeliveryArchive",
+        folder: "\u6700\u7ec8\u4ea4\u4ed8\u6c47\u603b_20260402_\u4e2d\u6587\u7ec8\u7248",
+        image: "assets/past-teaching/gaodun-codex-zh-first-slide-grid.jpg"
+    }
+];
+
 const FILTERS = {
     all: { en: "All", zh: "全部", it: "Tutti" },
     systems: { en: "AI Systems", zh: "AI 系统", it: "Sistemi AI" },
@@ -707,6 +815,15 @@ function renderHome(lang) {
     document.querySelector("#home-signals").innerHTML = SIGNALS.map((signal, index) => `<li><span class="signal-number">${String(index + 1).padStart(2, "0")}</span><span>${text(signal, lang)}</span></li>`).join("");
     document.querySelector("#home-insights").innerHTML = INSIGHTS.map((card) => `<article class="section-card span-4 reveal"><h3 class="card-title">${text(card.title, lang)}</h3><p class="card-copy">${text(card.copy, lang)}</p></article>`).join("");
     document.querySelector("#home-groups").innerHTML = HOME_GROUP_KEYS.map((key) => renderGroupCard(GROUPS.find((group) => group.key === key), lang)).join("");
+    document.querySelector("#home-teaching-showcase").innerHTML = PAST_TEACHING_SHOWCASES.map((item) => renderTeachingShowcase(item, lang)).join("");
+}
+
+function renderTeachingShowcase(item, lang) {
+    const language = text(LANGUAGE_LABELS[item.language], lang);
+    const archive = text(TEACHING_TERMS[item.archive], lang);
+    const alt = `${item.project} ${language} ${text(TEACHING_TERMS.montageAlt, lang)}`;
+
+    return `<article class="teaching-card reveal"><div class="teaching-badges"><span class="group-badge">${item.project}</span><span class="metric-chip">${language}</span></div><h3 class="card-title">${item.project} · ${language}</h3><p class="card-copy">${item.count} ${text(TEACHING_TERMS.firstSlideCovers, lang)} · ${archive}</p><div class="teaching-image-wrap"><img class="teaching-image" src="${item.image}" alt="${alt}" loading="lazy" decoding="async"></div><p class="teaching-folder"><span class="teaching-folder-label">${text(TEACHING_TERMS.sourceFolder, lang)}:</span> <span class="teaching-folder-value">${item.folder}</span></p></article>`;
 }
 
 function renderPortfolio(lang) {
