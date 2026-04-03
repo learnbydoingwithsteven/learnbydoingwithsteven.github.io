@@ -120,6 +120,7 @@ const COPY = {
                 it: "Progetti AI / Advisory / Canali media / Cinese, inglese, italiano."
             }
 
+        },
     },
     portfolio: {
         metaTitle: {
