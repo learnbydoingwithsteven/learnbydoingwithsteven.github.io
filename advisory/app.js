@@ -228,7 +228,11 @@ function renderTeachingShowcase() {
   const showcase = data.teachingShowcase;
   if (!showcase) return "";
 
-  const items = showcase.items
+  const filteredItems = showcase.items.filter((item) => item.language === currentLang);
+
+  if (filteredItems.length === 0) return "";
+
+  const itemsHtml = filteredItems
     .map((item) => {
       const language = tr({
         zh: item.language === "zh" ? "中文" : (item.language === "en" ? "英文" : "意大利语"),
@@ -262,7 +266,7 @@ function renderTeachingShowcase() {
     <section class="content-section">
       ${renderSectionHeading(showcase.section)}
       <div class="teaching-grid">
-        ${items}
+        ${itemsHtml}
       </div>
     </section>
   `;
