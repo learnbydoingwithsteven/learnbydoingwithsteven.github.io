@@ -665,64 +665,64 @@ window.PORTFOLIO_DATA = {
     },
     terms: {
       firstSlideCovers: { en: "curriculum covers", zh: "份教学封貌", it: "copertine curriculum" },
-      sourceFolder: { en: "Source Archive", zh: "源归档目录", it: "Archivio sorgente" },
-      anonymizedArchive: { en: "Enterprise-sanitized delivery", zh: "企业脱敏版交付归档", it: "Consegna anonimizzata enterprise" },
-      finalDeliveryArchive: { en: "Final production hub", zh: "最终生产版本归档", it: "Hub di produzione finale" },
+      sourceFolder: { en: "Case Reference", zh: "案例参考", it: "Riferimento caso" },
+      anonymizedArchive: { en: "Enterprise AI Training Series", zh: "企业级 AI 培训系列", it: "Serie di formazione AI enterprise" },
+      finalDeliveryArchive: { en: "Global Curriculum Hub", zh: "全球教学体系归档", it: "Hub di curriculum globale" },
       montageAlt: { en: "Curriculum visual matrix", zh: "课程首屏视觉矩阵", it: "Matrice visuale del curriculum" }
     },
     items: [
       {
         key: "pingan-it",
-        project: "Ping An",
+        project: { en: "Multinational Finance Group", zh: "跨国金融集团", it: "Gruppo Finanziario Multinazionale" },
         language: "it",
         count: 40,
         archive: "anonymizedArchive",
-        folder: "Raccolta_PPT_Italiano_Anonimizzata_20260403",
+        folder: "CASE_MNC_FIN_IT_2026",
         image: "../assets/past-teaching/pingan-it-first-slide-grid.jpg"
       },
       {
         key: "pingan-en",
-        project: "Ping An",
+        project: { en: "Multinational Finance Group", zh: "跨国金融集团", it: "Gruppo Finanziario Multinazionale" },
         language: "en",
         count: 40,
         archive: "anonymizedArchive",
-        folder: "English_Sanitized_PPT_Collection_20260403",
+        folder: "CASE_MNC_FIN_EN_2026",
         image: "../assets/past-teaching/pingan-en-first-slide-grid.jpg"
       },
       {
         key: "pingan-zh",
-        project: "Ping An",
+        project: { en: "Multinational Finance Group", zh: "跨国金融集团", it: "Gruppo Finanziario Multinazionale" },
         language: "zh",
         count: 40,
         archive: "anonymizedArchive",
-        folder: "交付PPT汇总_中文脱敏版_20260402",
+        folder: "CASE_MNC_FIN_ZH_2026",
         image: "../assets/past-teaching/pingan-zh-first-slide-grid.jpg"
       },
       {
         key: "gaodun-codex-it",
-        project: "Gaodun Codex",
+        project: { en: "Global Professional Education Hub", zh: "全球职业教育培训体系", it: "Hub Formazione Professionale Globale" },
         language: "it",
         count: 26,
         archive: "finalDeliveryArchive",
-        folder: "Archivio_Consegna_Finale_20260403_IT",
+        folder: "CASE_EDU_GLOBAL_IT_2026",
         image: "../assets/past-teaching/gaodun-codex-it-first-slide-grid.jpg"
       },
       {
         key: "gaodun-codex-en",
-        project: "Gaodun Codex",
+        project: { en: "Global Professional Education Hub", zh: "全球职业教育培训体系", it: "Hub Formazione Professionale Globale" },
         language: "en",
         count: 26,
         archive: "finalDeliveryArchive",
-        folder: "Final_Delivery_Hub_20260403_EN",
+        folder: "CASE_EDU_GLOBAL_EN_2026",
         image: "../assets/past-teaching/gaodun-codex-en-first-slide-grid.jpg"
       },
       {
         key: "gaodun-codex-zh",
-        project: "Gaodun Codex",
+        project: { en: "Global Professional Education Hub", zh: "全球职业教育培训体系", it: "Hub Formazione Professionale Globale" },
         language: "zh",
         count: 26,
         archive: "finalDeliveryArchive",
-        folder: "最终交付汇总_20260402_中文终版",
+        folder: "CASE_EDU_GLOBAL_ZH_2026",
         image: "../assets/past-teaching/gaodun-codex-zh-first-slide-grid.jpg"
       }
     ]

@@ -717,15 +717,6 @@ function renderHome(lang) {
     document.querySelector("#home-signals").innerHTML = SIGNALS.map((signal, index) => `<li><span class="signal-number">${String(index + 1).padStart(2, "0")}</span><span>${text(signal, lang)}</span></li>`).join("");
     document.querySelector("#home-insights").innerHTML = INSIGHTS.map((card) => `<article class="section-card span-4 reveal"><h3 class="card-title">${text(card.title, lang)}</h3><p class="card-copy">${text(card.copy, lang)}</p></article>`).join("");
     document.querySelector("#home-groups").innerHTML = HOME_GROUP_KEYS.map((key) => renderGroupCard(GROUPS.find((group) => group.key === key), lang)).join("");
-    document.querySelector("#home-teaching-showcase").innerHTML = PAST_TEACHING_SHOWCASES.map((item) => renderTeachingShowcase(item, lang)).join("");
-}
-
-function renderTeachingShowcase(item, lang) {
-    const language = text(LANGUAGE_LABELS[item.language], lang);
-    const archive = text(TEACHING_TERMS[item.archive], lang);
-    const alt = `${item.project} ${language} ${text(TEACHING_TERMS.montageAlt, lang)}`;
-
-    return `<article class="teaching-card reveal"><div class="teaching-badges"><span class="group-badge">${item.project}</span><span class="metric-chip">${language}</span></div><h3 class="card-title">${item.project} · ${language}</h3><p class="card-copy">${item.count} ${text(TEACHING_TERMS.firstSlideCovers, lang)} · ${archive}</p><div class="teaching-image-wrap"><img class="teaching-image" src="${item.image}" alt="${alt}" loading="lazy" decoding="async"></div><p class="teaching-folder"><span class="teaching-folder-label">${text(TEACHING_TERMS.sourceFolder, lang)}:</span> <span class="teaching-folder-value">${item.folder}</span></p></article>`;
 }
 
 function renderPortfolio(lang) {

@@ -240,15 +240,15 @@ function renderTeachingShowcase() {
         it: item.language === "zh" ? "Cinese" : (item.language === "en" ? "Inglese" : "Italiano")
       });
       const archive = tr(showcase.terms[item.archive]);
-      const alt = `${item.project} ${language} ${tr(showcase.terms.montageAlt)}`;
+      const alt = `${tr(item.project)} ${language} ${tr(showcase.terms.montageAlt)}`;
 
       return `
         <article class="teaching-card reveal">
           <div class="teaching-badges">
-            <span class="group-badge">${item.project}</span>
+            <span class="group-badge">${tr(item.project)}</span>
             <span class="metric-chip">${language}</span>
           </div>
-          <h3 class="card-title">${item.project} · ${language}</h3>
+          <h3 class="card-title">${tr(item.project)} · ${language}</h3>
           <p class="card-copy">${item.count} ${tr(showcase.terms.firstSlideCovers)} · ${archive}</p>
           <div class="teaching-image-wrap">
             <img class="teaching-image" src="${item.image}" alt="${alt}" loading="lazy">
