@@ -658,9 +658,9 @@ window.PORTFOLIO_DATA = {
         it: "Matrici visuali delle slide di copertina"
       },
       lead: {
-        zh: "跨越中、英、意三大市场的企业级 AI 培训课程视觉索引，集中展示了来自平安集团与高顿 Codex 项目的 150 余份高保真教学课件的首屏封貌。",
-        en: "A comprehensive visual registry of enterprise-grade AI training programs delivered across Chinese, English, and Italian markets, featuring 150+ high-fidelity presentation assets from the Ping An and Gaodun Codex projects.",
-        it: "Un registro visivo completo dei programmi di formazione AI di livello enterprise erogati nei mercati cinese, inglese e italiano, con oltre 150 asset di presentazione dai progetti Ping An e Gaodun Codex."
+        zh: "跨越中、英、意三大市场的企业级 AI 培训课程视觉索引，集中展示了来自大型金融集团与全球教育服务机构的 150 余份高保真教学课件的首屏封貌。",
+        en: "A comprehensive visual registry of enterprise-grade AI training programs delivered across Chinese, English, and Italian markets, featuring 150+ high-fidelity presentation assets from major financial groups and global educational institutions.",
+        it: "Un registro visivo completo dei programmi di formazione AI di livello enterprise erogati nei mercati cinese, inglese e italiano, con oltre 150 asset di presentazione da grandi gruppi finanziari e istituzioni educative globali."
       }
     },
     terms: {
