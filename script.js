@@ -626,7 +626,9 @@ function applyLanguage(lang) {
     renderPortfolio(lang);
     renderDirectory(lang);
     revealNow();
+    bindRevealObserver();
 }
+
 
 function syncMeta(lang) {
     const page = document.body.dataset.page;
@@ -694,23 +696,31 @@ function bindAccordionControls() {
     if (collapse) collapse.addEventListener("click", () => document.querySelectorAll("details.directory-group").forEach((item) => { item.open = false; }));
 }
 
+let revealObserver = null;
 function bindRevealObserver() {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("is-visible");
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.18 });
-    document.querySelectorAll(".reveal").forEach((node) => observer.observe(node));
+    if (!revealObserver) {
+        revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("is-visible");
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12 });
+    }
+    document.querySelectorAll(".reveal:not(.is-visible)").forEach((node) => revealObserver.observe(node));
 }
 
+
 function revealNow() {
-    document.querySelectorAll(".reveal").forEach((node, index) => {
-        setTimeout(() => node.classList.add("is-visible"), 18 * index);
+    // Only stagger elements that are likely on the first screen
+    document.querySelectorAll(".reveal:not(.is-visible)").forEach((node, index) => {
+        if (index < 10) {
+            setTimeout(() => node.classList.add("is-visible"), 40 * index);
+        }
     });
 }
+
 
 function renderHome(lang) {
     if (document.body.dataset.page !== "home") return;
@@ -735,6 +745,7 @@ function renderPortfolio(lang) {
         button.addEventListener("click", () => {
             state.filter = button.dataset.filter;
             renderPortfolio(lang);
+            bindRevealObserver();
         });
     });
 

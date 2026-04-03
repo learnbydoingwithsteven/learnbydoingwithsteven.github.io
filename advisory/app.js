@@ -350,6 +350,30 @@ function renderFooter() {
   `;
 }
 
+let revealObserver = null;
+function bindReveal() {
+  if (!revealObserver) {
+    revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+  }
+
+  document.querySelectorAll(".hero, .content-section, .panel, .footer-card, .reveal").forEach((el) => {
+    if (!el.classList.contains("is-visible")) {
+      revealObserver.observe(el);
+    }
+  });
+}
+
+
 function renderPage() {
   document.documentElement.lang = currentLang === "zh" ? "zh-CN" : currentLang;
   document.title = `${data.meta.name} | ${tr({
@@ -374,6 +398,9 @@ function renderPage() {
     documentsSection,
     footerSection
   ].join("");
+
+  bindReveal();
 }
 
 renderPage();
+

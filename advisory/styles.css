@@ -56,7 +56,16 @@ a {
 .page-shell {
   position: relative;
   z-index: 1;
+  opacity: 0;
+  animation: page-ready 720ms cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  animation-delay: 120ms;
 }
+
+@keyframes page-ready {
+  from { opacity: 0; transform: scale(0.99); }
+  to { opacity: 1; transform: scale(1); }
+}
+
 
 .topbar {
   position: sticky;
@@ -113,9 +122,25 @@ main {
 }
 
 .hero,
-.content-section {
-  animation: rise 680ms ease both;
+.content-section,
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 1.2s cubic-bezier(0.2, 0.8, 0.2, 1), transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
+
+.hero.is-visible,
+.content-section.is-visible,
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero,
+.content-section {
+  /* These will be animated by IntersectionObserver Adding is-visible class */
+}
+
 
 .hero {
   display: grid;
@@ -445,12 +470,7 @@ main {
   background: rgba(255, 255, 255, 0.08);
 }
 
-@keyframes rise {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+
 
 .teaching-grid {
   display: grid;
