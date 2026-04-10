@@ -119,9 +119,25 @@ const COPY = {
                 zh: "AI 项目 / 顾问培训 / 媒体渠道 / 中文、英文、意大利语。",
                 it: "Progetti AI / Advisory / Canali media / Cinese, inglese, italiano."
             }
-
         },
-    },
+        teachingIntro: {
+            label: {
+                en: "Past teaching",
+                zh: "\u8fc7\u5f80\u6559\u5b66",
+                it: "Archivio didattico"
+            },
+            title: {
+                en: "Past teaching archives, arranged by language",
+                zh: "\u8fc7\u5f80\u6559\u5b66\u5f52\u6863\u4e0e\u8bed\u8a00\u9635\u5217",
+                it: "Archivi didattici organizzati per lingua"
+            },
+            copy: {
+                en: "Two multilingual archive families, each shown through Chinese, English, and Italian opening-slide matrices for a calmer end-of-page browse.",
+                zh: "\u4e24\u7ec4\u5f80\u671f\u6559\u5b66\u5f52\u6863\uff0c\u6309\u4e2d\u82f1\u610f\u4e09\u79cd\u8bed\u8a00\u5206\u7ec4\u5448\u73b0\uff0c\u8ba9\u9875\u9762\u672b\u7aef\u7684\u6d4f\u89c8\u66f4\u81ea\u7136\u3001\u66f4\u6574\u9f50\u3002",
+                it: "Due famiglie di archivi multilingue, mostrate in cinese, inglese e italiano con una consultazione finale piu calma e ordinata."
+            }
+        },
+        },
     portfolio: {
         metaTitle: {
             en: "Portfolio | Learn By Doing with Steven",
@@ -258,6 +274,12 @@ const INSIGHTS = [
             en: "Repositories / systems / applied products.",
             zh: "仓库 / 系统 / 应用产品。",
             it: "Repository / Sistemi / Prodotti applicati."
+        },
+        href: "portfolio.html",
+        cta: {
+            en: "Explore portfolio",
+            zh: "\u67e5\u770b\u9879\u76ee\u96c6",
+            it: "Esplora il portfolio"
         }
     },
     {
@@ -266,6 +288,12 @@ const INSIGHTS = [
             en: "Podcasts / newsletters / articles / videos.",
             zh: "播客 / Newsletter / 文章 / 视频。",
             it: "Podcast / Newsletter / Articoli / Video."
+        },
+        href: "podcasts.html#podcast-grid",
+        cta: {
+            en: "Open media channels",
+            zh: "\u6253\u5f00\u5a92\u4f53\u5185\u5bb9",
+            it: "Apri i canali media"
         }
     },
     {
@@ -274,6 +302,12 @@ const INSIGHTS = [
             en: "Scheduling / communities / contact / collaboration.",
             zh: "预约 / 社群 / 联系 / 合作。",
             it: "Prenotazioni / Community / Contatto / Collaborazione."
+        },
+        href: "podcasts.html#directory-groups",
+        cta: {
+            en: "Open community links",
+            zh: "\u6253\u5f00\u793e\u7fa4\u4e0e\u8054\u7cfb",
+            it: "Apri community e contatti"
         }
     }
 ];
@@ -559,6 +593,32 @@ const PROJECTS = [
         },
         tags: ["RAG", "Search", "Knowledge"],
         github: "https://github.com/learnbydoingwithsteven/rag_10"
+    },
+    {
+        repo: "knowledge_graph_studio",
+        category: "systems",
+        metric: { en: "Full stack", zh: "\u5168\u6808\u7cfb\u7edf", it: "Full stack" },
+        title: { en: "Knowledge Graph Studio", zh: "\u77e5\u8bc6\u56fe\u8c31\u5de5\u4f5c\u53f0", it: "Knowledge Graph Studio" },
+        description: {
+            en: "A production-grade platform for file ingestion, graph generation, metadata pipelines, and retrieval-ready knowledge assets.",
+            zh: "\u9762\u5411\u751f\u4ea7\u7684\u77e5\u8bc6\u56fe\u8c31\u5de5\u4f5c\u53f0\uff0c\u8986\u76d6\u6587\u4ef6\u6536\u96c6\u3001\u56fe\u8c31\u751f\u6210\u3001\u5143\u6570\u636e\u6d41\u6c34\u7ebf\u4e0e\u53ef\u68c0\u7d22\u8d44\u4ea7\u3002",
+            it: "Una piattaforma production-grade per ingestione file, generazione di grafi, pipeline di metadati e asset di conoscenza pronti al retrieval."
+        },
+        tags: ["Knowledge Graph", "FastAPI", "Next.js"],
+        github: "https://github.com/learnbydoingwithsteven/knowledge_graph_studio"
+    },
+    {
+        repo: "flight_track_codex54",
+        category: "applied",
+        metric: { en: "3D live app", zh: "3D \u5b9e\u65f6\u5e94\u7528", it: "App live 3D" },
+        title: { en: "3D Flight Intelligence Tracker", zh: "3D \u98de\u884c\u52a8\u6001\u8ffd\u8e2a", it: "Tracker 3D di flight intelligence" },
+        description: {
+            en: "A React and Three.js interface that renders live aircraft on a rotatable Earth with smooth motion, visual effects, and operational telemetry.",
+            zh: "\u57fa\u4e8e React \u4e0e Three.js \u7684 3D \u98de\u884c\u52a8\u6001\u754c\u9762\uff0c\u5728\u53ef\u65cb\u8f6c\u5730\u7403\u4e0a\u5c55\u793a\u5b9e\u65f6\u822a\u73ed\u3001\u52a8\u753b\u8fc7\u6e21\u4e0e\u8fd0\u884c\u6307\u6807\u3002",
+            it: "Un'interfaccia React e Three.js che visualizza aeromobili live su una Terra ruotabile con movimenti fluidi, effetti visivi e telemetria operativa."
+        },
+        tags: ["Three.js", "Realtime", "Visualization"],
+        github: "https://github.com/learnbydoingwithsteven/flight_track_codex54"
     }
 ];
 
@@ -581,6 +641,165 @@ const LANGUAGE_LABELS = {
     en: { en: "English", zh: "\u82f1\u6587", it: "Inglese" },
     it: { en: "Italian", zh: "\u610f\u5927\u5229\u8bed", it: "Italiano" }
 };
+
+const TEACHING_TERMS = {
+    openingSlides: {
+        en: "opening slides",
+        zh: "\u9996\u9875\u9635\u5217",
+        it: "slide iniziali"
+    },
+    languageEditions: {
+        en: "language editions",
+        zh: "\u8bed\u8a00\u7248\u672c",
+        it: "edizioni linguistiche"
+    },
+    workflowTracks: {
+        en: "workflow tracks",
+        zh: "\u4e1a\u52a1\u4e3b\u9898",
+        it: "filoni operativi"
+    },
+    capabilityClusters: {
+        en: "capability clusters",
+        zh: "\u80fd\u529b\u4e3b\u9898",
+        it: "cluster di competenze"
+    },
+    matrixLabel: {
+        en: "Matrix view",
+        zh: "\u9635\u5217\u89c6\u56fe",
+        it: "Vista a matrice"
+    },
+    sanitizedSet: {
+        en: "Sanitized multilingual delivery set",
+        zh: "\u8131\u654f\u591a\u8bed\u4ea4\u4ed8\u96c6",
+        it: "Set multilingue anonimizzato"
+    },
+    finalSet: {
+        en: "Final multilingual delivery set",
+        zh: "\u591a\u8bed\u6700\u7ec8\u4ea4\u4ed8\u96c6",
+        it: "Set multilingue finale"
+    }
+};
+
+const TEACHING_ARCHIVES = [
+    {
+        key: "financial-services-ai",
+        theme: "is-services",
+        kicker: {
+            en: "Archive 01",
+            zh: "\u5f52\u6863 01",
+            it: "Archivio 01"
+        },
+        badge: {
+            en: "Industry delivery",
+            zh: "\u884c\u4e1a\u4ea4\u4ed8",
+            it: "Consegna industry"
+        },
+        collectionKey: "sanitizedSet",
+        title: {
+            en: "Financial Services AI Delivery Archive",
+            zh: "\u91d1\u878d\u4e1a\u52a1 AI \u6559\u5b66\u5f52\u6863",
+            it: "Archivio didattico AI per i servizi finanziari"
+        },
+        copy: {
+            en: "A multilingual opening-slide matrix spanning frontline service, insurance advisory, banking operations, and leasing workflows.",
+            zh: "\u8986\u76d6\u4e00\u7ebf\u670d\u52a1\u3001\u4fdd\u9669\u987e\u95ee\u3001\u94f6\u884c\u8fd0\u8425\u4e0e\u79df\u8d41\u6d41\u7a0b\u7684\u591a\u8bed\u9996\u9875\u7ec4\u5408\u3002",
+            it: "Una matrice multilingue di slide iniziali che attraversa servizio frontline, consulenza assicurativa, operations bancarie e workflow leasing."
+        },
+        stats: [
+            { value: "40", labelKey: "openingSlides" },
+            { value: "4", labelKey: "workflowTracks" },
+            { value: "3", labelKey: "languageEditions" }
+        ],
+        languagePanels: [
+            {
+                lang: "zh",
+                image: "assets/past-teaching/financial-services-ai-zh-grid.jpg",
+                note: {
+                    en: "Sanitized matrix across banking, insurance, leasing, and frontline operating scenes.",
+                    zh: "\u8131\u654f\u5448\u73b0\u94f6\u884c\u3001\u4fdd\u9669\u3001\u79df\u8d41\u4e0e\u4e00\u7ebf\u8fd0\u8425\u4e3b\u9898\u3002",
+                    it: "Matrice anonimizzata su banca, assicurazioni, leasing e scene operative frontline."
+                }
+            },
+            {
+                lang: "en",
+                image: "assets/past-teaching/financial-services-ai-en-grid.jpg",
+                note: {
+                    en: "English delivery view for cross-functional AI workflow teaching.",
+                    zh: "\u82f1\u6587\u4ea4\u4ed8\u7248\uff0c\u5bf9\u5e94\u8de8\u4e1a\u52a1 AI \u6d41\u7a0b\u6559\u5b66\u3002",
+                    it: "Vista in inglese per una didattica AI trasversale ai workflow."
+                }
+            },
+            {
+                lang: "it",
+                image: "assets/past-teaching/financial-services-ai-it-grid.jpg",
+                note: {
+                    en: "Italian delivery view tailored for multilingual teaching reuse.",
+                    zh: "\u610f\u5927\u5229\u8bed\u7248\uff0c\u9002\u5408\u540e\u7eed\u591a\u8bed\u590d\u7528\u3002",
+                    it: "Vista in italiano pensata per il riuso didattico multilingue."
+                }
+            }
+        ]
+    },
+    {
+        key: "finance-capability",
+        theme: "is-capability",
+        kicker: {
+            en: "Archive 02",
+            zh: "\u5f52\u6863 02",
+            it: "Archivio 02"
+        },
+        badge: {
+            en: "Capability delivery",
+            zh: "\u80fd\u529b\u4ea4\u4ed8",
+            it: "Consegna capability"
+        },
+        collectionKey: "finalSet",
+        title: {
+            en: "Finance Capability & Productivity Archive",
+            zh: "\u8d22\u52a1\u80fd\u529b\u4e0e\u63d0\u6548\u5f52\u6863",
+            it: "Archivio competenze finance e produttivita"
+        },
+        copy: {
+            en: "A multilingual opening-slide matrix covering banking operations, prompt workflows, office AI tools, and finance analysis modules.",
+            zh: "\u8986\u76d6\u94f6\u884c\u8fd0\u8425\u3001\u63d0\u793a\u8bcd\u5de5\u4f5c\u6d41\u3001\u529e\u516c AI \u5de5\u5177\u4e0e\u8d22\u52a1\u5206\u6790\u4e3b\u9898\u7684\u591a\u8bed\u9996\u9875\u7ec4\u5408\u3002",
+            it: "Una matrice multilingue di slide iniziali su operations bancarie, workflow di prompt, strumenti AI per l'ufficio e moduli di analisi finance."
+        },
+        stats: [
+            { value: "26", labelKey: "openingSlides" },
+            { value: "4", labelKey: "capabilityClusters" },
+            { value: "3", labelKey: "languageEditions" }
+        ],
+        languagePanels: [
+            {
+                lang: "zh",
+                image: "assets/past-teaching/finance-capability-zh-grid.jpg",
+                note: {
+                    en: "Chinese matrix across finance analysis, prompt practice, and office AI tool fluency.",
+                    zh: "\u4e2d\u6587\u7248\u9635\u5217\uff0c\u805a\u5408\u8d22\u52a1\u5206\u6790\u3001\u63d0\u793a\u8bcd\u5b9e\u6218\u4e0e\u529e\u516c AI \u5de5\u5177\u719f\u7ec3\u5ea6\u3002",
+                    it: "Matrice cinese su analisi finance, pratica di prompt e padronanza degli strumenti AI d'ufficio."
+                }
+            },
+            {
+                lang: "en",
+                image: "assets/past-teaching/finance-capability-en-grid.jpg",
+                note: {
+                    en: "English matrix for finance operations and productivity-oriented AI courses.",
+                    zh: "\u82f1\u6587\u7248\u9635\u5217\uff0c\u9762\u5411\u8d22\u52a1\u8fd0\u8425\u4e0e\u63d0\u6548\u5bfc\u5411 AI \u8bfe\u7a0b\u3002",
+                    it: "Matrice inglese per corsi AI orientati a operations finance e produttivita."
+                }
+            },
+            {
+                lang: "it",
+                image: "assets/past-teaching/finance-capability-it-grid.jpg",
+                note: {
+                    en: "Italian matrix supporting multilingual finance upskilling delivery.",
+                    zh: "\u610f\u5927\u5229\u8bed\u7248\u9635\u5217\uff0c\u9002\u5408\u591a\u8bed\u8d22\u52a1\u63d0\u5347\u8bfe\u7a0b\u4ea4\u4ed8\u3002",
+                    it: "Matrice italiana per la consegna multilingue di percorsi di upskilling finance."
+                }
+            }
+        ]
+    }
+];
 
 
 
@@ -646,6 +865,8 @@ function syncStaticCopy(lang) {
     });
     const year = document.querySelector("[data-current-year]");
     if (year) year.textContent = new Date().getFullYear();
+    const topButton = document.querySelector(".top-button");
+    if (topButton) topButton.innerHTML = "&#8593;";
 }
 
 function resolveCopy(path, lang) {
@@ -706,19 +927,29 @@ function bindRevealObserver() {
                     revealObserver.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.12 });
+        }, { threshold: 0.08 });
     }
-    document.querySelectorAll(".reveal:not(.is-visible)").forEach((node) => revealObserver.observe(node));
+    const pendingNodes = Array.from(document.querySelectorAll(".reveal:not(.is-visible)"));
+    pendingNodes.forEach((node, index) => {
+        node.style.setProperty("--reveal-delay", `${Math.min(index, 9) * 70}ms`);
+        revealObserver.observe(node);
+    });
 }
 
 
 function revealNow() {
-    // Only stagger elements that are likely on the first screen
-    document.querySelectorAll(".reveal:not(.is-visible)").forEach((node, index) => {
+    const pendingNodes = Array.from(document.querySelectorAll(".reveal:not(.is-visible)"));
+    pendingNodes.forEach((node, index) => {
+        node.style.setProperty("--reveal-delay", `${Math.min(index, 9) * 70}ms`);
         if (index < 10) {
-            setTimeout(() => node.classList.add("is-visible"), 40 * index);
+            setTimeout(() => node.classList.add("is-visible"), 55 * index);
         }
     });
+}
+
+function renderInsightCard(card, lang) {
+    const routeLabel = text({ en: "Direct route", zh: "\u76f4\u8fbe\u5165\u53e3", it: "Accesso diretto" }, lang);
+    return `<a class="section-card section-card-link span-4 reveal" href="${card.href}"><div class="section-card-link-top"><span class="section-card-kicker">${routeLabel}</span><span class="section-card-arrow" aria-hidden="true">&#8599;</span></div><h3 class="card-title">${text(card.title, lang)}</h3><p class="card-copy">${text(card.copy, lang)}</p><span class="section-card-cta">${text(card.cta, lang)}</span></a>`;
 }
 
 
@@ -726,8 +957,24 @@ function renderHome(lang) {
     if (document.body.dataset.page !== "home") return;
     document.querySelector("#home-metrics").innerHTML = METRICS.map((metric) => `<article class="metric-pill"><span class="metric-value">${metric.value}</span><span class="metric-label">${text(metric.label, lang)}</span></article>`).join("");
     document.querySelector("#home-signals").innerHTML = SIGNALS.map((signal, index) => `<li><span class="signal-number">${String(index + 1).padStart(2, "0")}</span><span>${text(signal, lang)}</span></li>`).join("");
-    document.querySelector("#home-insights").innerHTML = INSIGHTS.map((card) => `<article class="section-card span-4 reveal"><h3 class="card-title">${text(card.title, lang)}</h3><p class="card-copy">${text(card.copy, lang)}</p></article>`).join("");
+    document.querySelector("#home-insights").innerHTML = INSIGHTS.map((card) => renderInsightCard(card, lang)).join("");
     document.querySelector("#home-groups").innerHTML = HOME_GROUP_KEYS.map((key) => renderGroupCard(GROUPS.find((group) => group.key === key), lang)).join("");
+    const teachingNode = document.querySelector("#home-teaching-archives");
+    if (teachingNode) {
+        teachingNode.innerHTML = TEACHING_ARCHIVES.map((archive) => renderTeachingArchive(archive, lang)).join("");
+    }
+}
+
+function renderTeachingArchive(archive, lang) {
+    return `<article class="teaching-archive reveal ${archive.theme}"><div class="teaching-archive-copy"><div class="teaching-archive-head"><div><p class="teaching-kicker">${text(archive.kicker, lang)}</p><h3 class="teaching-archive-title">${text(archive.title, lang)}</h3></div><span class="teaching-archive-badge">${text(archive.badge, lang)}</span></div><p class="teaching-archive-description">${text(archive.copy, lang)}</p><div class="teaching-stat-row">${archive.stats.map((stat) => `<div class="teaching-stat"><span class="teaching-stat-value">${stat.value}</span><span class="teaching-stat-label">${text(TEACHING_TERMS[stat.labelKey], lang)}</span></div>`).join("")}</div></div><div class="teaching-language-grid">${archive.languagePanels.map((panel) => renderTeachingLanguagePanel(panel, archive, lang)).join("")}</div></article>`;
+}
+
+function renderTeachingLanguagePanel(panel, archive, lang) {
+    const language = text(LANGUAGE_LABELS[panel.lang], lang);
+    const alt = `${language} ${text(TEACHING_TERMS.matrixLabel, lang)}`;
+    const collectionLabel = TEACHING_TERMS[archive.collectionKey];
+
+    return `<article class="teaching-language-card reveal"><div class="teaching-language-top"><span class="group-badge">${language}</span><span class="teaching-language-mode">${text(collectionLabel, lang)}</span></div><div class="teaching-image-wrap"><img class="teaching-image" src="${panel.image}" alt="${alt}" loading="lazy" decoding="async"></div><p class="teaching-language-note">${text(panel.note, lang)}</p></article>`;
 }
 
 function renderPortfolio(lang) {
@@ -745,6 +992,7 @@ function renderPortfolio(lang) {
         button.addEventListener("click", () => {
             state.filter = button.dataset.filter;
             renderPortfolio(lang);
+            revealNow();
             bindRevealObserver();
         });
     });

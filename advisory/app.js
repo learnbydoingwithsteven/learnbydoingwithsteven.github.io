@@ -3,6 +3,7 @@ let currentLang = "zh";
 
 const app = document.getElementById("app");
 const langSwitch = document.getElementById("lang-switch");
+const homeBrand = document.querySelector("[data-home-brand]");
 
 function tr(value) {
   if (value == null) return "";
@@ -13,6 +14,31 @@ function tr(value) {
 function hrefFor(value) {
   if (typeof value === "string") return value;
   return value[currentLang] ?? value.zh ?? value.en ?? value.it ?? "#";
+}
+
+function syncHomeBrand() {
+  if (!homeBrand) return;
+
+  const copy = {
+    zh: {
+      label: "\u8fd4\u56de\u9996\u9875",
+      caption: "Learn By Doing with Steven"
+    },
+    en: {
+      label: "Back to home",
+      caption: "Learn By Doing with Steven"
+    },
+    it: {
+      label: "Torna alla home",
+      caption: "Learn By Doing with Steven"
+    }
+  };
+
+  const labelNode = homeBrand.querySelector(".brand-label");
+  const captionNode = homeBrand.querySelector(".brand-caption");
+
+  if (labelNode) labelNode.textContent = copy[currentLang].label;
+  if (captionNode) captionNode.textContent = copy[currentLang].caption;
 }
 
 function renderLangSwitch() {
@@ -64,7 +90,7 @@ function renderMetrics() {
   return `
     <div class="panel">
       <h2 class="panel-title">${tr({
-        zh: "关键指标",
+        zh: "\u5173\u952e\u6307\u6807",
         en: "Key metrics",
         it: "Metriche chiave"
       })}</h2>
@@ -228,17 +254,19 @@ function renderTeachingShowcase() {
   const showcase = data.teachingShowcase;
   if (!showcase) return "";
 
-  const filteredItems = showcase.items.filter((item) => item.language === currentLang);
+  const filteredItems = showcase.items.filter((item) => item.language === currentLang || item.language === "all");
 
   if (filteredItems.length === 0) return "";
 
   const itemsHtml = filteredItems
     .map((item) => {
-      const language = tr({
-        zh: item.language === "zh" ? "中文" : (item.language === "en" ? "英文" : "意大利语"),
-        en: item.language === "zh" ? "Chinese" : (item.language === "en" ? "English" : "Italian"),
-        it: item.language === "zh" ? "Cinese" : (item.language === "en" ? "Inglese" : "Italiano")
-      });
+      const language = item.languageLabel
+        ? tr(item.languageLabel)
+        : tr({
+            zh: item.language === "zh" ? "\u4e2d\u6587" : (item.language === "en" ? "\u82f1\u6587" : "\u610f\u5927\u5229\u8bed"),
+            en: item.language === "zh" ? "Chinese" : (item.language === "en" ? "English" : "Italian"),
+            it: item.language === "zh" ? "Cinese" : (item.language === "en" ? "Inglese" : "Italiano")
+          });
       const archive = tr(showcase.terms[item.archive]);
       const alt = `${tr(item.project)} ${language} ${tr(showcase.terms.montageAlt)}`;
 
@@ -248,8 +276,8 @@ function renderTeachingShowcase() {
             <span class="group-badge">${tr(item.project)}</span>
             <span class="metric-chip">${language}</span>
           </div>
-          <h3 class="card-title">${tr(item.project)} · ${language}</h3>
-          <p class="card-copy">${item.count} ${tr(showcase.terms.firstSlideCovers)} · ${archive}</p>
+          <h3 class="card-title">${tr(item.project)} / ${language}</h3>
+          <p class="card-copy">${item.count} ${tr(showcase.terms.firstSlideCovers)} / ${archive}</p>
           <div class="teaching-image-wrap">
             <img class="teaching-image" src="${item.image}" alt="${alt}" loading="lazy">
           </div>
@@ -350,6 +378,24 @@ function renderFooter() {
   `;
 }
 
+function normalizeTeachingCards() {
+  document.querySelectorAll(".teaching-card").forEach((card) => {
+    const project = card.querySelector(".group-badge")?.textContent?.trim();
+    const language = card.querySelector(".metric-chip")?.textContent?.trim();
+    const title = card.querySelector(".card-title");
+    const copy = card.querySelector(".card-copy");
+
+    if (project && title) {
+      title.textContent = project;
+    }
+
+    if (language && copy) {
+      const normalized = copy.textContent.replace(/\s+.\s+/g, " / ").replace(/\s+/g, " ").trim();
+      copy.textContent = `${language} / ${normalized}`;
+    }
+  });
+}
+
 let revealObserver = null;
 function bindReveal() {
   if (!revealObserver) {
@@ -362,13 +408,23 @@ function bindReveal() {
           }
         });
       },
-      { threshold: 0.12 }
+      { threshold: 0.08 }
     );
   }
 
-  document.querySelectorAll(".hero, .content-section, .panel, .footer-card, .reveal").forEach((el) => {
+  document.querySelectorAll(".hero, .content-section, .panel, .footer-card, .reveal").forEach((el, index) => {
+    el.style.setProperty("--reveal-delay", `${Math.min(index, 8) * 70}ms`);
     if (!el.classList.contains("is-visible")) {
       revealObserver.observe(el);
+    }
+  });
+}
+
+function revealNow() {
+  document.querySelectorAll(".hero, .content-section, .panel, .footer-card, .reveal").forEach((el, index) => {
+    el.style.setProperty("--reveal-delay", `${Math.min(index, 8) * 70}ms`);
+    if (index < 8) {
+      setTimeout(() => el.classList.add("is-visible"), 55 * index);
     }
   });
 }
@@ -377,12 +433,13 @@ function bindReveal() {
 function renderPage() {
   document.documentElement.lang = currentLang === "zh" ? "zh-CN" : currentLang;
   document.title = `${data.meta.name} | ${tr({
-    zh: "顾问与讲师简介",
+    zh: "\u987e\u95ee\u4e0e\u8bb2\u5e08\u7b80\u4ecb",
     en: "Advisory and Lecturer Profile",
     it: "Profilo di consulenza e docenza"
   })}`;
 
   renderLangSwitch();
+  syncHomeBrand();
 
   const documentsSection = data.ui?.showDocumentsSection ? renderDocuments() : "";
   const footerSection = data.ui?.showFooterSection ? renderFooter() : "";
@@ -399,8 +456,9 @@ function renderPage() {
     footerSection
   ].join("");
 
+  normalizeTeachingCards();
+  revealNow();
   bindReveal();
 }
 
 renderPage();
-

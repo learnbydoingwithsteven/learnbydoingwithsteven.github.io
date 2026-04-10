@@ -1,0 +1,64 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="720" rx="40" fill="#05111A"/>
+  <rect width="1280" height="720" rx="40" fill="url(#bg)"/>
+  <circle cx="208" cy="148" r="174" fill="url(#glowA)"/>
+  <circle cx="1090" cy="124" r="188" fill="url(#glowB)"/>
+  <g opacity="0.18" stroke="#9BC5FF" stroke-width="1">
+    <path d="M160 182H1118"/>
+    <path d="M120 246H1160"/>
+    <path d="M120 310H1160"/>
+    <path d="M120 374H1160"/>
+    <path d="M120 438H1160"/>
+    <path d="M120 502H1160"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="86" y="88" width="1108" height="476" rx="34" fill="#0A1823" fill-opacity="0.94"/>
+    <rect x="136" y="134" width="236" height="18" rx="9" fill="#F5FBFF"/>
+    <rect x="136" y="166" width="318" height="12" rx="6" fill="#93C8FF" fill-opacity="0.4"/>
+    <path d="M166 420C166 285.795 274.795 177 409 177C543.205 177 652 285.795 652 420" stroke="#1D3446" stroke-width="26" stroke-linecap="round"/>
+    <path d="M166 420C166 285.795 274.795 177 409 177C543.205 177 652 285.795 652 420" stroke="url(#arc)" stroke-width="6" stroke-linecap="round"/>
+    <path d="M409 177C513.935 177 599 262.065 599 367" stroke="#79B8FF" stroke-width="3" stroke-dasharray="10 12"/>
+    <circle cx="270" cy="248" r="8" fill="#4DD0B5"/>
+    <circle cx="409" cy="177" r="10" fill="#F7B955"/>
+    <circle cx="599" cy="367" r="8" fill="#79B8FF"/>
+    <path d="M336 304L405 274L484 316L440 334L468 374L404 360L358 394L368 344L318 332L336 304Z" fill="#E8F3FF"/>
+    <rect x="720" y="212" width="390" height="206" rx="28" fill="#0E2433"/>
+    <rect x="756" y="252" width="122" height="30" rx="15" fill="#143B47"/>
+    <rect x="888" y="252" width="146" height="30" rx="15" fill="#17314A"/>
+    <rect x="756" y="308" width="308" height="12" rx="6" fill="#89D8C9" fill-opacity="0.42"/>
+    <rect x="756" y="338" width="272" height="12" rx="6" fill="#89D8C9" fill-opacity="0.28"/>
+    <rect x="756" y="384" width="74" height="74" rx="18" fill="#102F3C"/>
+    <rect x="844" y="384" width="74" height="74" rx="18" fill="#11293D"/>
+    <rect x="932" y="384" width="74" height="74" rx="18" fill="#163147"/>
+    <rect x="1020" y="384" width="74" height="74" rx="18" fill="#15293C"/>
+    <text x="776" y="430" fill="#D8FBF4" font-family="Space Grotesk, Arial, sans-serif" font-size="18" font-weight="700">ALT</text>
+    <text x="866" y="430" fill="#E8F3FF" font-family="Space Grotesk, Arial, sans-serif" font-size="18" font-weight="700">SPD</text>
+    <text x="952" y="430" fill="#FFE5B7" font-family="Space Grotesk, Arial, sans-serif" font-size="18" font-weight="700">HDG</text>
+    <text x="1042" y="430" fill="#BDD7FF" font-family="Space Grotesk, Arial, sans-serif" font-size="18" font-weight="700">ETA</text>
+  </g>
+  <text x="88" y="652" fill="#F5FBFF" font-family="Space Grotesk, Arial, sans-serif" font-size="64" font-weight="700">3D Flight Intelligence Tracker</text>
+  <text x="92" y="689" fill="#A5C1CF" font-family="Space Grotesk, Arial, sans-serif" font-size="24">Realtime telemetry • Spatial interface • Three.js experience</text>
+  <defs>
+    <linearGradient id="bg" x1="98" y1="42" x2="1180" y2="672" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#06111A"/>
+      <stop offset="0.48" stop-color="#0A1B28"/>
+      <stop offset="1" stop-color="#061019"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(208 148) rotate(90) scale(174)">
+      <stop stop-color="#4DD0B5" stop-opacity="0.52"/>
+      <stop offset="1" stop-color="#4DD0B5" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1090 124) rotate(90) scale(188)">
+      <stop stop-color="#79B8FF" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#79B8FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="arc" x1="166" y1="420" x2="652" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4DD0B5"/>
+      <stop offset="0.5" stop-color="#79B8FF"/>
+      <stop offset="1" stop-color="#F7B955"/>
+    </linearGradient>
+    <filter id="shadow" x="54" y="64" width="1172" height="536" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#000000" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+</svg>

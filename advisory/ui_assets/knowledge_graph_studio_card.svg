@@ -1,0 +1,66 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="720" rx="40" fill="#07131B"/>
+  <rect width="1280" height="720" rx="40" fill="url(#bg)"/>
+  <circle cx="1020" cy="152" r="180" fill="url(#glowA)" opacity="0.9"/>
+  <circle cx="230" cy="560" r="210" fill="url(#glowB)" opacity="0.72"/>
+  <g opacity="0.26" stroke="#8AE2D0" stroke-width="1.5">
+    <path d="M232 510L398 394"/>
+    <path d="M398 394L595 436"/>
+    <path d="M595 436L822 290"/>
+    <path d="M398 394L362 224"/>
+    <path d="M595 436L698 584"/>
+    <path d="M822 290L1018 224"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="110" y="118" width="374" height="476" rx="30" fill="#0C1E29" fill-opacity="0.94"/>
+    <rect x="150" y="160" width="194" height="20" rx="10" fill="#DFF8F2" fill-opacity="0.92"/>
+    <rect x="150" y="205" width="286" height="14" rx="7" fill="#86D9C9" fill-opacity="0.56"/>
+    <rect x="150" y="238" width="252" height="14" rx="7" fill="#86D9C9" fill-opacity="0.34"/>
+    <rect x="150" y="300" width="294" height="178" rx="24" fill="#102B38"/>
+    <circle cx="224" cy="360" r="26" fill="#4DD0B5"/>
+    <circle cx="312" cy="344" r="18" fill="#79B8FF"/>
+    <circle cx="362" cy="416" r="22" fill="#F7B955"/>
+    <circle cx="236" cy="442" r="16" fill="#DFF8F2"/>
+    <path d="M224 360L312 344L362 416L236 442L224 360Z" stroke="#DFF8F2" stroke-opacity="0.65" stroke-width="3"/>
+    <rect x="150" y="514" width="120" height="32" rx="16" fill="#123A42"/>
+    <rect x="284" y="514" width="138" height="32" rx="16" fill="#1A3247"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="532" y="146" width="638" height="428" rx="34" fill="#0A1A24" fill-opacity="0.94"/>
+    <rect x="584" y="196" width="232" height="18" rx="9" fill="#E8F7F3"/>
+    <rect x="584" y="228" width="356" height="12" rx="6" fill="#8AE2D0" fill-opacity="0.38"/>
+    <rect x="584" y="282" width="200" height="180" rx="26" fill="#123141"/>
+    <rect x="814" y="282" width="304" height="120" rx="26" fill="#102A39"/>
+    <rect x="814" y="422" width="304" height="88" rx="26" fill="#122534"/>
+    <path d="M684 374C684 352.461 701.461 335 723 335H912" stroke="#4DD0B5" stroke-width="4"/>
+    <path d="M912 335C935.748 335 955 354.252 955 378V438" stroke="#79B8FF" stroke-width="4"/>
+    <path d="M723 422C723 446.853 743.147 467 768 467H814" stroke="#F7B955" stroke-width="4"/>
+    <circle cx="723" cy="374" r="18" fill="#4DD0B5"/>
+    <circle cx="912" cy="335" r="16" fill="#DFF8F2"/>
+    <circle cx="955" cy="438" r="16" fill="#79B8FF"/>
+    <circle cx="814" cy="467" r="16" fill="#F7B955"/>
+    <rect x="584" y="510" width="156" height="28" rx="14" fill="#153B46"/>
+    <rect x="752" y="510" width="186" height="28" rx="14" fill="#17314A"/>
+    <rect x="950" y="510" width="132" height="28" rx="14" fill="#1F3140"/>
+  </g>
+  <text x="112" y="660" fill="#F4FBFA" font-family="Space Grotesk, Arial, sans-serif" font-size="64" font-weight="700">Knowledge Graph Studio</text>
+  <text x="114" y="697" fill="#98B9C5" font-family="Space Grotesk, Arial, sans-serif" font-size="24">Ingestion • Graph generation • Retrieval-ready knowledge assets</text>
+  <defs>
+    <linearGradient id="bg" x1="86" y1="34" x2="1178" y2="688" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07131B"/>
+      <stop offset="0.48" stop-color="#0A1C28"/>
+      <stop offset="1" stop-color="#061017"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1020 152) rotate(90) scale(180)">
+      <stop stop-color="#4DD0B5"/>
+      <stop offset="1" stop-color="#4DD0B5" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(230 560) rotate(90) scale(210)">
+      <stop stop-color="#79B8FF"/>
+      <stop offset="1" stop-color="#79B8FF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="78" y="92" width="1124" height="524" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#000000" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+</svg>

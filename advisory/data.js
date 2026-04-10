@@ -571,6 +571,51 @@ window.PORTFOLIO_DATA = {
         en: ["Multi-metric evaluation", "Governance and comparison framework", "Useful for project decision discussions"],
         it: ["Valutazione multi-metrica", "Framework di governance e confronto", "Utile per discussioni decisionali di progetto"]
       }
+    },
+    {
+      title: "Knowledge Graph Studio",
+      tag: { zh: "\u77e5\u8bc6\u7cfb\u7edf", en: "Knowledge systems", it: "Knowledge system" },
+      image: "./ui_assets/knowledge_graph_studio_card.svg",
+      copy: {
+        zh: "\u9762\u5411\u6587\u4ef6\u6536\u96c6\u3001\u56fe\u8c31\u751f\u6210\u4e0e\u68c0\u7d22\u8d44\u4ea7\u7ba1\u7406\u7684\u5168\u6808\u5de5\u4f5c\u53f0\uff0c\u9002\u5408\u4f01\u4e1a\u77e5\u8bc6\u5e93\u4e0e\u4f7f\u7528\u573a\u666f\u5c55\u793a\u3002",
+        en: "A full-stack studio for file ingestion, graph generation, and retrieval-ready knowledge assets, suitable for enterprise knowledge systems and architecture demos.",
+        it: "Uno studio full-stack per ingestione file, generazione di grafi e asset di conoscenza pronti al retrieval, adatto a demo di sistemi enterprise."
+      },
+      bullets: {
+        zh: ["\u6587\u4ef6\u8fdb\u7ba1\u4e0e\u56fe\u8c31\u751f\u6210", "\u5143\u6570\u636e\u4e0e\u68c0\u7d22\u8d44\u4ea7\u7ec4\u7ec7", "\u9002\u5408\u77e5\u8bc6\u5e93\u4e0e\u67b6\u6784\u5c55\u793a"],
+        en: ["File ingestion and graph generation", "Metadata and retrieval asset pipelines", "Useful for knowledge-base and architecture demos"],
+        it: ["Ingestione file e generazione di grafi", "Pipeline di metadati e asset di retrieval", "Utile per demo di knowledge base e architettura"]
+      }
+    },
+    {
+      title: "3D Flight Intelligence Tracker",
+      tag: { zh: "\u53ef\u89c6\u5316\u4ea7\u54c1", en: "Visual product", it: "Prodotto visuale" },
+      image: "./ui_assets/flight_intelligence_card.svg",
+      copy: {
+        zh: "\u57fa\u4e8e React \u4e0e Three.js \u7684 3D \u5b9e\u65f6\u8ffd\u8e2a\u754c\u9762\uff0c\u628a\u822a\u73ed\u52a8\u6001\u3001\u4f4d\u7f6e\u548c\u8fd0\u884c\u6307\u6807\u53ef\u89c6\u5316\u5730\u653e\u5230\u4e00\u4e2a\u4ea7\u54c1\u4f53\u9a8c\u91cc\u3002",
+        en: "A React and Three.js live interface that turns aircraft movement, location, and telemetry into a polished spatial product experience.",
+        it: "Un'interfaccia live in React e Three.js che trasforma movimento, posizione e telemetria degli aeromobili in un'esperienza prodotto spaziale."
+      },
+      bullets: {
+        zh: ["3D \u5730\u7403\u4e0e\u5b9e\u65f6\u8fd0\u52a8\u5c55\u793a", "\u7528\u4e8e\u53ef\u89c6\u5316\u4e0e\u4ea7\u54c1\u6f14\u793a", "\u9002\u5408\u5b9e\u65f6\u6570\u636e\u4ea4\u4e92\u573a\u666f"],
+        en: ["3D globe and live motion rendering", "Useful for product and visualization demos", "Suitable for realtime data interaction scenarios"],
+        it: ["Rendering live su globo 3D", "Utile per demo prodotto e visualizzazione", "Adatto a scenari di interazione realtime"]
+      }
+    },
+    {
+      title: "Multilingual Curriculum Delivery Hub",
+      tag: { zh: "\u591a\u8bed\u4ea4\u4ed8", en: "Delivery ops", it: "Delivery multilingue" },
+      image: "./ui_assets/curriculum_delivery_hub_card.svg",
+      copy: {
+        zh: "\u56f4\u7ed5\u4e2d\u82f1\u610f\u591a\u8bed\u8bfe\u7a0b\u5305\u88c5\u3001\u4ea4\u4ed8\u7ed3\u6784\u4e0e\u6559\u5b66\u8d44\u4ea7\u5f52\u6863\u7684\u6574\u4f53\u5316\u5de5\u4f5c\u53f0\uff0c\u9002\u5408\u4f01\u4e1a\u57f9\u8bad\u4e0e\u8bfe\u7a0b\u7cfb\u7edf\u5c55\u793a\u3002",
+        en: "A multilingual delivery workspace for packaging, structuring, and archiving Chinese, English, and Italian curriculum assets at scale.",
+        it: "Uno spazio di delivery multilingue per confezionare, strutturare e archiviare asset didattici in cinese, inglese e italiano."
+      },
+      bullets: {
+        zh: ["\u591a\u8bed\u8bfe\u7a0b\u6253\u5305\u4e0e\u5f52\u6863", "\u4ea4\u4ed8\u7ed3\u6784\u4e0e\u8d44\u4ea7\u6574\u7406", "\u9002\u5408\u57f9\u8bad\u9879\u76ee\u4e0e\u6559\u5b66\u4f53\u7cfb\u5c55\u793a"],
+        en: ["Multilingual packaging and archive flow", "Delivery structure and asset organization", "Useful for training programs and curriculum demos"],
+        it: ["Packaging multilingue e flusso di archivio", "Struttura di delivery e organizzazione asset", "Utile per programmi formativi e demo curriculum"]
+      }
     }
   ],
   documents: [
@@ -668,62 +713,84 @@ window.PORTFOLIO_DATA = {
       sourceFolder: { en: "Case Reference", zh: "案例参考", it: "Riferimento caso" },
       anonymizedArchive: { en: "Enterprise AI Training Series", zh: "企业级 AI 培训系列", it: "Serie di formazione AI enterprise" },
       finalDeliveryArchive: { en: "Global Curriculum Hub", zh: "全球教学体系归档", it: "Hub di curriculum globale" },
+      bilingualAiLessonSeries: { en: "Bilingual AI lesson series", zh: "\u53cc\u8bed AI \u8bfe\u7a0b\u7cfb\u5217", it: "Serie bilingue di lezioni AI" },
+      sanitizedHrbpSeries: { en: "Sanitized HRBP delivery set", zh: "\u8131\u654f HRBP \u4ea4\u4ed8\u96c6", it: "Set HRBP anonimizzato" },
       montageAlt: { en: "Curriculum visual matrix", zh: "课程首屏视觉矩阵", it: "Matrice visuale del curriculum" }
     },
     items: [
       {
-        key: "pingan-it",
+        key: "financial-services-ai-it",
         project: { en: "Multinational Finance Group", zh: "跨国金融集团", it: "Gruppo Finanziario Multinazionale" },
         language: "it",
         count: 40,
         archive: "anonymizedArchive",
         folder: "CASE_MNC_FIN_IT_2026",
-        image: "../assets/past-teaching/pingan-it-first-slide-grid.jpg"
+        image: "../assets/past-teaching/financial-services-ai-it-grid.jpg"
       },
       {
-        key: "pingan-en",
+        key: "financial-services-ai-en",
         project: { en: "Multinational Finance Group", zh: "跨国金融集团", it: "Gruppo Finanziario Multinazionale" },
         language: "en",
         count: 40,
         archive: "anonymizedArchive",
         folder: "CASE_MNC_FIN_EN_2026",
-        image: "../assets/past-teaching/pingan-en-first-slide-grid.jpg"
+        image: "../assets/past-teaching/financial-services-ai-en-grid.jpg"
       },
       {
-        key: "pingan-zh",
+        key: "financial-services-ai-zh",
         project: { en: "Multinational Finance Group", zh: "跨国金融集团", it: "Gruppo Finanziario Multinazionale" },
         language: "zh",
         count: 40,
         archive: "anonymizedArchive",
         folder: "CASE_MNC_FIN_ZH_2026",
-        image: "../assets/past-teaching/pingan-zh-first-slide-grid.jpg"
+        image: "../assets/past-teaching/financial-services-ai-zh-grid.jpg"
       },
       {
-        key: "gaodun-codex-it",
+        key: "finance-capability-it",
         project: { en: "Global Professional Education Hub", zh: "全球职业教育培训体系", it: "Hub Formazione Professionale Globale" },
         language: "it",
         count: 26,
         archive: "finalDeliveryArchive",
         folder: "CASE_EDU_GLOBAL_IT_2026",
-        image: "../assets/past-teaching/gaodun-codex-it-first-slide-grid.jpg"
+        image: "../assets/past-teaching/finance-capability-it-grid.jpg"
       },
       {
-        key: "gaodun-codex-en",
+        key: "finance-capability-en",
         project: { en: "Global Professional Education Hub", zh: "全球职业教育培训体系", it: "Hub Formazione Professionale Globale" },
         language: "en",
         count: 26,
         archive: "finalDeliveryArchive",
         folder: "CASE_EDU_GLOBAL_EN_2026",
-        image: "../assets/past-teaching/gaodun-codex-en-first-slide-grid.jpg"
+        image: "../assets/past-teaching/finance-capability-en-grid.jpg"
       },
       {
-        key: "gaodun-codex-zh",
+        key: "finance-capability-zh",
         project: { en: "Global Professional Education Hub", zh: "全球职业教育培训体系", it: "Hub Formazione Professionale Globale" },
         language: "zh",
         count: 26,
         archive: "finalDeliveryArchive",
         folder: "CASE_EDU_GLOBAL_ZH_2026",
-        image: "../assets/past-teaching/gaodun-codex-zh-first-slide-grid.jpg"
+        image: "../assets/past-teaching/finance-capability-zh-grid.jpg"
+      },
+      {
+        key: "zero-to-sota-ai-100",
+        project: { en: "Zero to SOTA AI 100 Lessons", zh: "\u4ece 0 \u5230 SOTA AI 100 \u8bfe\u53cc\u8bed\u4f53\u7cfb", it: "Zero to SOTA AI - 100 lezioni" },
+        language: "all",
+        languageLabel: { en: "ZH / EN", zh: "\u4e2d / \u82f1", it: "ZH / EN" },
+        count: 100,
+        archive: "bilingualAiLessonSeries",
+        folder: "AI_SOTA_100_BILINGUAL_2026",
+        image: "../assets/past-teaching/zero-to-sota-ai-100-grid.jpg"
+      },
+      {
+        key: "logistics-hrbp",
+        project: { en: "Logistics HRBP Training Series", zh: "\u7269\u6d41 HRBP \u57f9\u8bad\u7cfb\u5217", it: "Serie formativa HRBP logistica" },
+        language: "all",
+        languageLabel: { en: "ZH / IT", zh: "\u4e2d / \u610f", it: "ZH / IT" },
+        count: 4,
+        archive: "sanitizedHrbpSeries",
+        folder: "LOGISTICS_HRBP_SANITIZED_2026",
+        image: "../assets/past-teaching/logistics-hrbp-grid.jpg"
       }
     ]
   }
