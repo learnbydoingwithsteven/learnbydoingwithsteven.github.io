@@ -811,32 +811,32 @@ const TEACHING_PROJECTS = [
         metric: { value: "18", label: { en: "training assets", zh: "\u8bad\u7ec3\u8d44\u4ea7", it: "asset training" } },
         title: {
             en: "AI Workplace Productivity Training",
-            zh: "AI \u529e\u516c\u6548\u7387\u4e0e\u534f\u540c\u8425\u9500\u8bad\u7ec3",
-            it: "Training AI per produttivita e marketing"
+            zh: "AI \u529e\u516c\u6548\u7387\u4e0e\u534f\u540c\u8bad\u7ec3",
+            it: "Training AI per produttivita"
         },
         copy: {
-            en: "Hands-on methods for office efficiency, executive writing, content production, growth marketing, private-domain conversion, and team collaboration.",
-            zh: "\u8986\u76d6\u529e\u516c\u6548\u7387\u3001\u6c47\u62a5\u5199\u4f5c\u3001\u5185\u5bb9\u751f\u4ea7\u3001\u8425\u9500\u589e\u957f\u3001\u79c1\u57df\u8f6c\u5316\u4e0e\u7ec4\u7ec7\u534f\u540c\uff0c\u5f3a\u8c03\u4e00\u7ebf\u5c97\u4f4d\u53ef\u64cd\u4f5c\u7684 AI \u65b9\u6cd5\u3002",
-            it: "Metodi pratici per produttivita, report, contenuti, growth marketing, conversione private-domain e collaborazione."
+            en: "Hands-on methods for office efficiency, executive writing, content production, and team collaboration with AI tools.",
+            zh: "\u8986\u76d6\u529e\u516c\u6548\u7387\u3001\u6c47\u62a5\u5199\u4f5c\u3001\u5185\u5bb9\u751f\u4ea7\u4e0e\u7ec4\u7ec7\u534f\u540c\uff0c\u5f3a\u8c03\u4e00\u7ebf\u5c97\u4f4d\u53ef\u64cd\u4f5c\u7684 AI \u65b9\u6cd5\u3002",
+            it: "Metodi pratici per produttivita, report, contenuti e collaborazione."
         },
-        tags: ["Office", "Marketing", "Enablement"],
+        tags: ["Office", "AI Tools", "Enablement"],
         image: "assets/past-teaching/ai-office-productivity-grid.jpg"
     },
     {
         key: "deepseek-marketing-15day",
         collection: "governance-productivity",
-        tag: { en: "Marketing camp", zh: "DeepSeek \u8425\u9500", it: "Marketing camp" },
+        tag: { en: "DeepSeek Marketing", zh: "DeepSeek \u8425\u9500", it: "DeepSeek Marketing" },
         languageLabel: { en: "ZH", zh: "\u4e2d\u6587", it: "ZH" },
         metric: { value: "15", label: { en: "days", zh: "\u5929\u8bad\u7ec3", it: "giorni" } },
         title: {
-            en: "AI Marketing 15-Day Intensive",
+            en: "DeepSeek Marketing 15-Day Intensive",
             zh: "DeepSeek \u8425\u9500 15 \u5929\u8bad\u7ec3\u8425",
-            it: "Intensive AI marketing di 15 giorni"
+            it: "Intensive DeepSeek marketing di 15 giorni"
         },
         copy: {
-            en: "A focused series for applying AI to campaign planning, content generation, audience conversion, and repeatable marketing operations.",
-            zh: "\u628a AI \u7528\u5230\u8425\u9500\u7b56\u5212\u3001\u5185\u5bb9\u751f\u4ea7\u3001\u7528\u6237\u8f6c\u5316\u4e0e\u53ef\u590d\u7528\u7684\u8425\u9500\u8fd0\u8425\u6d41\u7a0b\u91cc\u3002",
-            it: "Una serie focalizzata su pianificazione campagne, contenuti, conversione audience e operations marketing ripetibili."
+            en: "A focused series for applying DeepSeek to campaign planning, content generation, audience conversion, and repeatable marketing operations.",
+            zh: "\u628a DeepSeek \u7528\u5230\u8425\u9500\u7b56\u5212\u3001\u5185\u5bb9\u751f\u4ea7\u3001\u7528\u6237\u8f6c\u5316\u4e0e\u53ef\u590d\u7528\u7684\u8425\u9500\u8fd0\u8425\u6d41\u7a0b\u91cc\u3002",
+            it: "Una serie focalizzata su pianificazione campagne, contenuti, conversione audience e operations marketing con DeepSeek."
         },
         tags: ["DeepSeek", "Growth", "Content"],
         image: "assets/past-teaching/deepseek-marketing-15day-grid.jpg"
@@ -1052,10 +1052,12 @@ const state = { lang: detectLanguage(), filter: "all" };
 
 document.addEventListener("DOMContentLoaded", () => {
     bindLanguageSwitcher();
+    bindFontSizeSwitcher();
     bindBackToTop();
     bindHeaderState();
     bindAccordionControls();
     bindRevealObserver();
+    bindLightbox();
     applyLanguage(state.lang);
 });
 
@@ -1196,6 +1198,8 @@ function renderHome(lang) {
     const teachingNode = document.querySelector("#home-teaching-archives");
     if (teachingNode) {
         teachingNode.innerHTML = renderTeachingShowcase(lang);
+        bindDragScroll();
+        bindTeachingImageClicks();
     }
 }
 
@@ -1315,4 +1319,111 @@ function labelFromUrl(url) {
     if (url.includes("youtube.com") || url.includes("music.youtube.com")) return "YouTube Music";
     if (url.includes("amazon.com")) return "Amazon Music";
     return "Open Link";
+}
+
+/* ── Font-size switcher ── */
+const FONTSIZE_KEY = "lbds-fontsize";
+
+function bindFontSizeSwitcher() {
+    const stored = localStorage.getItem(FONTSIZE_KEY);
+    if (stored && ["lg", "md", "sm"].includes(stored)) {
+        document.body.dataset.fontsize = stored;
+    }
+    syncFontSizeButtons();
+    document.querySelectorAll(".fontsize-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+            document.body.dataset.fontsize = btn.dataset.fontsize;
+            localStorage.setItem(FONTSIZE_KEY, btn.dataset.fontsize);
+            syncFontSizeButtons();
+        });
+    });
+}
+
+function syncFontSizeButtons() {
+    const current = document.body.dataset.fontsize || "lg";
+    document.querySelectorAll(".fontsize-btn").forEach((btn) => {
+        btn.classList.toggle("is-active", btn.dataset.fontsize === current);
+    });
+}
+
+/* ── Image Lightbox ── */
+function bindLightbox() {
+    const overlay = document.getElementById("lightbox-overlay");
+    const img = document.getElementById("lightbox-img");
+    const closeBtn = overlay?.querySelector(".lightbox-close");
+    if (!overlay || !img) return;
+
+    function openLightbox(src, alt) {
+        img.src = src;
+        img.alt = alt || "";
+        overlay.classList.add("is-open");
+        document.body.style.overflow = "hidden";
+    }
+
+    function closeLightbox() {
+        overlay.classList.remove("is-open");
+        document.body.style.overflow = "";
+    }
+
+    if (closeBtn) closeBtn.addEventListener("click", closeLightbox);
+    overlay.addEventListener("click", (e) => {
+        if (e.target === overlay || e.target === img) closeLightbox();
+    });
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeLightbox();
+    });
+
+    window.__openLightbox = openLightbox;
+}
+
+function bindTeachingImageClicks() {
+    document.querySelectorAll(".teaching-window-card img, .teaching-project-image, .teaching-project-gallery-image").forEach((img) => {
+        img.style.cursor = "zoom-in";
+        img.addEventListener("click", (e) => {
+            e.stopPropagation();
+            if (window.__openLightbox) window.__openLightbox(img.src, img.alt);
+        });
+    });
+}
+
+/* ── Drag-scroll for teaching rails ── */
+function bindDragScroll() {
+    document.querySelectorAll(".teaching-window-rail").forEach((rail) => {
+        let isDragging = false;
+        let startX = 0;
+        let scrollLeft = 0;
+
+        // Stop CSS animation for manual control
+        const track = rail.querySelector(".teaching-window-track");
+        if (track) track.style.animation = "none";
+
+        rail.addEventListener("mousedown", (e) => {
+            isDragging = true;
+            startX = e.pageX - rail.offsetLeft;
+            scrollLeft = rail.scrollLeft;
+            rail.style.cursor = "grabbing";
+        });
+
+        rail.addEventListener("mouseleave", () => { isDragging = false; rail.style.cursor = "grab"; });
+        rail.addEventListener("mouseup", () => { isDragging = false; rail.style.cursor = "grab"; });
+        rail.addEventListener("mousemove", (e) => {
+            if (!isDragging) return;
+            e.preventDefault();
+            const x = e.pageX - rail.offsetLeft;
+            rail.scrollLeft = scrollLeft - (x - startX) * 1.5;
+        });
+
+        // Touch support
+        rail.addEventListener("touchstart", (e) => {
+            isDragging = true;
+            startX = e.touches[0].pageX - rail.offsetLeft;
+            scrollLeft = rail.scrollLeft;
+        }, { passive: true });
+        rail.addEventListener("touchend", () => { isDragging = false; });
+        rail.addEventListener("touchmove", (e) => {
+            if (!isDragging) return;
+            const x = e.touches[0].pageX - rail.offsetLeft;
+            rail.scrollLeft = scrollLeft - (x - startX) * 1.5;
+        }, { passive: true });
+    });
 }

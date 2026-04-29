@@ -24,9 +24,9 @@ window.PORTFOLIO_DATA = {
       it: "Esperienza di lungo periodo tra banca, manifattura, ICT cross-border e progetti AI indipendenti, con responsabilita su delivery di sistemi, governance dei processi, formazione interna e coordinamento organizzativo."
     },
     summary: {
-      zh: "工作经历覆盖中国建设银行、建行欧洲、三一集团欧洲及独立 AI 顾问项目，适合企业培训、顾问介绍与客户沟通场景。",
-      en: "Experience spans China Construction Bank, CCB Europe, SANY Group Europe, and independent AI advisory work, making the profile suitable for enterprise training, advisory introductions, and client-facing communication.",
-      it: "Il percorso comprende China Construction Bank, CCB Europe, SANY Group Europe e progetti di consulenza AI indipendente, con un profilo adatto a formazione aziendale, presentazioni consulenziali e comunicazione verso clienti."
+      zh: "工作经历覆盖中国建设银行、建行欧洲、三一集团欧洲及独立 AI 顾问项目。",
+      en: "Experience spans China Construction Bank, CCB Europe, SANY Group Europe, and independent AI advisory work.",
+      it: "Il percorso comprende China Construction Bank, CCB Europe, SANY Group Europe e progetti di consulenza AI indipendente."
     },
     eyebrow: {
       zh: "",
@@ -184,9 +184,9 @@ window.PORTFOLIO_DATA = {
         it: "Materiali di supporto"
       },
       lead: {
-        zh: "相关材料将根据后续需要再开放展示。",
-        en: "Supporting materials can be made visible later when needed.",
-        it: "I materiali di supporto potranno essere resi visibili in seguito, quando necessario."
+        zh: "相关课程材料可根据合作需求提供。",
+        en: "Supporting materials are available upon request for collaboration discussions.",
+        it: "I materiali di supporto sono disponibili su richiesta per discussioni di collaborazione."
       }
     },
     network: {
@@ -204,14 +204,14 @@ window.PORTFOLIO_DATA = {
     },
     footer: {
       title: {
-        zh: "联系与延展",
-        en: "Contact and extension",
-        it: "Contatto ed estensione"
+        zh: "联系与合作",
+        en: "Contact and collaboration",
+        it: "Contatto e collaborazione"
       },
       copy: {
-        zh: "如需更完整的项目材料、课程大纲或客户介绍版本，可在后续阶段继续扩展。",
-        en: "If a fuller project packet, course outline, or client-facing version is needed, the page can be extended in a later phase.",
-        it: "Se serve una versione piu completa con materiali progetto, outline del corso o presentazione cliente, la pagina puo essere estesa in una fase successiva."
+        zh: "如需了解课程合作、项目咨询或商务沟通，欢迎通过以下方式联系。",
+        en: "For course collaboration, project consulting, or business inquiries, please reach out through the channels below.",
+        it: "Per collaborazioni didattiche, consulenza progettuale o richieste commerciali, contattateci attraverso i canali seguenti."
       }
     }
   },
@@ -337,18 +337,18 @@ window.PORTFOLIO_DATA = {
       bullets: {
         zh: [
           "主题覆盖企业 AI 提效、知识库与 RAG、Agent 工作流、财务与法务场景。",
-          "持续把课程材料、案例展示与产品原型结合为同一套讲解体系。",
-          "适合企业培训、顾问介绍和客户沟通场景。"
+          "课程材料、案例展示与产品原型结合为同一套可交付体系。",
+          "已为多个行业客户提供定制化 AI 解决方案。"
         ],
         en: [
           "Topics include enterprise AI enablement, knowledge systems and RAG, agent workflows, and finance or legal use cases.",
-          "Course materials, case studies, and product prototypes are organized into one coherent presentation system.",
-          "Suitable for enterprise training, advisory introductions, and client-facing communication."
+          "Course materials, case studies, and product prototypes are organized into one coherent delivery system.",
+          "Customized AI solutions delivered across multiple industry clients."
         ],
         it: [
           "I temi includono AI enablement per l'impresa, knowledge system e RAG, workflow agent e casi d'uso finance o legal.",
-          "Materiali didattici, casi e prototipi prodotto vengono organizzati in un unico sistema di presentazione.",
-          "Adatto a formazione aziendale, presentazioni consulenziali e comunicazione verso clienti."
+          "Materiali didattici, casi e prototipi prodotto vengono organizzati in un unico sistema di delivery.",
+          "Soluzioni AI personalizzate erogate per clienti di diversi settori."
         ]
       }
     },
@@ -420,9 +420,9 @@ window.PORTFOLIO_DATA = {
         it: "CCB Guizhou | Gestione corporate banking / Responsabile programmi sistemi credito"
       },
       copy: {
-        zh: "从一线业务进入系统与流程管理，形成后续讲授企业 AI 提效时非常重要的业务基础。",
-        en: "Started from front-line business work and moved into systems and process management, building a strong business foundation for later enterprise AI teaching.",
-        it: "Partito dal lavoro business di prima linea per poi passare a sistemi e processi, costruendo una base molto solida per la successiva docenza AI in ambito enterprise."
+        zh: "从一线业务进入系统与流程管理，积累了扩展到企业 AI 场景的深厚业务基础。",
+        en: "Started from front-line business work and moved into systems and process management, building a strong business foundation that extends naturally into enterprise AI scenarios.",
+        it: "Partito dal lavoro business di prima linea per poi passare a sistemi e processi, costruendo una base solida che si estende naturalmente verso gli scenari AI enterprise."
       },
       bullets: {
         zh: [
@@ -470,14 +470,14 @@ window.PORTFOLIO_DATA = {
     },
     {
       title: {
-        zh: "课程、案例与展示材料",
-        en: "Course, case, and presentation materials",
-        it: "Materiali per corsi, casi e presentazioni"
+        zh: "课程体系与专业交付能力",
+        en: "Curriculum design and delivery capabilities",
+        it: "Progettazione curriculum e capacita di erogazione"
       },
       copy: {
-        zh: "同一套内容可延展为讲师简介、顾问介绍页、项目案例库、课程页面与客户展示材料。",
-        en: "The same content base can be extended into lecturer profiles, advisory pages, case libraries, course pages, and client-facing decks.",
-        it: "La stessa base contenutistica puo essere estesa in profili docente, pagine advisory, librerie di casi, pagine corso e materiali di presentazione per clienti."
+        zh: "可按需提供从课程大纲定制、案例库组装到现场授课与远程 Workshop 的全流程交付支持。",
+        en: "Full-cycle delivery support available, from curriculum customization and case library assembly to onsite instruction and remote workshops.",
+        it: "Supporto alla delivery completo, dalla personalizzazione del curriculum e assemblaggio della libreria casi fino alla docenza onsite e workshop remoti."
       }
     }
   ],
@@ -626,9 +626,9 @@ window.PORTFOLIO_DATA = {
         it: "Brief dei requisiti"
       },
       copy: {
-        zh: "课程需求的基础版本，可用于后续对外沟通整理。",
-        en: "A baseline course-requirement brief for later external communication.",
-        it: "Una base di requisiti del corso utilizzabile per successive comunicazioni esterne."
+        zh: "课程需求参考文档，可用于课程定制讨论。",
+        en: "A course requirements reference for curriculum customization discussions.",
+        it: "Un documento di riferimento per i requisiti del corso, utile per la personalizzazione."
       },
       links: [
         { label: "中文", href: "./需求.md" },
@@ -861,7 +861,7 @@ window.PORTFOLIO_DATA = {
       },
       {
         key: "deepseek-marketing-15day",
-        project: { en: "AI Marketing 15-Day Intensive", zh: "AI 营销 15 天训练营", it: "Intensive AI marketing di 15 giorni" },
+        project: { en: "DeepSeek Marketing 15-Day Intensive", zh: "DeepSeek 营销 15 天训练营", it: "Intensive DeepSeek marketing di 15 giorni" },
         language: "all",
         languageLabel: { en: "ZH", zh: "中文", it: "ZH" },
         count: 15,

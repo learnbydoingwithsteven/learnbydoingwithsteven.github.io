@@ -37,13 +37,18 @@ body {
     color: var(--ink);
     background: linear-gradient(160deg, #fcf7ef 0%, #fffaf4 42%, #eef4ef 100%);
     font-family: "Space Grotesk", "Segoe UI", sans-serif;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.52;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     position: relative;
     overflow-x: hidden;
 }
+
+/* Font-size tiers: lg (default), md, sm */
+body[data-fontsize="lg"] { font-size: 14px; }
+body[data-fontsize="md"] { font-size: 13px; }
+body[data-fontsize="sm"] { font-size: 12px; }
 
 body::before,
 body::after {
@@ -133,8 +138,8 @@ button {
 }
 
 .brand-mark {
-    width: 42px;
-    height: 42px;
+    width: 34px;
+    height: 34px;
     border-radius: 999px;
     display: grid;
     place-items: center;
@@ -157,7 +162,7 @@ button {
 }
 
 .brand-name {
-    font-size: 0.95rem;
+    font-size: 0.86rem;
     font-weight: 700;
     letter-spacing: -0.02em;
 }
@@ -311,7 +316,7 @@ button {
 }
 
 .hero {
-    padding: 44px 0 18px;
+    padding: 28px 0 14px;
 }
 
 .hero-grid {
@@ -344,7 +349,7 @@ button {
 .hero-copy {
     position: relative;
     overflow: hidden;
-    padding: 18px;
+    padding: 16px;
     border-radius: var(--radius-xl);
     background: linear-gradient(145deg, rgba(255, 255, 255, 0.78), rgba(255, 249, 240, 0.6));
 }
@@ -401,8 +406,8 @@ button {
 }
 
 .display-title {
-    font-size: clamp(2.55rem, 6vw, 5rem);
-    margin-bottom: 14px;
+    font-size: clamp(1.85rem, 4vw, 3.2rem);
+    margin-bottom: 10px;
 }
 
 .display-title .accent {
@@ -422,9 +427,9 @@ button {
 }
 
 .hero-lead {
-    font-size: clamp(0.96rem, 1.55vw, 1.08rem);
+    font-size: clamp(0.88rem, 1.3vw, 0.98rem);
     max-width: 62ch;
-    margin: 0 0 18px;
+    margin: 0 0 14px;
 }
 
 .button-row {
@@ -492,14 +497,14 @@ button {
 }
 
 .profile-image-wrap {
-    padding: 18px 18px 0;
+    padding: 14px 14px 0;
 }
 
 .profile-image {
     width: 100%;
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 5 / 4;
     object-fit: cover;
-    border-radius: 28px 28px 16px 16px;
+    border-radius: 22px 22px 14px 14px;
 }
 
 .profile-copy-wrap {
@@ -517,8 +522,8 @@ button {
 }
 
 .profile-title {
-    margin: 0 0 10px;
-    font-size: clamp(1.6rem, 2vw, 2rem);
+    margin: 0 0 8px;
+    font-size: clamp(1.25rem, 1.8vw, 1.6rem);
     font-family: "Fraunces", Georgia, serif;
     letter-spacing: -0.03em;
     line-height: 1.15;
@@ -573,8 +578,8 @@ button {
 }
 
 .section-title {
-    font-size: clamp(1.75rem, 3.4vw, 2.85rem);
-    margin-bottom: 8px;
+    font-size: clamp(1.35rem, 2.6vw, 2.1rem);
+    margin-bottom: 6px;
 }
 
 .section-copy {
@@ -1224,9 +1229,30 @@ button {
     position: relative;
     z-index: 1;
     margin-inline: 0;
-    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
     padding: 2px 0 6px;
-    mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+    cursor: grab;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255,255,255,0.2) transparent;
+}
+
+.teaching-window-rail:active {
+    cursor: grabbing;
+}
+
+.teaching-window-rail::-webkit-scrollbar {
+    height: 6px;
+}
+
+.teaching-window-rail::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.2);
+    border-radius: 999px;
+}
+
+.teaching-window-rail::-webkit-scrollbar-track {
+    background: transparent;
 }
 
 .teaching-window-track {
@@ -1947,4 +1973,101 @@ button {
         overflow-x: auto;
         mask-image: none;
     }
+}
+
+/* ── Font-size switcher pill ── */
+.fontsize-switch {
+    display: inline-flex;
+    gap: 3px;
+    padding: 3px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.76);
+    border: 1px solid var(--line);
+    margin-left: 6px;
+}
+
+.fontsize-btn {
+    min-width: 36px;
+    padding: 6px 8px;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--ink-soft);
+    font-size: 0.72rem;
+    font-weight: 600;
+    border: 0;
+    cursor: pointer;
+    transition: background 180ms ease, color 180ms ease;
+}
+
+.fontsize-btn.is-active {
+    background: rgba(16, 24, 40, 0.9);
+    color: #fffdf8;
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.12);
+}
+
+/* ── Image Lightbox ── */
+.lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.82);
+    backdrop-filter: blur(12px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 280ms ease;
+    cursor: zoom-out;
+}
+
+.lightbox-overlay.is-open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.lightbox-overlay img {
+    max-width: 92vw;
+    max-height: 88vh;
+    border-radius: 16px;
+    box-shadow: 0 32px 80px rgba(0, 0, 0, 0.5);
+    object-fit: contain;
+    transform: scale(0.92);
+    transition: transform 320ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.lightbox-overlay.is-open img {
+    transform: scale(1);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    border: 0;
+    background: rgba(255, 255, 255, 0.14);
+    color: #fffdf8;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 180ms ease;
+}
+
+.lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.28);
+}
+
+/* Clickable image indicators */
+.teaching-window-card {
+    cursor: pointer;
+}
+
+.teaching-project-image-wrap,
+.teaching-project-gallery {
+    cursor: zoom-in;
 }
