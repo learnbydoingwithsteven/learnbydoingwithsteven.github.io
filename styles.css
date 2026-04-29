@@ -46,6 +46,10 @@ body {
 }
 
 /* Font-size tiers: lg (default), md, sm */
+html[data-fontsize="lg"] { font-size: 16px; }
+html[data-fontsize="md"] { font-size: 14.85px; }
+html[data-fontsize="sm"] { font-size: 13.71px; }
+
 body[data-fontsize="lg"] { font-size: 14px; }
 body[data-fontsize="md"] { font-size: 13px; }
 body[data-fontsize="sm"] { font-size: 12px; }

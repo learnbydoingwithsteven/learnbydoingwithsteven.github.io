@@ -22,7 +22,7 @@ def parse_args():
     parser.add_argument(
         "--preset",
         default="general",
-        choices=["general", "ai-lessons", "hrbp"],
+        choices=["general", "ai-lessons", "hrbp", "robotics", "governance", "ai-marketing", "credit-risk", "due-diligence", "office-productivity"],
     )
     return parser.parse_args()
 
@@ -159,6 +159,8 @@ def draw_chip(base, box, text, fill, text_fill):
 
 
 def tokenize(text):
+    if re.search(r"[\u4e00-\u9fff]", text):
+        return list(text)
     if re.search(r"[A-Za-z]", text) and " " in text:
         return re.findall(r"\S+\s*", text)
     return list(text)
@@ -203,6 +205,48 @@ def draw_lines(draw, x, y, lines, font, fill, spacing):
         bbox = draw.textbbox((x, cursor), line, font=font)
         cursor = bbox[3] + spacing
     return cursor
+
+
+def stable_code(text, prefix, digits=2):
+    value = sum((index + 1) * ord(char) for index, char in enumerate(text))
+    modulus = 10 ** digits
+    number = value % modulus
+    if number == 0:
+        number = modulus
+    return f"{prefix} {number:0{digits}d}"
+
+
+def parse_chinese_number(value):
+    mapping = {
+        "一": 1,
+        "二": 2,
+        "三": 3,
+        "四": 4,
+        "五": 5,
+        "六": 6,
+        "七": 7,
+        "八": 8,
+        "九": 9,
+        "十": 10,
+        "十一": 11,
+        "十二": 12,
+        "十三": 13,
+        "十四": 14,
+        "十五": 15,
+    }
+    return mapping.get(value)
+
+
+def extract_training_day(stem):
+    match = re.search(r"day\s*0?(\d{1,2})", stem, re.IGNORECASE)
+    if match:
+        return int(match.group(1))
+
+    match = re.search(r"第([一二三四五六七八九十]{1,3})天", stem)
+    if match:
+        return parse_chinese_number(match.group(1))
+
+    return None
 
 
 def safe_ai_payload(deck_path, texts):
@@ -255,6 +299,154 @@ def safe_hrbp_payload(deck_path):
         "summary": "Sanitized public showcase covering people operations, governance, capability building and compliance workflows.",
         "footer_left": "Industry training archive",
         "footer_right": "Sanitized display",
+    }
+
+
+def robotics_payload(deck_path):
+    stem = Path(deck_path).stem
+    return {
+        "eyebrow": "Embodied intelligence research",
+        "badge": stable_code(stem, "Case"),
+        "title_lines": ["具身智能市场研究", "专题案例与产品分析"],
+        "summary": "面向具身智能赛道的市场扫描、产品能力梳理、商业化路径判断与代表性案例对比。",
+        "footer_left": "Public research showcase",
+        "footer_right": "Sanitized portfolio",
+    }
+
+
+def governance_payload(deck_path):
+    stem = Path(deck_path).stem
+    module_match = re.search(r"(?:^|[_-])(\d{1,2})(?:[_-]|$)", stem)
+    lower_stem = stem.lower()
+    if "cheatsheet" in lower_stem:
+        badge = "Cheatsheet"
+        title_lines = ["AI 治理课程记录", "速查资料与执行清单"]
+    elif "script" in lower_stem:
+        badge = "Script"
+        title_lines = ["AI 治理课程记录", "讲稿归档与课堂支撑"]
+    else:
+        badge = f"Module {int(module_match.group(1)):02d}" if module_match else stable_code(stem, "Module")
+        title_lines = ["AI 治理课程记录", "治理框架、流程与落地实践"]
+
+    return {
+        "eyebrow": "AI governance delivery",
+        "badge": badge,
+        "title_lines": title_lines,
+        "summary": "覆盖治理框架、职责分工、风险边界、制度设计、落地流程与课堂配套材料的完整课程记录。",
+        "footer_left": "Training archive",
+        "footer_right": "Public showcase",
+    }
+
+
+def ai_marketing_payload(deck_path):
+    stem = Path(deck_path).stem
+    day_match = re.search(r"Day\s*0?(\d+)", stem, re.IGNORECASE)
+    day_number = int(day_match.group(1)) if day_match else None
+    badge = f"Day {day_number:02d}" if day_number else stable_code(stem, "Day")
+    subtitle = f"第 {day_number:02d} 讲 / 中国市场专题" if day_number else "中国市场专题训练营"
+    return {
+        "eyebrow": "AI marketing intensive",
+        "badge": badge,
+        "title_lines": ["AI 营销训练营", subtitle],
+        "summary": "聚焦中国市场窗口期、内容生产、品牌增长、渠道协同与训练营式落地推进的系列课程交付。",
+        "footer_left": "Course delivery archive",
+        "footer_right": "Sanitized portfolio",
+    }
+
+
+def credit_risk_payload(deck_path):
+    stem = Path(deck_path).stem
+    lower_stem = stem.lower()
+    day_number = extract_training_day(stem)
+
+    if "cheatsheet" in lower_stem or "讲义" in stem:
+        badge = "Cheatsheet"
+        subtitle = "速查手册与课堂讲义"
+    elif "script" in lower_stem or "speaker" in lower_stem or "讲稿" in stem:
+        badge = "Script"
+        subtitle = "逐页讲稿与讲师支撑"
+    elif "15天培训课程" in stem:
+        badge = "Master"
+        subtitle = "15 天体系总览"
+    elif day_number is not None:
+        badge = f"Day {day_number:02d}"
+        subtitle = f"第 {day_number:02d} 天 / 信贷流程专题"
+    else:
+        badge = stable_code(stem, "Deck")
+        subtitle = "流程识别与风险评估"
+
+    return {
+        "eyebrow": "Bank credit risk training",
+        "badge": badge,
+        "title_lines": ["银行信贷风险课程", subtitle],
+        "summary": "围绕客户准入、授信分析、贷中审查、贷后管理与合规风控展开的系统化课程交付。",
+        "footer_left": "Training archive",
+        "footer_right": "Public showcase",
+    }
+
+
+def due_diligence_payload(deck_path):
+    stem = Path(deck_path).stem
+    lower_stem = stem.lower()
+    day_number = extract_training_day(stem)
+
+    if "cheatsheet" in lower_stem or "讲义" in stem:
+        badge = "Cheatsheet"
+        subtitle = "现场尽调速查资料"
+    elif "script" in lower_stem or "speaker" in lower_stem or "讲稿" in stem:
+        badge = "Script"
+        subtitle = "讲稿归档与课堂支撑"
+    elif "15天培训课程" in stem:
+        badge = "Master"
+        subtitle = "15 天课程总览"
+    elif day_number is not None:
+        badge = f"Day {day_number:02d}"
+        subtitle = f"第 {day_number:02d} 天 / 现场识别专题"
+    else:
+        badge = stable_code(stem, "Deck")
+        subtitle = "尽调与评估专题"
+
+    return {
+        "eyebrow": "Due diligence evaluation",
+        "badge": badge,
+        "title_lines": ["银行尽调评估课程", subtitle],
+        "summary": "覆盖现场识别、经营核查、授信尽调、资产评估、授后跟踪与课堂支撑材料的完整记录。",
+        "footer_left": "Course archive",
+        "footer_right": "Public showcase",
+    }
+
+
+def office_productivity_payload(deck_path):
+    stem = Path(deck_path).stem
+    lower_stem = stem.lower()
+    day_number = extract_training_day(stem)
+
+    if "cheatsheet" in lower_stem:
+        badge = "Cheatsheet"
+        subtitle = "速查手册与课堂提要"
+    elif "handout" in lower_stem:
+        badge = "Handout"
+        subtitle = "讲义材料与练习配套"
+    elif "speaker" in lower_stem or "notes" in lower_stem:
+        badge = "Notes"
+        subtitle = "讲师备注与授课支撑"
+    elif "15天培训课程" in stem:
+        badge = "Master"
+        subtitle = "15 天训练营总览"
+    elif day_number is not None:
+        badge = f"Day {day_number:02d}"
+        subtitle = f"第 {day_number:02d} 天 / 办公提效专题"
+    else:
+        badge = stable_code(stem, "Deck")
+        subtitle = "办公自动化与协同提效"
+
+    return {
+        "eyebrow": "AI workplace productivity",
+        "badge": badge,
+        "title_lines": ["AI 职场效率训练营", subtitle],
+        "summary": "聚焦写作、汇报、表格、会议、知识整理与多工具协同的办公提效型课程交付。",
+        "footer_left": "Training archive",
+        "footer_right": "Sanitized portfolio",
     }
 
 
@@ -351,6 +543,164 @@ def draw_hrbp_visual(base):
     base.alpha_composite(overlay)
 
 
+def draw_robotics_visual(base):
+    overlay = Image.new("RGBA", base.size, (0, 0, 0, 0))
+    draw = ImageDraw.Draw(overlay)
+
+    panel = (980, 120, 1480, 748)
+    draw.rounded_rectangle(panel, radius=48, fill=(15, 28, 46, 168), outline=(138, 206, 255, 76), width=2)
+
+    draw.ellipse((1090, 148, 1360, 418), fill=(94, 144, 255, 76))
+    draw.rounded_rectangle((1140, 242, 1310, 560), radius=68, fill=(221, 235, 255, 215))
+    draw.rounded_rectangle((1178, 194, 1272, 298), radius=32, fill=(235, 243, 255, 232))
+    draw.ellipse((1204, 224, 1234, 254), fill=(48, 76, 122, 190))
+    draw.ellipse((1216, 224, 1246, 254), fill=(48, 76, 122, 190))
+    draw.rounded_rectangle((1184, 326, 1268, 372), radius=18, fill=(84, 120, 182, 190))
+    draw.line((1168, 572, 1132, 676), fill=(186, 214, 255, 228), width=18)
+    draw.line((1282, 572, 1318, 676), fill=(186, 214, 255, 228), width=18)
+    draw.line((1152, 364, 1060, 454), fill=(186, 214, 255, 212), width=16)
+    draw.line((1298, 364, 1388, 454), fill=(186, 214, 255, 212), width=16)
+
+    draw.rounded_rectangle((1036, 514, 1116, 676), radius=30, fill=(131, 184, 255, 170))
+    draw.rounded_rectangle((1334, 514, 1414, 676), radius=30, fill=(131, 184, 255, 170))
+    for point in ((1032, 206), (1440, 240), (1008, 640), (1454, 606)):
+        draw.ellipse((point[0] - 16, point[1] - 16, point[0] + 16, point[1] + 16), fill=(114, 231, 255, 200))
+
+    for idx, offset in enumerate((0, 62, 126)):
+        draw.line((1024, 808 + idx * 8, 1364 - offset, 808 + idx * 8), fill=(137, 224, 255, 144 - idx * 24), width=6)
+
+    base.alpha_composite(overlay)
+
+
+def draw_governance_visual(base):
+    overlay = Image.new("RGBA", base.size, (0, 0, 0, 0))
+    draw = ImageDraw.Draw(overlay)
+
+    panel = (980, 120, 1480, 748)
+    draw.rounded_rectangle(panel, radius=48, fill=(17, 30, 48, 160), outline=(122, 210, 255, 72), width=2)
+    shield = [(1230, 172), (1378, 232), (1352, 498), (1230, 618), (1108, 498), (1082, 232)]
+    draw.polygon(shield, fill=(92, 188, 255, 170))
+    draw.polygon(shield, outline=(227, 247, 255, 210), width=4)
+    draw.line((1230, 260, 1230, 508), fill=(239, 248, 255, 220), width=16)
+    draw.line((1144, 352, 1316, 352), fill=(239, 248, 255, 220), width=16)
+
+    nodes = ((1058, 222), (1422, 252), (1026, 594), (1418, 610), (1230, 716))
+    for x, y in nodes:
+        draw.ellipse((x - 18, y - 18, x + 18, y + 18), fill=(122, 228, 255, 220))
+        draw.line((1230, 390, x, y), fill=(122, 228, 255, 132), width=5)
+
+    for idx, width in enumerate((302, 256, 214)):
+        y = 792 + idx * 10
+        draw.line((1036, y, 1036 + width, y), fill=(136, 222, 255, 140 - idx * 20), width=6)
+
+    base.alpha_composite(overlay)
+
+
+def draw_marketing_visual(base):
+    overlay = Image.new("RGBA", base.size, (0, 0, 0, 0))
+    draw = ImageDraw.Draw(overlay)
+
+    panel = (980, 120, 1480, 748)
+    draw.rounded_rectangle(panel, radius=48, fill=(18, 33, 53, 156), outline=(135, 219, 255, 72), width=2)
+    draw.rounded_rectangle((1036, 182, 1428, 452), radius=34, fill=(235, 244, 255, 214))
+    bars = [
+        (1080, 392, 1120, 418),
+        (1152, 346, 1192, 418),
+        (1224, 298, 1264, 418),
+        (1296, 248, 1336, 418),
+    ]
+    for box in bars:
+        draw.rounded_rectangle(box, radius=12, fill=(86, 154, 255, 215))
+    draw.line((1076, 270, 1168, 338, 1240, 286, 1312, 236, 1382, 210), fill=(255, 186, 89, 220), width=10, joint="curve")
+    draw.ellipse((1362, 190, 1400, 228), fill=(255, 186, 89, 232))
+
+    draw.polygon([(1120, 512), (1368, 512), (1296, 586), (1192, 586)], fill=(97, 194, 255, 178))
+    draw.polygon([(1164, 610), (1324, 610), (1278, 670), (1210, 670)], fill=(255, 197, 102, 186))
+    draw.line((1036, 800, 1362, 800), fill=(129, 220, 255, 146), width=6)
+    draw.line((1036, 816, 1304, 816), fill=(129, 220, 255, 124), width=6)
+    draw.line((1036, 832, 1228, 832), fill=(129, 220, 255, 102), width=6)
+
+    base.alpha_composite(overlay)
+
+
+def draw_credit_visual(base):
+    overlay = Image.new("RGBA", base.size, (0, 0, 0, 0))
+    draw = ImageDraw.Draw(overlay)
+
+    panel = (980, 120, 1480, 748)
+    draw.rounded_rectangle(panel, radius=48, fill=(17, 30, 48, 160), outline=(120, 201, 255, 72), width=2)
+    draw.rounded_rectangle((1054, 178, 1406, 448), radius=34, fill=(229, 238, 250, 218))
+    for idx, x in enumerate((1108, 1188, 1268, 1348)):
+        bar_height = (idx + 2) * 46
+        draw.rounded_rectangle((x, 404 - bar_height, x + 42, 404), radius=12, fill=(83, 140, 227, 214))
+    draw.line((1094, 308, 1180, 282, 1260, 246, 1340, 202, 1398, 182), fill=(255, 184, 88, 220), width=10, joint="curve")
+    draw.ellipse((1380, 164, 1420, 204), fill=(255, 184, 88, 232))
+
+    draw.rounded_rectangle((1088, 522, 1372, 650), radius=28, fill=(88, 154, 219, 180))
+    for idx in range(3):
+        y = 554 + idx * 30
+        draw.line((1136, y, 1326 - idx * 26, y), fill=(237, 245, 255, 210), width=10)
+    draw.ellipse((1112, 548, 1140, 576), fill=(255, 217, 126, 220))
+    draw.ellipse((1112, 578, 1140, 606), fill=(255, 217, 126, 220))
+    draw.ellipse((1112, 608, 1140, 636), fill=(255, 217, 126, 220))
+
+    for idx, width in enumerate((312, 268, 220)):
+        y = 804 + idx * 8
+        draw.line((1032, y, 1032 + width, y), fill=(133, 218, 255, 144 - idx * 22), width=6)
+
+    base.alpha_composite(overlay)
+
+
+def draw_due_diligence_visual(base):
+    overlay = Image.new("RGBA", base.size, (0, 0, 0, 0))
+    draw = ImageDraw.Draw(overlay)
+
+    panel = (980, 120, 1480, 748)
+    draw.rounded_rectangle(panel, radius=48, fill=(16, 30, 46, 158), outline=(124, 208, 255, 72), width=2)
+    draw.rounded_rectangle((1090, 176, 1358, 622), radius=34, fill=(236, 243, 252, 222))
+    draw.rectangle((1128, 218, 1320, 514), fill=(248, 251, 255, 245))
+    draw.rounded_rectangle((1172, 184, 1276, 222), radius=16, fill=(94, 146, 219, 224))
+    for idx in range(5):
+        y = 274 + idx * 48
+        draw.rectangle((1156, y, 1184, y + 28), outline=(77, 127, 193, 210), width=4)
+        draw.line((1198, y + 14, 1298 - idx * 16, y + 14), fill=(121, 145, 177, 190), width=8)
+    draw.line((1160, 288, 1168, 300, 1180, 278), fill=(62, 192, 140, 228), width=6)
+    draw.line((1160, 336, 1168, 348, 1180, 326), fill=(62, 192, 140, 228), width=6)
+
+    draw.ellipse((1286, 422, 1418, 554), outline=(255, 191, 94, 228), width=16)
+    draw.line((1388, 522, 1452, 590), fill=(255, 191, 94, 228), width=16)
+
+    for idx, width in enumerate((302, 256, 214)):
+        y = 804 + idx * 8
+        draw.line((1034, y, 1034 + width, y), fill=(137, 220, 255, 144 - idx * 22), width=6)
+
+    base.alpha_composite(overlay)
+
+
+def draw_office_visual(base):
+    overlay = Image.new("RGBA", base.size, (0, 0, 0, 0))
+    draw = ImageDraw.Draw(overlay)
+
+    panel = (980, 120, 1480, 748)
+    draw.rounded_rectangle(panel, radius=48, fill=(17, 30, 48, 160), outline=(126, 208, 255, 72), width=2)
+    draw.rounded_rectangle((1048, 184, 1420, 448), radius=34, fill=(231, 240, 252, 220))
+    draw.rounded_rectangle((1078, 220, 1390, 398), radius=22, fill=(247, 250, 255, 238))
+    draw.rectangle((1098, 244, 1370, 266), fill=(93, 146, 222, 214))
+    for idx in range(4):
+        y = 300 + idx * 30
+        draw.line((1112, y, 1328 - idx * 26, y), fill=(123, 145, 174, 198), width=8)
+    draw.rounded_rectangle((1158, 504, 1302, 624), radius=28, fill=(87, 153, 220, 188))
+    draw.rounded_rectangle((1328, 504, 1422, 650), radius=24, fill=(255, 188, 92, 178))
+    draw.line((1082, 562, 1132, 562, 1182, 534, 1234, 550), fill=(70, 201, 173, 224), width=10, joint="curve")
+    draw.ellipse((1220, 536, 1250, 566), fill=(70, 201, 173, 232))
+
+    for idx, width in enumerate((312, 268, 220)):
+        y = 804 + idx * 8
+        draw.line((1032, y, 1032 + width, y), fill=(136, 219, 255, 144 - idx * 22), width=6)
+
+    base.alpha_composite(overlay)
+
+
 def compose_cover(deck_path, output_path, preset):
     texts = extract_slide_texts(deck_path)
 
@@ -381,12 +731,93 @@ def compose_cover(deck_path, output_path, preset):
         body_fill = (84, 101, 119, 255)
         chip_fill = (44, 88, 122, 235)
         chip_text = (245, 248, 251, 255)
+    elif preset == "robotics":
+        payload = robotics_payload(deck_path)
+        background = build_gradient((WIDTH, HEIGHT), (13, 19, 32), (30, 47, 72))
+        base = background.convert("RGBA")
+        add_blur_blob(base, (1240, 212), 220, (91, 143, 255, 82), blur=82)
+        add_blur_blob(base, (272, 736), 214, (88, 202, 255, 44), blur=94)
+        add_grid_overlay(base, (255, 255, 255, 18), spacing=42, inset=44)
+        draw_robotics_visual(base)
+        title_fill = (241, 246, 255, 255)
+        subtitle_fill = (176, 205, 255, 255)
+        body_fill = (202, 216, 236, 255)
+        chip_fill = (150, 177, 255, 230)
+        chip_text = (25, 34, 54, 255)
+    elif preset == "governance":
+        payload = governance_payload(deck_path)
+        background = build_gradient((WIDTH, HEIGHT), (8, 22, 34), (14, 46, 60))
+        base = background.convert("RGBA")
+        add_blur_blob(base, (1230, 190), 220, (64, 198, 255, 74), blur=86)
+        add_blur_blob(base, (290, 748), 216, (70, 225, 197, 42), blur=96)
+        add_grid_overlay(base, (154, 224, 255, 20), spacing=40, inset=44)
+        draw_governance_visual(base)
+        title_fill = (237, 248, 255, 255)
+        subtitle_fill = (174, 229, 255, 255)
+        body_fill = (196, 224, 239, 255)
+        chip_fill = (115, 225, 255, 230)
+        chip_text = (7, 38, 49, 255)
+    elif preset == "ai-marketing":
+        payload = ai_marketing_payload(deck_path)
+        background = build_gradient((WIDTH, HEIGHT), (17, 23, 39), (46, 63, 92))
+        base = background.convert("RGBA")
+        add_blur_blob(base, (1240, 194), 220, (255, 182, 76, 78), blur=84)
+        add_blur_blob(base, (254, 752), 212, (108, 194, 255, 46), blur=96)
+        add_grid_overlay(base, (255, 255, 255, 16), spacing=42, inset=44)
+        draw_marketing_visual(base)
+        title_fill = (245, 248, 255, 255)
+        subtitle_fill = (194, 214, 255, 255)
+        body_fill = (210, 220, 238, 255)
+        chip_fill = (255, 189, 95, 235)
+        chip_text = (44, 31, 17, 255)
+    elif preset == "credit-risk":
+        payload = credit_risk_payload(deck_path)
+        background = build_gradient((WIDTH, HEIGHT), (13, 20, 34), (31, 50, 76))
+        base = background.convert("RGBA")
+        add_blur_blob(base, (1236, 202), 220, (78, 152, 255, 78), blur=84)
+        add_blur_blob(base, (286, 752), 220, (255, 192, 91, 38), blur=96)
+        add_grid_overlay(base, (255, 255, 255, 16), spacing=42, inset=44)
+        draw_credit_visual(base)
+        title_fill = (244, 248, 255, 255)
+        subtitle_fill = (194, 214, 255, 255)
+        body_fill = (208, 220, 238, 255)
+        chip_fill = (158, 183, 255, 230)
+        chip_text = (28, 37, 59, 255)
+    elif preset == "due-diligence":
+        payload = due_diligence_payload(deck_path)
+        background = build_gradient((WIDTH, HEIGHT), (11, 21, 34), (28, 46, 70))
+        base = background.convert("RGBA")
+        add_blur_blob(base, (1240, 208), 220, (88, 154, 255, 74), blur=86)
+        add_blur_blob(base, (282, 750), 214, (255, 193, 92, 38), blur=96)
+        add_grid_overlay(base, (255, 255, 255, 16), spacing=42, inset=44)
+        draw_due_diligence_visual(base)
+        title_fill = (244, 248, 255, 255)
+        subtitle_fill = (194, 214, 255, 255)
+        body_fill = (208, 220, 238, 255)
+        chip_fill = (154, 183, 255, 230)
+        chip_text = (28, 37, 59, 255)
+    elif preset == "office-productivity":
+        payload = office_productivity_payload(deck_path)
+        background = build_gradient((WIDTH, HEIGHT), (14, 22, 36), (34, 54, 80))
+        base = background.convert("RGBA")
+        add_blur_blob(base, (1238, 208), 220, (90, 152, 255, 76), blur=84)
+        add_blur_blob(base, (280, 746), 218, (72, 210, 186, 34), blur=96)
+        add_grid_overlay(base, (255, 255, 255, 16), spacing=42, inset=44)
+        draw_office_visual(base)
+        title_fill = (244, 248, 255, 255)
+        subtitle_fill = (194, 214, 255, 255)
+        body_fill = (208, 220, 238, 255)
+        chip_fill = (159, 184, 255, 230)
+        chip_text = (28, 37, 59, 255)
     else:
         payload = general_payload(deck_path, texts)
+        preview = extract_first_slide_image(deck_path)
         background = build_gradient((WIDTH, HEIGHT), (22, 24, 36), (34, 52, 74))
         base = background.convert("RGBA")
         add_blur_blob(base, (1160, 250), 230, (122, 152, 255, 84), blur=90)
+        add_blur_blob(base, (300, 700), 220, (92, 138, 255, 48), blur=95)
         add_grid_overlay(base, (255, 255, 255, 16), spacing=42, inset=44)
+        draw_ai_visual(base, preview)
         title_fill = (241, 245, 255, 255)
         subtitle_fill = (190, 210, 255, 255)
         body_fill = (203, 214, 235, 255)

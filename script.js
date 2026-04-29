@@ -1198,7 +1198,6 @@ function renderHome(lang) {
     const teachingNode = document.querySelector("#home-teaching-archives");
     if (teachingNode) {
         teachingNode.innerHTML = renderTeachingShowcase(lang);
-        bindDragScroll();
         bindTeachingImageClicks();
     }
 }
@@ -1327,11 +1326,13 @@ const FONTSIZE_KEY = "lbds-fontsize";
 function bindFontSizeSwitcher() {
     const stored = localStorage.getItem(FONTSIZE_KEY);
     if (stored && ["lg", "md", "sm"].includes(stored)) {
+        document.documentElement.dataset.fontsize = stored;
         document.body.dataset.fontsize = stored;
     }
     syncFontSizeButtons();
     document.querySelectorAll(".fontsize-btn").forEach((btn) => {
         btn.addEventListener("click", () => {
+            document.documentElement.dataset.fontsize = btn.dataset.fontsize;
             document.body.dataset.fontsize = btn.dataset.fontsize;
             localStorage.setItem(FONTSIZE_KEY, btn.dataset.fontsize);
             syncFontSizeButtons();
@@ -1340,7 +1341,7 @@ function bindFontSizeSwitcher() {
 }
 
 function syncFontSizeButtons() {
-    const current = document.body.dataset.fontsize || "lg";
+    const current = document.documentElement.dataset.fontsize || document.body.dataset.fontsize || "lg";
     document.querySelectorAll(".fontsize-btn").forEach((btn) => {
         btn.classList.toggle("is-active", btn.dataset.fontsize === current);
     });
@@ -1387,43 +1388,4 @@ function bindTeachingImageClicks() {
 }
 
 /* ── Drag-scroll for teaching rails ── */
-function bindDragScroll() {
-    document.querySelectorAll(".teaching-window-rail").forEach((rail) => {
-        let isDragging = false;
-        let startX = 0;
-        let scrollLeft = 0;
-
-        // Stop CSS animation for manual control
-        const track = rail.querySelector(".teaching-window-track");
-        if (track) track.style.animation = "none";
-
-        rail.addEventListener("mousedown", (e) => {
-            isDragging = true;
-            startX = e.pageX - rail.offsetLeft;
-            scrollLeft = rail.scrollLeft;
-            rail.style.cursor = "grabbing";
-        });
-
-        rail.addEventListener("mouseleave", () => { isDragging = false; rail.style.cursor = "grab"; });
-        rail.addEventListener("mouseup", () => { isDragging = false; rail.style.cursor = "grab"; });
-        rail.addEventListener("mousemove", (e) => {
-            if (!isDragging) return;
-            e.preventDefault();
-            const x = e.pageX - rail.offsetLeft;
-            rail.scrollLeft = scrollLeft - (x - startX) * 1.5;
-        });
-
-        // Touch support
-        rail.addEventListener("touchstart", (e) => {
-            isDragging = true;
-            startX = e.touches[0].pageX - rail.offsetLeft;
-            scrollLeft = rail.scrollLeft;
-        }, { passive: true });
-        rail.addEventListener("touchend", () => { isDragging = false; });
-        rail.addEventListener("touchmove", (e) => {
-            if (!isDragging) return;
-            const x = e.touches[0].pageX - rail.offsetLeft;
-            rail.scrollLeft = scrollLeft - (x - startX) * 1.5;
-        }, { passive: true });
-    });
-}
+// bindDragScroll removed to allow continuous CSS marquee auto-scroll
