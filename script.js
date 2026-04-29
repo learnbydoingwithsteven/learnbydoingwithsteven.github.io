@@ -72,29 +72,29 @@ const COPY = {
             tertiary: { en: "Email", zh: "邮箱", it: "Email" }
         },
         intro: {
-            label: { en: "Positioning", zh: "站点定位", it: "Posizionamento" },
+            label: { en: "", zh: "", it: "" },
             title: {
                 en: "Content & services",
                 zh: "内容与服务",
                 it: "Contenuti e servizi"
             },
             copy: {
-                en: "AI projects / advisory / media channels / community / Chinese, English, Italian",
-                zh: "AI 项目 / 顾问培训 / 媒体内容 / 社群网络 / 中文、英文、意大利语",
-                it: "Progetti AI / Advisory / Canali media / Community / Cinese, inglese, italiano"
+                en: "",
+                zh: "",
+                it: ""
             }
         },
         linksIntro: {
-            label: { en: "Sections", zh: "主要模块", it: "Sezioni" },
+            label: { en: "", zh: "", it: "" },
             title: {
                 en: "Access points",
                 zh: "入口导航",
                 it: "Punti di accesso"
             },
             copy: {
-                en: "Scheduling / media / advisory / communities / contact / support",
-                zh: "预约 / 社媒内容 / 顾问培训 / 社群 / 联系 / 支持",
-                it: "Prenotazioni / Media / Advisory / Community / Contatto / Supporto"
+                en: "",
+                zh: "",
+                it: ""
             }
         },
         cta: {
@@ -122,19 +122,19 @@ const COPY = {
         },
         teachingIntro: {
             label: {
-                en: "Past teaching",
-                zh: "\u8fc7\u5f80\u6559\u5b66",
-                it: "Archivio didattico"
+                en: "",
+                zh: "",
+                it: ""
             },
             title: {
-                en: "Past teaching archives, arranged by language",
-                zh: "\u8fc7\u5f80\u6559\u5b66\u5f52\u6863\u4e0e\u8bed\u8a00\u9635\u5217",
-                it: "Archivi didattici organizzati per lingua"
+                en: "Project Highlights",
+                zh: "项目集锦",
+                it: "Progetti in evidenza"
             },
             copy: {
-                en: "Two multilingual archive families, each shown through Chinese, English, and Italian opening-slide matrices for a calmer end-of-page browse.",
-                zh: "\u4e24\u7ec4\u5f80\u671f\u6559\u5b66\u5f52\u6863\uff0c\u6309\u4e2d\u82f1\u610f\u4e09\u79cd\u8bed\u8a00\u5206\u7ec4\u5448\u73b0\uff0c\u8ba9\u9875\u9762\u672b\u7aef\u7684\u6d4f\u89c8\u66f4\u81ea\u7136\u3001\u66f4\u6574\u9f50\u3002",
-                it: "Due famiglie di archivi multilingue, mostrate in cinese, inglese e italiano con una consultazione finale piu calma e ordinata."
+                en: "",
+                zh: "",
+                it: ""
             }
         },
         },
@@ -358,7 +358,7 @@ const GROUPS = [
             it: "Advisory / Formazione / AI enterprise"
         },
         items: [
-            { title: { en: "Open advisory page", zh: "打开介绍页", it: "Apri la pagina advisory" }, url: "advisory/" }
+            { title: { en: "Open advisory page", zh: "打开介绍页", it: "Apri la pagina advisory" }, url: "advisory/index.html" }
         ]
     },
     {
@@ -643,161 +643,392 @@ const LANGUAGE_LABELS = {
 };
 
 const TEACHING_TERMS = {
-    openingSlides: {
-        en: "opening slides",
-        zh: "\u9996\u9875\u9635\u5217",
-        it: "slide iniziali"
-    },
-    languageEditions: {
-        en: "language editions",
-        zh: "\u8bed\u8a00\u7248\u672c",
-        it: "edizioni linguistiche"
-    },
-    workflowTracks: {
-        en: "workflow tracks",
-        zh: "\u4e1a\u52a1\u4e3b\u9898",
-        it: "filoni operativi"
-    },
-    capabilityClusters: {
-        en: "capability clusters",
-        zh: "\u80fd\u529b\u4e3b\u9898",
-        it: "cluster di competenze"
+    windowLabel: {
+        en: "",
+        zh: "",
+        it: ""
     },
     matrixLabel: {
-        en: "Matrix view",
-        zh: "\u9635\u5217\u89c6\u56fe",
-        it: "Vista a matrice"
+        en: "Selected Projects",
+        zh: "\u7cbe\u9009\u9879\u76ee",
+        it: "Progetti selezionati"
     },
-    sanitizedSet: {
-        en: "Sanitized multilingual delivery set",
-        zh: "\u8131\u654f\u591a\u8bed\u4ea4\u4ed8\u96c6",
-        it: "Set multilingue anonimizzato"
+    languageLabel: {
+        en: "Language",
+        zh: "\u8bed\u8a00",
+        it: "Lingua"
     },
-    finalSet: {
-        en: "Final multilingual delivery set",
-        zh: "\u591a\u8bed\u6700\u7ec8\u4ea4\u4ed8\u96c6",
-        it: "Set multilingue finale"
+    sourceLabel: {
+        en: "Source",
+        zh: "\u6765\u6e90",
+        it: "Fonte"
+    },
+    projectCount: {
+        en: "projects",
+        zh: "\u4e2a\u9879\u76ee",
+        it: "progetti"
+    },
+    compactHint: {
+        en: "",
+        zh: "",
+        it: ""
+    },
+    imageAlt: {
+        en: "project preview",
+        zh: "\u9879\u76ee\u9884\u89c8",
+        it: "anteprima progetto"
     }
 };
 
-const TEACHING_ARCHIVES = [
+const TEACHING_PROJECTS = [
     {
-        key: "financial-services-ai",
-        theme: "is-services",
-        kicker: {
-            en: "Archive 01",
-            zh: "\u5f52\u6863 01",
-            it: "Archivio 01"
-        },
-        badge: {
-            en: "Industry delivery",
-            zh: "\u884c\u4e1a\u4ea4\u4ed8",
-            it: "Consegna industry"
-        },
-        collectionKey: "sanitizedSet",
+        key: "financial-frontline-ai",
+        collection: "banking-finance",
+        tag: { en: "Financial frontline AI", zh: "\u91d1\u878d\u4e00\u7ebf AI", it: "AI frontline finance" },
+        languageLabel: { en: "ZH / EN / IT", zh: "\u4e2d / \u82f1 / \u610f", it: "ZH / EN / IT" },
+        metric: { value: "40", label: { en: "project assets", zh: "\u9879\u76ee\u7d20\u6750", it: "materiali progetto" } },
         title: {
-            en: "Financial Services AI Delivery Archive",
-            zh: "\u91d1\u878d\u4e1a\u52a1 AI \u6559\u5b66\u5f52\u6863",
-            it: "Archivio didattico AI per i servizi finanziari"
+            en: "Financial Group Frontline AI Enablement",
+            zh: "\u91d1\u878d\u96c6\u56e2\u4e00\u7ebf AI \u8d4b\u80fd\u8bfe\u7a0b",
+            it: "AI enablement per frontline finance"
         },
         copy: {
-            en: "A multilingual opening-slide matrix spanning frontline service, insurance advisory, banking operations, and leasing workflows.",
-            zh: "\u8986\u76d6\u4e00\u7ebf\u670d\u52a1\u3001\u4fdd\u9669\u987e\u95ee\u3001\u94f6\u884c\u8fd0\u8425\u4e0e\u79df\u8d41\u6d41\u7a0b\u7684\u591a\u8bed\u9996\u9875\u7ec4\u5408\u3002",
-            it: "Una matrice multilingue di slide iniziali che attraversa servizio frontline, consulenza assicurativa, operations bancarie e workflow leasing."
+            en: "Role-ready AI workflows for client communication, reporting, data analysis, daily operations, and compliance boundaries.",
+            zh: "\u56f4\u7ed5\u5ba2\u6237\u6c9f\u901a\u3001\u62a5\u544a\u5199\u4f5c\u3001\u6570\u636e\u5206\u6790\u3001\u65e5\u5e38\u4e1a\u52a1\u4e0e\u5408\u89c4\u8fb9\u754c\uff0c\u5e2e\u52a9\u4e00\u7ebf\u56e2\u961f\u5efa\u7acb\u53ef\u76f4\u63a5\u4f7f\u7528\u7684 AI \u5de5\u4f5c\u6d41\u3002",
+            it: "Workflow AI pronti per comunicazione clienti, report, analisi dati, operations quotidiane e confini di compliance."
         },
-        stats: [
-            { value: "40", labelKey: "openingSlides" },
-            { value: "4", labelKey: "workflowTracks" },
-            { value: "3", labelKey: "languageEditions" }
-        ],
-        languagePanels: [
-            {
-                lang: "zh",
-                image: "assets/past-teaching/financial-services-ai-zh-grid.jpg",
-                note: {
-                    en: "Sanitized matrix across banking, insurance, leasing, and frontline operating scenes.",
-                    zh: "\u8131\u654f\u5448\u73b0\u94f6\u884c\u3001\u4fdd\u9669\u3001\u79df\u8d41\u4e0e\u4e00\u7ebf\u8fd0\u8425\u4e3b\u9898\u3002",
-                    it: "Matrice anonimizzata su banca, assicurazioni, leasing e scene operative frontline."
-                }
-            },
-            {
-                lang: "en",
-                image: "assets/past-teaching/financial-services-ai-en-grid.jpg",
-                note: {
-                    en: "English delivery view for cross-functional AI workflow teaching.",
-                    zh: "\u82f1\u6587\u4ea4\u4ed8\u7248\uff0c\u5bf9\u5e94\u8de8\u4e1a\u52a1 AI \u6d41\u7a0b\u6559\u5b66\u3002",
-                    it: "Vista in inglese per una didattica AI trasversale ai workflow."
-                }
-            },
-            {
-                lang: "it",
-                image: "assets/past-teaching/financial-services-ai-it-grid.jpg",
-                note: {
-                    en: "Italian delivery view tailored for multilingual teaching reuse.",
-                    zh: "\u610f\u5927\u5229\u8bed\u7248\uff0c\u9002\u5408\u540e\u7eed\u591a\u8bed\u590d\u7528\u3002",
-                    it: "Vista in italiano pensata per il riuso didattico multilingue."
-                }
-            }
-        ]
+        tags: ["AI workflow", "Finance", "Compliance"],
+        images: {
+            zh: "assets/past-teaching/financial-services-ai-zh-grid.jpg",
+            en: "assets/past-teaching/financial-services-ai-en-grid.jpg",
+            it: "assets/past-teaching/financial-services-ai-it-grid.jpg"
+        }
+    },
+    {
+        key: "bank-ict-architecture",
+        collection: "banking-finance",
+        tag: { en: "Bank ICT", zh: "\u94f6\u884c IT \u67b6\u6784", it: "ICT bancario" },
+        languageLabel: { en: "ZH DOCX", zh: "\u4e2d\u6587 DOCX", it: "ZH DOCX" },
+        metric: { value: "10", label: { en: "documents", zh: "\u7814\u7a76\u6587\u6863", it: "documenti" } },
+        title: {
+            en: "Bank IT Architecture & AI Enablement Workshop",
+            zh: "\u94f6\u884c IT \u67b6\u6784\u4e0e AI \u8d4b\u80fd\u54a8\u8be2 Workshop",
+            it: "Workshop su architettura IT bancaria e AI"
+        },
+        copy: {
+            en: "A discussion-ready map of bank core systems, platform capabilities, process digitization, and AI enablement opportunities.",
+            zh: "\u56f4\u7ed5\u4e3b\u6d41\u94f6\u884c IT \u67b6\u6784\u3001\u6838\u5fc3\u7cfb\u7edf\u3001\u5e73\u53f0\u80fd\u529b\u4e0e AI \u8d4b\u80fd\u673a\u4f1a\uff0c\u652f\u6301\u94f6\u884c\u6570\u5b57\u5316\u8f6c\u578b\u4e0e\u6280\u672f\u8def\u7ebf\u7814\u8ba8\u3002",
+            it: "Una mappa pronta per discutere sistemi core bancari, capacita piattaforma, processi digitali e opportunita AI."
+        },
+        tags: ["Banking", "ICT", "AI strategy"],
+        image: "assets/past-teaching/bank-ict-architecture-doc-grid.jpg"
+    },
+    {
+        key: "bank-credit-risk",
+        collection: "banking-finance",
+        tag: { en: "Credit risk", zh: "\u4fe1\u8d37\u98ce\u63a7", it: "Rischio credito" },
+        languageLabel: { en: "ZH", zh: "\u4e2d\u6587", it: "ZH" },
+        metric: { value: "16", label: { en: "modules", zh: "\u8bfe\u7a0b\u6a21\u5757", it: "moduli" } },
+        title: {
+            en: "Bank Credit Risk Full-Process Program",
+            zh: "\u94f6\u884c\u4fe1\u8d37\u98ce\u9669\u5168\u6d41\u7a0b\u8bc6\u522b",
+            it: "Programma completo sul rischio credito bancario"
+        },
+        copy: {
+            en: "From credit entry and field due diligence to financial cross-checking and post-loan warning signals.",
+            zh: "\u4ece\u6388\u4fe1\u51c6\u5165\u3001\u73b0\u573a\u5c3d\u8c03\u3001\u8d22\u52a1\u6838\u67e5\u3001\u4ea4\u53c9\u9a8c\u8bc1\u5230\u8d37\u540e\u9884\u8b66\uff0c\u8bad\u7ec3\u5ba2\u6237\u7ecf\u7406\u4e0e\u98ce\u63a7\u4eba\u5458\u8bc6\u522b\u771f\u5b9e\u98ce\u9669\u3002",
+            it: "Da ingresso credito e due diligence sul campo a controlli finanziari incrociati e segnali post-finanziamento."
+        },
+        tags: ["Risk", "Due diligence", "Banking"],
+        image: "assets/past-teaching/bank-credit-risk-full-grid.jpg"
+    },
+    {
+        key: "bank-due-diligence",
+        collection: "banking-finance",
+        tag: { en: "On-site checks", zh: "\u73b0\u573a\u6838\u67e5", it: "Verifiche onsite" },
+        languageLabel: { en: "ZH", zh: "\u4e2d\u6587", it: "ZH" },
+        metric: { value: "19", label: { en: "records", zh: "\u5c3d\u8c03\u8bb0\u5f55", it: "record" } },
+        title: {
+            en: "Bank Credit Due Diligence Evaluation",
+            zh: "\u94f6\u884c\u4fe1\u8d37\u98ce\u9669\u73b0\u573a\u5c3d\u8c03\u8bc4\u4f30",
+            it: "Valutazione due diligence credito bancario"
+        },
+        copy: {
+            en: "A practical course on business authenticity, material verification, financial consistency, site observation, and interview strategy.",
+            zh: "\u56f4\u7ed5\u4f01\u4e1a\u7ecf\u8425\u771f\u5b9e\u6027\u3001\u8d44\u6599\u6838\u9a8c\u3001\u8d22\u52a1\u52fe\u7a3d\u3001\u73b0\u573a\u89c2\u5bdf\u4e0e\u8bbf\u8c08\u7b56\u7565\uff0c\u8bad\u7ec3\u4ece\u6750\u6599\u5230\u73b0\u573a\u7684\u98ce\u9669\u5224\u65ad\u80fd\u529b\u3002",
+            it: "Un percorso pratico su autenticita aziendale, verifica materiali, coerenza finanziaria, osservazione onsite e interviste."
+        },
+        tags: ["Fieldwork", "Finance", "Risk control"],
+        image: "assets/past-teaching/bank-credit-due-diligence-grid.jpg"
     },
     {
         key: "finance-capability",
-        theme: "is-capability",
-        kicker: {
-            en: "Archive 02",
-            zh: "\u5f52\u6863 02",
-            it: "Archivio 02"
-        },
-        badge: {
-            en: "Capability delivery",
-            zh: "\u80fd\u529b\u4ea4\u4ed8",
-            it: "Consegna capability"
-        },
-        collectionKey: "finalSet",
+        collection: "banking-finance",
+        tag: { en: "Finance capability", zh: "\u8d22\u52a1\u80fd\u529b", it: "Competenze finance" },
+        languageLabel: { en: "ZH / EN / IT", zh: "\u4e2d / \u82f1 / \u610f", it: "ZH / EN / IT" },
+        metric: { value: "26", label: { en: "project assets", zh: "\u9879\u76ee\u7d20\u6750", it: "materiali progetto" } },
         title: {
-            en: "Finance Capability & Productivity Archive",
-            zh: "\u8d22\u52a1\u80fd\u529b\u4e0e\u63d0\u6548\u5f52\u6863",
-            it: "Archivio competenze finance e produttivita"
+            en: "Finance Capability & Productivity Training",
+            zh: "\u91d1\u878d\u4e0e\u5546\u4e1a\u80fd\u529b\u8bad\u7ec3\u4f53\u7cfb",
+            it: "Training finance e produttivita"
         },
         copy: {
-            en: "A multilingual opening-slide matrix covering banking operations, prompt workflows, office AI tools, and finance analysis modules.",
-            zh: "\u8986\u76d6\u94f6\u884c\u8fd0\u8425\u3001\u63d0\u793a\u8bcd\u5de5\u4f5c\u6d41\u3001\u529e\u516c AI \u5de5\u5177\u4e0e\u8d22\u52a1\u5206\u6790\u4e3b\u9898\u7684\u591a\u8bed\u9996\u9875\u7ec4\u5408\u3002",
-            it: "Una matrice multilingue di slide iniziali su operations bancarie, workflow di prompt, strumenti AI per l'ufficio e moduli di analisi finance."
+            en: "A professional capability path covering finance basics, business analysis, prompt workflows, office AI, and cross-cultural collaboration.",
+            zh: "\u8986\u76d6\u91d1\u878d\u57fa\u7840\u3001\u4e1a\u52a1\u5206\u6790\u3001\u63d0\u793a\u8bcd\u5de5\u4f5c\u6d41\u3001\u529e\u516c AI \u5de5\u5177\u4e0e\u8de8\u6587\u5316\u534f\u4f5c\uff0c\u9002\u5408\u4f01\u4e1a\u5185\u90e8\u4eba\u624d\u68af\u961f\u548c\u4e13\u4e1a\u80fd\u529b\u5efa\u8bbe\u3002",
+            it: "Un percorso su basi finance, analisi business, prompt workflow, strumenti AI d'ufficio e collaborazione interculturale."
         },
-        stats: [
-            { value: "26", labelKey: "openingSlides" },
-            { value: "4", labelKey: "capabilityClusters" },
-            { value: "3", labelKey: "languageEditions" }
-        ],
-        languagePanels: [
-            {
-                lang: "zh",
-                image: "assets/past-teaching/finance-capability-zh-grid.jpg",
-                note: {
-                    en: "Chinese matrix across finance analysis, prompt practice, and office AI tool fluency.",
-                    zh: "\u4e2d\u6587\u7248\u9635\u5217\uff0c\u805a\u5408\u8d22\u52a1\u5206\u6790\u3001\u63d0\u793a\u8bcd\u5b9e\u6218\u4e0e\u529e\u516c AI \u5de5\u5177\u719f\u7ec3\u5ea6\u3002",
-                    it: "Matrice cinese su analisi finance, pratica di prompt e padronanza degli strumenti AI d'ufficio."
-                }
-            },
-            {
-                lang: "en",
-                image: "assets/past-teaching/finance-capability-en-grid.jpg",
-                note: {
-                    en: "English matrix for finance operations and productivity-oriented AI courses.",
-                    zh: "\u82f1\u6587\u7248\u9635\u5217\uff0c\u9762\u5411\u8d22\u52a1\u8fd0\u8425\u4e0e\u63d0\u6548\u5bfc\u5411 AI \u8bfe\u7a0b\u3002",
-                    it: "Matrice inglese per corsi AI orientati a operations finance e produttivita."
-                }
-            },
-            {
-                lang: "it",
-                image: "assets/past-teaching/finance-capability-it-grid.jpg",
-                note: {
-                    en: "Italian matrix supporting multilingual finance upskilling delivery.",
-                    zh: "\u610f\u5927\u5229\u8bed\u7248\u9635\u5217\uff0c\u9002\u5408\u591a\u8bed\u8d22\u52a1\u63d0\u5347\u8bfe\u7a0b\u4ea4\u4ed8\u3002",
-                    it: "Matrice italiana per la consegna multilingue di percorsi di upskilling finance."
-                }
-            }
+        tags: ["Finance", "Prompting", "Productivity"],
+        images: {
+            zh: "assets/past-teaching/finance-capability-zh-grid.jpg",
+            en: "assets/past-teaching/finance-capability-en-grid.jpg",
+            it: "assets/past-teaching/finance-capability-it-grid.jpg"
+        }
+    },
+    {
+        key: "ai-governance-course",
+        collection: "governance-productivity",
+        tag: { en: "AI Governance", zh: "AI \u6cbb\u7406", it: "AI Governance" },
+        languageLabel: { en: "EN / ZH", zh: "\u82f1 / \u4e2d", it: "EN / ZH" },
+        metric: { value: "17", label: { en: "course records", zh: "\u8bfe\u7a0b\u8bb0\u5f55", it: "record corso" } },
+        title: {
+            en: "AI Governance Theory & Practice",
+            zh: "AI \u6cbb\u7406\u7406\u8bba\u4e0e\u5b9e\u8df5\u8bfe\u7a0b",
+            it: "AI Governance: teoria e pratica"
+        },
+        copy: {
+            en: "Governance principles, accountability, transparency, privacy, security resilience, risk management, documentation, GenAI, MLOps, and B2B cases.",
+            zh: "\u8986\u76d6 AI \u6cbb\u7406\u539f\u5219\u3001\u8d23\u4efb\u673a\u5236\u3001\u900f\u660e\u6027\u3001\u9690\u79c1\u4fdd\u62a4\u3001\u5b89\u5168\u97e7\u6027\u3001\u98ce\u9669\u7ba1\u7406\u3001\u6587\u6863\u4f53\u7cfb\u3001GenAI\u3001MLOps \u4e0e B \u7aef\u6848\u4f8b\u3002",
+            it: "Principi di governance, accountability, trasparenza, privacy, resilienza, risk management, documentazione, GenAI, MLOps e casi B2B."
+        },
+        tags: ["AI Act", "GDPR", "MLOps"],
+        image: "assets/past-teaching/ai-governance-records-grid.jpg"
+    },
+    {
+        key: "ai-office-productivity",
+        collection: "governance-productivity",
+        tag: { en: "Office AI", zh: "AI \u529e\u516c\u63d0\u6548", it: "AI per ufficio" },
+        languageLabel: { en: "ZH", zh: "\u4e2d\u6587", it: "ZH" },
+        metric: { value: "18", label: { en: "training assets", zh: "\u8bad\u7ec3\u8d44\u4ea7", it: "asset training" } },
+        title: {
+            en: "AI Workplace Productivity Training",
+            zh: "AI \u529e\u516c\u6548\u7387\u4e0e\u534f\u540c\u8425\u9500\u8bad\u7ec3",
+            it: "Training AI per produttivita e marketing"
+        },
+        copy: {
+            en: "Hands-on methods for office efficiency, executive writing, content production, growth marketing, private-domain conversion, and team collaboration.",
+            zh: "\u8986\u76d6\u529e\u516c\u6548\u7387\u3001\u6c47\u62a5\u5199\u4f5c\u3001\u5185\u5bb9\u751f\u4ea7\u3001\u8425\u9500\u589e\u957f\u3001\u79c1\u57df\u8f6c\u5316\u4e0e\u7ec4\u7ec7\u534f\u540c\uff0c\u5f3a\u8c03\u4e00\u7ebf\u5c97\u4f4d\u53ef\u64cd\u4f5c\u7684 AI \u65b9\u6cd5\u3002",
+            it: "Metodi pratici per produttivita, report, contenuti, growth marketing, conversione private-domain e collaborazione."
+        },
+        tags: ["Office", "Marketing", "Enablement"],
+        image: "assets/past-teaching/ai-office-productivity-grid.jpg"
+    },
+    {
+        key: "deepseek-marketing-15day",
+        collection: "governance-productivity",
+        tag: { en: "Marketing camp", zh: "DeepSeek \u8425\u9500", it: "Marketing camp" },
+        languageLabel: { en: "ZH", zh: "\u4e2d\u6587", it: "ZH" },
+        metric: { value: "15", label: { en: "days", zh: "\u5929\u8bad\u7ec3", it: "giorni" } },
+        title: {
+            en: "AI Marketing 15-Day Intensive",
+            zh: "DeepSeek \u8425\u9500 15 \u5929\u8bad\u7ec3\u8425",
+            it: "Intensive AI marketing di 15 giorni"
+        },
+        copy: {
+            en: "A focused series for applying AI to campaign planning, content generation, audience conversion, and repeatable marketing operations.",
+            zh: "\u628a AI \u7528\u5230\u8425\u9500\u7b56\u5212\u3001\u5185\u5bb9\u751f\u4ea7\u3001\u7528\u6237\u8f6c\u5316\u4e0e\u53ef\u590d\u7528\u7684\u8425\u9500\u8fd0\u8425\u6d41\u7a0b\u91cc\u3002",
+            it: "Una serie focalizzata su pianificazione campagne, contenuti, conversione audience e operations marketing ripetibili."
+        },
+        tags: ["DeepSeek", "Growth", "Content"],
+        image: "assets/past-teaching/deepseek-marketing-15day-grid.jpg"
+    },
+    {
+        key: "zero-to-sota-ai",
+        collection: "governance-productivity",
+        tag: { en: "AI foundations", zh: "AI \u57fa\u7840 / Agent", it: "Fondamenti AI" },
+        languageLabel: { en: "ZH / EN", zh: "\u4e2d / \u82f1", it: "ZH / EN" },
+        metric: { value: "100", label: { en: "lessons", zh: "\u8bfe", it: "lezioni" } },
+        title: {
+            en: "Zero to SOTA AI 100-Lesson System",
+            zh: "\u4ece 0 \u5230 SOTA AI 100 \u8bfe\u53cc\u8bed\u4f53\u7cfb",
+            it: "Zero to SOTA AI: sistema da 100 lezioni"
+        },
+        copy: {
+            en: "Selected technical tutorials across AI foundations, agents, RAG, vibe coding, NotebookLM, software engineering productivity, and knowledge workflows.",
+            zh: "\u8986\u76d6\u667a\u80fd\u4f53\u3001\u77e5\u8bc6\u5e93\u3001\u8f6f\u4ef6\u5de5\u7a0b\u63d0\u6548\u4e0e\u77e5\u8bc6\u5de5\u4f5c\u6d41\uff0c\u9002\u5408\u6280\u672f\u56e2\u961f\u4e0e\u4e1a\u52a1\u56e2\u961f\u5feb\u901f\u5efa\u7acb AI \u5e94\u7528\u80fd\u529b\u3002",
+            it: "Tutorial tecnici su fondamenti AI, agent, RAG, vibe coding, NotebookLM, produttivita software e workflow di conoscenza."
+        },
+        tags: ["Agent", "RAG", "Vibe Coding"],
+        image: "assets/past-teaching/zero-to-sota-ai-100-grid.jpg"
+    },
+    {
+        key: "embodied-intelligence-research",
+        collection: "prototypes-research",
+        tag: { en: "Embodied AI", zh: "\u5177\u8eab\u667a\u80fd", it: "Embodied AI" },
+        languageLabel: { en: "ZH", zh: "\u4e2d\u6587", it: "ZH" },
+        metric: { value: "8", label: { en: "research assets", zh: "\u7814\u7a76\u8d44\u4ea7", it: "asset ricerca" } },
+        title: {
+            en: "Embodied Intelligence Research & Overseas Workshop",
+            zh: "\u5177\u8eab\u667a\u80fd\u884c\u4e1a\u5206\u6790\u53ca\u51fa\u6d77 Workshop",
+            it: "Ricerca embodied intelligence e workshop go-global"
+        },
+        copy: {
+            en: "A market scan across companies, product routes, financing, competition, supply chains, and overseas market entry.",
+            zh: "\u56f4\u7ed5\u4e3b\u6d41\u5177\u8eab\u667a\u80fd\u4f01\u4e1a\u3001\u4ea7\u54c1\u8def\u7ebf\u3001\u878d\u8d44\u7ade\u4e89\u3001\u4f9b\u5e94\u94fe\u4e0e\u6d77\u5916\u5e02\u573a\u8fdb\u5165\uff0c\u5f62\u6210\u884c\u4e1a\u626b\u63cf\u4e0e\u51fa\u6d77\u7814\u8ba8\u6750\u6599\u3002",
+            it: "Una scansione su aziende, roadmap prodotto, finanziamenti, competizione, supply chain e ingresso mercati esteri."
+        },
+        tags: ["Robotics", "Go global", "Research"],
+        image: "assets/showcase/embodied-intelligence-workshop.png"
+    },
+    {
+        key: "machinery-sales-ai",
+        collection: "prototypes-research",
+        tag: { en: "Industrial sales AI", zh: "\u5de5\u7a0b\u673a\u68b0\u9500\u552e AI", it: "AI vendite industriali" },
+        languageLabel: { en: "ZH / EN", zh: "\u4e2d / \u82f1", it: "ZH / EN" },
+        metric: { value: "Prototype", label: { en: "workflow", zh: "\u6d41\u7a0b\u539f\u578b", it: "workflow" } },
+        title: {
+            en: "Engineering Machinery Sales Intelligence Prototype",
+            zh: "\u5de5\u7a0b\u673a\u68b0\u9500\u552e\u667a\u80fd\u5316\u539f\u578b",
+            it: "Prototipo AI per vendite macchine industriali"
+        },
+        copy: {
+            en: "An overseas sales support flow from customer inquiry and product catalog matching to AI-assisted response and dealer enablement.",
+            zh: "\u5c55\u793a\u5de5\u4e1a\u673a\u68b0\u4e1a\u52a1\u4ece\u5ba2\u6237\u8be2\u5355\u3001\u4ea7\u54c1\u76ee\u5f55\u5230\u9500\u552e\u54cd\u5e94\u7684 AI \u8f85\u52a9\u6d41\u7a0b\uff0c\u670d\u52a1\u6d77\u5916\u9500\u552e\u4e0e\u7ecf\u9500\u5546\u652f\u6301\u4f53\u7cfb\u3002",
+            it: "Un flusso per vendite estere: inquiry cliente, catalogo prodotto, risposta assistita AI e supporto dealer."
+        },
+        tags: ["Manufacturing", "Sales", "Dealer support"],
+        image: "assets/showcase/industrial-sales-ai-project.jpg"
+    },
+    {
+        key: "cfo-finance-system",
+        collection: "prototypes-research",
+        tag: { en: "Finance system", zh: "\u8d22\u52a1\u7cfb\u7edf", it: "Sistema finance" },
+        languageLabel: { en: "ZH / EN", zh: "\u4e2d / \u82f1", it: "ZH / EN" },
+        metric: { value: "CFO", label: { en: "prototype", zh: "\u539f\u578b", it: "prototipo" } },
+        title: {
+            en: "CFO Global Finance Management Prototype",
+            zh: "CFO \u5168\u7403\u8d22\u52a1\u4e1a\u52a1\u7ba1\u7406\u7cfb\u7edf",
+            it: "Prototipo CFO per gestione finance globale"
+        },
+        copy: {
+            en: "A digital finance-management concept covering cash, reporting, procurement, production, scenario analysis, and management dashboards.",
+            zh: "\u8986\u76d6\u8d44\u91d1\u7ba1\u7406\u3001\u8d22\u52a1\u62a5\u8868\u3001\u91c7\u8d2d\u3001\u751f\u4ea7\u4e0e\u60c5\u666f\u5206\u6790\u7b49\u6a21\u5757\uff0c\u7528\u4e8e\u5c55\u793a\u8d22\u52a1\u7ba1\u7406\u6570\u5b57\u5316\u4e0e\u7ecf\u8425\u5206\u6790\u7cfb\u7edf\u80fd\u529b\u3002",
+            it: "Un concept digitale per cash, reporting, procurement, produzione, scenario analysis e dashboard gestionali."
+        },
+        tags: ["CFO", "Finance", "Scenario analysis"],
+        image: "assets/showcase/cfo-finance-system.jpg"
+    },
+    {
+        key: "legal-retrieval",
+        collection: "prototypes-research",
+        tag: { en: "Legal AI", zh: "\u6cd5\u52a1 AI", it: "Legal AI" },
+        languageLabel: { en: "ZH / EN / IT", zh: "\u4e2d / \u82f1 / \u610f", it: "ZH / EN / IT" },
+        metric: { value: "HK + IT", label: { en: "retrieval", zh: "\u6cd5\u5f8b\u68c0\u7d22", it: "retrieval" } },
+        title: {
+            en: "Hong Kong & Italy Legal Retrieval Tool",
+            zh: "\u9999\u6e2f / \u610f\u5927\u5229\u6cd5\u5f8b\u68c0\u7d22\u5de5\u5177",
+            it: "Strumento retrieval legale Hong Kong e Italia"
+        },
+        copy: {
+            en: "A local legal knowledge base with hybrid retrieval, article positioning, comparative reading, and Q&A interaction.",
+            zh: "\u9762\u5411\u9999\u6e2f\u4e0e\u610f\u5927\u5229\u6cd5\u5f8b\u573a\u666f\uff0c\u5c55\u793a\u672c\u5730\u77e5\u8bc6\u5e93\u3001\u6df7\u5408\u68c0\u7d22\u3001\u6761\u6587\u5b9a\u4f4d\u4e0e\u95ee\u7b54\u4ea4\u4e92\u80fd\u529b\u3002",
+            it: "Knowledge base legale locale con retrieval ibrido, posizionamento articoli, lettura comparata e Q&A."
+        },
+        tags: ["Legal retrieval", "RAG", "Compliance"],
+        image: "assets/showcase/hk-it-law-chat.png"
+    },
+    {
+        key: "logistics-hrbp",
+        collection: "prototypes-research",
+        tag: { en: "HRBP training", zh: "\u7269\u6d41 HRBP", it: "HRBP logistica" },
+        languageLabel: { en: "ZH / IT", zh: "\u4e2d / \u610f", it: "ZH / IT" },
+        metric: { value: "4", label: { en: "modules", zh: "\u6a21\u5757", it: "moduli" } },
+        title: {
+            en: "Logistics HRBP Training Series",
+            zh: "\u7269\u6d41 HRBP \u57f9\u8bad\u7cfb\u5217",
+            it: "Serie formativa HRBP logistica"
+        },
+        copy: {
+            en: "A compact training archive for HRBP communication, role enablement, and organizational collaboration in logistics contexts.",
+            zh: "\u9762\u5411\u7269\u6d41\u573a\u666f\u7684 HRBP \u6c9f\u901a\u3001\u5c97\u4f4d\u8d4b\u80fd\u4e0e\u7ec4\u7ec7\u534f\u540c\u8bad\u7ec3\u5f52\u6863\u3002",
+            it: "Archivio compatto su comunicazione HRBP, enablement di ruolo e collaborazione organizzativa in logistica."
+        },
+        tags: ["HRBP", "Logistics", "Training"],
+        image: "assets/past-teaching/logistics-hrbp-grid.jpg"
+    },
+    {
+        key: "workshop-content-network",
+        collection: "prototypes-research",
+        tag: { en: "Content network", zh: "\u5185\u5bb9\u4e0e\u73b0\u573a", it: "Rete contenuti" },
+        languageLabel: { en: "ZH / EN / IT", zh: "\u4e2d / \u82f1 / \u610f", it: "ZH / EN / IT" },
+        metric: { value: "Always-on", label: { en: "content", zh: "\u5185\u5bb9", it: "contenuti" } },
+        title: {
+            en: "Workshop, Social Matrix & Technical Tutorials",
+            zh: "Workshop\u3001\u793e\u5a92\u77e9\u9635\u4e0e\u7cbe\u9009\u6280\u672f\u6559\u7a0b",
+            it: "Workshop, matrice social e tutorial tecnici"
+        },
+        copy: {
+            en: "Training scenes, public writing, international video platforms, and selected tutorials connect the project archive with ongoing public output.",
+            zh: "\u5c55\u793a\u57f9\u8bad\u73b0\u573a\u3001\u4e2a\u4eba\u4e3b\u9875\u3001\u65e5\u5e38\u53d1\u6587\u3001\u516c\u5f00\u89c6\u9891\u4e0e\u7cbe\u9009\u6280\u672f\u6559\u7a0b\uff0c\u5448\u73b0\u6301\u7eed\u5185\u5bb9\u8f93\u51fa\u4e0e\u8de8\u8bed\u79cd\u8868\u8fbe\u80fd\u529b\u3002",
+            it: "Scene di training, scrittura pubblica, piattaforme video internazionali e tutorial selezionati collegano archivio e output pubblico."
+        },
+        tags: ["Workshop", "Social", "Tutorials"],
+        gallery: [
+            "assets/showcase/workshop-training-scene.jpg",
+            "assets/showcase/brand-presence.jpg",
+            "assets/showcase/video-presence.jpg",
+            "assets/showcase/public-lessons.jpg"
         ]
+    }
+];
+
+const TEACHING_COLLECTIONS = [
+    {
+        key: "banking-finance",
+        theme: "is-services",
+        open: false,
+        kicker: { en: "", zh: "", it: "" },
+        title: {
+            en: "Banking, Finance & Risk Projects",
+            zh: "\u94f6\u884c\u3001\u91d1\u878d\u4e0e\u98ce\u63a7\u9879\u76ee",
+            it: "Progetti banca, finance e rischio"
+        },
+        copy: {
+            en: "",
+            zh: "",
+            it: ""
+        }
+    },
+    {
+        key: "governance-productivity",
+        theme: "is-capability",
+        open: false,
+        kicker: { en: "", zh: "", it: "" },
+        title: {
+            en: "AI Governance, Productivity & Marketing",
+            zh: "AI \u6cbb\u7406\u3001\u529e\u516c\u63d0\u6548\u4e0e\u8425\u9500\u8bad\u7ec3",
+            it: "AI governance, produttivita e marketing"
+        },
+        copy: {
+            en: "",
+            zh: "",
+            it: ""
+        }
+    },
+    {
+        key: "prototypes-research",
+        theme: "is-frontier",
+        open: false,
+        kicker: { en: "", zh: "", it: "" },
+        title: {
+            en: "Prototypes, Research & Content Network",
+            zh: "\u7cfb\u7edf\u539f\u578b\u3001\u524d\u6cbf\u7814\u7a76\u4e0e\u5185\u5bb9\u7f51\u7edc",
+            it: "Prototipi, ricerca e rete contenuti"
+        },
+        copy: {
+            en: "",
+            zh: "",
+            it: ""
+        }
     }
 ];
 
@@ -961,20 +1192,54 @@ function renderHome(lang) {
     document.querySelector("#home-groups").innerHTML = HOME_GROUP_KEYS.map((key) => renderGroupCard(GROUPS.find((group) => group.key === key), lang)).join("");
     const teachingNode = document.querySelector("#home-teaching-archives");
     if (teachingNode) {
-        teachingNode.innerHTML = TEACHING_ARCHIVES.map((archive) => renderTeachingArchive(archive, lang)).join("");
+        teachingNode.innerHTML = renderTeachingShowcase(lang);
     }
 }
 
-function renderTeachingArchive(archive, lang) {
-    return `<article class="teaching-archive reveal ${archive.theme}"><div class="teaching-archive-copy"><div class="teaching-archive-head"><div><p class="teaching-kicker">${text(archive.kicker, lang)}</p><h3 class="teaching-archive-title">${text(archive.title, lang)}</h3></div><span class="teaching-archive-badge">${text(archive.badge, lang)}</span></div><p class="teaching-archive-description">${text(archive.copy, lang)}</p><div class="teaching-stat-row">${archive.stats.map((stat) => `<div class="teaching-stat"><span class="teaching-stat-value">${stat.value}</span><span class="teaching-stat-label">${text(TEACHING_TERMS[stat.labelKey], lang)}</span></div>`).join("")}</div></div><div class="teaching-language-grid">${archive.languagePanels.map((panel) => renderTeachingLanguagePanel(panel, archive, lang)).join("")}</div></article>`;
+function renderTeachingShowcase(lang) {
+    const doubledProjects = [...TEACHING_PROJECTS, ...TEACHING_PROJECTS];
+    return `<div class="teaching-window reveal"><div class="teaching-window-top"><div><p class="teaching-kicker">${text(TEACHING_TERMS.windowLabel, lang)}</p><h3 class="teaching-window-title">${text(TEACHING_TERMS.matrixLabel, lang)}</h3></div><span class="teaching-archive-badge">${TEACHING_PROJECTS.length} ${text(TEACHING_TERMS.projectCount, lang)}</span></div><div class="teaching-window-rail" aria-label="${text(TEACHING_TERMS.matrixLabel, lang)}"><div class="teaching-window-track">${doubledProjects.map((project) => renderTeachingWindowCard(project, lang)).join("")}</div></div></div><div class="teaching-collection-stack">${TEACHING_COLLECTIONS.map((collection) => renderTeachingCollection(collection, lang)).join("")}</div>`;
 }
 
-function renderTeachingLanguagePanel(panel, archive, lang) {
-    const language = text(LANGUAGE_LABELS[panel.lang], lang);
-    const alt = `${language} ${text(TEACHING_TERMS.matrixLabel, lang)}`;
-    const collectionLabel = TEACHING_TERMS[archive.collectionKey];
+function renderTeachingWindowCard(project, lang) {
+    const image = teachingProjectImage(project, lang);
+    const title = text(project.title, lang);
+    const media = image
+        ? `<img class="teaching-window-image" src="${image}" alt="${title} ${text(TEACHING_TERMS.imageAlt, lang)}" loading="lazy" decoding="async">`
+        : "";
 
-    return `<article class="teaching-language-card reveal"><div class="teaching-language-top"><span class="group-badge">${language}</span><span class="teaching-language-mode">${text(collectionLabel, lang)}</span></div><div class="teaching-image-wrap"><img class="teaching-image" src="${panel.image}" alt="${alt}" loading="lazy" decoding="async"></div><p class="teaching-language-note">${text(panel.note, lang)}</p></article>`;
+    return `<article class="teaching-window-card">${media}<div class="teaching-window-card-copy"><span class="group-badge">${text(project.tag, lang)}</span><h4 class="teaching-window-card-title">${title}</h4><p class="teaching-window-card-meta">${project.metric.value} / ${text(project.languageLabel, lang)}</p></div></article>`;
+}
+
+function renderTeachingCollection(collection, lang) {
+    const projects = TEACHING_PROJECTS.filter((project) => project.collection === collection.key);
+    return `<details class="teaching-collection reveal ${collection.theme}" ${collection.open ? "open" : ""}><summary><div class="teaching-collection-summary"><p class="teaching-kicker">${text(collection.kicker, lang)}</p><h3 class="teaching-archive-title">${text(collection.title, lang)}</h3><p class="teaching-archive-description">${text(collection.copy, lang)}</p></div><div class="teaching-collection-meta"><span class="teaching-archive-badge">${projects.length} ${text(TEACHING_TERMS.projectCount, lang)}</span><span class="summary-caret" aria-hidden="true"></span></div></summary><div class="teaching-collection-body"><p class="teaching-compact-hint">${text(TEACHING_TERMS.compactHint, lang)}</p><div class="teaching-project-grid">${projects.map((project) => renderTeachingProjectCard(project, lang)).join("")}</div></div></details>`;
+}
+
+function renderTeachingProjectCard(project, lang) {
+    const gallery = teachingProjectGallery(project, lang);
+    const title = text(project.title, lang);
+    const media = gallery.length > 1
+        ? `<div class="teaching-project-gallery">${gallery.map((src, index) => `<img class="teaching-project-gallery-image" src="${src}" alt="${title} ${text(TEACHING_TERMS.imageAlt, lang)} ${index + 1}" loading="lazy" decoding="async">`).join("")}</div>`
+        : gallery.length === 1
+            ? `<div class="teaching-project-image-wrap"><img class="teaching-project-image" src="${gallery[0]}" alt="${title} ${text(TEACHING_TERMS.imageAlt, lang)}" loading="lazy" decoding="async"></div>`
+            : "";
+
+    return `<article class="teaching-project-card">${media}<div class="teaching-project-card-body"><div class="teaching-project-top"><span class="group-badge">${text(project.tag, lang)}</span><span class="metric-chip">${project.metric.value}</span></div><h4 class="teaching-project-title">${title}</h4><p class="teaching-project-copy">${text(project.copy, lang)}</p><div class="teaching-project-meta"><span>${text(project.metric.label, lang)}</span><span>${text(TEACHING_TERMS.languageLabel, lang)}: ${text(project.languageLabel, lang)}</span></div><div class="project-tags">${project.tags.map((tag) => `<span class="tag">${tag}</span>`).join("")}</div></div></article>`;
+}
+
+function teachingProjectImage(project, lang) {
+    if (project.gallery?.length) return project.gallery[0];
+    if (project.images) {
+        return project.images[lang] ?? project.images.en ?? project.images.zh ?? Object.values(project.images)[0];
+    }
+    return project.image ?? "";
+}
+
+function teachingProjectGallery(project, lang) {
+    if (project.gallery?.length) return project.gallery;
+    const image = teachingProjectImage(project, lang);
+    return image ? [image] : [];
 }
 
 function renderPortfolio(lang) {

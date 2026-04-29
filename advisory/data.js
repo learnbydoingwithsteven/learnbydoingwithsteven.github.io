@@ -603,18 +603,18 @@ window.PORTFOLIO_DATA = {
       }
     },
     {
-      title: "Multilingual Curriculum Delivery Hub",
-      tag: { zh: "\u591a\u8bed\u4ea4\u4ed8", en: "Delivery ops", it: "Delivery multilingue" },
+      title: "Multilingual Curriculum Hub",
+      tag: { zh: "\u591a\u8bed\u8bfe\u7a0b\u5e93", en: "Curriculum ops", it: "Curriculum multilingue" },
       image: "./ui_assets/curriculum_delivery_hub_card.svg",
       copy: {
-        zh: "\u56f4\u7ed5\u4e2d\u82f1\u610f\u591a\u8bed\u8bfe\u7a0b\u5305\u88c5\u3001\u4ea4\u4ed8\u7ed3\u6784\u4e0e\u6559\u5b66\u8d44\u4ea7\u5f52\u6863\u7684\u6574\u4f53\u5316\u5de5\u4f5c\u53f0\uff0c\u9002\u5408\u4f01\u4e1a\u57f9\u8bad\u4e0e\u8bfe\u7a0b\u7cfb\u7edf\u5c55\u793a\u3002",
-        en: "A multilingual delivery workspace for packaging, structuring, and archiving Chinese, English, and Italian curriculum assets at scale.",
-        it: "Uno spazio di delivery multilingue per confezionare, strutturare e archiviare asset didattici in cinese, inglese e italiano."
+        zh: "\u56f4\u7ed5\u4e2d\u82f1\u610f\u591a\u8bed\u8bfe\u7a0b\u5305\u88c5\u3001\u5185\u5bb9\u7ed3\u6784\u4e0e\u6559\u5b66\u8d44\u4ea7\u5f52\u6863\u7684\u6574\u4f53\u5316\u5de5\u4f5c\u53f0\uff0c\u9002\u5408\u4f01\u4e1a\u57f9\u8bad\u4e0e\u8bfe\u7a0b\u7cfb\u7edf\u5c55\u793a\u3002",
+        en: "A multilingual workspace for packaging, structuring, and archiving Chinese, English, and Italian curriculum assets at scale.",
+        it: "Uno spazio multilingue per confezionare, strutturare e archiviare asset didattici in cinese, inglese e italiano."
       },
       bullets: {
-        zh: ["\u591a\u8bed\u8bfe\u7a0b\u6253\u5305\u4e0e\u5f52\u6863", "\u4ea4\u4ed8\u7ed3\u6784\u4e0e\u8d44\u4ea7\u6574\u7406", "\u9002\u5408\u57f9\u8bad\u9879\u76ee\u4e0e\u6559\u5b66\u4f53\u7cfb\u5c55\u793a"],
-        en: ["Multilingual packaging and archive flow", "Delivery structure and asset organization", "Useful for training programs and curriculum demos"],
-        it: ["Packaging multilingue e flusso di archivio", "Struttura di delivery e organizzazione asset", "Utile per programmi formativi e demo curriculum"]
+        zh: ["\u591a\u8bed\u8bfe\u7a0b\u6253\u5305\u4e0e\u5f52\u6863", "\u5185\u5bb9\u7ed3\u6784\u4e0e\u8d44\u4ea7\u6574\u7406", "\u9002\u5408\u57f9\u8bad\u9879\u76ee\u4e0e\u6559\u5b66\u4f53\u7cfb\u5c55\u793a"],
+        en: ["Multilingual packaging and archive flow", "Content structure and asset organization", "Useful for training programs and curriculum demos"],
+        it: ["Packaging multilingue e flusso di archivio", "Struttura dei contenuti e organizzazione asset", "Utile per programmi formativi e demo curriculum"]
       }
     }
   ],
@@ -698,24 +698,31 @@ window.PORTFOLIO_DATA = {
     section: {
       kicker: { zh: "过往教学存档", en: "Curriculum Archive", it: "Archivio corsi" },
       title: {
-        zh: "课程交付首屏视觉阵列",
-        en: "Presentation Cover Matrices",
-        it: "Matrici visuali delle slide di copertina"
+        zh: "课程项目视觉阵列",
+        en: "Course Project Visual Matrices",
+        it: "Matrici visuali dei progetti formativi"
       },
       lead: {
-        zh: "跨越中、英、意三大市场的企业级 AI 培训课程视觉索引，集中展示了来自大型金融集团与全球教育服务机构的 150 余份高保真教学课件的首屏封貌。",
-        en: "A comprehensive visual registry of enterprise-grade AI training programs delivered across Chinese, English, and Italian markets, featuring 150+ high-fidelity presentation assets from major financial groups and global educational institutions.",
-        it: "Un registro visivo completo dei programmi di formazione AI di livello enterprise erogati nei mercati cinese, inglese e italiano, con oltre 150 asset di presentazione da grandi gruppi finanziari e istituzioni educative globali."
+        zh: "覆盖 AI、ICT、治理、金融风控与营销训练的课程项目索引，集中展示 400 余份 PPT 与 Word 视觉素材的阵列化归档。",
+        en: "A public-facing course archive spanning AI, ICT, governance, credit risk, and marketing training, showcasing 400+ PPT and Word visual assets in a unified matrix.",
+        it: "Un archivio pubblico che copre AI, ICT, governance, rischio credito e marketing, con oltre 400 asset visivi PPT e Word in una matrice unificata."
       }
     },
     terms: {
-      firstSlideCovers: { en: "curriculum covers", zh: "份教学封貌", it: "copertine curriculum" },
+      firstSlideCovers: { en: "visual assets", zh: "份视觉素材", it: "asset visivi" },
       sourceFolder: { en: "Case Reference", zh: "案例参考", it: "Riferimento caso" },
       anonymizedArchive: { en: "Enterprise AI Training Series", zh: "企业级 AI 培训系列", it: "Serie di formazione AI enterprise" },
       finalDeliveryArchive: { en: "Global Curriculum Hub", zh: "全球教学体系归档", it: "Hub di curriculum globale" },
       bilingualAiLessonSeries: { en: "Bilingual AI lesson series", zh: "\u53cc\u8bed AI \u8bfe\u7a0b\u7cfb\u5217", it: "Serie bilingue di lezioni AI" },
-      sanitizedHrbpSeries: { en: "Sanitized HRBP delivery set", zh: "\u8131\u654f HRBP \u4ea4\u4ed8\u96c6", it: "Set HRBP anonimizzato" },
-      montageAlt: { en: "Curriculum visual matrix", zh: "课程首屏视觉矩阵", it: "Matrice visuale del curriculum" }
+      sanitizedHrbpSeries: { en: "Sanitized HRBP training set", zh: "\u8131\u654f HRBP \u8bad\u7ec3\u96c6", it: "Set HRBP anonimizzato" },
+      marketResearchArchive: { en: "Embodied intelligence research archive", zh: "具身智能研究归档", it: "Archivio ricerca embodied intelligence" },
+      ictDocArchive: { en: "Banking ICT document archive", zh: "银行 ICT 文档归档", it: "Archivio documentale ICT bancario" },
+      creditRiskArchive: { en: "Bank credit risk training archive", zh: "银行信贷风险课程归档", it: "Archivio formativo sul rischio credito bancario" },
+      dueDiligenceArchive: { en: "Bank due diligence archive", zh: "银行尽调课程归档", it: "Archivio di due diligence bancaria" },
+      governanceArchive: { en: "AI governance course archive", zh: "AI 治理课程归档", it: "Archivio corsi di AI governance" },
+      officeProductivityArchive: { en: "AI workplace productivity archive", zh: "AI 职场提效课程归档", it: "Archivio produttivita AI per l'ufficio" },
+      marketingArchive: { en: "AI marketing training archive", zh: "AI 营销课程归档", it: "Archivio training AI marketing" },
+      montageAlt: { en: "Course visual matrix", zh: "课程视觉阵列", it: "Matrice visuale del corso" }
     },
     items: [
       {
@@ -791,6 +798,76 @@ window.PORTFOLIO_DATA = {
         archive: "sanitizedHrbpSeries",
         folder: "LOGISTICS_HRBP_SANITIZED_2026",
         image: "../assets/past-teaching/logistics-hrbp-grid.jpg"
+      },
+      {
+        key: "embodied-intelligence-research",
+        project: { en: "Embodied Intelligence Research Program", zh: "具身智能市场研究专题", it: "Programma di ricerca sull'intelligenza embodied" },
+        language: "all",
+        languageLabel: { en: "ZH", zh: "中文", it: "ZH" },
+        count: 8,
+        archive: "marketResearchArchive",
+        folder: "CASE_EMBODIED_INTELLIGENCE_2026",
+        image: "../assets/past-teaching/embodied-intelligence-research-grid.jpg"
+      },
+      {
+        key: "bank-ict-architecture-docs",
+        project: { en: "Banking ICT Architecture Briefing", zh: "银行 ICT 架构研究文档", it: "Dossier di architettura ICT bancaria" },
+        language: "all",
+        languageLabel: { en: "ZH DOCX", zh: "中文 DOCX", it: "ZH DOCX" },
+        count: 10,
+        archive: "ictDocArchive",
+        folder: "CASE_BANK_ICT_DOCS_ZH_2026",
+        image: "../assets/past-teaching/bank-ict-architecture-doc-grid.jpg"
+      },
+      {
+        key: "bank-credit-risk-full",
+        project: { en: "Bank Credit Risk Program", zh: "银行信贷风险全流程课程", it: "Programma rischio credito bancario" },
+        language: "all",
+        languageLabel: { en: "ZH", zh: "中文", it: "ZH" },
+        count: 16,
+        archive: "creditRiskArchive",
+        folder: "CASE_BANK_CREDIT_RISK_ZH_2026",
+        image: "../assets/past-teaching/bank-credit-risk-full-grid.jpg"
+      },
+      {
+        key: "bank-credit-due-diligence",
+        project: { en: "Bank Due Diligence Evaluation Program", zh: "银行尽调评估课程记录", it: "Programma di due diligence bancaria" },
+        language: "all",
+        languageLabel: { en: "ZH", zh: "中文", it: "ZH" },
+        count: 19,
+        archive: "dueDiligenceArchive",
+        folder: "CASE_BANK_DUE_DILIGENCE_ZH_2026",
+        image: "../assets/past-teaching/bank-credit-due-diligence-grid.jpg"
+      },
+      {
+        key: "ai-governance-records",
+        project: { en: "AI Governance Course Record", zh: "AI 治理课程记录", it: "Archivio corso di AI governance" },
+        language: "all",
+        languageLabel: { en: "EN / ZH", zh: "英 / 中", it: "EN / ZH" },
+        count: 17,
+        archive: "governanceArchive",
+        folder: "CASE_AI_GOVERNANCE_2026",
+        image: "../assets/past-teaching/ai-governance-records-grid.jpg"
+      },
+      {
+        key: "ai-office-productivity",
+        project: { en: "AI Workplace Productivity Camp", zh: "AI 职场效率训练营", it: "Training AI per produttivita in ufficio" },
+        language: "all",
+        languageLabel: { en: "ZH", zh: "中文", it: "ZH" },
+        count: 18,
+        archive: "officeProductivityArchive",
+        folder: "CASE_AI_OFFICE_PRODUCTIVITY_ZH_2026",
+        image: "../assets/past-teaching/ai-office-productivity-grid.jpg"
+      },
+      {
+        key: "deepseek-marketing-15day",
+        project: { en: "AI Marketing 15-Day Intensive", zh: "AI 营销 15 天训练营", it: "Intensive AI marketing di 15 giorni" },
+        language: "all",
+        languageLabel: { en: "ZH", zh: "中文", it: "ZH" },
+        count: 15,
+        archive: "marketingArchive",
+        folder: "CASE_AI_MARKETING_15DAY_ZH_2026",
+        image: "../assets/past-teaching/deepseek-marketing-15day-grid.jpg"
       }
     ]
   }
