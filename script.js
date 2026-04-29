@@ -1277,11 +1277,11 @@ function renderDirectory(lang) {
 }
 
 function renderGroupCard(group, lang) {
-    return `<article class="link-group-card reveal ${group.key === "advisory" ? "is-highlight" : ""}"><div class="card-top"><div><span class="group-badge">${group.badge}</span><h3 class="card-title">${text(group.title, lang)}</h3><p class="card-copy">${text(group.description, lang)}</p></div><span class="group-summary-count">${group.items.length}</span></div><div class="link-list">${group.items.slice(0, 4).map((item) => renderLink(item, lang)).join("")}</div></article>`;
+    return `<details class="link-group-card reveal ${group.key === "advisory" ? "is-highlight" : ""}"><summary><div class="card-top"><div><span class="group-badge">${group.badge}</span><h3 class="card-title">${text(group.title, lang)}</h3><p class="card-copy">${text(group.description, lang)}</p></div><div class="group-summary-actions"><span class="group-summary-count">${group.items.length}</span><span class="summary-caret" aria-hidden="true"></span></div></div></summary><div class="link-list">${group.items.slice(0, 4).map((item) => renderLink(item, lang)).join("")}</div></details>`;
 }
 
 function renderGroupDetails(group, lang) {
-    return `<details class="directory-group reveal" open><summary><div class="group-summary-copy"><span class="group-badge">${group.badge}</span><h3 class="group-summary-title">${text(group.title, lang)}</h3><p class="group-summary-meta">${text(group.description, lang)}</p></div><div class="site-nav"><span class="group-summary-count">${group.items.length}</span><span class="summary-caret" aria-hidden="true"></span></div></summary><div class="directory-items">${group.items.map((item) => renderLink(item, lang)).join("")}</div></details>`;
+    return `<details class="directory-group reveal"><summary><div class="group-summary-copy"><span class="group-badge">${group.badge}</span><h3 class="group-summary-title">${text(group.title, lang)}</h3><p class="group-summary-meta">${text(group.description, lang)}</p></div><div class="site-nav"><span class="group-summary-count">${group.items.length}</span><span class="summary-caret" aria-hidden="true"></span></div></summary><div class="directory-items">${group.items.map((item) => renderLink(item, lang)).join("")}</div></details>`;
 }
 
 function renderLink(item, lang) {

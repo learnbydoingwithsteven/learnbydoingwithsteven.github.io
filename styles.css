@@ -37,7 +37,8 @@ body {
     color: var(--ink);
     background: linear-gradient(160deg, #fcf7ef 0%, #fffaf4 42%, #eef4ef 100%);
     font-family: "Space Grotesk", "Segoe UI", sans-serif;
-    line-height: 1.6;
+    font-size: 15px;
+    line-height: 1.52;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     position: relative;
@@ -100,7 +101,7 @@ button {
     position: sticky;
     top: 0;
     z-index: 40;
-    padding: 16px 0;
+    padding: 12px 0;
 }
 
 .site-header.scrolled .header-bar {
@@ -112,8 +113,8 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 16px;
-    padding: 14px 18px;
+    gap: 12px;
+    padding: 10px 14px;
     border-radius: 999px;
     border: 1px solid var(--line-strong);
     background: rgba(255, 251, 245, 0.74);
@@ -125,25 +126,28 @@ button {
 .brand {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     text-decoration: none;
     min-width: 0;
     flex: 0 0 auto;
 }
 
 .brand-mark {
-    width: 44px;
-    height: 44px;
-    border-radius: 16px;
+    width: 42px;
+    height: 42px;
+    border-radius: 999px;
     display: grid;
     place-items: center;
-    background:
-        radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), transparent 36%),
-        linear-gradient(145deg, var(--accent) 0%, #083344 100%);
-    color: #ffffff;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.25);
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.86);
+    border: 1px solid rgba(16, 24, 40, 0.1);
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.1);
+}
+
+.brand-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .brand-copy {
@@ -153,13 +157,13 @@ button {
 }
 
 .brand-name {
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 700;
     letter-spacing: -0.02em;
 }
 
 .brand-tag {
-    font-size: 0.78rem;
+    font-size: 0.72rem;
     color: var(--muted);
 }
 
@@ -201,10 +205,10 @@ button {
     justify-content: center;
     flex: 0 0 auto;
     text-decoration: none;
-    padding: 10px 14px;
+    padding: 8px 12px;
     border-radius: 999px;
     color: var(--ink-soft);
-    font-size: 0.95rem;
+    font-size: 0.88rem;
     white-space: nowrap;
     transition: transform 180ms ease, color 180ms ease, background 180ms ease;
 }
@@ -265,7 +269,7 @@ button {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    padding: 12px 18px;
+    padding: 10px 15px;
     border-radius: 999px;
     border: 1px solid transparent;
     font-weight: 600;
@@ -307,13 +311,13 @@ button {
 }
 
 .hero {
-    padding: 56px 0 24px;
+    padding: 44px 0 18px;
 }
 
 .hero-grid {
     display: grid;
     grid-template-columns: minmax(0, 1.12fr) minmax(300px, 0.88fr);
-    gap: 28px;
+    gap: 22px;
     align-items: center;
 }
 
@@ -340,7 +344,7 @@ button {
 .hero-copy {
     position: relative;
     overflow: hidden;
-    padding: 22px;
+    padding: 18px;
     border-radius: var(--radius-xl);
     background: linear-gradient(145deg, rgba(255, 255, 255, 0.78), rgba(255, 249, 240, 0.6));
 }
@@ -397,8 +401,8 @@ button {
 }
 
 .display-title {
-    font-size: clamp(3rem, 7vw, 5.9rem);
-    margin-bottom: 18px;
+    font-size: clamp(2.55rem, 6vw, 5rem);
+    margin-bottom: 14px;
 }
 
 .display-title .accent {
@@ -414,12 +418,13 @@ button {
 .podcast-copy,
 .quick-copy {
     color: var(--ink-soft);
+    font-size: 0.94rem;
 }
 
 .hero-lead {
-    font-size: clamp(1rem, 1.8vw, 1.2rem);
+    font-size: clamp(0.96rem, 1.55vw, 1.08rem);
     max-width: 62ch;
-    margin: 0 0 22px;
+    margin: 0 0 18px;
 }
 
 .button-row {
@@ -556,20 +561,20 @@ button {
 }
 
 .section {
-    padding: 40px 0 0;
+    padding: 32px 0 0;
 }
 
 .section-intro {
     display: flex;
     justify-content: space-between;
     align-items: end;
-    gap: 20px;
-    margin-bottom: 20px;
+    gap: 16px;
+    margin-bottom: 16px;
 }
 
 .section-title {
-    font-size: clamp(2rem, 4vw, 3.4rem);
-    margin-bottom: 10px;
+    font-size: clamp(1.75rem, 3.4vw, 2.85rem);
+    margin-bottom: 8px;
 }
 
 .section-copy {
@@ -578,11 +583,11 @@ button {
 }
 
 .section-label {
-    margin: 0 0 10px;
+    margin: 0 0 8px;
     text-transform: uppercase;
     letter-spacing: 0.16em;
     color: var(--muted);
-    font-size: 0.82rem;
+    font-size: 0.76rem;
 }
 
 .section-label:empty,
@@ -603,9 +608,9 @@ button {
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    padding: 22px;
-    border-radius: 28px;
+    gap: 8px;
+    padding: 18px;
+    border-radius: 24px;
     background: rgba(255, 255, 255, 0.84);
     overflow: hidden;
     transition: transform 240ms cubic-bezier(0.33, 1, 0.68, 1), box-shadow 240ms ease, border-color 240ms ease, background 240ms ease;
@@ -683,7 +688,7 @@ button {
 
 .card-title {
     margin: 0 0 8px;
-    font-size: 1.4rem;
+    font-size: 1.22rem;
     letter-spacing: -0.03em;
 }
 
@@ -712,7 +717,7 @@ button {
 .podcast-grid,
 .quick-grid {
     display: grid;
-    gap: 16px;
+    gap: 12px;
 }
 
 .teaching-grid {
@@ -734,10 +739,19 @@ button {
 }
 
 .link-group-card {
-    padding: 20px;
-    border-radius: 28px;
+    padding: 16px;
+    border-radius: 24px;
     background: rgba(255, 255, 255, 0.82);
     transition: transform 240ms cubic-bezier(0.33, 1, 0.68, 1), box-shadow 240ms ease, border-color 240ms ease, background 240ms ease;
+}
+
+.link-group-card summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+.link-group-card summary::-webkit-details-marker {
+    display: none;
 }
 
 .link-group-card.is-highlight {
@@ -794,13 +808,24 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: start;
-    gap: 14px;
-    margin-bottom: 16px;
+    gap: 12px;
+    margin-bottom: 0;
 }
 
 .card-top h3 {
-    margin: 0 0 8px;
-    font-size: 1.55rem;
+    margin: 0 0 6px;
+    font-size: 1.22rem;
+}
+
+.link-group-card[open] .card-top {
+    margin-bottom: 12px;
+}
+
+.group-summary-actions {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    flex: 0 0 auto;
 }
 
 .group-badge,
@@ -811,9 +836,9 @@ button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 6px 10px;
+    padding: 5px 9px;
     border-radius: 999px;
-    font-size: 0.76rem;
+    font-size: 0.7rem;
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -828,7 +853,7 @@ button {
 .directory-items,
 .podcast-platforms {
     display: grid;
-    gap: 10px;
+    gap: 8px;
 }
 
 .link-card,
@@ -837,9 +862,9 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: start;
-    gap: 14px;
-    padding: 15px 16px;
-    border-radius: 18px;
+    gap: 12px;
+    padding: 12px 14px;
+    border-radius: 16px;
     background: rgba(16, 24, 40, 0.04);
     border: 1px solid transparent;
     text-decoration: none;
@@ -874,14 +899,14 @@ button {
 .podcast-title,
 .quick-title {
     margin: 0 0 4px;
-    font-size: 1rem;
+    font-size: 0.95rem;
 }
 
 .link-desc,
 .platform-desc {
     margin: 0;
     color: var(--muted);
-    font-size: 0.92rem;
+    font-size: 0.84rem;
     overflow-wrap: anywhere;
     word-break: break-word;
 }
@@ -916,8 +941,8 @@ button {
 .podcast-card,
 .quick-card,
 .cta-card {
-    padding: 22px;
-    border-radius: 28px;
+    padding: 18px;
+    border-radius: 24px;
     background: rgba(255, 255, 255, 0.84);
     transition: transform 240ms cubic-bezier(0.33, 1, 0.68, 1), box-shadow 240ms ease, border-color 240ms ease, background 240ms ease;
 }
@@ -1531,6 +1556,10 @@ button {
 }
 
 .directory-group[open] .summary-caret {
+    transform: rotate(225deg);
+}
+
+.link-group-card[open] .summary-caret {
     transform: rotate(225deg);
 }
 
