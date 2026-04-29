@@ -721,7 +721,7 @@ const TEACHING_PROJECTS = [
             it: "Una mappa pronta per discutere sistemi core bancari, capacita piattaforma, processi digitali e opportunita AI."
         },
         tags: ["Banking", "ICT", "AI strategy"],
-        image: "assets/past-teaching/bank-ict-architecture-doc-grid.jpg"
+        image: "assets/past-teaching/bank-ict-architecture-doc-grid.png"
     },
     {
         key: "bank-credit-risk",
@@ -740,7 +740,7 @@ const TEACHING_PROJECTS = [
             it: "Da ingresso credito e due diligence sul campo a controlli finanziari incrociati e segnali post-finanziamento."
         },
         tags: ["Risk", "Due diligence", "Banking"],
-        image: "assets/past-teaching/bank-credit-risk-full-grid.jpg"
+        image: "assets/past-teaching/bank-credit-risk-full-grid.png"
     },
     {
         key: "bank-due-diligence",
@@ -759,7 +759,7 @@ const TEACHING_PROJECTS = [
             it: "Un percorso pratico su autenticita aziendale, verifica materiali, coerenza finanziaria, osservazione onsite e interviste."
         },
         tags: ["Fieldwork", "Finance", "Risk control"],
-        image: "assets/past-teaching/bank-credit-due-diligence-grid.jpg"
+        image: "assets/past-teaching/bank-credit-due-diligence-grid.png"
     },
     {
         key: "finance-capability",
@@ -877,7 +877,7 @@ const TEACHING_PROJECTS = [
             it: "Una scansione su aziende, roadmap prodotto, finanziamenti, competizione, supply chain e ingresso mercati esteri."
         },
         tags: ["Robotics", "Go global", "Research"],
-        image: "assets/showcase/embodied-intelligence-workshop.png"
+        image: "assets/past-teaching/embodied-intelligence-research-grid.png"
     },
     {
         key: "machinery-sales-ai",
@@ -896,7 +896,7 @@ const TEACHING_PROJECTS = [
             it: "Un flusso per vendite estere: inquiry cliente, catalogo prodotto, risposta assistita AI e supporto dealer."
         },
         tags: ["Manufacturing", "Sales", "Dealer support"],
-        image: "assets/showcase/industrial-sales-ai-project.jpg"
+        image: "assets/past-teaching/industrial-machinery-sales-grid.jpg"
     },
     {
         key: "cfo-finance-system",
@@ -915,7 +915,7 @@ const TEACHING_PROJECTS = [
             it: "Un concept digitale per cash, reporting, procurement, produzione, scenario analysis e dashboard gestionali."
         },
         tags: ["CFO", "Finance", "Scenario analysis"],
-        image: "assets/showcase/cfo-finance-system.jpg"
+        image: "assets/past-teaching/cfo-finance-system-grid.jpg"
     },
     {
         key: "legal-retrieval",
@@ -934,7 +934,10 @@ const TEACHING_PROJECTS = [
             it: "Knowledge base legale locale con retrieval ibrido, posizionamento articoli, lettura comparata e Q&A."
         },
         tags: ["Legal retrieval", "RAG", "Compliance"],
-        image: "assets/showcase/hk-it-law-chat.png"
+        gallery: [
+            "assets/showcase/hk-it-law-chat.png",
+            "assets/past-teaching/hk-it-law-specialist-grid.png"
+        ]
     },
     {
         key: "logistics-hrbp",
@@ -973,10 +976,10 @@ const TEACHING_PROJECTS = [
         },
         tags: ["Workshop", "Social", "Tutorials"],
         gallery: [
-            "assets/showcase/workshop-training-scene.jpg",
-            "assets/showcase/brand-presence.jpg",
-            "assets/showcase/video-presence.jpg",
-            "assets/showcase/public-lessons.jpg"
+            "assets/past-teaching/ai-course-real-slides-grid.jpg",
+            "assets/past-teaching/ai-application-projects-grid.jpg",
+            "assets/past-teaching/professional-education-trilingual-grid.jpg",
+            "assets/past-teaching/financial-services-ai-zh-grid.jpg"
         ]
     }
 ];

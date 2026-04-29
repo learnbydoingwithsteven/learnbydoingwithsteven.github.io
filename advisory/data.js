@@ -807,7 +807,7 @@ window.PORTFOLIO_DATA = {
         count: 8,
         archive: "marketResearchArchive",
         folder: "CASE_EMBODIED_INTELLIGENCE_2026",
-        image: "../assets/past-teaching/embodied-intelligence-research-grid.jpg"
+        image: "../assets/past-teaching/embodied-intelligence-research-grid.png"
       },
       {
         key: "bank-ict-architecture-docs",
@@ -817,7 +817,7 @@ window.PORTFOLIO_DATA = {
         count: 10,
         archive: "ictDocArchive",
         folder: "CASE_BANK_ICT_DOCS_ZH_2026",
-        image: "../assets/past-teaching/bank-ict-architecture-doc-grid.jpg"
+        image: "../assets/past-teaching/bank-ict-architecture-doc-grid.png"
       },
       {
         key: "bank-credit-risk-full",
@@ -827,7 +827,7 @@ window.PORTFOLIO_DATA = {
         count: 16,
         archive: "creditRiskArchive",
         folder: "CASE_BANK_CREDIT_RISK_ZH_2026",
-        image: "../assets/past-teaching/bank-credit-risk-full-grid.jpg"
+        image: "../assets/past-teaching/bank-credit-risk-full-grid.png"
       },
       {
         key: "bank-credit-due-diligence",
@@ -837,7 +837,7 @@ window.PORTFOLIO_DATA = {
         count: 19,
         archive: "dueDiligenceArchive",
         folder: "CASE_BANK_DUE_DILIGENCE_ZH_2026",
-        image: "../assets/past-teaching/bank-credit-due-diligence-grid.jpg"
+        image: "../assets/past-teaching/bank-credit-due-diligence-grid.png"
       },
       {
         key: "ai-governance-records",
