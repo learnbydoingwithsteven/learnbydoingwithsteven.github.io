@@ -485,7 +485,7 @@ window.PORTFOLIO_DATA = {
     {
       title: "Excavator Sales Engine",
       tag: { zh: "销售 AI", en: "Sales AI", it: "Sales AI" },
-      image: "./ui_assets/excavator_sales_engine_home.png",
+      image: "./ui_assets/excavator_sales_engine_card.svg",
       copy: {
         zh: "面向工程机械销售的问询分析、选型推荐与市场模拟系统，适合展示 AI 如何进入销售流程与客户沟通。",
         en: "An inquiry analysis, product recommendation, and market simulation system for industrial machinery sales, suitable for showing how AI can enter real sales workflows and client communication.",
@@ -500,7 +500,7 @@ window.PORTFOLIO_DATA = {
     {
       title: "IT Accounting & Finance RAG",
       tag: { zh: "财务 AI", en: "Finance AI", it: "Finance AI" },
-      image: "./ui_assets/it_accounting_rag_chat.png",
+      image: "./ui_assets/it_accounting_rag_card.svg",
       copy: {
         zh: "围绕意大利会计与财务规则搭建的知识库与 RAG 应用，可用于展示 AI 在专业知识工作中的效率与准确性。",
         en: "A knowledge base and RAG application built around Italian accounting and finance rules, useful for demonstrating AI efficiency and accuracy in expert knowledge work.",
@@ -515,7 +515,7 @@ window.PORTFOLIO_DATA = {
     {
       title: "HK IT Law AI Specialist",
       tag: { zh: "法务 AI", en: "Legal AI", it: "Legal AI" },
-      image: "./ui_assets/hk_it_law_chat.png",
+      image: "./ui_assets/hk_it_law_ai_card.svg",
       copy: {
         zh: "基于香港与意大利 IT 法律场景的多语种合规辅助系统，适合法务、合规与跨境业务培训。",
         en: "A multilingual compliance support system built on Hong Kong and Italian IT law scenarios, suitable for legal, compliance, and cross-border business training.",
@@ -530,7 +530,7 @@ window.PORTFOLIO_DATA = {
     {
       title: "Agentic AI Systems (0 to 1)",
       tag: { zh: "课程体系", en: "Course system", it: "Sistema corso" },
-      image: "./ui_assets/agentic_ai_course_page.png",
+      image: "./ui_assets/agentic_ai_systems_card.svg",
       copy: {
         zh: "从基础聊天助手到多智能体协作的课程与演示体系，适合企业内训、工作坊与 bootcamp 场景。",
         en: "A course and demo system that runs from basic chat assistants to multi-agent collaboration, suitable for enterprise training, workshops, and bootcamps.",
@@ -545,7 +545,7 @@ window.PORTFOLIO_DATA = {
     {
       title: "LBDWS Video Hub & Knowledge Graph",
       tag: { zh: "知识资产", en: "Knowledge assets", it: "Asset di conoscenza" },
-      image: "./ui_assets/knowledge_graph.png",
+      image: "./ui_assets/lbdws_video_knowledge_graph_card.svg",
       copy: {
         zh: "把视频、主题与知识点组织为可检索的知识图谱，适合内部知识库、培训复盘与内容资产沉淀。",
         en: "Organizes videos, themes, and knowledge points into a searchable graph, suitable for internal knowledge bases, training reviews, and content asset accumulation.",
@@ -560,7 +560,7 @@ window.PORTFOLIO_DATA = {
     {
       title: "LLM Evaluation Pipeline",
       tag: { zh: "模型评估", en: "Model evaluation", it: "Valutazione modelli" },
-      image: "./ui_assets/llm_eval_metrics.png",
+      image: "./ui_assets/llm_evaluation_pipeline_card.svg",
       copy: {
         zh: "围绕大模型评估、对比与治理的结构化流程，适合管理层、技术团队和项目决策讨论。",
         en: "A structured workflow for large-model evaluation, comparison, and governance, suitable for management, technical teams, and project decision-making discussions.",

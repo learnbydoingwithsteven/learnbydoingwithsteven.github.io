@@ -1,0 +1,55 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="720" rx="40" fill="#07131B"/>
+  <rect width="1280" height="720" rx="40" fill="url(#bg)"/>
+  <g opacity="0.14" stroke="#79B8FF" stroke-width="1">
+    <path d="M130 186H1150"/>
+    <path d="M130 266H1150"/>
+    <path d="M130 346H1150"/>
+    <path d="M130 426H1150"/>
+    <path d="M130 506H1150"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="96" y="96" width="1088" height="470" rx="34" fill="#0B1B25" fill-opacity="0.94"/>
+    <rect x="148" y="142" width="238" height="18" rx="9" fill="#F6FBFB"/>
+    <rect x="148" y="176" width="322" height="12" rx="6" fill="#8BE1D1" fill-opacity="0.36"/>
+    <rect x="148" y="232" width="324" height="276" rx="28" fill="#102732"/>
+    <rect x="190" y="276" width="202" height="24" rx="12" fill="#EAF4FF" fill-opacity="0.92"/>
+    <rect x="190" y="326" width="226" height="12" rx="6" fill="#8AE2D0" fill-opacity="0.4"/>
+    <rect x="190" y="360" width="180" height="12" rx="6" fill="#8AE2D0" fill-opacity="0.28"/>
+    <rect x="190" y="418" width="92" height="44" rx="18" fill="#4DD0B5" fill-opacity="0.24"/>
+    <text x="212" y="447" fill="#D6FBF3" font-family="Space Grotesk, Arial, sans-serif" font-size="22" font-weight="700">RAG</text>
+    <rect x="506" y="232" width="302" height="276" rx="28" fill="#11283A"/>
+    <path d="M560 302H738" stroke="#F7B955" stroke-width="8" stroke-linecap="round"/>
+    <path d="M560 352H742" stroke="#8AE2D0" stroke-width="8" stroke-linecap="round"/>
+    <path d="M560 402H710" stroke="#79B8FF" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="542" cy="302" r="8" fill="#F7B955"/>
+    <circle cx="542" cy="352" r="8" fill="#4DD0B5"/>
+    <circle cx="542" cy="402" r="8" fill="#79B8FF"/>
+    <rect x="846" y="232" width="286" height="276" rx="28" fill="#102433"/>
+    <rect x="890" y="276" width="178" height="34" rx="17" fill="#153B46"/>
+    <rect x="890" y="340" width="196" height="12" rx="6" fill="#EAF4FF" fill-opacity="0.42"/>
+    <rect x="890" y="372" width="150" height="12" rx="6" fill="#EAF4FF" fill-opacity="0.24"/>
+    <path d="M472 370H506" stroke="#4DD0B5" stroke-width="5" stroke-linecap="round"/>
+    <path d="M808 370H846" stroke="#79B8FF" stroke-width="5" stroke-linecap="round"/>
+    <path d="M658 508V538H990V508" stroke="url(#flow)" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="658" cy="508" r="10" fill="#4DD0B5"/>
+    <circle cx="990" cy="508" r="10" fill="#F7B955"/>
+  </g>
+  <text x="96" y="650" fill="#F5FBFF" font-family="Space Grotesk, Arial, sans-serif" font-size="64" font-weight="700">IT Accounting &amp; Finance RAG</text>
+  <text x="100" y="688" fill="#A5C1CF" font-family="Space Grotesk, Arial, sans-serif" font-size="24">Regulatory retrieval / Expert knowledge / Finance advisory</text>
+  <defs>
+    <linearGradient id="bg" x1="96" y1="42" x2="1168" y2="678" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07131B"/>
+      <stop offset="0.52" stop-color="#0A1C28"/>
+      <stop offset="1" stop-color="#061017"/>
+    </linearGradient>
+    <linearGradient id="flow" x1="658" y1="538" x2="990" y2="538" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4DD0B5"/>
+      <stop offset="0.5" stop-color="#79B8FF"/>
+      <stop offset="1" stop-color="#F7B955"/>
+    </linearGradient>
+    <filter id="shadow" x="64" y="70" width="1152" height="532" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#000000" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+</svg>

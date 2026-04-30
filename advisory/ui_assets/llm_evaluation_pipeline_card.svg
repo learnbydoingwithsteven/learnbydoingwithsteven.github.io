@@ -1,0 +1,56 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="720" rx="40" fill="#07131B"/>
+  <rect width="1280" height="720" rx="40" fill="url(#bg)"/>
+  <g opacity="0.14" stroke="#79B8FF" stroke-width="1">
+    <path d="M120 186H1160"/>
+    <path d="M120 266H1160"/>
+    <path d="M120 346H1160"/>
+    <path d="M120 426H1160"/>
+    <path d="M120 506H1160"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="94" y="96" width="1092" height="470" rx="34" fill="#0B1B25" fill-opacity="0.94"/>
+    <rect x="146" y="142" width="250" height="18" rx="9" fill="#F5FBFF"/>
+    <rect x="146" y="176" width="340" height="12" rx="6" fill="#8BE1D1" fill-opacity="0.36"/>
+    <rect x="154" y="238" width="286" height="248" rx="28" fill="#102732"/>
+    <rect x="194" y="284" width="104" height="34" rx="17" fill="#143B47"/>
+    <rect x="314" y="284" width="74" height="34" rx="17" fill="#17314A"/>
+    <rect x="194" y="350" width="192" height="12" rx="6" fill="#EAF4FF" fill-opacity="0.38"/>
+    <rect x="194" y="384" width="158" height="12" rx="6" fill="#EAF4FF" fill-opacity="0.24"/>
+    <rect x="502" y="238" width="286" height="248" rx="28" fill="#11283A"/>
+    <path d="M556 424V334" stroke="#4DD0B5" stroke-width="18" stroke-linecap="round"/>
+    <path d="M624 424V298" stroke="#79B8FF" stroke-width="18" stroke-linecap="round"/>
+    <path d="M692 424V362" stroke="#F7B955" stroke-width="18" stroke-linecap="round"/>
+    <path d="M540 444H722" stroke="#EAF4FF" stroke-opacity="0.35" stroke-width="4" stroke-linecap="round"/>
+    <rect x="848" y="238" width="286" height="248" rx="28" fill="#102433"/>
+    <path d="M910 346H1066" stroke="#8AE2D0" stroke-width="5" stroke-linecap="round"/>
+    <path d="M910 394H1036" stroke="#79B8FF" stroke-width="5" stroke-linecap="round"/>
+    <path d="M910 442H1076" stroke="#F7B955" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="900" cy="346" r="9" fill="#4DD0B5"/>
+    <circle cx="900" cy="394" r="9" fill="#79B8FF"/>
+    <circle cx="900" cy="442" r="9" fill="#F7B955"/>
+    <path d="M440 362H502" stroke="#4DD0B5" stroke-width="5" stroke-linecap="round"/>
+    <path d="M788 362H848" stroke="#79B8FF" stroke-width="5" stroke-linecap="round"/>
+    <path d="M298 516H990" stroke="url(#flow)" stroke-width="4" stroke-linecap="round" stroke-dasharray="10 12"/>
+    <circle cx="298" cy="516" r="10" fill="#4DD0B5"/>
+    <circle cx="644" cy="516" r="10" fill="#79B8FF"/>
+    <circle cx="990" cy="516" r="10" fill="#F7B955"/>
+  </g>
+  <text x="94" y="650" fill="#F5FBFF" font-family="Space Grotesk, Arial, sans-serif" font-size="64" font-weight="700">LLM Evaluation Pipeline</text>
+  <text x="98" y="688" fill="#A5C1CF" font-family="Space Grotesk, Arial, sans-serif" font-size="24">Multi-metric scoring / Governance comparison / Model decisions</text>
+  <defs>
+    <linearGradient id="bg" x1="96" y1="42" x2="1176" y2="678" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07131B"/>
+      <stop offset="0.52" stop-color="#0A1C28"/>
+      <stop offset="1" stop-color="#061017"/>
+    </linearGradient>
+    <linearGradient id="flow" x1="298" y1="516" x2="990" y2="516" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4DD0B5"/>
+      <stop offset="0.5" stop-color="#79B8FF"/>
+      <stop offset="1" stop-color="#F7B955"/>
+    </linearGradient>
+    <filter id="shadow" x="62" y="70" width="1156" height="532" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#000000" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+</svg>

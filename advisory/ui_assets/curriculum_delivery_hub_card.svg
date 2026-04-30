@@ -31,7 +31,7 @@
     <rect x="754" y="520" width="144" height="26" rx="13" fill="#163B41"/>
   </g>
   <text x="112" y="654" fill="#F4FBFA" font-family="Space Grotesk, Arial, sans-serif" font-size="60" font-weight="700">Multilingual Curriculum Delivery Hub</text>
-  <text x="114" y="691" fill="#98B9C5" font-family="Space Grotesk, Arial, sans-serif" font-size="24">Chinese • English • Italian delivery packaging and archive operations</text>
+  <text x="114" y="691" fill="#98B9C5" font-family="Space Grotesk, Arial, sans-serif" font-size="24">Chinese / English / Italian delivery packaging and archive operations</text>
   <defs>
     <linearGradient id="bg" x1="112" y1="48" x2="1178" y2="670" gradientUnits="userSpaceOnUse">
       <stop stop-color="#07121A"/>

@@ -44,7 +44,7 @@
     <rect x="950" y="510" width="132" height="28" rx="14" fill="#1F3140"/>
   </g>
   <text x="112" y="660" fill="#F4FBFA" font-family="Space Grotesk, Arial, sans-serif" font-size="64" font-weight="700">Knowledge Graph Studio</text>
-  <text x="114" y="697" fill="#98B9C5" font-family="Space Grotesk, Arial, sans-serif" font-size="24">Ingestion • Graph generation • Retrieval-ready knowledge assets</text>
+  <text x="114" y="697" fill="#98B9C5" font-family="Space Grotesk, Arial, sans-serif" font-size="24">Ingestion / Graph generation / Retrieval-ready knowledge assets</text>
   <defs>
     <linearGradient id="bg" x1="86" y1="34" x2="1178" y2="688" gradientUnits="userSpaceOnUse">
       <stop stop-color="#07131B"/>

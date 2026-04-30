@@ -1,0 +1,56 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="720" rx="40" fill="#07131B"/>
+  <rect width="1280" height="720" rx="40" fill="url(#bg)"/>
+  <g opacity="0.14" stroke="#79B8FF" stroke-width="1">
+    <path d="M120 178H1160"/>
+    <path d="M120 258H1160"/>
+    <path d="M120 338H1160"/>
+    <path d="M120 418H1160"/>
+    <path d="M120 498H1160"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="94" y="96" width="1092" height="470" rx="34" fill="#0B1B25" fill-opacity="0.94"/>
+    <rect x="146" y="142" width="254" height="18" rx="9" fill="#F5FBFF"/>
+    <rect x="146" y="176" width="348" height="12" rx="6" fill="#8BE1D1" fill-opacity="0.36"/>
+    <rect x="156" y="236" width="284" height="252" rx="28" fill="#102732"/>
+    <rect x="206" y="278" width="184" height="42" rx="21" fill="#143B47"/>
+    <text x="248" y="306" fill="#D6FBF3" font-family="Space Grotesk, Arial, sans-serif" font-size="22" font-weight="700">0 to 1</text>
+    <rect x="206" y="358" width="196" height="12" rx="6" fill="#8AE2D0" fill-opacity="0.38"/>
+    <rect x="206" y="392" width="156" height="12" rx="6" fill="#8AE2D0" fill-opacity="0.24"/>
+    <rect x="500" y="236" width="284" height="252" rx="28" fill="#11283A"/>
+    <circle cx="642" cy="342" r="44" fill="#79B8FF" fill-opacity="0.18"/>
+    <circle cx="642" cy="342" r="18" fill="#79B8FF"/>
+    <circle cx="578" cy="420" r="15" fill="#4DD0B5"/>
+    <circle cx="706" cy="420" r="15" fill="#F7B955"/>
+    <path d="M642 360L578 420M642 360L706 420" stroke="#EAF4FF" stroke-width="4" stroke-linecap="round"/>
+    <rect x="844" y="236" width="284" height="252" rx="28" fill="#102433"/>
+    <rect x="892" y="284" width="188" height="18" rx="9" fill="#EAF4FF" fill-opacity="0.86"/>
+    <rect x="892" y="332" width="202" height="12" rx="6" fill="#F7B955" fill-opacity="0.38"/>
+    <rect x="892" y="366" width="162" height="12" rx="6" fill="#F7B955" fill-opacity="0.24"/>
+    <rect x="892" y="426" width="82" height="32" rx="16" fill="#1B3145"/>
+    <rect x="988" y="426" width="82" height="32" rx="16" fill="#163B41"/>
+    <path d="M440 362H500" stroke="#4DD0B5" stroke-width="5" stroke-linecap="round"/>
+    <path d="M784 362H844" stroke="#79B8FF" stroke-width="5" stroke-linecap="round"/>
+    <path d="M298 514H986" stroke="url(#flow)" stroke-width="4" stroke-linecap="round" stroke-dasharray="10 12"/>
+    <circle cx="298" cy="514" r="10" fill="#4DD0B5"/>
+    <circle cx="642" cy="514" r="10" fill="#79B8FF"/>
+    <circle cx="986" cy="514" r="10" fill="#F7B955"/>
+  </g>
+  <text x="94" y="650" fill="#F5FBFF" font-family="Space Grotesk, Arial, sans-serif" font-size="64" font-weight="700">Agentic AI Systems (0 to 1)</text>
+  <text x="98" y="688" fill="#A5C1CF" font-family="Space Grotesk, Arial, sans-serif" font-size="24">Assistants / Multi-agent workflows / Enterprise bootcamps</text>
+  <defs>
+    <linearGradient id="bg" x1="96" y1="42" x2="1176" y2="678" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07131B"/>
+      <stop offset="0.52" stop-color="#0A1C28"/>
+      <stop offset="1" stop-color="#061017"/>
+    </linearGradient>
+    <linearGradient id="flow" x1="298" y1="514" x2="986" y2="514" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4DD0B5"/>
+      <stop offset="0.5" stop-color="#79B8FF"/>
+      <stop offset="1" stop-color="#F7B955"/>
+    </linearGradient>
+    <filter id="shadow" x="62" y="70" width="1156" height="532" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#000000" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+</svg>
