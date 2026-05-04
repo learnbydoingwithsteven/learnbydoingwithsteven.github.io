@@ -861,6 +861,44 @@ const TEACHING_PROJECTS = [
         image: "assets/past-teaching/zero-to-sota-ai-100-grid.jpg"
     },
     {
+        key: "llm-full-cycle-development",
+        collection: "ai-systems-curriculum",
+        tag: { en: "LLM engineering", zh: "LLM \u5de5\u7a0b", it: "LLM engineering" },
+        languageLabel: { en: "ZH", zh: "\u4e2d\u6587", it: "ZH" },
+        metric: { value: "35 sessions", label: { en: "course sessions", zh: "\u8bfe\u7a0b sessions", it: "sessioni corso" } },
+        title: {
+            en: "LLM Full-Cycle Development Training",
+            zh: "LLM \u5168\u5468\u671f\u5f00\u53d1\u57f9\u8bad",
+            it: "Training sviluppo LLM full-cycle"
+        },
+        copy: {
+            en: "A 35-session curriculum covering LLM foundations, Transformer, data engineering, training, fine-tuning, evaluation, safety, deployment, operations, and commercial delivery.",
+            zh: "\u8986\u76d6 LLM \u57fa\u7840\u3001Transformer\u3001\u6570\u636e\u5de5\u7a0b\u3001\u8bad\u7ec3\u5fae\u8c03\u3001\u8bc4\u4f30\u5b89\u5168\u3001\u90e8\u7f72\u8fd0\u8425\u4e0e\u5546\u4e1a\u5316\u4ea4\u4ed8\u7684 35 \u4e2a session\u3002",
+            it: "Curriculum di 35 sessioni su fondamenti LLM, Transformer, data engineering, training, fine-tuning, evaluation, safety, deployment, operations e delivery commerciale."
+        },
+        tags: ["LLM", "Fine-tuning", "Deployment"],
+        image: "assets/past-teaching/llm-full-cycle-development-35-sessions-grid.png"
+    },
+    {
+        key: "langchain-langgraph-course",
+        collection: "ai-systems-curriculum",
+        tag: { en: "LangChain / LangGraph", zh: "LangChain / LangGraph", it: "LangChain / LangGraph" },
+        languageLabel: { en: "ZH", zh: "\u4e2d\u6587", it: "ZH" },
+        metric: { value: "31 sessions", label: { en: "course sessions", zh: "\u8bfe\u7a0b sessions", it: "sessioni corso" } },
+        title: {
+            en: "LangChain / LangGraph Continuous Course",
+            zh: "LangChain / LangGraph \u8fde\u7eed\u8bfe\u7a0b",
+            it: "Corso continuo LangChain / LangGraph"
+        },
+        copy: {
+            en: "A 31-session build-oriented course from LangChain basics to RAG, tools, agents, LangGraph state workflows, human-in-the-loop, evaluation, and production operation.",
+            zh: "\u4ece LangChain \u57fa\u7840\u5230 RAG\u3001\u5de5\u5177\u8c03\u7528\u3001Agent\u3001LangGraph \u72b6\u6001\u6d41\u3001human-in-the-loop\u3001\u8bc4\u4f30\u4e0e\u751f\u4ea7\u8fd0\u8425\u7684 31 \u4e2a session \u5b9e\u6218\u8bfe\u7a0b\u3002",
+            it: "Corso pratico di 31 sessioni da basi LangChain a RAG, tool, agent, workflow LangGraph, human-in-the-loop, evaluation e operations."
+        },
+        tags: ["LangChain", "LangGraph", "RAG Agents"],
+        image: "assets/past-teaching/langchain-langgraph-31-sessions-grid.png"
+    },
+    {
         key: "embodied-intelligence-research",
         collection: "prototypes-research",
         tag: { en: "Embodied AI", zh: "\u5177\u8eab\u667a\u80fd", it: "Embodied AI" },
@@ -1010,6 +1048,22 @@ const TEACHING_COLLECTIONS = [
             en: "AI Governance, Productivity & Marketing",
             zh: "AI \u6cbb\u7406\u3001\u529e\u516c\u63d0\u6548\u4e0e\u8425\u9500\u8bad\u7ec3",
             it: "AI governance, produttivita e marketing"
+        },
+        copy: {
+            en: "",
+            zh: "",
+            it: ""
+        }
+    },
+    {
+        key: "ai-systems-curriculum",
+        theme: "is-frontier",
+        open: false,
+        kicker: { en: "", zh: "", it: "" },
+        title: {
+            en: "AI Systems & LLM Engineering Curriculum",
+            zh: "AI \u7cfb\u7edf\u4e0e LLM \u5de5\u7a0b\u8bfe\u7a0b",
+            it: "Curriculum AI systems e LLM engineering"
         },
         copy: {
             en: "",
@@ -1252,7 +1306,7 @@ function renderPortfolio(lang) {
     if (document.body.dataset.page !== "portfolio") return;
     document.querySelector("#portfolio-stats").innerHTML = [
         { value: "1,500+", label: { en: "applications", zh: "应用规模", it: "applicazioni" } },
-        { value: "400+", label: { en: "courses and learning units", zh: "课程与学习单元", it: "corsi e unita di apprendimento" } },
+        { value: "450+", label: { en: "courses and learning units", zh: "课程与学习单元", it: "corsi e unita di apprendimento" } },
         { value: "25+", label: { en: "flagship repositories", zh: "核心仓库", it: "repository di punta" } },
         { value: "3", label: { en: "supported interface languages", zh: "支持的界面语言", it: "lingue supportate" } }
     ].map((stat) => `<article class="metric-pill"><span class="metric-value">${stat.value}</span><span class="metric-label">${text(stat.label, lang)}</span></article>`).join("");

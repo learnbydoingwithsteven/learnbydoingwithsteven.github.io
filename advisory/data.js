@@ -703,9 +703,9 @@ window.PORTFOLIO_DATA = {
         it: "Matrici visuali dei progetti formativi"
       },
       lead: {
-        zh: "覆盖 AI、ICT、治理、金融风控与营销训练的课程项目索引，集中展示 400 余份 PPT 与 Word 视觉素材的阵列化归档。",
-        en: "A public-facing course archive spanning AI, ICT, governance, credit risk, and marketing training, showcasing 400+ PPT and Word visual assets in a unified matrix.",
-        it: "Un archivio pubblico che copre AI, ICT, governance, rischio credito e marketing, con oltre 400 asset visivi PPT e Word in una matrice unificata."
+        zh: "覆盖 AI、LLM 工程、LangChain、ICT、治理、金融风控与营销训练的课程项目索引，集中展示 450+ 份课程视觉素材的阵列化归档。",
+        en: "A public-facing course archive spanning AI, LLM engineering, LangChain/LangGraph, ICT, governance, credit risk, and marketing training, showcasing 450+ course visual assets in a unified matrix.",
+        it: "Un archivio pubblico che copre AI, LLM engineering, LangChain/LangGraph, ICT, governance, rischio credito e marketing, con oltre 450 asset visivi formativi in una matrice unificata."
       }
     },
     terms: {
@@ -714,6 +714,8 @@ window.PORTFOLIO_DATA = {
       anonymizedArchive: { en: "Enterprise AI Training Series", zh: "企业级 AI 培训系列", it: "Serie di formazione AI enterprise" },
       finalDeliveryArchive: { en: "Global Curriculum Hub", zh: "全球教学体系归档", it: "Hub di curriculum globale" },
       bilingualAiLessonSeries: { en: "Bilingual AI lesson series", zh: "\u53cc\u8bed AI \u8bfe\u7a0b\u7cfb\u5217", it: "Serie bilingue di lezioni AI" },
+      llmLifecycleArchive: { en: "LLM full-cycle development curriculum", zh: "LLM \u5168\u5468\u671f\u5f00\u53d1\u8bfe\u7a0b", it: "Curriculum sviluppo LLM full-cycle" },
+      langchainCourseArchive: { en: "LangChain / LangGraph continuous course", zh: "LangChain / LangGraph \u8fde\u7eed\u8bfe\u7a0b", it: "Corso continuo LangChain / LangGraph" },
       sanitizedHrbpSeries: { en: "Sanitized HRBP training set", zh: "\u8131\u654f HRBP \u8bad\u7ec3\u96c6", it: "Set HRBP anonimizzato" },
       marketResearchArchive: { en: "Embodied intelligence research archive", zh: "具身智能研究归档", it: "Archivio ricerca embodied intelligence" },
       ictDocArchive: { en: "Banking ICT document archive", zh: "银行 ICT 文档归档", it: "Archivio documentale ICT bancario" },
@@ -788,6 +790,28 @@ window.PORTFOLIO_DATA = {
         archive: "bilingualAiLessonSeries",
         folder: "AI_SOTA_100_BILINGUAL_2026",
         image: "../assets/past-teaching/zero-to-sota-ai-100-grid.jpg"
+      },
+      {
+        key: "llm-full-cycle-development",
+        project: { en: "LLM Full-Cycle Development Training", zh: "LLM \u5168\u5468\u671f\u5f00\u53d1\u57f9\u8bad", it: "Training sviluppo LLM full-cycle" },
+        language: "all",
+        languageLabel: { en: "ZH", zh: "\u4e2d\u6587", it: "ZH" },
+        count: 35,
+        countLabel: { en: "sessions", zh: "sessions", it: "sessioni" },
+        archive: "llmLifecycleArchive",
+        folder: "LLM_FULL_CYCLE_35_SESSIONS_2026",
+        image: "../assets/past-teaching/llm-full-cycle-development-35-sessions-grid.png"
+      },
+      {
+        key: "langchain-langgraph-course",
+        project: { en: "LangChain / LangGraph Continuous Course", zh: "LangChain / LangGraph \u8fde\u7eed\u8bfe\u7a0b", it: "Corso continuo LangChain / LangGraph" },
+        language: "all",
+        languageLabel: { en: "ZH", zh: "\u4e2d\u6587", it: "ZH" },
+        count: 31,
+        countLabel: { en: "sessions", zh: "sessions", it: "sessioni" },
+        archive: "langchainCourseArchive",
+        folder: "LANGCHAIN_LANGGRAPH_31_SESSIONS_2026",
+        image: "../assets/past-teaching/langchain-langgraph-31-sessions-grid.png"
       },
       {
         key: "logistics-hrbp",

@@ -268,6 +268,7 @@ function renderTeachingShowcase() {
             it: item.language === "zh" ? "Cinese" : (item.language === "en" ? "Inglese" : "Italiano")
           });
       const archive = tr(showcase.terms[item.archive]);
+      const countLabel = item.countLabel ? tr(item.countLabel) : tr(showcase.terms.firstSlideCovers);
       const alt = `${tr(item.project)} ${language} ${tr(showcase.terms.montageAlt)}`;
 
       return `
@@ -277,7 +278,7 @@ function renderTeachingShowcase() {
             <span class="metric-chip">${language}</span>
           </div>
           <h3 class="card-title">${tr(item.project)} / ${language}</h3>
-          <p class="card-copy">${item.count} ${tr(showcase.terms.firstSlideCovers)} / ${archive}</p>
+          <p class="card-copy">${item.count} ${countLabel} / ${archive}</p>
           <div class="teaching-image-wrap">
             <img class="teaching-image" src="${item.image}" alt="${alt}" loading="lazy">
           </div>
