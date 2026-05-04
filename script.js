@@ -1131,6 +1131,7 @@ function applyLanguage(lang) {
     syncMeta(lang);
     syncStaticCopy(lang);
     syncLanguageButtons(lang);
+    syncFontSizeButtons();
     renderHome(lang);
     renderPortfolio(lang);
     renderDirectory(lang);
@@ -1376,6 +1377,25 @@ function labelFromUrl(url) {
 
 /* ── Font-size switcher ── */
 const FONTSIZE_KEY = "lbds-fontsize";
+const FONTSIZE_COPY = {
+    switchLabel: {
+        en: "Font size",
+        zh: "\u5b57\u4f53\u5927\u5c0f",
+        it: "Dimensione testo"
+    },
+    lg: {
+        short: { en: "L", zh: "\u5927", it: "G" },
+        label: { en: "Large text", zh: "\u5927\u5b57\u4f53", it: "Testo grande" }
+    },
+    md: {
+        short: { en: "M", zh: "\u4e2d", it: "M" },
+        label: { en: "Medium text", zh: "\u4e2d\u5b57\u4f53", it: "Testo medio" }
+    },
+    sm: {
+        short: { en: "S", zh: "\u5c0f", it: "P" },
+        label: { en: "Small text", zh: "\u5c0f\u5b57\u4f53", it: "Testo piccolo" }
+    }
+};
 
 function bindFontSizeSwitcher() {
     const stored = localStorage.getItem(FONTSIZE_KEY);
@@ -1396,8 +1416,18 @@ function bindFontSizeSwitcher() {
 
 function syncFontSizeButtons() {
     const current = document.documentElement.dataset.fontsize || document.body.dataset.fontsize || "lg";
+    const lang = state.lang || "zh";
+    document.querySelectorAll(".fontsize-switch").forEach((switcher) => {
+        switcher.setAttribute("aria-label", text(FONTSIZE_COPY.switchLabel, lang));
+    });
     document.querySelectorAll(".fontsize-btn").forEach((btn) => {
-        btn.classList.toggle("is-active", btn.dataset.fontsize === current);
+        const isActive = btn.dataset.fontsize === current;
+        const copy = FONTSIZE_COPY[btn.dataset.fontsize] || FONTSIZE_COPY.lg;
+        btn.textContent = text(copy.short, lang);
+        btn.title = text(copy.label, lang);
+        btn.setAttribute("aria-label", text(copy.label, lang));
+        btn.setAttribute("aria-pressed", String(isActive));
+        btn.classList.toggle("is-active", isActive);
     });
 }
 
