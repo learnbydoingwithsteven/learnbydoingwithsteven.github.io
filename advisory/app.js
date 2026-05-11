@@ -4,6 +4,8 @@ let currentLang = "zh";
 const app = document.getElementById("app");
 const langSwitch = document.getElementById("lang-switch");
 const homeBrand = document.querySelector("[data-home-brand]");
+const topbar = document.querySelector(".topbar");
+const topbarToggle = document.querySelector("[data-topbar-toggle]");
 
 function tr(value) {
   if (value == null) return "";
@@ -39,6 +41,69 @@ function syncHomeBrand() {
 
   if (labelNode) labelNode.textContent = copy[currentLang].label;
   if (captionNode) captionNode.textContent = copy[currentLang].caption;
+}
+
+function syncTopbarToggleLabel() {
+  if (!topbarToggle) return;
+
+  const copy = {
+    collapse: {
+      zh: "收起顶部栏",
+      en: "Collapse top banner",
+      it: "Comprimi la barra superiore"
+    },
+    expand: {
+      zh: "展开顶部栏",
+      en: "Expand top banner",
+      it: "Espandi la barra superiore"
+    }
+  };
+
+  const isCompact = topbar?.classList.contains("is-compact");
+  const label = tr(isCompact ? copy.expand : copy.collapse);
+  topbarToggle.setAttribute("aria-label", label);
+  topbarToggle.setAttribute("title", label);
+  topbarToggle.setAttribute("aria-expanded", String(!isCompact));
+}
+
+function bindTopbarState() {
+  if (!topbar || !topbarToggle) return;
+
+  let manualCompact = false;
+  let autoCompact = false;
+  let lastScrollY = window.scrollY;
+
+  const setCompact = (compact) => {
+    topbar.classList.toggle("is-compact", compact);
+    syncTopbarToggleLabel();
+  };
+
+  const update = () => {
+    const currentY = window.scrollY;
+
+    if (!manualCompact) {
+      if (currentY < 90) {
+        autoCompact = false;
+      } else if (currentY > lastScrollY + 8 && currentY > 180) {
+        autoCompact = true;
+      } else if (currentY < lastScrollY - 18) {
+        autoCompact = false;
+      }
+    }
+
+    lastScrollY = currentY;
+    setCompact(manualCompact || autoCompact);
+  };
+
+  topbarToggle.addEventListener("click", () => {
+    const isCompact = topbar.classList.contains("is-compact");
+    manualCompact = !isCompact;
+    autoCompact = false;
+    setCompact(manualCompact);
+  });
+
+  window.addEventListener("scroll", update, { passive: true });
+  update();
 }
 
 function renderLangSwitch() {
@@ -444,6 +509,7 @@ function renderPage() {
 
   renderLangSwitch();
   syncHomeBrand();
+  syncTopbarToggleLabel();
 
   const documentsSection = data.ui?.showDocumentsSection ? renderDocuments() : "";
   const footerSection = data.ui?.showFooterSection ? renderFooter() : "";
@@ -465,4 +531,5 @@ function renderPage() {
   bindReveal();
 }
 
+bindTopbarState();
 renderPage();

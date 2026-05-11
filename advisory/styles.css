@@ -79,6 +79,13 @@ a {
   background: rgba(6, 16, 24, 0.72);
   backdrop-filter: blur(18px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  transition: width 220ms ease, margin 220ms ease, padding 220ms ease, border-radius 220ms ease, background 220ms ease;
+}
+
+.topbar-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .brand {
@@ -133,6 +140,7 @@ a {
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: opacity 180ms ease, max-width 220ms ease, transform 220ms ease, padding 220ms ease, border-color 220ms ease;
 }
 
 .lang-button {
@@ -149,6 +157,85 @@ a {
 .lang-button.is-active {
   background: linear-gradient(135deg, rgba(77, 208, 181, 0.24), rgba(121, 184, 255, 0.2));
   color: var(--text);
+}
+
+.topbar-toggle {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--text);
+  font: inherit;
+  cursor: pointer;
+  transition: transform 180ms ease, background 180ms ease, color 180ms ease;
+}
+
+.topbar-toggle:hover,
+.topbar-toggle:focus-visible {
+  transform: translateY(-1px);
+  background: rgba(77, 208, 181, 0.24);
+}
+
+.topbar-toggle-glyph {
+  line-height: 1;
+  transition: transform 180ms ease;
+}
+
+.topbar.is-compact {
+  width: fit-content;
+  max-width: min(360px, calc(100vw - 32px));
+  height: 56px;
+  margin: 8px auto 0;
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: rgba(6, 16, 24, 0.86);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.topbar.is-compact .lang-switch {
+  max-width: 0;
+  padding: 0;
+  border-color: transparent;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+  transform: scale(0.96);
+}
+
+.topbar.is-compact .brand {
+  gap: 8px;
+}
+
+.topbar.is-compact .brand-return {
+  width: 32px;
+  height: 32px;
+}
+
+.topbar.is-compact .brand-copy {
+  max-width: 180px;
+  overflow: hidden;
+}
+
+.topbar.is-compact .brand-label {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.8rem;
+}
+
+.topbar.is-compact .brand-caption {
+  display: none;
+}
+
+.topbar.is-compact .topbar-toggle-glyph {
+  transform: rotate(180deg);
 }
 
 main {
@@ -734,6 +821,15 @@ main {
     padding-inline: 16px;
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .topbar-actions {
+    justify-content: center;
+  }
+
+  .topbar.is-compact {
+    flex-direction: row;
+    align-items: center;
   }
 
   main {

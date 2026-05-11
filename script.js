@@ -32,6 +32,18 @@ const COPY = {
             en: "Back to top",
             zh: "返回顶部",
             it: "Torna su"
+        },
+        headerToggle: {
+            collapse: {
+                en: "Collapse top banner",
+                zh: "收起顶部栏",
+                it: "Comprimi la barra superiore"
+            },
+            expand: {
+                en: "Expand top banner",
+                zh: "展开顶部栏",
+                it: "Espandi la barra superiore"
+            }
         }
     },
     home: {
@@ -1507,6 +1519,7 @@ function syncStaticCopy(lang) {
     if (year) year.textContent = new Date().getFullYear();
     const topButton = document.querySelector(".top-button");
     if (topButton) topButton.innerHTML = "&#8593;";
+    syncHeaderToggleLabels();
 }
 
 function resolveCopy(path, lang) {
@@ -1545,9 +1558,58 @@ function bindBackToTop() {
 function bindHeaderState() {
     const header = document.querySelector(".site-header");
     if (!header) return;
-    const update = () => header.classList.toggle("scrolled", window.scrollY > 24);
+    const toggle = header.querySelector("[data-header-toggle]");
+    let manualCompact = false;
+    let autoCompact = false;
+    let lastScrollY = window.scrollY;
+
+    const setCompact = (compact) => {
+        header.classList.toggle("is-compact", compact);
+        syncHeaderToggleLabels();
+    };
+
+    const update = () => {
+        const currentY = window.scrollY;
+        header.classList.toggle("scrolled", currentY > 24);
+
+        if (!manualCompact) {
+            if (currentY < 90) {
+                autoCompact = false;
+            } else if (currentY > lastScrollY + 8 && currentY > 180) {
+                autoCompact = true;
+            } else if (currentY < lastScrollY - 18) {
+                autoCompact = false;
+            }
+        }
+
+        lastScrollY = currentY;
+        setCompact(manualCompact || autoCompact);
+    };
+
+    if (toggle) {
+        toggle.addEventListener("click", () => {
+            const isCompact = header.classList.contains("is-compact");
+            manualCompact = !isCompact;
+            autoCompact = false;
+            setCompact(manualCompact);
+        });
+    }
+
     window.addEventListener("scroll", update, { passive: true });
     update();
+}
+
+function syncHeaderToggleLabels() {
+    const lang = state.lang || "en";
+    document.querySelectorAll("[data-header-toggle]").forEach((button) => {
+        const header = button.closest(".site-header");
+        const isCompact = header?.classList.contains("is-compact");
+        const copy = isCompact ? COPY.shared.headerToggle.expand : COPY.shared.headerToggle.collapse;
+        const label = text(copy, lang);
+        button.setAttribute("aria-label", label);
+        button.setAttribute("title", label);
+        button.setAttribute("aria-expanded", String(!isCompact));
+    });
 }
 
 function bindAccordionControls() {

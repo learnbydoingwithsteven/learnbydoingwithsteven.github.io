@@ -111,6 +111,7 @@ button {
     top: 0;
     z-index: 40;
     padding: 12px 0;
+    transition: padding 220ms ease;
 }
 
 .site-header.scrolled .header-bar {
@@ -119,6 +120,7 @@ button {
 }
 
 .header-bar {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -129,7 +131,7 @@ button {
     background: rgba(255, 251, 245, 0.74);
     backdrop-filter: blur(20px);
     box-shadow: 0 12px 36px rgba(15, 23, 42, 0.06);
-    transition: background 220ms ease, box-shadow 220ms ease;
+    transition: background 220ms ease, box-shadow 220ms ease, max-width 220ms ease, padding 220ms ease, gap 220ms ease;
 }
 
 .brand {
@@ -198,6 +200,7 @@ button {
     overflow-y: hidden;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    transition: opacity 180ms ease, max-width 220ms ease, transform 220ms ease;
 }
 
 .site-nav::-webkit-scrollbar {
@@ -206,6 +209,7 @@ button {
 
 .header-actions {
     flex: 0 0 auto;
+    transition: opacity 180ms ease, max-width 220ms ease, transform 220ms ease;
 }
 
 .nav-link {
@@ -246,6 +250,7 @@ button {
 .button,
 .filter-chip,
 .control-button,
+.header-toggle,
 .top-button {
     border: 0;
     cursor: pointer;
@@ -269,6 +274,90 @@ button {
     background: rgba(16, 24, 40, 0.9);
     color: #fffdf8;
     box-shadow: 0 8px 18px rgba(15, 23, 42, 0.14);
+}
+
+.header-toggle {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    background: rgba(16, 24, 40, 0.88);
+    color: #fffdf8;
+    box-shadow: 0 10px 20px rgba(15, 23, 42, 0.12);
+}
+
+.header-toggle:hover,
+.header-toggle:focus-visible {
+    background: var(--accent-deep);
+    transform: translateY(-1px);
+}
+
+.header-toggle-glyph {
+    display: inline-flex;
+    line-height: 1;
+    transition: transform 180ms ease;
+}
+
+.site-header.is-compact {
+    padding: 6px 0;
+}
+
+.site-header.is-compact .header-bar {
+    width: fit-content;
+    max-width: min(360px, calc(100vw - 2rem));
+    margin-inline: auto;
+    padding: 6px 8px;
+    gap: 8px;
+    background: rgba(255, 251, 245, 0.94);
+    box-shadow: 0 16px 34px rgba(15, 23, 42, 0.14);
+}
+
+.site-header.is-compact .site-nav,
+.site-header.is-compact .header-actions {
+    position: absolute;
+    max-width: 0;
+    max-height: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transform: scale(0.96);
+    visibility: hidden;
+}
+
+.site-header.is-compact .brand {
+    gap: 8px;
+}
+
+.site-header.is-compact .brand-mark {
+    width: 30px;
+    height: 30px;
+}
+
+.site-header.is-compact .brand-copy {
+    max-width: 190px;
+    overflow: hidden;
+}
+
+.site-header.is-compact .brand-name {
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.78rem;
+}
+
+.site-header.is-compact .brand-tag {
+    display: none;
+}
+
+.site-header.is-compact .header-toggle-glyph {
+    transform: rotate(180deg);
 }
 
 .button,
@@ -1945,6 +2034,15 @@ button {
     .header-bar {
         flex-direction: column;
         align-items: stretch;
+    }
+
+    .header-toggle {
+        align-self: center;
+    }
+
+    .site-header.is-compact .header-bar {
+        flex-direction: row;
+        align-items: center;
     }
 
     .site-nav,
