@@ -899,6 +899,28 @@ const TEACHING_PROJECTS = [
         image: "assets/past-teaching/langchain-langgraph-31-sessions-grid.png"
     },
     {
+        key: "gsib-ai-agents-risk-compliance",
+        collection: "ai-systems-curriculum",
+        tag: { en: "G-SIB AI Agents", zh: "G-SIB AI Agent", it: "AI agent G-SIB" },
+        languageLabel: { en: "EN / CN", zh: "\u82f1 / \u4e2d", it: "EN / CN" },
+        metric: { value: "3+ hours", label: { en: "bilingual course", zh: "\u53cc\u8bed\u8bfe\u7a0b", it: "corso bilingue" } },
+        title: {
+            en: "AI Agents for G-SIB Risk & Compliance",
+            zh: "G-SIB \u98ce\u63a7\u5408\u89c4 AI Agent \u843d\u5730",
+            it: "AI agent per risk & compliance G-SIB"
+        },
+        copy: {
+            en: "A bilingual course on moving from copilots to auditable agentic workflows for KYC, AML, compliance monitoring, controls, and human-in-the-loop review at global systemically important banks.",
+            zh: "\u9762\u5411\u5168\u7403\u7cfb\u7edf\u91cd\u8981\u6027\u94f6\u884c\uff0c\u8bb2\u89e3\u5982\u4f55\u4ece Copilot \u8d70\u5411\u53ef\u5ba1\u8ba1\u7684 Agentic Workflow\uff0c\u8986\u76d6 KYC\u3001AML\u3001\u5408\u89c4\u76d1\u6d4b\u3001\u63a7\u5236\u6d4b\u8bd5\u4e0e human-in-the-loop \u5ba1\u6838\u3002",
+            it: "Corso bilingue sul passaggio da copilot a workflow agentici auditabili per KYC, AML, monitoraggio compliance, controlli e review human-in-the-loop nelle G-SIB."
+        },
+        tags: ["G-SIB", "AI Agents", "Risk & Compliance"],
+        gallery: [
+            "assets/past-teaching/gsib-ai-agents-risk-compliance-cover.png",
+            "assets/past-teaching/gsib-ai-agents-risk-compliance-infographic.png"
+        ]
+    },
+    {
         key: "embodied-intelligence-research",
         collection: "prototypes-research",
         tag: { en: "Embodied AI", zh: "\u5177\u8eab\u667a\u80fd", it: "Embodied AI" },

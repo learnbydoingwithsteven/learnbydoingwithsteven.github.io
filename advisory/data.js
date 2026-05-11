@@ -716,6 +716,7 @@ window.PORTFOLIO_DATA = {
       bilingualAiLessonSeries: { en: "Bilingual AI lesson series", zh: "\u53cc\u8bed AI \u8bfe\u7a0b\u7cfb\u5217", it: "Serie bilingue di lezioni AI" },
       llmLifecycleArchive: { en: "LLM full-cycle development curriculum", zh: "LLM \u5168\u5468\u671f\u5f00\u53d1\u8bfe\u7a0b", it: "Curriculum sviluppo LLM full-cycle" },
       langchainCourseArchive: { en: "LangChain / LangGraph continuous course", zh: "LangChain / LangGraph \u8fde\u7eed\u8bfe\u7a0b", it: "Corso continuo LangChain / LangGraph" },
+      gsibAiAgentsArchive: { en: "G-SIB risk and compliance AI agents course", zh: "G-SIB \u98ce\u63a7\u5408\u89c4 AI Agent \u8bfe\u7a0b", it: "Corso AI agent per risk e compliance G-SIB" },
       sanitizedHrbpSeries: { en: "Sanitized HRBP training set", zh: "\u8131\u654f HRBP \u8bad\u7ec3\u96c6", it: "Set HRBP anonimizzato" },
       marketResearchArchive: { en: "Embodied intelligence research archive", zh: "具身智能研究归档", it: "Archivio ricerca embodied intelligence" },
       ictDocArchive: { en: "Banking ICT document archive", zh: "银行 ICT 文档归档", it: "Archivio documentale ICT bancario" },
@@ -812,6 +813,21 @@ window.PORTFOLIO_DATA = {
         archive: "langchainCourseArchive",
         folder: "LANGCHAIN_LANGGRAPH_31_SESSIONS_2026",
         image: "../assets/past-teaching/langchain-langgraph-31-sessions-grid.png"
+      },
+      {
+        key: "gsib-ai-agents-risk-compliance",
+        project: { en: "AI Agents for G-SIB Risk & Compliance", zh: "G-SIB \u98ce\u63a7\u5408\u89c4 AI Agent \u843d\u5730", it: "AI agent per risk & compliance G-SIB" },
+        language: "all",
+        languageLabel: { en: "EN / CN", zh: "\u82f1 / \u4e2d", it: "EN / CN" },
+        countText: { en: "3+ hours", zh: "3+ \u5c0f\u65f6", it: "3+ ore" },
+        countLabel: { en: "bilingual course", zh: "\u53cc\u8bed\u8bfe\u7a0b", it: "corso bilingue" },
+        archive: "gsibAiAgentsArchive",
+        folder: "GSIB_AI_AGENTS_RISK_COMPLIANCE_EN_CN_2026",
+        gallery: [
+          "../assets/past-teaching/gsib-ai-agents-risk-compliance-cover.png",
+          "../assets/past-teaching/gsib-ai-agents-risk-compliance-infographic.png"
+        ],
+        image: "../assets/past-teaching/gsib-ai-agents-risk-compliance-cover.png"
       },
       {
         key: "logistics-hrbp",

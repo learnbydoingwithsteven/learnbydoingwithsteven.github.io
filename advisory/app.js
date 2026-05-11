@@ -268,8 +268,13 @@ function renderTeachingShowcase() {
             it: item.language === "zh" ? "Cinese" : (item.language === "en" ? "Inglese" : "Italiano")
           });
       const archive = tr(showcase.terms[item.archive]);
+      const count = item.countText ? tr(item.countText) : item.count;
       const countLabel = item.countLabel ? tr(item.countLabel) : tr(showcase.terms.firstSlideCovers);
       const alt = `${tr(item.project)} ${language} ${tr(showcase.terms.montageAlt)}`;
+      const gallery = item.gallery?.length ? item.gallery : [item.image].filter(Boolean);
+      const media = gallery.length > 1
+        ? `<div class="teaching-image-gallery">${gallery.map((src, index) => `<img class="teaching-image" src="${src}" alt="${alt} ${index + 1}" loading="lazy">`).join("")}</div>`
+        : `<div class="teaching-image-wrap"><img class="teaching-image" src="${gallery[0]}" alt="${alt}" loading="lazy"></div>`;
 
       return `
         <article class="teaching-card reveal">
@@ -278,10 +283,8 @@ function renderTeachingShowcase() {
             <span class="metric-chip">${language}</span>
           </div>
           <h3 class="card-title">${tr(item.project)} / ${language}</h3>
-          <p class="card-copy">${item.count} ${countLabel} / ${archive}</p>
-          <div class="teaching-image-wrap">
-            <img class="teaching-image" src="${item.image}" alt="${alt}" loading="lazy">
-          </div>
+          <p class="card-copy">${count} ${countLabel} / ${archive}</p>
+          ${media}
           <p class="teaching-folder">
             <span class="teaching-folder-label">${tr(showcase.terms.sourceFolder)}:</span>
             <span class="teaching-folder-value">${item.folder}</span>
