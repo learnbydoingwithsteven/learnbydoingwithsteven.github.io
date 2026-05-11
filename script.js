@@ -71,6 +71,28 @@ const COPY = {
             secondary: { en: "Media & Links", zh: "媒体与链接", it: "Media e link" },
             tertiary: { en: "Email", zh: "邮箱", it: "Email" }
         },
+        aiNews: {
+            label: {
+                en: "Recent AI news",
+                zh: "近期 AI 新闻",
+                it: "Notizie AI recenti"
+            },
+            title: {
+                en: "Weekly global AI big news",
+                zh: "每周全球 AI 大事",
+                it: "Grandi notizie AI della settimana"
+            },
+            copy: {
+                en: "A text-first sliding digest from the latest weekly research projects.",
+                zh: "基于最新周报项目整理的纯文字滑动摘要。",
+                it: "Un digest testuale e scorrevole dagli ultimi progetti settimanali."
+            },
+            link: {
+                en: "Open full note",
+                zh: "打开完整新闻",
+                it: "Apri la nota completa"
+            }
+        },
         intro: {
             label: { en: "", zh: "", it: "" },
             title: {
@@ -308,6 +330,235 @@ const INSIGHTS = [
             en: "Open community links",
             zh: "\u6253\u5f00\u793e\u7fa4\u4e0e\u8054\u7cfb",
             it: "Apri community e contatti"
+        }
+    }
+];
+
+const AI_NEWS_GITHUB_BASE = "https://github.com/learnbydoingwithsteven/learnbydoingwithsteven.github.io/tree/main/ai-news";
+
+const RECENT_AI_NEWS = [
+    {
+        date: "2026-05-10",
+        path: "2026-05-10/openai-default-realtime-api",
+        topic: {
+            en: "OpenAI default model and realtime voice APIs",
+            zh: "OpenAI 默认模型与实时语音 API",
+            it: "OpenAI: modello predefinito e API voce realtime"
+        },
+        intro: {
+            en: "GPT-5.5 Instant moved into the default ChatGPT path while realtime voice APIs pushed interaction closer to daily product use.",
+            zh: "GPT-5.5 Instant 进入默认 ChatGPT 体验，实时语音 API 让模型交互更接近日常产品入口。",
+            it: "GPT-5.5 Instant entra nel flusso predefinito di ChatGPT, mentre le API vocali realtime avvicinano l'AI all'uso quotidiano."
+        }
+    },
+    {
+        date: "2026-05-10",
+        path: "2026-05-10/anthropic-enterprise-claude-compute",
+        topic: {
+            en: "Anthropic expands enterprise agents and Claude compute",
+            zh: "Anthropic 扩展企业智能体与 Claude 算力",
+            it: "Anthropic amplia agenti enterprise e calcolo Claude"
+        },
+        intro: {
+            en: "Enterprise service layers, financial agents, and compute expansion showed Claude moving deeper into operational workflows.",
+            zh: "企业服务层、金融智能体和算力扩展共同说明 Claude 正在更深入进入业务流程。",
+            it: "Servizi enterprise, agenti finanziari e nuova capacità di calcolo portano Claude più dentro i flussi operativi."
+        }
+    },
+    {
+        date: "2026-05-10",
+        path: "2026-05-10/enterprise-ai-depth-signals",
+        topic: {
+            en: "Enterprise AI advantage shifts to depth of use",
+            zh: "企业 AI 优势转向使用深度",
+            it: "Il vantaggio AI enterprise si sposta sulla profondità d'uso"
+        },
+        intro: {
+            en: "Microsoft and OpenAI signals pointed past tool adoption toward redesigned workflows, agents, and sustained capability building.",
+            zh: "Microsoft 与 OpenAI 的信号显示，竞争重点已从工具采用转向流程重构、智能体和持续能力建设。",
+            it: "I segnali di Microsoft e OpenAI vanno oltre l'adozione: contano workflow ridisegnati, agenti e capacità continuative."
+        }
+    },
+    {
+        date: "2026-05-10",
+        path: "2026-05-10/caisi-predeployment-evaluations",
+        topic: {
+            en: "CAISI widens pre-deployment AI evaluations",
+            zh: "CAISI 扩大 AI 上线前评估合作",
+            it: "CAISI estende le valutazioni AI pre-rilascio"
+        },
+        intro: {
+            en: "NIST's AI safety institute broadened evaluation partnerships with major labs, making pre-release testing a governance norm.",
+            zh: "NIST 旗下 AI 安全机构扩大与主要实验室的评估合作，让上线前测试更接近治理常规。",
+            it: "L'istituto AI safety del NIST amplia le partnership con i grandi lab e rende più normale il testing prima del rilascio."
+        }
+    },
+    {
+        date: "2026-05-10",
+        path: "2026-05-10/google-ai-search-open-web",
+        topic: {
+            en: "Google AI Search reconnects answers to the open web",
+            zh: "Google AI 搜索把答案重新接回开放网络",
+            it: "Google AI Search ricollega le risposte al web aperto"
+        },
+        intro: {
+            en: "AI Mode and AI Overviews updates emphasized links, forums, subscriptions, and previews around generated answers.",
+            zh: "AI Mode 与 AI Overviews 更新强化链接、论坛、订阅和预览，让生成式答案保留外部路径。",
+            it: "Gli aggiornamenti di AI Mode e AI Overviews rafforzano link, forum, abbonamenti e anteprime intorno alle risposte generate."
+        }
+    },
+    {
+        date: "2026-05-10",
+        path: "2026-05-10/meta-ai-age-assurance",
+        topic: {
+            en: "Meta frames AI age assurance as safety infrastructure",
+            zh: "Meta 将 AI 年龄识别变成安全基础设施",
+            it: "Meta tratta l'age assurance AI come infrastruttura di sicurezza"
+        },
+        intro: {
+            en: "AI-powered age assurance tied youth protection to identity, product policy, and platform-level trust systems.",
+            zh: "AI 年龄识别把青少年保护、身份判断、产品政策和平台级信任体系连接起来。",
+            it: "L'age assurance AI collega tutela dei minori, identità, policy di prodotto e fiducia a livello piattaforma."
+        }
+    },
+    {
+        date: "2026-05-03",
+        path: "2026-05-03/microsoft-openai-partnership-reset",
+        topic: {
+            en: "Microsoft and OpenAI reset partnership boundaries",
+            zh: "Microsoft 与 OpenAI 重设合作边界",
+            it: "Microsoft e OpenAI ridisegnano i confini della partnership"
+        },
+        intro: {
+            en: "A revised partnership structure gave OpenAI more cloud flexibility while Microsoft retained long-term IP access.",
+            zh: "调整后的合作结构让 OpenAI 获得更多云灵活性，同时 Microsoft 保留长期 IP 权益。",
+            it: "La nuova struttura concede a OpenAI più flessibilità cloud, mentre Microsoft mantiene accesso IP di lungo periodo."
+        }
+    },
+    {
+        date: "2026-05-03",
+        path: "2026-05-03/ai-capex-cloud-earnings",
+        topic: {
+            en: "AI capex becomes the cloud earnings story",
+            zh: "AI 资本开支成为云财报主线",
+            it: "La capex AI diventa la storia centrale del cloud"
+        },
+        intro: {
+            en: "Microsoft, Alphabet, Amazon, and Meta earnings made AI infrastructure spending the headline behind platform competition.",
+            zh: "Microsoft、Alphabet、Amazon 与 Meta 财报让 AI 基础设施投入成为平台竞争背后的主线。",
+            it: "I risultati di Microsoft, Alphabet, Amazon e Meta mettono la spesa infrastrutturale AI al centro della competizione."
+        }
+    },
+    {
+        date: "2026-05-03",
+        path: "2026-05-03/google-deepmind-ai-co-clinician",
+        topic: {
+            en: "Google DeepMind explores the AI co-clinician",
+            zh: "Google DeepMind 探索 AI 协作临床助手",
+            it: "Google DeepMind esplora il co-clinician AI"
+        },
+        intro: {
+            en: "The co-clinician pattern positioned AI as a supervised partner in clinical workflows rather than an autonomous doctor.",
+            zh: "协作临床助手模式把 AI 定位为受监督的流程伙伴，而不是独立医生。",
+            it: "Il pattern co-clinician posiziona l'AI come partner supervisionato nei workflow clinici, non come medico autonomo."
+        }
+    },
+    {
+        date: "2026-05-03",
+        path: "2026-05-03/gemini-in-cars",
+        topic: {
+            en: "Gemini enters cars with Google built-in",
+            zh: "Gemini 进入搭载 Google built-in 的汽车",
+            it: "Gemini entra nelle auto con Google built-in"
+        },
+        intro: {
+            en: "In-car AI assistants moved toward natural dialogue, routing, manuals, and EV guidance inside the driving experience.",
+            zh: "车载 AI 助手开始进入自然对话、路线规划、说明书检索和电动车指导等驾驶场景。",
+            it: "Gli assistenti AI in auto entrano in dialogo naturale, navigazione, manuali e guida EV durante l'esperienza di guida."
+        }
+    },
+    {
+        date: "2026-05-03",
+        path: "2026-05-03/meta-ai-energy-infrastructure",
+        topic: {
+            en: "Meta ties AI infrastructure to new energy systems",
+            zh: "Meta 将 AI 基础设施连接到新能源系统",
+            it: "Meta collega infrastruttura AI e nuovi sistemi energetici"
+        },
+        intro: {
+            en: "Solar-from-space and long-duration storage partnerships showed that AI scale is becoming an energy strategy problem.",
+            zh: "太空太阳能和长时储能合作说明，AI 规模化已经变成能源战略问题。",
+            it: "Partnership su solare spaziale e storage di lunga durata mostrano che la scala AI è anche strategia energetica."
+        }
+    },
+    {
+        date: "2026-05-03",
+        path: "2026-05-03/dod-classified-ai-networks",
+        topic: {
+            en: "U.S. defense AI moves into classified networks",
+            zh: "美国防务 AI 进入机密网络环境",
+            it: "L'AI difesa USA entra nelle reti classificate"
+        },
+        intro: {
+            en: "New agreements and GenAI.mil expanded generative AI options for high-security defense environments.",
+            zh: "新协议与 GenAI.mil 为高安全防务环境扩展了生成式 AI 选项。",
+            it: "Nuovi accordi e GenAI.mil ampliano le opzioni generative AI per ambienti difesa ad alta sicurezza."
+        }
+    },
+    {
+        date: "2026-04-26",
+        path: "2026-04-26/openai-agents-gpt55-safety",
+        topic: {
+            en: "OpenAI pushes agents, GPT-5.5, images, and safety",
+            zh: "OpenAI 推进智能体、GPT-5.5、图像与安全",
+            it: "OpenAI accelera agenti, GPT-5.5, immagini e safety"
+        },
+        intro: {
+            en: "A dense product week connected workspace agents, image generation, model upgrades, and bio safety testing.",
+            zh: "一周密集产品更新把工作区智能体、图像生成、模型升级和生物安全测试连接起来。",
+            it: "Una settimana densa collega agenti workspace, generazione immagini, upgrade modello e test di biosicurezza."
+        }
+    },
+    {
+        date: "2026-04-26",
+        path: "2026-04-26/anthropic-amazon-5gw-compute",
+        topic: {
+            en: "Anthropic and Amazon scale toward 5GW compute",
+            zh: "Anthropic 与 Amazon 推进 5GW 级算力",
+            it: "Anthropic e Amazon scalano verso 5GW di calcolo"
+        },
+        intro: {
+            en: "Large compute and AWS commitments highlighted how frontier model strategy is becoming long-horizon infrastructure planning.",
+            zh: "大规模算力与 AWS 承诺显示，前沿模型策略正在变成长期基础设施规划。",
+            it: "Grandi impegni compute e AWS mostrano che la strategia frontier model diventa pianificazione infrastrutturale."
+        }
+    },
+    {
+        date: "2026-04-26",
+        path: "2026-04-26/google-agent-platform-tpu-virgo",
+        topic: {
+            en: "Google Cloud packages agents, TPUs, and Virgo networking",
+            zh: "Google Cloud 打包智能体、TPU 与 Virgo 网络",
+            it: "Google Cloud unisce agenti, TPU e rete Virgo"
+        },
+        intro: {
+            en: "Gemini Enterprise Agent Platform, new TPUs, and Virgo networking formed a full-stack enterprise AI push.",
+            zh: "Gemini 企业智能体平台、新 TPU 与 Virgo 网络构成完整企业 AI 技术栈推进。",
+            it: "Gemini Enterprise Agent Platform, nuovi TPU e rete Virgo compongono una spinta AI enterprise full-stack."
+        }
+    },
+    {
+        date: "2026-04-26",
+        path: "2026-04-26/meta-graviton-agentic-compute",
+        topic: {
+            en: "Meta and AWS Graviton broaden agentic compute",
+            zh: "Meta 与 AWS Graviton 扩展智能体算力组合",
+            it: "Meta e AWS Graviton ampliano il compute agentico"
+        },
+        intro: {
+            en: "Tens of millions of Graviton cores signaled a more diversified compute stack for agentic AI workloads.",
+            zh: "数千万 Graviton 核心说明，智能体 AI 负载正在采用更分层的算力组合。",
+            it: "Decine di milioni di core Graviton indicano uno stack compute più diversificato per workload AI agentici."
         }
     }
 ];
@@ -1341,11 +1592,23 @@ function renderInsightCard(card, lang) {
     return `<a class="section-card section-card-link span-4 reveal" href="${card.href}"><div class="section-card-link-top"><span class="section-card-kicker">${routeLabel}</span><span class="section-card-arrow" aria-hidden="true">&#8599;</span></div><h3 class="card-title">${text(card.title, lang)}</h3><p class="card-copy">${text(card.copy, lang)}</p><span class="section-card-cta">${text(card.cta, lang)}</span></a>`;
 }
 
+function renderAiNewsCard(item, lang, duplicate = false) {
+    const duplicateAttrs = duplicate ? ' aria-hidden="true" tabindex="-1"' : "";
+    return `<a class="ai-news-card" href="${AI_NEWS_GITHUB_BASE}/${item.path}" target="_blank" rel="noopener"${duplicateAttrs}><span class="ai-news-date">${item.date}</span><h3 class="ai-news-card-title">${item.date} · ${text(item.topic, lang)}</h3><p class="ai-news-card-copy">${text(item.intro, lang)}</p><span class="ai-news-card-link">${text(COPY.home.aiNews.link, lang)} <span aria-hidden="true">&#8599;</span></span></a>`;
+}
+
+function renderAiNewsTrack(lang) {
+    const doubledNews = [...RECENT_AI_NEWS, ...RECENT_AI_NEWS];
+    return doubledNews.map((item, index) => renderAiNewsCard(item, lang, index >= RECENT_AI_NEWS.length)).join("");
+}
+
 
 function renderHome(lang) {
     if (document.body.dataset.page !== "home") return;
     document.querySelector("#home-metrics").innerHTML = METRICS.map((metric) => `<article class="metric-pill"><span class="metric-value">${metric.value}</span><span class="metric-label">${text(metric.label, lang)}</span></article>`).join("");
     document.querySelector("#home-signals").innerHTML = SIGNALS.map((signal, index) => `<li><span class="signal-number">${String(index + 1).padStart(2, "0")}</span><span>${text(signal, lang)}</span></li>`).join("");
+    const newsNode = document.querySelector("#home-ai-news");
+    if (newsNode) newsNode.innerHTML = renderAiNewsTrack(lang);
     document.querySelector("#home-insights").innerHTML = INSIGHTS.map((card) => renderInsightCard(card, lang)).join("");
     document.querySelector("#home-groups").innerHTML = HOME_GROUP_KEYS.map((key) => renderGroupCard(GROUPS.find((group) => group.key === key), lang)).join("");
     const teachingNode = document.querySelector("#home-teaching-archives");
