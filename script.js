@@ -921,6 +921,82 @@ const TEACHING_PROJECTS = [
         ]
     },
     {
+        key: "enterprise-digital-employee-agent",
+        collection: "ai-systems-curriculum",
+        tag: { en: "Digital employee agents", zh: "\u6570\u5b57\u5458\u5de5\u667a\u80fd\u4f53", it: "Agenti dipendenti digitali" },
+        languageLabel: { en: "ZH", zh: "\u4e2d\u6587", it: "ZH" },
+        metric: { value: "19 sessions", label: { en: "course sessions", zh: "\u8bfe\u7a0b sessions", it: "sessioni corso" } },
+        title: {
+            en: "Enterprise Digital Employee Agent Bootcamp",
+            zh: "\u4f01\u4e1a\u7ea7\u6570\u5b57\u5458\u5de5\u667a\u80fd\u4f53\u6784\u5efa\u5b9e\u6218\u8425",
+            it: "Bootcamp agenti dipendenti digitali enterprise"
+        },
+        copy: {
+            en: "A 19-session hands-on curriculum for designing, deploying, testing, operating, and governing enterprise digital employee agent systems from tool use to reusable skills, memory, monitoring, and delivery.",
+            zh: "19 \u8bfe\u5b9e\u6218\u4f53\u7cfb\uff0c\u56f4\u7ed5\u4f01\u4e1a\u7ea7\u6570\u5b57\u5458\u5de5\u667a\u80fd\u4f53\u7684\u8ba4\u77e5\u67b6\u6784\u3001\u7cfb\u7edf\u90e8\u7f72\u3001\u6280\u80fd\u63a5\u5165\u3001\u4e1a\u52a1\u573a\u666f\u3001\u4ea4\u4ed8\u9a8c\u6536\u3001\u4e0a\u7ebf\u8fd0\u8425\u4e0e\u6301\u7eed\u4f18\u5316\u5c55\u5f00\u3002",
+            it: "Curriculum pratico di 19 sessioni per progettare, distribuire, testare e gestire sistemi di agenti digitali enterprise con skill riusabili, memoria, monitoraggio e delivery."
+        },
+        tags: ["Digital Employee", "Agent Systems", "Enterprise AI"],
+        image: "assets/past-teaching/enterprise-digital-employee-agent-19-sessions-grid.jpg"
+    },
+    {
+        key: "outcome-driven-ai-work-methods",
+        collection: "governance-productivity",
+        tag: { en: "AI work methods", zh: "AI \u5de5\u4f5c\u65b9\u6cd5", it: "Metodi di lavoro AI" },
+        languageLabel: { en: "ZH", zh: "\u4e2d\u6587", it: "ZH" },
+        metric: { value: "20 lessons", label: { en: "course lessons", zh: "\u8bfe\u7a0b\u8bfe\u8282", it: "lezioni corso" } },
+        title: {
+            en: "Outcome-Driven AI Work Methods Bootcamp",
+            zh: "\u4ece\u95ee\u9898\u5230\u884c\u52a8\uff1aAI \u6210\u679c\u4ea4\u4ed8\u65b9\u6cd5\u8bad\u7ec3\u8425",
+            it: "Bootcamp AI dal problema all'azione"
+        },
+        copy: {
+            en: "A 20-lesson path for turning ambiguous problems into reusable deliverables, shared language, system models, knowledge assets, adoption playbooks, and measurable action plans.",
+            zh: "20 \u8bfe\u8bfe\u7a0b\uff0c\u628a\u6a21\u7cca\u95ee\u9898\u8f6c\u6210\u53ef\u63d0\u4ea4\u4f5c\u54c1\uff0c\u8986\u76d6\u5171\u540c\u8bed\u8a00\u3001\u7cfb\u7edf\u6a21\u578b\u3001\u771f\u5b9e\u8bca\u65ad\u3001\u77e5\u8bc6\u590d\u7528\u3001\u843d\u5730\u8282\u594f\u4e0e\u8def\u6f14\u590d\u76d8\u3002",
+            it: "Percorso di 20 lezioni per trasformare problemi ambigui in deliverable riusabili, linguaggio condiviso, modelli di sistema, asset di conoscenza e piani d'azione misurabili."
+        },
+        tags: ["Work Methods", "Knowledge Reuse", "Delivery"],
+        image: "assets/past-teaching/outcome-driven-ai-work-methods-20-lessons-grid.png"
+    },
+    {
+        key: "production-ai-agent-systems",
+        collection: "ai-systems-curriculum",
+        tag: { en: "Production AI agents", zh: "\u751f\u4ea7\u7ea7 AI \u667a\u80fd\u4f53", it: "Agenti AI in produzione" },
+        languageLabel: { en: "ZH", zh: "\u4e2d\u6587", it: "ZH" },
+        metric: { value: "17 sessions", label: { en: "course sessions", zh: "\u8bfe\u7a0b sessions", it: "sessioni corso" } },
+        title: {
+            en: "Production AI Agent Systems Bootcamp",
+            zh: "\u751f\u4ea7\u7ea7 AI \u667a\u80fd\u4f53\u7cfb\u7edf\u6784\u5efa\u5b9e\u6218\u8425",
+            it: "Bootcamp sistemi agentici AI in produzione"
+        },
+        copy: {
+            en: "A 17-session curriculum covering policy-aware design, engineering architecture, agent skills, protocol integration, RAG, memory, human collaboration, evaluation, safety, platformization, and operating loops.",
+            zh: "17 \u8bfe\u7cfb\u7edf\u8bfe\u7a0b\uff0c\u8986\u76d6\u5408\u89c4\u8bbe\u8ba1\u3001\u5de5\u7a0b\u67b6\u6784\u3001\u667a\u80fd\u4f53\u6280\u80fd\u3001\u534f\u8bae\u96c6\u6210\u3001RAG\u3001\u8bb0\u5fc6\u67b6\u6784\u3001\u4eba\u673a\u534f\u4f5c\u3001\u8bc4\u4f30\u5b89\u5168\u3001\u5e73\u53f0\u5316\u4e0e\u4e0a\u7ebf\u8fd0\u8425\u95ed\u73af\u3002",
+            it: "Curriculum di 17 sessioni su design conforme, architettura engineering, skill agentiche, integrazione protocolli, RAG, memoria, collaborazione umana, evaluation, safety, piattaforme e operations."
+        },
+        tags: ["AI Agents", "Production Systems", "Governance"],
+        image: "assets/past-teaching/production-ai-agent-systems-17-sessions-grid.jpg"
+    },
+    {
+        key: "ai-career-coach-young-professionals",
+        collection: "governance-productivity",
+        tag: { en: "AI career coach", zh: "AI \u804c\u4e1a\u6559\u7ec3", it: "AI career coach" },
+        languageLabel: { en: "IT / ZH", zh: "\u610f / \u4e2d", it: "IT / ZH" },
+        metric: { value: "21 modules", label: { en: "complete curriculum", zh: "\u5b8c\u6574\u8bfe\u7a0b\u4f53\u7cfb", it: "curriculum completo" } },
+        title: {
+            en: "AI Career Coach Curriculum for Young Professionals",
+            zh: "\u9752\u5e74\u804c\u4e1a\u53d1\u5c55 AI Coach \u8bfe\u7a0b\u4f53\u7cfb",
+            it: "AI Career Coach per giovani professionisti"
+        },
+        copy: {
+            en: "A 21-module Italian-first curriculum combining AI literacy, coaching workflows, ChatGPT operations, model comparison, research tooling, CV and LinkedIn assets, interview practice, portfolio work, and delivery quality.",
+            zh: "21 \u4e2a\u6a21\u5757\u7684\u610f\u5927\u5229\u8bed\u804c\u4e1a\u53d1\u5c55 AI \u8bfe\u7a0b\uff0c\u8986\u76d6 AI \u7d20\u517b\u3001\u6559\u7ec3\u6d41\u7a0b\u3001\u5de5\u5177\u5b9e\u64cd\u3001\u7b80\u5386\u4e0e LinkedIn\u3001\u9762\u8bd5\u6a21\u62df\u3001\u4f5c\u54c1\u96c6\u4e0e\u4ea4\u4ed8\u8d28\u91cf\u3002",
+            it: "Curriculum di 21 moduli su AI literacy, workflow di coaching, uso operativo di ChatGPT, confronto modelli, ricerca, CV, LinkedIn, colloqui, portfolio e qualita di erogazione."
+        },
+        tags: ["Career Coaching", "AI Literacy", "Portfolio"],
+        image: "assets/past-teaching/ai-career-coach-young-professionals-21-modules-grid.png"
+    },
+    {
         key: "embodied-intelligence-research",
         collection: "prototypes-research",
         tag: { en: "Embodied AI", zh: "\u5177\u8eab\u667a\u80fd", it: "Embodied AI" },
@@ -1329,7 +1405,7 @@ function renderPortfolio(lang) {
     if (document.body.dataset.page !== "portfolio") return;
     document.querySelector("#portfolio-stats").innerHTML = [
         { value: "1,500+", label: { en: "applications", zh: "应用规模", it: "applicazioni" } },
-        { value: "450+", label: { en: "courses and learning units", zh: "课程与学习单元", it: "corsi e unita di apprendimento" } },
+        { value: "500+", label: { en: "courses and learning units", zh: "课程与学习单元", it: "corsi e unita di apprendimento" } },
         { value: "25+", label: { en: "flagship repositories", zh: "核心仓库", it: "repository di punta" } },
         { value: "3", label: { en: "supported interface languages", zh: "支持的界面语言", it: "lingue supportate" } }
     ].map((stat) => `<article class="metric-pill"><span class="metric-value">${stat.value}</span><span class="metric-label">${text(stat.label, lang)}</span></article>`).join("");

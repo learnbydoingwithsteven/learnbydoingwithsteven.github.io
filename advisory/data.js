@@ -703,9 +703,9 @@ window.PORTFOLIO_DATA = {
         it: "Matrici visuali dei progetti formativi"
       },
       lead: {
-        zh: "覆盖 AI、LLM 工程、LangChain、ICT、治理、金融风控与营销训练的课程项目索引，集中展示 450+ 份课程视觉素材的阵列化归档。",
-        en: "A public-facing course archive spanning AI, LLM engineering, LangChain/LangGraph, ICT, governance, credit risk, and marketing training, showcasing 450+ course visual assets in a unified matrix.",
-        it: "Un archivio pubblico che copre AI, LLM engineering, LangChain/LangGraph, ICT, governance, rischio credito e marketing, con oltre 450 asset visivi formativi in una matrice unificata."
+        zh: "覆盖 AI、LLM 工程、LangChain、ICT、治理、金融风控与营销训练的课程项目索引，集中展示 500+ 份课程视觉素材的阵列化归档。",
+        en: "A public-facing course archive spanning AI, LLM engineering, LangChain/LangGraph, ICT, governance, credit risk, and marketing training, showcasing 500+ course visual assets in a unified matrix.",
+        it: "Un archivio pubblico che copre AI, LLM engineering, LangChain/LangGraph, ICT, governance, rischio credito e marketing, con oltre 500 asset visivi formativi in una matrice unificata."
       }
     },
     terms: {
@@ -717,6 +717,10 @@ window.PORTFOLIO_DATA = {
       llmLifecycleArchive: { en: "LLM full-cycle development curriculum", zh: "LLM \u5168\u5468\u671f\u5f00\u53d1\u8bfe\u7a0b", it: "Curriculum sviluppo LLM full-cycle" },
       langchainCourseArchive: { en: "LangChain / LangGraph continuous course", zh: "LangChain / LangGraph \u8fde\u7eed\u8bfe\u7a0b", it: "Corso continuo LangChain / LangGraph" },
       gsibAiAgentsArchive: { en: "G-SIB risk and compliance AI agents course", zh: "G-SIB \u98ce\u63a7\u5408\u89c4 AI Agent \u8bfe\u7a0b", it: "Corso AI agent per risk e compliance G-SIB" },
+      digitalEmployeeAgentArchive: { en: "Enterprise digital employee agent curriculum", zh: "\u4f01\u4e1a\u7ea7\u6570\u5b57\u5458\u5de5\u667a\u80fd\u4f53\u8bfe\u7a0b", it: "Curriculum agenti dipendenti digitali enterprise" },
+      outcomeWorkMethodsArchive: { en: "Outcome-driven AI work methods curriculum", zh: "AI \u6210\u679c\u4ea4\u4ed8\u4e0e\u77e5\u8bc6\u590d\u7528\u8bfe\u7a0b", it: "Curriculum metodi AI orientati ai risultati" },
+      productionAgentSystemsArchive: { en: "Production AI agent systems curriculum", zh: "\u751f\u4ea7\u7ea7 AI \u667a\u80fd\u4f53\u7cfb\u7edf\u8bfe\u7a0b", it: "Curriculum sistemi agentici AI in produzione" },
+      aiCareerCoachArchive: { en: "AI career coach curriculum", zh: "\u9752\u5e74\u804c\u4e1a\u53d1\u5c55 AI Coach \u8bfe\u7a0b", it: "Curriculum AI career coach" },
       sanitizedHrbpSeries: { en: "Sanitized HRBP training set", zh: "\u8131\u654f HRBP \u8bad\u7ec3\u96c6", it: "Set HRBP anonimizzato" },
       marketResearchArchive: { en: "Embodied intelligence research archive", zh: "具身智能研究归档", it: "Archivio ricerca embodied intelligence" },
       ictDocArchive: { en: "Banking ICT document archive", zh: "银行 ICT 文档归档", it: "Archivio documentale ICT bancario" },
@@ -828,6 +832,50 @@ window.PORTFOLIO_DATA = {
           "../assets/past-teaching/gsib-ai-agents-risk-compliance-infographic.png"
         ],
         image: "../assets/past-teaching/gsib-ai-agents-risk-compliance-cover.png"
+      },
+      {
+        key: "enterprise-digital-employee-agent",
+        project: { en: "Enterprise Digital Employee Agent Bootcamp", zh: "\u4f01\u4e1a\u7ea7\u6570\u5b57\u5458\u5de5\u667a\u80fd\u4f53\u6784\u5efa\u5b9e\u6218\u8425", it: "Bootcamp agenti dipendenti digitali enterprise" },
+        language: "all",
+        languageLabel: { en: "ZH", zh: "\u4e2d\u6587", it: "ZH" },
+        count: 19,
+        countLabel: { en: "sessions", zh: "sessions", it: "sessioni" },
+        archive: "digitalEmployeeAgentArchive",
+        folder: "DIGITAL_EMPLOYEE_AGENT_BOOTCAMP_19_SESSIONS_2026",
+        image: "../assets/past-teaching/enterprise-digital-employee-agent-19-sessions-grid.jpg"
+      },
+      {
+        key: "outcome-driven-ai-work-methods",
+        project: { en: "Outcome-Driven AI Work Methods Bootcamp", zh: "\u4ece\u95ee\u9898\u5230\u884c\u52a8\uff1aAI \u6210\u679c\u4ea4\u4ed8\u65b9\u6cd5\u8bad\u7ec3\u8425", it: "Bootcamp AI dal problema all'azione" },
+        language: "all",
+        languageLabel: { en: "ZH", zh: "\u4e2d\u6587", it: "ZH" },
+        count: 20,
+        countLabel: { en: "lessons", zh: "\u8bfe", it: "lezioni" },
+        archive: "outcomeWorkMethodsArchive",
+        folder: "OUTCOME_DRIVEN_AI_WORK_METHODS_20_LESSONS_2026",
+        image: "../assets/past-teaching/outcome-driven-ai-work-methods-20-lessons-grid.png"
+      },
+      {
+        key: "production-ai-agent-systems",
+        project: { en: "Production AI Agent Systems Bootcamp", zh: "\u751f\u4ea7\u7ea7 AI \u667a\u80fd\u4f53\u7cfb\u7edf\u6784\u5efa\u5b9e\u6218\u8425", it: "Bootcamp sistemi agentici AI in produzione" },
+        language: "all",
+        languageLabel: { en: "ZH", zh: "\u4e2d\u6587", it: "ZH" },
+        count: 17,
+        countLabel: { en: "sessions", zh: "sessions", it: "sessioni" },
+        archive: "productionAgentSystemsArchive",
+        folder: "PRODUCTION_AI_AGENT_SYSTEMS_17_SESSIONS_2026",
+        image: "../assets/past-teaching/production-ai-agent-systems-17-sessions-grid.jpg"
+      },
+      {
+        key: "ai-career-coach-young-professionals",
+        project: { en: "AI Career Coach Curriculum for Young Professionals", zh: "\u9752\u5e74\u804c\u4e1a\u53d1\u5c55 AI Coach \u8bfe\u7a0b\u4f53\u7cfb", it: "AI Career Coach per giovani professionisti" },
+        language: "all",
+        languageLabel: { en: "IT / ZH", zh: "\u610f / \u4e2d", it: "IT / ZH" },
+        count: 21,
+        countLabel: { en: "modules", zh: "\u6a21\u5757", it: "moduli" },
+        archive: "aiCareerCoachArchive",
+        folder: "AI_CAREER_COACH_21_MODULES_2026",
+        image: "../assets/past-teaching/ai-career-coach-young-professionals-21-modules-grid.png"
       },
       {
         key: "logistics-hrbp",
