@@ -53,7 +53,7 @@ const COPY = {
             it: "Learn By Doing with Steven | Progetti AI, advisory e media"
         },
         metaDescription: {
-            en: "AI projects, advisory, media channels, and community access in Chinese, English, and Italian.",
+            en: "Learn By Doing with Steven: AI projects, GenAI and LLM learning, AI agents, data science, advisory, podcasts, newsletters, communities, and multilingual media channels.",
             zh: "AI 项目、顾问培训、媒体渠道与社群网络，支持中文、英文与意大利语。",
             it: "Progetti AI, advisory, canali media e accesso alla community in cinese, inglese e italiano."
         },
@@ -230,7 +230,7 @@ const COPY = {
             it: "Media e link | Learn By Doing with Steven"
         },
         metaDescription: {
-            en: "A multilingual directory for calls, writing, communities, social profiles, and podcast feeds.",
+            en: "Learn By Doing with Steven media and reference hub for AI, GenAI, LLMs, AI agents, data science, advisory, podcasts, newsletters, communities, video channels, and multilingual links.",
             zh: "一个覆盖预约、写作、社群、社交主页与播客分发的多语言目录。",
             it: "Una directory multilingue per call, scrittura, community, profili social e feed podcast."
         },
@@ -897,6 +897,39 @@ const QUICK_LINKS = [
     { title: "Xiaoyuzhou", url: "https://www.xiaoyuzhoufm.com/" },
     { title: "Ximalaya", url: "https://www.ximalaya.com/" },
     { title: "Apple Podcasts", url: "https://podcasts.apple.com/search?term=%E6%95%B0%E6%8D%AE%E6%BC%AB%E8%B0%88" }
+];
+
+const TOPIC_CLUSTERS = [
+    {
+        title: "Core AI and engineering",
+        copy: "Data Science, GenAI, LLMs, AI agents, agentic AI, machine learning, deep learning, NLP, reinforcement learning, RAG, knowledge graphs, multimodal AI, AI coding, prompt engineering, automation, and production AI systems.",
+        tags: ["AI", "GenAI", "LLM", "AI Agents", "Agentic AI", "Data Science", "ML", "Deep Learning", "NLP", "RL", "RAG", "Knowledge Graph", "Multimodal AI", "Prompt Engineering", "AI Coding", "Automation"]
+    },
+    {
+        title: "Infrastructure and research coverage",
+        copy: "Hands-on notes and reviews around AI infrastructure, GPU programming, CUDA, Triton kernels, Stanford CS336, MIT 6.S191, CS230, CME295, CME296, model evaluation, safety, governance, and frontier AI labs.",
+        tags: ["AI Infrastructure", "GPU Programming", "CUDA", "Triton Kernels", "Stanford CS336", "MIT 6.S191", "CS230", "CME295", "CME296", "Model Evaluation", "AI Safety", "AI Governance", "OpenAI", "Anthropic", "Google AI", "Meta AI", "Microsoft AI"]
+    },
+    {
+        title: "Advisory and applied domains",
+        copy: "Enterprise AI enablement and practical systems work across banking, finance, risk, compliance, legal technology, sales workflows, CFO finance systems, HR, logistics, manufacturing, ICT, and digital transformation.",
+        tags: ["Enterprise AI", "Banking AI", "Finance AI", "Risk", "Compliance", "Legal AI", "Sales AI", "CFO Systems", "HR Analytics", "Logistics", "Manufacturing", "ICT", "Digital Transformation", "Advisory", "Corporate Training"]
+    },
+    {
+        title: "Media brands and content formats",
+        copy: "Learn By Doing with Steven, 数能生智, Steven Data Talk, Steven AI Talk, Steven 数据漫谈, weekly AI news, article reviews, course reviews, NotebookLM reviews, podcasts, videos, newsletters, blogs, and community notes.",
+        tags: ["Learn By Doing with Steven", "数能生智", "Steven Data Talk", "Steven AI Talk", "Steven 数据漫谈", "AI News", "Course Reviews", "NotebookLM", "Podcast", "Video", "Newsletter", "Blog", "Community"]
+    },
+    {
+        title: "Public channels and communities",
+        copy: "The channel graph spans Linktree, GitHub, GitHub.io, YouTube, LinkedIn, Substack, Bear Blog, TikTok, Instagram, Facebook, X, WeChat, Bilibili, Xiaohongshu, Discord, Telegram, WhatsApp, Apple Podcasts, Spotify, YouTube Music, Amazon Music, Ximalaya, and Xiaoyuzhou.",
+        tags: ["Linktree", "GitHub", "YouTube", "LinkedIn", "Substack", "Bear Blog", "TikTok", "Instagram", "Facebook", "X", "WeChat", "Bilibili", "Xiaohongshu", "Discord", "Telegram", "WhatsApp", "Apple Podcasts", "Spotify", "YouTube Music", "Amazon Music", "Ximalaya", "Xiaoyuzhou"]
+    },
+    {
+        title: "Collaborations and identity graph",
+        copy: "Public references connect Steven's independent AI work with Vanta Tech Lab, DukeCEO, Founder Vision, Steven On The Road, cross-border communities, startup conversations, education, investing, and founder networks.",
+        tags: ["Vanta Tech Lab", "DukeCEO", "Founder Vision", "Steven On The Road", "Founder Network", "Startup", "Education", "Investing", "Community Builder", "Engineer", "Podcast Host", "Milan"]
+    }
 ];
 
 const LANGUAGE_LABELS = {
@@ -1755,6 +1788,12 @@ function renderDirectory(lang) {
     document.querySelector("#directory-groups").innerHTML = GROUPS.map((group) => renderGroupDetails(group, lang)).join("");
     document.querySelector("#podcast-grid").innerHTML = PODCASTS.map((show) => `<article class="podcast-card reveal"><span class="show-badge">${text(show.badge, lang)}</span><div class="podcast-head"><h3 class="podcast-title">${text(show.title, lang)}</h3><p class="podcast-copy">${show.links.length} links</p></div><div class="podcast-platforms">${show.links.map((url) => `<a class="platform-link" href="${url}" target="_blank" rel="noopener"><div class="link-meta"><h4 class="platform-name">${labelFromUrl(url)}</h4><p class="platform-desc">${shortUrl(url)}</p></div><span class="link-arrow">↗</span></a>`).join("")}</div></article>`).join("");
     document.querySelector("#quick-links").innerHTML = QUICK_LINKS.map((item) => `<a class="quick-card reveal" href="${item.url}" target="_blank" rel="noopener"><div class="quick-meta"><h3 class="quick-title">${item.title}</h3><p class="quick-copy">${shortUrl(item.url)}</p></div><span class="link-arrow">↗</span></a>`).join("");
+    const topicNode = document.querySelector("#topic-grid");
+    if (topicNode) topicNode.innerHTML = TOPIC_CLUSTERS.map(renderTopicCluster).join("");
+}
+
+function renderTopicCluster(topic) {
+    return `<article class="project-card reveal"><div class="project-top"><div class="project-head"><p class="project-repo">Reference topic</p><h3 class="project-title">${topic.title}</h3></div><span class="metric-chip">${topic.tags.length} terms</span></div><p class="project-desc">${topic.copy}</p><div class="project-tags">${topic.tags.map((tag) => `<span class="tag">${tag}</span>`).join("")}</div></article>`;
 }
 
 function renderGroupCard(group, lang) {

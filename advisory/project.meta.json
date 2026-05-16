@@ -1,0 +1,53 @@
+﻿{
+    "$schema":  "../../project.meta.schema.json",
+    "schemaVersion":  1,
+    "name":  "advisory",
+    "title":  "Advisory",
+    "kind":  "project-folder",
+    "status":  "unknown",
+    "category":  "app-or-demo",
+    "description":  "",
+    "tags":  [
+                 "app-or-demo"
+             ],
+    "priority":  "unset",
+    "owner":  "",
+    "paths":  {
+                  "relative":  "learnbydoingwithsteven.github.io/advisory",
+                  "absolute":  "F:\\learnbydoingwithsteven\\learnbydoingwithsteven.github.io\\advisory"
+              },
+    "repo":  {
+                 "hasGit":  false,
+                 "remote":  null
+             },
+    "stack":  [
+                  "static-html"
+              ],
+    "entrypoints":  {
+                        "web":  "index.html"
+                    },
+    "signals":  {
+                    "hasReadme":  false,
+                    "hasPackageJson":  false,
+                    "hasIndexHtml":  true,
+                    "hasViteConfig":  false,
+                    "hasNextConfig":  false,
+                    "hasPython":  false,
+                    "hasNotebooks":  false
+                },
+    "children":  {
+                     "count":  1,
+                     "immediateProjectSignalCount":  0
+                 },
+    "activity":  {
+                     "lastModifiedLocal":  "2026-05-11T22:41:00",
+                     "inferredActivity":  "hot"
+                 },
+    "notes":  "",
+    "metadata":  {
+                     "generated":  true,
+                     "generatedAt":  "2026-05-11T20:55:37Z",
+                     "generatedBy":  "tools/update_project_metadata.ps1",
+                     "confidence":  "inferred"
+                 }
+}

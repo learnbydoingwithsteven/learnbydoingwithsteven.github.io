@@ -1,0 +1,54 @@
+﻿{
+    "$schema":  "../../project.meta.schema.json",
+    "schemaVersion":  1,
+    "name":  "ai-news",
+    "title":  "Recent AI News",
+    "kind":  "project-folder",
+    "status":  "unknown",
+    "category":  "workspace-folder",
+    "description":  "",
+    "tags":  [
+                 "workspace-folder",
+                 "ai"
+             ],
+    "priority":  "unset",
+    "owner":  "",
+    "paths":  {
+                  "relative":  "learnbydoingwithsteven.github.io/ai-news",
+                  "absolute":  "F:\\learnbydoingwithsteven\\learnbydoingwithsteven.github.io\\ai-news"
+              },
+    "repo":  {
+                 "hasGit":  false,
+                 "remote":  null
+             },
+    "stack":  [
+
+              ],
+    "entrypoints":  {
+                        "readme":  "README.md"
+                    },
+    "signals":  {
+                    "hasReadme":  true,
+                    "hasPackageJson":  false,
+                    "hasIndexHtml":  false,
+                    "hasViteConfig":  false,
+                    "hasNextConfig":  false,
+                    "hasPython":  false,
+                    "hasNotebooks":  false
+                },
+    "children":  {
+                     "count":  3,
+                     "immediateProjectSignalCount":  0
+                 },
+    "activity":  {
+                     "lastModifiedLocal":  "2026-05-11T22:41:01",
+                     "inferredActivity":  "hot"
+                 },
+    "notes":  "",
+    "metadata":  {
+                     "generated":  true,
+                     "generatedAt":  "2026-05-11T20:55:37Z",
+                     "generatedBy":  "tools/update_project_metadata.ps1",
+                     "confidence":  "inferred"
+                 }
+}

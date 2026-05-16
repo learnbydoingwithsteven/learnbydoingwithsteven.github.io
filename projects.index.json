@@ -1,0 +1,149 @@
+﻿{
+    "schemaVersion":  1,
+    "generatedAt":  "2026-05-11T20:55:37Z",
+    "generatedBy":  "tools/update_project_metadata.ps1",
+    "workspace":  {
+                      "root":  "F:\\learnbydoingwithsteven",
+                      "scopeRoot":  "F:\\learnbydoingwithsteven\\learnbydoingwithsteven.github.io",
+                      "scopeRelativePath":  "learnbydoingwithsteven.github.io",
+                      "folderCount":  8
+                  },
+    "totals":  {
+                   "gitRepositories":  0,
+                   "projectFolders":  3,
+                   "workspaceFolders":  5,
+                   "archiveOrOutput":  1
+               },
+    "projects":  [
+                     {
+                         "name":  "advisory",
+                         "title":  "Advisory",
+                         "kind":  "project-folder",
+                         "status":  "unknown",
+                         "category":  "app-or-demo",
+                         "tags":  [
+                                      "app-or-demo"
+                                  ],
+                         "relativePath":  "learnbydoingwithsteven.github.io/advisory",
+                         "stack":  [
+                                       "static-html"
+                                   ],
+                         "childProjectSignals":  0,
+                         "inferredActivity":  "hot"
+                     },
+                     {
+                         "name":  "ai-news",
+                         "title":  "Recent AI News",
+                         "kind":  "project-folder",
+                         "status":  "unknown",
+                         "category":  "workspace-folder",
+                         "tags":  [
+                                      "workspace-folder",
+                                      "ai"
+                                  ],
+                         "relativePath":  "learnbydoingwithsteven.github.io/ai-news",
+                         "stack":  [
+
+                                   ],
+                         "childProjectSignals":  0,
+                         "inferredActivity":  "hot"
+                     },
+                     {
+                         "name":  "assets",
+                         "title":  "Assets",
+                         "kind":  "workspace-folder",
+                         "status":  "unknown",
+                         "category":  "workspace-folder",
+                         "tags":  [
+                                      "workspace-folder"
+                                  ],
+                         "relativePath":  "learnbydoingwithsteven.github.io/assets",
+                         "stack":  [
+
+                                   ],
+                         "childProjectSignals":  0,
+                         "inferredActivity":  "hot"
+                     },
+                     {
+                         "name":  "images",
+                         "title":  "Images",
+                         "kind":  "workspace-folder",
+                         "status":  "unknown",
+                         "category":  "workspace-folder",
+                         "tags":  [
+                                      "workspace-folder"
+                                  ],
+                         "relativePath":  "learnbydoingwithsteven.github.io/images",
+                         "stack":  [
+
+                                   ],
+                         "childProjectSignals":  0,
+                         "inferredActivity":  "hot"
+                     },
+                     {
+                         "name":  "manualref",
+                         "title":  "Manualref",
+                         "kind":  "project-folder",
+                         "status":  "unknown",
+                         "category":  "workspace-folder",
+                         "tags":  [
+                                      "workspace-folder"
+                                  ],
+                         "relativePath":  "learnbydoingwithsteven.github.io/manualref",
+                         "stack":  [
+
+                                   ],
+                         "childProjectSignals":  1,
+                         "inferredActivity":  "hot"
+                     },
+                     {
+                         "name":  "output",
+                         "title":  "Output",
+                         "kind":  "workspace-folder",
+                         "status":  "archive",
+                         "category":  "archive-or-output",
+                         "tags":  [
+                                      "archive-or-output",
+                                      "archive"
+                                  ],
+                         "relativePath":  "learnbydoingwithsteven.github.io/output",
+                         "stack":  [
+
+                                   ],
+                         "childProjectSignals":  0,
+                         "inferredActivity":  "hot"
+                     },
+                     {
+                         "name":  "tmp",
+                         "title":  "Tmp",
+                         "kind":  "workspace-folder",
+                         "status":  "unknown",
+                         "category":  "workspace-folder",
+                         "tags":  [
+                                      "workspace-folder"
+                                  ],
+                         "relativePath":  "learnbydoingwithsteven.github.io/tmp",
+                         "stack":  [
+
+                                   ],
+                         "childProjectSignals":  0,
+                         "inferredActivity":  "hot"
+                     },
+                     {
+                         "name":  "tools",
+                         "title":  "Tools",
+                         "kind":  "workspace-folder",
+                         "status":  "unknown",
+                         "category":  "workspace-folder",
+                         "tags":  [
+                                      "workspace-folder"
+                                  ],
+                         "relativePath":  "learnbydoingwithsteven.github.io/tools",
+                         "stack":  [
+                                       "python"
+                                   ],
+                         "childProjectSignals":  0,
+                         "inferredActivity":  "hot"
+                     }
+                 ]
+}

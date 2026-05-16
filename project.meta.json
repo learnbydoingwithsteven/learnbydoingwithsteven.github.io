@@ -1,0 +1,55 @@
+﻿{
+    "$schema":  "../project.meta.schema.json",
+    "schemaVersion":  1,
+    "name":  "learnbydoingwithsteven.github.io",
+    "title":  "Learn By Doing with Steven",
+    "kind":  "git-repository",
+    "status":  "unknown",
+    "category":  "web-product",
+    "description":  "",
+    "tags":  [
+                 "web-product"
+             ],
+    "priority":  "unset",
+    "owner":  "",
+    "paths":  {
+                  "relative":  "learnbydoingwithsteven.github.io",
+                  "absolute":  "F:\\learnbydoingwithsteven\\learnbydoingwithsteven.github.io"
+              },
+    "repo":  {
+                 "hasGit":  true,
+                 "remote":  "https://github.com/learnbydoingwithsteven/learnbydoingwithsteven.github.io.git"
+             },
+    "stack":  [
+                  "static-html",
+                  "python"
+              ],
+    "entrypoints":  {
+                        "readme":  "README.md",
+                        "web":  "index.html"
+                    },
+    "signals":  {
+                    "hasReadme":  true,
+                    "hasPackageJson":  false,
+                    "hasIndexHtml":  true,
+                    "hasViteConfig":  false,
+                    "hasNextConfig":  false,
+                    "hasPython":  true,
+                    "hasNotebooks":  false
+                },
+    "children":  {
+                     "count":  8,
+                     "immediateProjectSignalCount":  8
+                 },
+    "activity":  {
+                     "lastModifiedLocal":  "2026-05-11T22:41:01",
+                     "inferredActivity":  "hot"
+                 },
+    "notes":  "",
+    "metadata":  {
+                     "generated":  true,
+                     "generatedAt":  "2026-05-11T21:07:58Z",
+                     "generatedBy":  "tools/update_project_metadata.ps1",
+                     "confidence":  "inferred"
+                 }
+}
